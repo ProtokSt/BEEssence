@@ -1,0 +1,24 @@
+0.9.3Test2
+Dependencies:
+¯¯¯¯¯¯¯¯¯¯¯¯¯
+Exoplanets
+BERT
+PW AnchorCeti 1.15.414
+
+::::::::::::::
+:NEW FEATURES:
+::::::::::::::
+-Without stations, checked all bugs
+-New Unit system, checked all bugs
+-Tidal navigation bonus reduced to 33% to avoid a huge impact in game playing at sea.
+
+:::::::::::
+:KNOW BUGS:
+:::::::::::
+-Too much aliens, along the game is possible to have more space between new spawns?
+-Progenitor device 3D is under floor
+-Progenitor Ruins need not to be similar to an expedition site
+-Quantities of Afinities resources must be 3 (is 1 now)
+-Quantities of Common strategic resources must be 2 (is 1 now)
+-When a quest create a Afinities/Common strategic resource do not give any quantity!
+-Augmentary, Gene garden. Gene smelter, Clone plant, Aegis (Unit), Rocktopus (Unit), Inmortal (Unit) do not have right affinity icon on tech screen for Essence.

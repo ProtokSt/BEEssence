@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MIGUGH: Last modified v0.9.3.2025-03-09-->
+<GameData>
+	<!--Russian texts-->
+	<Language_RU_RU>
+		<Row Tag="TXT_KEY_MOD_DLC_VERSION"><!--!change version here when new modification!-->
+			<Text>v0.9.3.2025-03-09 (Русский)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MOD_DLC_ESSENCE_BALANCE_IF_YOU_SEE_THIS_MESSAGE_THE_LANGUAGE_FILE_HAS_NOT_LOADED_PROPERLY">
+			<Text>CivBE все еще жив благодаря модам. Поддержите нас с помощью хэштегов #CivBE_Essence и #CivBEAlive. Спасибо за использование нашего мода для дополнений «Rising tide» и «Exoplanets».</Text>
+		</Row>
+		<!--Bugs text changes-->
+		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_HITPOINTS">
+			<Text>{1_Num} ОЗ</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_HITPOINTS_TT">
+			<Text>Здоровье базы: {1_Num} ОЗ</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_PASSIVEABILITY_ULTRASONIC_EMITTER_DAMAGE_HELP">
+			<Text>Наносит урон юнитам алиенов в радиусе 2 клеток.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_CULTURE_FROM_HEALTH">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] от вашего уровня Здоровья [ICON_HEALTH].[NEWLINE][ICON_BULLET]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST">
+			<Text>Каждый город (или база сателлит [ICON_PUPPET]), который у вас есть, кроме Штаб-Квартиры [ICON_CAPITAL], увеличит стоимость приобретения Добродетелей на {1_Num:number "#.#"}%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_TECH_CITY_COST">
+			<Text>Каждый город (или база сателлит [ICON_PUPPET]), который у вас есть, кроме Штаб-Квартиры [ICON_CAPITAL], увеличит стоимость приобретения Технологий на {1_Num:number "#.#"}%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MILITARY_PRODUCTION_MOD">
+			<Text>+{1_Num}% к Производству [ICON_PRODUCTION] Боевых Отрядов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_UNHEALTH_SPECIALISTS">
+			<Text></Text>
+		</Replace>
+		<!--UI Maps easy classification-->
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_HARDLYWITHOUTWATER">
+			<Text>Случайная планета с очень малым количеством воды[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_HARDLYWITHOUTWATER_HELP">
+			<Text>Игра выберет для вас планету с небольшим количеством воды</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_TERRANLIKE">
+			<Text>Случайная планета, похожая на Землю[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_TERRANLIKE_HELP">
+			<Text>Игра выберет для вас планету, сбалансированную по континентам и воде</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_ALMOSTALLWATER">
+			<Text>Случайная многоводная водная планета[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_ALMOSTALLWATER_HELP">
+			<Text>Игра выберет для вас планету с большим количеством воды.</Text>
+		</Row>
+		<!--Maps options-->
+		<!--Maps options Team Setting-->
+		<Replace Tag="TXT_KEY_MAP_OPTION_TEAM_SETTING">
+			<Text>Количество команд</Text>
+		</Replace>
+		<!--Exoplanets maps names-->
+		<!--<Replace Tag="TXT_KEY_MAP_ARBOREAN_NAME">
+			<Text>Экзопланета-Арборейская-(Кеплер 186f)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_ARIDEAN_NAME">
+			<Text>Экзопланета-Аридиан-(Ригил Ханторис Бб)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_OCEANIA_NAME">
+			<Text>Экзопланета-Океания-(Тау Кита d)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_TILTED_AXIS_NAME">
+			<Text>Экзопланета-Наклонная ось-(Мю Жертвенника f)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_VULCAN_NAME">
+			<Text>Экзопланета-Вулкан-(82 Эридана e)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_WILDERNESS_NAME">
+			<Text>Экзопланета-Дикая местность-(Eta Vulpeculae b)</Text>
+		</Replace>-->
+		<!--Other special maps names-->
+		<Replace Tag="TXT_KEY_MAP_ICE_AGE"><!--TXT_KEY_MAP_ICE_AGE_NAME-->
+			<Text>Разблокировано-Ледник</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_INLAND_SEA"><!--TXT_KEY_MAP_INLAND_SEA_NAME-->
+			<Text>Разблокировано-Внутреннее Море</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_TINY_ISLANDS"><!--TXT_KEY_MAP_TINY_ISLANDS_NAME-->
+			<Text>Разблокировано-Крошечные Острова</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_SKIRMISH"><!--TXT_KEY_MAP_SKIRMISH_NAME-->
+			<Text>Модификация-Migugh-Skirmish #</Text>
+		</Replace>
+		<!--Usermod maps names-->
+		<Row Tag="TXT_KEY_MAP_BIGLAND_NAME">
+			<Text>Модификация-Migugh-БигЛэнд</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAP_WATERWORLD_NAME">
+			<Text>Модификация-Migugh-Водный Мир</Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_MAP_TIDALCRACKED_NAME">
+			<Text>Модификация-?-Приливные трещины</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SEVENLAKES_NAME">
+			<Text>Модификация-?-7 Озёр</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_CHIRON_NAME">
+			<Text>Модификация-?-Хирон (Альфа Кентавра)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SINEVA_NAME">
+			<Text>Модификация-?-Синева (Анчор Сети)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SKEEPER_TAIL_NAME">
+			<Text>Модификация-Protok-AC_Skeeper_Tail #</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_ACDLC_SKIRMISH_NAME">
+			<Text>Модификация-Protok-AC_Skirbreach #</Text>
+		</Row>-->
+		<!-- Usermod map names help-->
+		<Row Tag="TXT_KEY_MAP_BIGLAND_HELP">
+			<Text>Огромная карта, на которой доминирует большой континент, соединенный с редкими океанами в центре карты.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAP_WATERWORLD_HELP">
+			<Text>Карта для навигации по бескрайнему океану, где из-под скал виднеются лишь несколько земель.</Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_MAP_SKEEPER_TAIL_HELP">
+			<Text>Карта, предназначенная для настоящего многопользовательского режима, разделенная горами посередине.[NEWLINE](опции: карта WrapX)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_ACDLC_SKIRMISH_HELP">
+			<Text>Карта, предназначенная для настоящего многопользовательского режима, разделенная небольшим океаном посередине. [NEWLINE](опции: без океана)(Обычная карта)</Text>
+		</Row>-->
+		<!--Colonists, starship, cargo text changes-->
+		<Replace Tag="TXT_KEY_COLONIST_PIONEERS">
+			<Text>+1 Пищи [ICON_FOOD] в каждом городе. Создание колонистов в два раза быстрее.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_COLONIST_MERCENARIES">
+			<Text>+1 Производства [ICON_PRODUCTION] в каждом городе. Все отряды получают +10% к силе [ICON_STRENGTH] и силе дальнего боя [ICON_RANGE_STRENGTH] на дружественной территории.</Text>
+		</Replace>
+		<!--Tips on initial loading screen text changes (TODO:Change it on Lua)-->
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_2">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]MGH Заметки 2.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_3">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]MGH Заметки 3.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_4">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]MGH Заметки 4.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_5">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]MGH Заметки 5.</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_ARC_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_AFRICAN_UNION_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_BRASILIA_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_PAN_ASIA_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_FRANCO_IBERIA_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_KAVITHAN_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_POLYSTRALIA_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_RUSSIA_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_AL_FALAH_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_NORTH_SEA_ALLIANCE_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_INTEGR_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_CHUNGSU_1">
+			<Text>Подсказки:[NEWLINE][ICON_BULLET]Улучшения [COLOR_HIGHLIGHT_IMPROVEMENT][ENDCOLOR] Купол, Узел и Биоколодец не могут быть построены рядом друг с другом, они должны находиться на большом расстоянии друг от друга, чтобы работать должным образом. Купол дает дополнительную урожайность вблизи гор, рек или на холмах; Узел уменьшает здоровье вражеских юнитов; Для развертывания Биоколодца необходима речная или пресная вода.[NEWLINE][ICON_BULLET]Начальное сообщение тестового руководства.</Text>
+		</Replace>
+		<!--Tips, general and map text changes-->
+		<Replace Tag="TXT_KEY_RESOURCE_TOOLTIP_IMPROVED">
+			<Text>При улучшении с помощью [COLOR_HIGHLIGHT_IMPROVEMENT]{@1_ImprovementName}[ENDCOLOR]:[NEWLINE](Шахты добавляют дополнительный +2 [ICON_PRODUCTION])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RESOURCE_EGGS">
+			<Text>Икра</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RESOURCE_SHELL">
+			<Text>Моллюски</Text>
+		</Replace>
+		<!--Improvement text changes-->
+		<Replace Tag="TXT_KEY_BUILD_BLOCKED_CANNOT_BE_ADJACENT">
+			<Text>[COLOR_NEGATIVE_TEXT]Это Улучшение не может быть смежным с другими Улучшениями того же типа.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_WORK_BARGE_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Улучшение клетки[ENDCOLOR], которое может быть построено [COLOR_HIGHLIGHT_UNIT]Рабочими[ENDCOLOR] на [COLOR_HIGHLIGHT_RESOURCE]Кораллах [ICON_CORAL][ENDCOLOR] и [COLOR_HIGHLIGHT_RESOURCE]Водорослях [ICON_ALGAE][ENDCOLOR]. Даёт:[NEWLINE][ICON_BULLET] 2 к Производство [ICON_PRODUCTION] и 1 к Энергии [ICON_ENERGY] от Кораллов [ICON_CORAL][NEWLINE][ICON_BULLET] 2 к Пище [ICON_FOOD] и 1 к Энергии [ICON_ENERGY] от Водорослей [ICON_ALGAE]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ENERGY_IMPROVEMENTS_HEADING3_BODY">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Улучшение клетки[ENDCOLOR] могут иметь особые бонусы в зависимости от поверхности, на которой они построены.[NEWLINE]Купол даёт +1 Культуры [ICON_CULTURE] когда построен на реке, +1 Культуры [ICON_CULTURE] если на холмах and +1 Культуры [ICON_CULTURE] за каждую соседнюю клетку Гор.[NEWLINE]Узел даёт +1 [ICON_ENERGY] Энергию, если размещён рядом с городом.[NEWLINE]Генератор может быть построен на холмах, чтобы производить +1 [ICON_ENERGY] Энергию.[NEWLINE][NEWLINE]Также есть исключения.[NEWLINE]Биоколодец можно построить только на клетках, где есть река или озеро с пресной водой.[NEWLINE]Кроме того, Купол, Узел и Биоколодец не могут быть построены рядом с другими улучшениями того же типа.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_MANUFACTORY_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Улучшение клетки[ENDCOLOR], которое может быть построено [COLOR_HIGHLIGHT_UNIT]Рабочими[ENDCOLOR] на равнинной местности на наземных или глубоководных заводах по добыче гидрата метана.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_BIOWELL_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Улучшение клетки[ENDCOLOR], которое может быть построено [COLOR_HIGHLIGHT_UNIT]Рабочими[ENDCOLOR] на суше, около рек, но они не могут быть соседними. Даёт:[NEWLINE][ICON_BULLET] +1 к Здоровью [ICON_HEALTH_1]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_DOME_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Улучшение клетки[ENDCOLOR], которое может быть построено [COLOR_HIGHLIGHT_UNIT]Рабочими[ENDCOLOR] на любой местности, но не рядом с таким же. Gives:[NEWLINE][ICON_BULLET] +10 очкам здоровья базы[NEWLINE][ICON_BULLET] +1 Культуры [ICON_CULTURE] если рядом с рекой[NEWLINE][ICON_BULLET] +1 Культуры [ICON_CULTURE] если на холмах[NEWLINE][ICON_BULLET] +1 Культуры [ICON_CULTURE] за каждую гору рядом</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_NODE_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Улучшение клетки[ENDCOLOR], которое может быть построено [COLOR_HIGHLIGHT_UNIT]Рабочими[ENDCOLOR] можно строить на любой местности, но не рядом друг с другом. Даёт:[NEWLINE][ICON_BULLET] 10 урона вражеским юнитам</Text>
+		</Replace>
+		<!--Units text changes-->
+		<Replace Tag="TXT_KEY_UNIT_AEGIS_HELP">
+			<Text>Пилотируемая легкая боевая броня с разнообразным установленным оружием. Это юнит ближнего боя, который [COLOR_HIGHLIGHT_TEXT]атакует 2 раза[ENDCOLOR]. Он также [COLOR_HIGHLIGHT_TEXT]вытесняет обороняющегося юнита из зоны поражения при атаке[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ANGEL_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Путешествует по каньонам и мелководью.[ENDCOLOR] Ультимативный представитель Превосходства [ICON_SUPREMACY]. Высоко продвинутый роботизированный шагоход, оснащённый исключительным тяжелым оружием дальнего боя. Это чрезвычайно универсальный отряд, подходящий для любой роли на поле боя.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_AQUILON_HELP">
+			<Text>Летающий гибрид машины и организма, способный наносить мощные атаки на чрезвычайно большом расстоянии.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_AUTOSLED_HELP">
+			<Text>Отряд штурмовиков, установленный на полуавтономной мобильной боевой платформе. Это быстрое, агрессивное рейдовое и разведывательное подразделение.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_BATTLESUIT_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% защиты от дальних атак.[ENDCOLOR] Бронированный солдат с усиленной броней. Очень сильный ударный юнит ближнего боя.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_CARVR_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Путешествует по каньонам и мелководью.[ENDCOLOR] Универсальный робот-солдат ближнего боя. Также получает [COLOR_HIGHLIGHT_TEXT]бонус при атаке неукрепленных врагов.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_GELIOPOD_HELP">
+			<Text>Хрупкий, но смертоносный юнит ближнего боя, который использует [COLOR_HIGHLIGHT_TEXT]невидимость[ENDCOLOR], чтобы обходить врагов с фланга и устраивать засады. Это юнит ближнего боя, специализирующийся на охоте и убийствах.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_GOLEM_HELP">
+			<Text>Укрепленный, но очень медленный колоссальный отряд, способный прикрывать близлежащие войска. Это грозный оборонительный отряд. Дополнительно получает [COLOR_HIGHLIGHT_TEXT]бонус при атаке укрепленных врагов.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_IMMORTAL_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Всегда лечится каждый ход, не нуждаясь в отдыхе. [ENDCOLOR] Солдат, чьи физические возможности были генетически улучшены.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LEV_DESTROYER_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% защиты от дальних атак.[ENDCOLOR] Абсолютное воплощение [ICON_PURITY] Чистоты. Гигантская, тяжеловооруженная платформа, которая [COLOR_HIGHLIGHT_TEXT]парит над землей, что позволяет ей пересекать каньоны и воду[ENDCOLOR]. Это очень мощная боевая единица дальнего боя.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LEV_TANK_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% защиты от дальних атак.[ENDCOLOR] Бронированная боевая машина, которая [COLOR_HIGHLIGHT_TEXT]парит над землей, что позволяет ей пересекать каньоны и воду[ENDCOLOR]. Это мощная и маневренная боевая единица ближнего боя.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ROCKTOPUS_HELP">
+			<Text>Живой, биоинженерный орбитальный аппарат, способный перемещаться между позициями и обеспечивающий ограниченное орбитальное покрытие вокруг своего местонахождения.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SABR_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Проходит через каньоны и мелководье.[ENDCOLOR]Роботизированная артиллерийская платформа с очень большой дальностью, но требующая развертывания. Это очень мощная боевая единица дальнего боя.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SIEGE_HELP">
+			<Text>Боевая единица дальнего боя, [COLOR_HIGHLIGHT_TEXT]ракеты которой могут пролетать над препятствиями на местности[ENDCOLOR]. Специализируется на снижении городской обороны, но требует развертывания.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SUBMARINE_HELP">
+			<Text>Дальнобойный морской юнит. Специализируется на скрытности, очень хорош в нападении и засадах, но имеет ограниченную скорость атаки и дальность и полагается на свою [COLOR_HIGHLIGHT_TEXT]невидимость[ENDCOLOR], чтобы перехитрить врагов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_XENO_CAVALRY_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Всегда исцеляет себя каждый ход, никогда не нуждаясь в отдыхе.[ENDCOLOR]Люди-солдаты, сидящие на генетически улучшенных, одомашненных инопланетных формах жизни. Это быстрый юнит ближнего боя.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_XENO_TITAN_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Он всегда исцеляет себя каждый ход, не нуждаясь в отдыхе.[ENDCOLOR] Абсолютный представитель Гармонии [ICON_HARMONY]. Чудовищное биоинженерное существо, основанное на инопланетных формах жизни. Это огромная и очень мощная боевая единица ближнего боя.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LASERCOM_SATELLITE_HELP">
+			<Text>Орбитальный юнит. Находясь на орбите, он устанавливает контакт со Старой Землей, одна из частей в победе за освобождение и землю обетованную. Каждый город в радиусе действия получает +20% к общей [ICON_CULTURE] Культуре.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_WEATHER_CONTROLLER_HELP">
+			<Text>Орбитальный юнит. +1 к [ICON_FOOD] Еде на ваших клетках.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ORBITAL_FABRICATOR_HELP">
+			<Text>Орбитальный юнит. Создает 2 новых стратегических ресурса на неулучшенных клетках в течение своего жизненного цикла.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_HOLOMATRIX_HELP">
+			<Text>Орбитальный юнит. +1 Культура [ICON_CULTURE] на ваших клетках.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_DEEP_SPACE_TELESCOPE_HELP">
+			<Text>Орбитальный юнит. +1 Наука [ICON_RESEARCH] на ваших клетках. Каждый город в радиусе действия получает +20% Науки [ICON_RESEARCH] в целом.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ALL_SEEING_EYE_HELP">
+			<Text>Орбитальный юнит. Удаляет 50% интриги из любого города в радиусе действия и получает на 50% меньше интриги от активности вражеских секретных агентов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_STATION_SENTINEL_HELP">
+			<Text>Орбитальный юнит. +2 к производству [ICON_PRODUCTION] на этой клетках. Каждый город в радиусе действия получает +5% к производству [ICON_PRODUCTION] в целом.</Text>
+		</Replace>
+		<!--Units perks text changes-->
+		<Row Tag="TXT_KEY_UNITPERK_STRONG_AGAINST_RANGED_UNITS_1_HELP">
+			<Text>+20% против дальнобойных отрядов.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNITPERK_STRONG_AGAINST_MOUNTED_UNITS_1_HELP">
+			<Text>+20% против конных подразделений (танков и кавалерии).</Text>
+		</Row>
+		<!--Units promotions changes-->
+		<Replace Tag="TXT_KEY_PROMOTION_TIDAL_NAVIGATION_HELP">
+			<Text>+33% к защите морских юнитов от дальнобойных атак</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_MOUNTED">
+			<Text>Установленный блок</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_MOUNTED_HELP">
+			<Text>Конный отряд, вы получаете дополнительные +20% за фланговый обход при атаке, если окружаете противника другими отрядами.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AUTOHEALING">
+			<Text>Самовосстанавливающийся блок</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AUTOHEALING_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Самоисцеление[ENDCOLOR]: Всегда исцеляет себя каждый ход без необходимости отдыха.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_EXTRADEFENSE">
+			<Text>Юнит с защитным щитом</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_EXTRADEFENSE_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]Защитный щит[ENDCOLOR]: +30% защиты от дальних атак.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_SUPERAEGIS">
+			<Text>Двойная атака</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_SUPERAEGIS_HELP">
+			<Text>Может атаковать дважды.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AMPHIBIOUS">
+			<Text>Амфибия</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AMPHIBIOUS_HELP">
+			<Text>Вы можете атаковать и захватить морской город.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_ROBOTWALKER">
+			<Text>Агрегат с механизированным ходунком</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_ROBOTWALKER_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Механизированный шагоход[ENDCOLOR]: пересекает каньоны и мелководье.</Text>
+		</Row>
+		<!--Buildings text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_DESC">
+			<Text>Плотина|Плотины</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_PEDIA">
+			<Text>Чтобы предотвратить разлив рек, прилегающих к городам, нужна была плотина. Она также обеспечивала пресной водой в случае необходимости, а также служила для получения энергии простым способом. Это было очень легко сделать, если город находился недалеко от реки, что облегчало его строительство и обслуживание. Первые плотины были идентичны плотинам на Старой Земле, бетонная конструкция с турбинами для производства электроэнергии, простая в обслуживании, управляемая несколькими инженерами.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_HELP">
+			<Text>[COLOR_RED]Можно построить только в городах с рекой.[ENDCOLOR]</Text>
+		</Replace>
+		<!--Buildings quests info-->
+		<Replace Tag="TXT_KEY_BUILDING_SPY_AGENCY_HELP">
+			<Text>Предоставляет 2 шпионов.[NEWLINE][NEWLINE][ICON_QUEST] Варианты задания:[NEWLINE][ICON_BULLET]Немедленно получите 60 Науки [ICON_RESEARCH][NEWLINE][ICON_BULLET]+2 Науки [ICON_RESEARCH] от шпионских агентств</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DEPOT_HELP">
+			<Text>Позволяет прокладывать из города торговые пути, а также даёт 1 свободную ячейку торгового пути.[NEWLINE][NEWLINE][ICON_QUEST] Варианты задания:[NEWLINE][ICON_BULLET]+2 производства [ICON_PRODUCTION] со складов [NEWLINE][ICON_BULLET]Вы немедленно получаете новый торговый путь</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_CLINIC_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Варианты квеста:[NEWLINE][ICON_BULLET]Вы немедленно получаете 30 науки [ICON_RESEARCH][NEWLINE][ICON_BULLET]Вы немедленно получаете 30 культуры [ICON_CULTURE]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_ULTRASONIC_FENCE_HELP">
+			<Text>Вызывает у инопланетян подсознательное нежелание приближаться к городу или оставаться на территории в радиусе 2 клеток вокруг него. В случае враждебно настроенных инопланетян эффективность снижается.[NEWLINE][NEWLINE][ICON_QUEST] Варианты миссии:[NEWLINE][ICON_BULLET]+1 к радиусу отпугивания от ультразвуковых барьеров[NEWLINE][ICON_BULLET]Отряды пришельцев не будут атаковать торговые конвои</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_ALIEN_PRESERVE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Варианты задания:[NEWLINE][ICON_BULLET]Вы немедленно получаете 60 Культуры [ICON_CULTURE][NEWLINE][ICON_BULLET]+2 Дипломатического капитала [ICON_DIPLO_CAPITAL] от Резервация инопланетян</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_COMMAND_CENTER_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Варианты квеста:[NEWLINE][ICON_BULLET]Секретным агентам нужно меньше успешных операций для повышения ранга[NEWLINE][ICON_BULLET]+1 Секретный агент [ICON_SPY]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SURVEILLANCE_WEB_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Варианты квеста:[NEWLINE][ICON_BULLET]+10% к скорости секретных операций[NEWLINE][ICON_BULLET]+1 секретный агент [ICON_SPY]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_XENO_SANCTUARY_HELP">
+			<Text>Дает +1 очко за ход к победе в сценарии "Трансцендентность".[NEWLINE][NEWLINE][ICON_QUEST] Варианты задания:[NEWLINE][ICON_BULLET]+10% к скорости работы[NEWLINE][ICON_BULLET]+1 к науке [ICON_RESEARCH] за уровень гармонии [ICON_HARMONY]</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_HYPERCORE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Варианты задания:[NEWLINE][ICON_BULLET]+10% к скорости работы[NEWLINE][ICON_BULLET]+1 к науке [ICON_RESEARCH] за уровень гармонии [ICON_HARMONY] Превосходство [ICON_SUPREMACY]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SKYCRANE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Варианты задания:[NEWLINE][ICON_BULLET]+10% скорости рабочего[NEWLINE][ICON_BULLET]+1 науки [ICON_RESEARCH] за уровень чистоты [ICON_PURITY]</Text>
+		</Row>
+		<!--Specialists text changes-->
+		<Replace Tag="TXT_KEY_SPECIALIST_LABORER">
+			<Text>Дипломат|Дипломаты</Text>
+		</Replace>
+		<!--Technology text changes-->
+		<Row Tag="TXT_KEY_TECH_NOTEXT_HELP">
+			<Text></Text>
+		</Row>
+		<Replace Tag="TXT_KEY_TECH_TRANSCENDENTAL_MATH_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Позволяет открыть [COLOR_HIGHLIGHT_TEXT]Трансцендентальное Уравнение[ENDCOLOR] и начать победу [COLOR_HIGHLIGHT_TEXT]контакта[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_HYPERCOMPUTING_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Требуется для завершения победы путем [COLOR_SUPREMACY_AFFINITY]эмансипации[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_NANOTECHNOLOGY_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Требуется для завершения победы через [COLOR_PURITY_AFFINITY]Землю Обетованную.[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_SWARM_INTELLIGENCE_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Требуется для завершения победы [COLOR_HARMONY_AFFINITY]Трансцендентностью[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_TRANSGENICS_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Требуется для завершения победы [COLOR_HARMONY_AFFINITY]Трансцендентностью[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_NANOROBOTICS_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Требуется для завершения победы [COLOR_HARMONY_AFFINITY]Трансцендентностью[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_ARTIFICIAL_EVOLUTION_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Требуется для завершения победы [COLOR_HARMONY_AFFINITY]Трансцендентностью[ENDCOLOR].</Text>
+		</Replace>
+		<!--Perks text changes-->
+		<!--Perks-Artifact text changes-->
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_SLUMBER_SLAUGHTER_EXTRACT_EFFECTS_SUMMARY">
+			<Text>+20% к скорости строительства рабочих.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_STATECRAFT_EFFECTS_SUMMARY">
+			<Text>+5 Здоровья [ICON_HEALTH_1].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_PROJECTED_CHASIS_CONSTRUCTION_EFFECTS_SUMMARY">
+			<Text>+10% к скорости строительства рабочих и +10% к силе [ICON_STRENGTH] и силе дальнего боя [ICON_RANGE_STRENGTH] при атаке или защите от пришельцев.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION">
+			<Text>Мы получили лучшее понимание инопланетного биома и почвы. В наших изысканиях мы нашли новые пригодные для использования материалы.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION">
+			<Text>Обнаружены стратегические ресурсы</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_1_EFFECTS_SUMMARY">
+			<Text>+1 Титан [ICON_TITANIUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_2_EFFECTS_SUMMARY">
+			<Text>+1 Титан [ICON_TITANIUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_3_EFFECTS_SUMMARY">
+			<Text>+1 Нефть [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_4_EFFECTS_SUMMARY">
+			<Text>+1 Нефть [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_5_EFFECTS_SUMMARY">
+			<Text>+1 Геотермаль [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_6_EFFECTS_SUMMARY">
+			<Text>+1 Геотермаль [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION">
+			<Text>Обнаружены стратегические ресурсы</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_1_EFFECTS_SUMMARY">
+			<Text>+1 Ксеномасса [ICON_XENOMASS].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_2_EFFECTS_SUMMARY">
+			<Text>+1 Ксеномасса [ICON_XENOMASS].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_3_EFFECTS_SUMMARY">
+			<Text>+1 Антигравий [ICON_FLOAT_STONE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_4_EFFECTS_SUMMARY">
+			<Text>+1 Антигравий [ICON_FLOAT_STONE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_5_EFFECTS_SUMMARY">
+			<Text>+1 Фираксит [ICON_FIRAXITE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_6_EFFECTS_SUMMARY">
+			<Text>+1 Фираксит [ICON_FIRAXITE].</Text>
+		</Row>
+		<!--Wonders-Artifact text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_TEMPORAL_CALCULUS_HELP">
+			<Text>Воинские подразделения могут получить два дополнительных уровня опыта.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DIMENSION_FOLDING_COMPLEX_HELP">
+			<Text>Этот город теперь работает на дополнительном количестве плиток, равном количеству граждан [ICON_POPULATION] + 2.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_RELATIVISTIC_DATA_BANK_HELP">
+			<Text>Для проведения некоторых секретных операций требуется на 1 уровень интриги меньше. Даёт 1го шпиона.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_QUANTUM_POLITICS_HELP">
+			<Text>+10% к скорости приобретения Добродетели и +10% к Силе [ICON_STRENGTH] и Силе дальнего боя [ICON_RANGE_STRENGTH] при атаке инопланетян или защите от них.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_MACHINE_ASSISTED_FREE_WILL_HELP">
+			<Text>Технологии Листья стоят на 10% меньше Науки [ICON_RESEARCH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_TESSELATION_FOUNDRY_HELP">
+			<Text>+1 Производства [ICON_PRODUCTION] от Генераторов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_TESSELATION_FOUNDRY_EFFECTS_SUMMARY">
+			<Text>+1 Производства [ICON_PRODUCTION] от Генераторов и боевые юниты стоят на 15% меньше Производства [ICON_PRODUCTION] в этом городе.</Text>
+		</Replace>
+		<!--Wonders text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_PROMETHEAN_HELP">
+			<Text>Этот город больше не генерирует Нездоровье [ICON_HEALTH_4] любого рода (в том числе с обрабатываемых клеток).</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_NEW_TERRAN_MYTH_HELP">
+			<Text>+1 Культуры [ICON_CULTURE] от Нефти [ICON_PETROLEUM], Титана [ICON_TITANIUM] и Геотермали [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_BYTEGEIST_HELP">
+			<Text>Бесплатный Институт.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CYNOSURE_HELP">
+			<Text>+1 к Науке [ICON_RESEARCH] за каждого жителя [ICON_CITIZEN] в этом городе.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DEEP_MEMORY_HELP">
+			<Text>+1 к Культуре [ICON_CULTURE] за каждого жителя [ICON_CITIZEN] в этом городе.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DRONE_SPHERE_HELP">
+			<Text>Рабочие на 50% быстрее.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CRAWLER_HELP">
+			<Text>+20% к Производству [ICON_PRODUCTION] зданий в этом городе и +2 к Производству [ICON_PRODUCTION] от улучшений Завод.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ANSIBLE_HELP">
+			<Text>+30% к очкам Совершенства за технологии.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PRECOG_PROJECT_HELP">
+			<Text>+2 Геотермали [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_STELLAR_CODEX_HELP">
+			<Text>+1 Науки [ICON_RESEARCH] от Антенных решеток.[NEWLINE][NEWLINE]+2 Нефти [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PANOPTICON_HELP">
+			<Text>Боевые юниты получают +1 к обзору.[NEWLINE][NEWLINE]+2 Титан [ICON_TITANIUM].</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_AKKOROKAMUI_HELP">
+			<Text>Все граждане-специалисты [ICON_CITIZEN] во всех городах производят на 1 больше.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_NANOTHERMITE_HELP">
+			<Text>+20% к Силе [ICON_STRENGTH] и Дальнобойной Силе [ICON_RANGE_STRENGTH] для всех юнитов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_XENOMALLEUM_HELP">
+			<Text>+3 Ксеномассы [ICON_XENOMASS], Антигравия [ICON_FLOAT_STONE] и Фираксита [ICON_FIRAXITE] к общим ресурсам.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_MASS_DRIVER_HELP">
+			<Text>+1 к дальности атаки города.</Text>
+		</Replace>
+		<!--Quests text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_HARMONY">
+			<Text>+1 к Пище [ICON_FOOD] за каждый Периметр Обороны</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_PURITY">
+			<Text>+1 Культуры [ICON_CULTURE] за каждый Периметр Обороны</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_SUPREMACY">
+			<Text>+1 Науки [ICON_RESEARCH] за каждый Периметр Обороны</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SEA_WELL_PRODUCTION_FLAT_HELP">
+			<Text>+1 Производства [ICON_PRODUCTION] за каждый Морской Колодец</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_PLANTATION_FOOD_FLAT_HELP">
+			<Text>+1 Пищи [ICON_FOOD] от Плантаций</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_RECOVERING_OLIVIA_ROSS_FARMS_FOOD">
+			<Text>+1 Здоровье [ICON_HEALTH] на фермы</Text>
+		</Replace>
+		<!--Quests-Buildings text changes-->
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_CLINICS_A_HELP">
+			<Text>Вы немедленно получаете 30 очков Науки [ICON_RESEARCH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_CLINICS_B_HELP">
+			<Text>Вы немедленно получаете 30 очков Культуры [ICON_CULTURE]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_DEPOTS_PRODUCTION_FLAT_HELP">
+			<Text>+2 к производству [ICON_PRODUCTION] на торговых складах</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_DEPOTS_B_HELP">
+			<Text>Вы немедленно получаете новый торговый путь.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SPY_AGENCY_A_HELP">
+			<Text>Вы немедленно получаете 60 к Науке [ICON_RESEARCH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SPY_AGENCY_B_HELP">
+			<Text>+2 к науке [ICON_RESEARCH] от Бюро Разведки</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_ALIEN_PRESERVES_A_HELP">
+			<Text>Вы немедленно получаете 60 к Культуре [ICON_CULTURE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_ALIEN_PRESERVES_B_HELP">
+			<Text>+2 к Влиянию [ICON_DIPLO_CAPITAL] Резерваций Инопланетян</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SURVEILLANCE_WEB_A_HELP">
+			<Text>+10% к скорости секретных операций</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SURVEILLANCE_WEB_B_HELP">
+			<Text>+1 Тайный Агент [ICON_SPY]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_COMMAND_CENTERS_SPIES_HELP">
+			<Text>+1 Тайный Агент [ICON_SPY]</Text>
+		</Replace>
+		<!--Affinity text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_AFFINITY_HEALTH_PER_MILITARY_UNIT">
+			<Text>+0.25 Здоровья [ICON_HEALTH] за каждого боевого юнита под вашим командованием.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_EXPLORER_MIASMA_IMMUNITY_HELP">
+			<Text>Иммунитет исследователя к миазмам</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_EXPLORER_BETTER_HELP">
+			<Text>У Исследователя +1 к передвижению [ICON_MOVES] и +10 к силе [ICON_STRENGTH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_XENOMASS_GATHERING_HELP">
+			<Text>Каждая клетка с Ксеномассой [ICON_XENOMASS] дает на 1 Пищи [ICON_FOOD] больше, чем обычно</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FLOAT_STONE_GATHERING_HELP">
+			<Text>Каждая клетка с Антигравием [ICON_FLOAT_STONE] дает на 1 Культуры [ICON_CULTURE] больше, чем обычно</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FIRAXITE_GATHERING_HELP">
+			<Text>Каждая клетка с Фиракситом [ICON_FIRAXITE] дает на 1 Науки [ICON_RESEARCH] больше, чем обычно</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_BIOWELLS_HELP">
+			<Text>+1 к Здоровью [ICON_HEALTH] от Биоколодцев</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_DOMES_HELP">
+			<Text>+1 к Культуре [ICON_CULTURE] от Куполов</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_NODES_HELP">
+			<Text>+1 Науки [ICON_RESEARCH] от Узлов</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_BIOWELLS_HELP">
+			<Text>+1 Пищи [ICON_FOOD] от Биоколодцев</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_DOMES_HELP">
+			<Text>+1 Пищи [ICON_FOOD] от Куполов</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_NODES_HELP">
+			<Text>+1 Пищи [ICON_FOOD] от Узлов</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_AFFINITY_TRADER_MIASMA_IMMUNITY">
+			<Text>Юниты и торговые пути не получают урона от миазмов</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_CULTURE_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% к Культуре [ICON_CULTURE] города, находящегося в зоне действия дружественного орбитального модуля</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_ENERGY_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% Энергии [ICON_ENERGY] для города, находящегося в зоне действия дружественного орбитального модуля</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_PRODUCTION_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% к добыче [ICON_PRODUCTION] в городе, находящемся в зоне действия дружественной орбитальной установки</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_H_P_HELP">
+			<Text>5% к скорости приобретения Добродетелей</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_P_S_HELP">
+			<Text>5% к скорости приобретения Добродетелей</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_S_H_HELP">
+			<Text>5% к скорости приобретения Добродетелей</Text>
+		</Row>
+		<!--Virtues text changes-->
+		<Replace Tag="TXT_KEY_POLICY_EFFECT_WONDER_PRODUCTION_MODIFIER">
+			<Text>+{1_Num}% к Производству [ICON_PRODUCTION] Чудес и Национальных Проектов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_2">
+			<Text>Превращение в товар[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]-15% к расходам на содержание здания.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_6">
+			<Text>Инвестиции[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]-50% на содержание дорог.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_14">
+			<Text>Гражданский долг[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]+1 [ICON_CULTURE] Культуры в каждом городе.[ENDCOLOR]</Text>
+		</Replace>
+		<!--Foreign policies text bugs-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A1_HELP">
+			<Text>Науки [ICON_RESEARCH] на 8% больше в каждом городе.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A2_HELP">
+			<Text>Науки [ICON_RESEARCH] на 12% больше в каждом городе.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A3_HELP">
+			<Text>Науки [ICON_RESEARCH] на 15% больше в каждом городе.</Text>
+		</Replace>
+		<!--Foreign policies text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A1_HELP">
+			<Text>Орбитальное покрытие города увеличивается на 1, а орбитальные юниты вырабатывают 1 Энергию [ICON_ENERGY].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A2_HELP">
+			<Text>Орбитальное покрытие города увеличивается на 2, а орбитальные юниты вырабатывают 2 Энергию [ICON_ENERGY].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A3_HELP">
+			<Text>Орбитальное покрытие города увеличивается на 3, а орбитальные юниты вырабатывают 3 Энергию [ICON_ENERGY].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_ORBITAL3_HELP">
+			<Text>Увеличивает дальность противоорбитальной атаки города на 2.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_ORBITAL4_HELP">
+			<Text>Увеличивает дальность противоорбитальной атаки города на 2.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_ORBITAL_HELP">
+			<Text>Даёт орбитальное покрытие над ресурсами совершенств ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL2_HELP">
+			<Text>+2 к орбитальному покрытию над ресурсами совершенств ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL3_HELP">
+			<Text>+2 к орбитальному покрытию над ресурсами совершенств ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL4_HELP">
+			<Text>+2 к орбитальному покрытию над ресурсами совершенств ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_MILITARY_HELP">
+			<Text>Увеличенная Сила [ICON_STRENGTH] и Сила Дальнего Удара [ICON_RANGE_STRENGTH] при атаке и защите против инопланетян.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY2_HELP">
+			<Text>+10% Увеличенная Сила [ICON_STRENGTH] и Сила Дальнего Удара [ICON_RANGE_STRENGTH] при атаке и защите против инопланетян.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY3_HELP">
+			<Text>+15% Увеличенная Сила [ICON_STRENGTH] и Сила Дальнего Удара [ICON_RANGE_STRENGTH] при атаке и защите против инопланетян.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY4_HELP">
+			<Text>+20% Увеличенная Сила [ICON_STRENGTH] и Сила Дальнего Удара [ICON_RANGE_STRENGTH] при атаке и защите против инопланетян.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_MILITARY_HELP">
+			<Text>Усиление дистанционных атак городов, а также возможно дистанционной атаки для аванпостов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY2_HELP">
+			<Text>+10% Усиление дистанционных атак городов, а также возможно дистанционной атаки для аванпостов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY3_HELP">
+			<Text>+15% Усиление дистанционных атак городов, а также возможно дистанционной атаки для аванпостов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY4_HELP">
+			<Text>+20% Усиление дистанционных атак городов, а также возможно дистанционной атаки для аванпостов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_INDUSTRY_HELP">
+			<Text>Дополнительное Производство [ICON_PRODUCTION] от Титана [ICON_TITANIUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY2_HELP">
+			<Text>+1 Дополнительное Производство [ICON_PRODUCTION] от Титана [ICON_TITANIUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY3_HELP">
+			<Text>+1 Дополнительное Производство [ICON_PRODUCTION] от Титана [ICON_TITANIUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY4_HELP">
+			<Text>+1 Дополнительное Производство [ICON_PRODUCTION] от Титана [ICON_TITANIUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_SCIENCE_HELP">
+			<Text>Дополнительная Наука [ICON_RESEARCH] от Нефти [ICON_PETROLEUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE2_HELP">
+			<Text>+1 Дополнительная Наука [ICON_RESEARCH] от Нефти [ICON_PETROLEUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE3_HELP">
+			<Text>+1 Дополнительная Наука [ICON_RESEARCH] от Нефти [ICON_PETROLEUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE4_HELP">
+			<Text>+1 Дополнительная Наука [ICON_RESEARCH] от Нефти [ICON_PETROLEUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_WEALTH_HELP">
+			<Text>Дополнительно +2 Энергии [ICON_ENERGY] от Геотермали [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH2_HELP">
+			<Text>Дополнительно +2 Энергии [ICON_ENERGY] от Геотермали [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH3_HELP">
+			<Text>Дополнительно +2 Энергии [ICON_ENERGY] от Геотермали [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH4_HELP">
+			<Text>Дополнительно +2 Энергии [ICON_ENERGY] от Геотермали [ICON_GEOTHERMAL].</Text>>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_CULTURE_HELP">
+			<Text>Добавляет +1 Культуры [ICON_CULTURE] к улучшениям [COLOR_HIGHLIGHT_IMPROVEMENT]Загон[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Дно[ENDCOLOR] и [COLOR_HIGHLIGHT_IMPROVEMENT]Рыбная Ферма[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE2_HELP">
+			<Text>Добавляет +1 Культуры [ICON_CULTURE] к улучшениям [COLOR_HIGHLIGHT_IMPROVEMENT]Загон[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Дно[ENDCOLOR] и [COLOR_HIGHLIGHT_IMPROVEMENT]Рыбная Ферма[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE3_HELP">
+			<Text>+Добавляет +1 Культуры [ICON_CULTURE] к улучшениям [COLOR_HIGHLIGHT_IMPROVEMENT]Загон[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Дно[ENDCOLOR] и [COLOR_HIGHLIGHT_IMPROVEMENT]Рыбная Ферма[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE4_HELP">
+			<Text>Добавляет +1 Культуры [ICON_CULTURE] к улучшениям [COLOR_HIGHLIGHT_IMPROVEMENT]Загон[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Дно[ENDCOLOR] и [COLOR_HIGHLIGHT_IMPROVEMENT]Рыбная Ферма[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_HEALTH_HELP">
+			<Text>Добавляет +1 Здоровья [ICON_HEALTH] к [COLOR_HIGHLIGHT_IMPROVEMENT]Улучшениям Ресурсов Совершенств[ENDCOLOR] ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH2_HELP">
+			<Text>+Добавляет +1 Здоровья [ICON_HEALTH] к [COLOR_HIGHLIGHT_IMPROVEMENT]Улучшениям Ресурсов Совершенств ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH3_HELP">
+			<Text>Добавляет +1 Здоровья [ICON_HEALTH] к [COLOR_HIGHLIGHT_IMPROVEMENT]Улучшениям Ресурсов Совершенств ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH4_HELP">
+			<Text>Добавляет +1 Здоровья [ICON_HEALTH] к [COLOR_HIGHLIGHT_IMPROVEMENT]Улучшениям Ресурсов Совершенств ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_SOCIAL_HEALTH_HELP">
+			<Text>Больше Энергии [ICON_ENERGY] и +1 Здоровья [ICON_HEALTH] от [COLOR_HIGHLIGHT_IMPROVEMENT]Земного Ландшафта[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH2_HELP">
+			<Text>+2 Энергии [ICON_ENERGY] и +1 Здоровья [ICON_HEALTH] от [COLOR_HIGHLIGHT_IMPROVEMENT]Земного Ландшафта[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH3_HELP">
+			<Text>+3 Энергии [ICON_ENERGY] и +1 Здоровья [ICON_HEALTH] от [COLOR_HIGHLIGHT_IMPROVEMENT]Земного Ландшафта[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH4_HELP">
+			<Text>+4 Энергии [ICON_ENERGY] и +1 Здоровья [ICON_HEALTH] от [COLOR_HIGHLIGHT_IMPROVEMENT]Земного Ландшафта[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_INDUSTRY_HELP">
+			<Text>Больше Производства [ICON_PRODUCTION] в городах с гарнизоном.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY2_HELP">
+			<Text>+2 Производства [ICON_PRODUCTION] в городах с гарнизоном.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY3_HELP">
+			<Text>+3 Производства [ICON_PRODUCTION] в городах с гарнизоном.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY4_HELP">
+			<Text>+4 Производства [ICON_PRODUCTION] в городах с гарнизоном.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_WEALTH_HELP">
+			<Text>Больше Энергии [ICON_ENERGY] в ваших городах.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH2_HELP">
+			<Text>+3 Энергии [ICON_ENERGY] в каждом городе.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH3_HELP">
+			<Text>+4 Энергии [ICON_ENERGY] в каждом городе.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH4_HELP">
+			<Text>+5 Энергии [ICON_ENERGY] в каждом городе.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE2_HELP">
+			<Text>Стоимость новых Добродетелей [ICON_CULTURE] уменьшена на 6%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE3_HELP">
+			<Text>Стоимость новых Добродетелей [ICON_CULTURE] уменьшена на 8%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE4_HELP">
+			<Text>Стоимость новых Добродетелей [ICON_CULTURE] уменьшена на 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH2_HELP">
+			<Text>+10% к росту [ICON_CITIZEN] Популяции в Столице [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH3_HELP">
+			<Text>+15% к росту [ICON_CITIZEN] Популяции в Столице [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH4_HELP">
+			<Text>+20% к росту [ICON_CITIZEN] Популяции в Столице [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE2_HELP">
+			<Text>Увеличение Науки [ICON_RESEARCH] в Столице [ICON_CAPITAL] на 6%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE3_HELP">
+			<Text>Увеличение Науки [ICON_RESEARCH] в Столице [ICON_CAPITAL] на 8%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE4_HELP">
+			<Text>Увеличение Науки [ICON_RESEARCH] в Столице [ICON_CAPITAL] на 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_CAPITAL_TRADE_HELP">
+			<Text>Восстановление ОЗ Городов и Аванпостов на 5 больше, уменьшено Нездоровье [ICON_UNHEALTH] от количества городов.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE2_HELP">
+			<Text>Восстановление ОЗ Городов и Аванпостов на 5 больше, уменьшено Нездоровье [ICON_UNHEALTH] от количества городов на -10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE3_HELP">
+			<Text>Восстановление ОЗ Городов и Аванпостов на 5 больше, уменьшено Нездоровье [ICON_UNHEALTH] от количества городов на -15%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE4_HELP">
+			<Text>Восстановление ОЗ Городов и Аванпостов на 5 больше, уменьшено Нездоровье [ICON_UNHEALTH] от количества городов на -20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH2_HELP">
+			<Text>Увеличивает Энергию [ICON_ENERGY] производимую Столицей [ICON_CAPITAL] на 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH3_HELP">
+			<Text>Увеличивает Энергию [ICON_ENERGY] производимую Столицей [ICON_CAPITAL] на 15%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH4_HELP">
+			<Text>Увеличивает Энергию [ICON_ENERGY] производимую Столицей [ICON_CAPITAL] на 20%.</Text>
+		</Replace>
+		<!--Personality traits text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A1_HELP">
+			<Text>+10% добычи Города при разработке проектов проеобразования.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A2_HELP">
+			<Text>+15% добычи Города при разработке проектов проеобразования.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A3_HELP">
+			<Text>+20% добычи Города при разработке проектов проеобразования.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A1_HELP">
+			<Text>Глобальное Нездоровье [ICON_UNHEALTH] от Населения [ICON_CITIZEN] ниже на 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A2_HELP">
+			<Text>Глобальное Нездоровье [ICON_UNHEALTH] от Населения [ICON_CITIZEN] ниже на 20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A3_HELP">
+			<Text>Глобальное Нездоровье [ICON_UNHEALTH] от Населения [ICON_CITIZEN] ниже на 30%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A1_HELP">
+			<Text>Для технологий веток требуется на 12% меньше Науки [ICON_RESEARCH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A2_HELP">
+			<Text>Для технологий веток требуется на 16% меньше Науки [ICON_RESEARCH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A3_HELP">
+			<Text>Для технологий веток требуется на 20% меньше Науки [ICON_RESEARCH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A1_HELP">
+			<Text>Военный счёт увеличен на 20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A2_HELP">
+			<Text>Военный счёт увеличен на 25%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A3_HELP">
+			<Text>Военный счёт увеличен на 30%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A1_HELP">
+			<Text>+50% Здоровья [ICON_HEALTH] в Столице [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A2_HELP">
+			<Text>+75% Здоровья [ICON_HEALTH] в Столице [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A3_HELP">
+			<Text>+100% Здоровья [ICON_HEALTH] в Столице [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_GROWTH_A3_HELP">
+			<Text>+2 к защите города [ICON_STRENGTH] за каждого [ICON_CITIZEN] жителя.</Text>
+		</Replace>
+		<!--Factions traits text changes-->
+		<!--Al Falah-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_WEALTH_A_HELP">
+			<Text>0.2/0.3/0.4 Энергии [ICON_ENERGY] за каждую клетку вашей территории.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A1_HELP">
+			<Text>+0.2 Энергии [ICON_ENERGY] за каждую клетку вашей территории.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A2_HELP">
+			<Text>+0.3 Энергии [ICON_ENERGY] за каждую клетку вашей территории.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A3_HELP">
+			<Text>+0.4 Энергии [ICON_ENERGY] за каждую клетку вашей территории.</Text>
+		</Replace>
+		<!--Polystralia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_TRADE_A_HELP">
+			<Text>10%/15%/20% к Производству [ICON_PRODUCTION] морских юнитов, города восстанавливают дополнительно 5/5/10 ОЗ в ход.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A1_HELP">
+			<Text>+10% к Производству [ICON_PRODUCTION] морских юнитов, города восстанавливают дополнительно 5 ОЗ в ход.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A2_HELP">
+			<Text>+15% к Производству [ICON_PRODUCTION] морских юнитов, города восстанавливают дополнительно 5 ОЗ в ход.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A3_HELP">
+			<Text>+20% к Производству [ICON_PRODUCTION] морских юнитов, города восстанавливают дополнительно 10 ОЗ в ход.</Text>
+		</Replace>
+		<!--KP-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_EXPAND_A_HELP">
+			<Text>Стоимость приобретения новых клеток города через Культуру [ICON_CULTURE] и Энергию [ICON_ENERGY] снижена на 30%/40%/50%, +3/6/9 Здоровья [ICON_HEALTH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A1_HELP">
+			<Text>Стоимость приобретения новых клеток города через Культуру [ICON_CULTURE] и Энергию [ICON_ENERGY] снижена на 30%, +3 Здоровья [ICON_HEALTH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A2_HELP">
+			<Text>Стоимость приобретения новых клеток города через Культуру [ICON_CULTURE] и Энергию [ICON_ENERGY] снижена на 40%, +6 Здоровья [ICON_HEALTH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A3_HELP">
+			<Text>Стоимость приобретения новых клеток города через Культуру [ICON_CULTURE] и Энергию [ICON_ENERGY] снижена на 50%, +9 Здоровья [ICON_HEALTH].</Text>
+		</Replace>
+		<!--PAC-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A_HELP">
+			<Text>Производство Чудес ускорено на 4%/6%/8%. +1/+2/+3 Дипломатического Капитала [ICON_DIPLO_CAPITAL] от Чудес.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A1_HELP">
+			<Text>Производство Чудес ускорено на 4%. +1 Дипломатического Капитала [ICON_DIPLO_CAPITAL] от Чудес.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A2_HELP">
+			<Text>Производство Чудес ускорено на 6%. +2 Дипломатического Капитала [ICON_DIPLO_CAPITAL] от Чудес.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A3_HELP">
+			<Text>Производство Чудес ускорено на 8%. +3 Дипломатического Капитала [ICON_DIPLO_CAPITAL] от Чудес.</Text>
+		</Replace>
+		<!--PAU-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_GROWTH_A_HELP">
+			<Text>+10%/20%/30% Пищи [ICON_FOOD] В Здоровых городах [ICON_HEALTH]. Производство [ICON_PRODUCTION] сооружений приносящих Культуру [ICON_CULTURE] ускорено на 10%/15%/20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A1_HELP">
+			<Text>+10% Пищи [ICON_FOOD] В Здоровых городах [ICON_HEALTH]. Производство [ICON_PRODUCTION] сооружений приносящих Культуру [ICON_CULTURE] ускорено на 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A2_HELP">
+			<Text>+20% Пищи [ICON_FOOD] В Здоровых городах [ICON_HEALTH]. Производство [ICON_PRODUCTION] сооружений приносящих Культуру [ICON_CULTURE] ускорено на 15%%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A3_HELP">
+			<Text>+30% Пищи [ICON_FOOD] В Здоровых городах [ICON_HEALTH]. Производство [ICON_PRODUCTION] сооружений приносящих Культуру [ICON_CULTURE] ускорено на 20%.</Text>
+		</Replace>
+		<!--Slavic federation-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A_HELP">
+			<Text>Все требования к стратегическим ресурсам для орбитальных юнитов снижаются на 1. Начинает с 2 единицами [ICON_PETROLEUM] нефти, [ICON_TITANIUM] титана и [ICON_GEOTHERMAL] геотермальных источников.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A1_HELP">
+			<Text>Все требования к стратегическим ресурсам для орбитальных юнитов снижаются на 1. Начинает с 2 единицами [ICON_PETROLEUM] нефти, [ICON_TITANIUM] титана и [ICON_GEOTHERMAL] геотермальных источников.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A3_HELP">
+			<Text>Дополнительно 2 единицы [ICON_PETROLEUM] нефти, [ICON_TITANIUM] титана и [ICON_GEOTHERMAL] геотермальных источников.</Text>
+		</Replace>
+		<!--Chungsu-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A_HELP">
+			<Text>+1/0/0 дополнительный тайный агент [ICON_SPY]. Успешная тайная операция в чужом городе приносит 10/20/30 науки [ICON_RESEARCH] за каждый ранг агента.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A2_HELP">
+			<Text>Успешная тайная операция в чужом городе приносит 20 очков науки [ICON_RESEARCH] за каждый ранг агента.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A3_HELP">
+			<Text>Успешная тайная операция в чужом городе приносит 30 очков науки [ICON_RESEARCH] за каждый ранг агента.</Text>
+		</Replace>
+		<!--INTEGR-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A_HELP">
+			<Text>Затраты дипломатического капитала [ICON_DIPLO_CAPITAL] на соглашения уменьшаются на 50%/60%/75%. Для покупки юнитов и зданий необходимо на 50%/60%/75% меньше дипломатического капитала [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A1_HELP">
+			<Text>Затраты дипломатического капитала [ICON_DIPLO_CAPITAL] на соглашения уменьшаются на 50%. Для покупки юнитов и зданий необходимо на 50% меньше дипломатического капитала [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A2_HELP">
+			<Text>Затраты дипломатического капитала [ICON_DIPLO_CAPITAL] на соглашения уменьшаются на 60%. Для покупки юнитов и зданий необходимо на 60% меньше дипломатического капитала [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A3_HELP">
+			<Text>Затраты дипломатического капитала [ICON_DIPLO_CAPITAL] на соглашения уменьшаются на 75%. Для покупки юнитов и зданий необходимо на 75% меньше дипломатического капитала [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<!--Factions traits text improvements-->
+		<!--North Sea Alliance-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_AQUATIC_A_HELP">
+			<Text>Боевая мощь [ICON_STRENGTH] городов на воде на 50%/60%/75% выше, а стоимость их перемещения на 50%/60%/75% ниже.</Text>
+		</Replace>
+		<!--Brasilia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_COMBAT_A_HELP">
+			<Text>Очки за военные успехи увеличиваются на 30%/40%/50%. Дает +1/+2/+3 к дипломатическому капиталу [ICON_DIPLO_CAPITAL] за каждый уничтоженный в бою юнит.</Text>
+		</Replace>
+		<!--ARC-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_COVERT_A_HELP">
+			<Text>Тайные операции проходят на 30%/40%/50% быстрее и требуют на 1 уровень интриги меньше для их проведения.</Text>
+		</Replace>
+		<!--Franco-Iberia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_CULTURE_A_HELP">
+			<Text>Бесплатное направление развития за каждые 10/9/8 направлений, открытых за очки культуры [ICON_CULTURE].</Text>
+		</Replace>
+	</Language_RU_RU>
+</GameData>

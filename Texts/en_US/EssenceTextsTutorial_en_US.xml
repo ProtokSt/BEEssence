@@ -1,0 +1,42 @@
+<!-- MIGUGH: Last modified v0.7.4.2025-02-04-->
+<GameData>
+	<!--English texts-->
+	<Language_en_US>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS1">
+			<Text>****Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS2">
+			<Text>Trading now is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS3">
+			<Text>In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS4">
+			<Text>Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS5">
+			<Text>Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS6_3">
+			<Text>***Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS7_1">
+			<Text>*Domes, Nodes, and Biowells upgrades cannot be built adjacent to each other, they must have a large space apart in order to develop properly.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS8_2">
+			<Text>**Domes gives extra yield near montains, rivers or on a hill; Nodes reduce the health of enemy units; Biowells needs a river with fresh water to be deployed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS9">
+			<Text>When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS10">	
+			<Text>If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS11">
+			<Text>Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS12">
+			<Text>Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

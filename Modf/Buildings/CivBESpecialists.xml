@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- MGH: Modified v0.4.9.2021-01-31-->
+<GameData>
+	<!-- Table definition -->
+	<Table name="Specialists">
+		<!-- Basic info -->
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text"/>
+		<Column name="Help" type="text"/>
+		<Column name="Civilopedia" type="text"/>
+		<Column name="Strategy" type="text"/>
+		<!--<Column name="GreatPeopleTitle" type="text"/>-->
+		<Column name="PortraitIndex" type="integer" default="-1"/>
+		<Column name="IconAtlas" type="text" default="NULL" reference="IconTextureAtlases(Atlas)"/>
+		<!-- Specialists info -->
+		<Column name="Visible" type="boolean" default="false"/>
+		<!--<Column name="Cost" type="integer" default="0"/>-->
+		<!--<Column name="Experience" type="integer" default="0"/>-->
+		<!--<Column name="GreatPeopleRateChange" type="integer" default="0"/>-->
+		<!--<Column name="CulturePerTurn" type="integer" default="0"/>-->
+		<!--<Column name="GreatPeopleUnitClass" type="text" default="NULL"/>-->
+	</Table>
+	<Table name="SpecialistFlavors">
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+		<Column name="FlavorType" type="text" reference="Flavors(Type)"/>
+		<Column name="Flavor" type="integer"/>
+	</Table>
+	<Table name="SpecialistYields">
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<!-- Table data -->
+	<Specialists>
+		<Row>
+			<ID>0</ID>
+			<Type>SPECIALIST_LABORER</Type>
+			<Description>TXT_KEY_SPECIALIST_LABORER</Description>
+			<Strategy>TXT_KEY_SPECIALIST_LABORER_STRATEGY</Strategy>
+			<Visible>true</Visible>
+			<IconAtlas>CITIZEN_ATLAS</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>SPECIALIST_GROWER</Type>
+			<Description>TXT_KEY_SPECIALIST_GROWER</Description>
+			<Strategy>TXT_KEY_SPECIALIST_GROWER_STRATEGY</Strategy>
+			<Visible>true</Visible>
+			<IconAtlas>CITIZEN_ATLAS</IconAtlas>
+			<PortraitIndex>5</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>SPECIALIST_ARTIST</Type>
+			<Description>TXT_KEY_SPECIALIST_ARTIST</Description>
+			<Strategy>TXT_KEY_SPECIALIST_ARTIST_STRATEGY</Strategy>
+			<Visible>true</Visible>
+			<IconAtlas>CITIZEN_ATLAS</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>SPECIALIST_SCIENTIST</Type>
+			<Description>TXT_KEY_SPECIALIST_SCIENTIST</Description>
+			<Strategy>TXT_KEY_SPECIALIST_SCIENTIST_STRATEGY</Strategy>
+			<Visible>true</Visible>
+			<IconAtlas>CITIZEN_ATLAS</IconAtlas>
+			<PortraitIndex>2</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>SPECIALIST_TRADER</Type>
+			<Description>TXT_KEY_SPECIALIST_TRADER</Description>
+			<Strategy>TXT_KEY_SPECIALIST_TRADER_STRATEGY</Strategy>
+			<Visible>true</Visible>
+			<IconAtlas>CITIZEN_ATLAS</IconAtlas>
+			<PortraitIndex>3</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>SPECIALIST_ENGINEER</Type>
+			<Description>TXT_KEY_SPECIALIST_ENGINEER</Description>
+			<Strategy>TXT_KEY_SPECIALIST_ENGINEER_STRATEGY</Strategy>
+			<Visible>true</Visible>
+			<IconAtlas>CITIZEN_ATLAS</IconAtlas>
+			<PortraitIndex>1</PortraitIndex>
+		</Row>
+	</Specialists>
+	<SpecialistYields>
+		<Row>
+			<SpecialistType>SPECIALIST_LABORER</SpecialistType>
+			<YieldType>YIELD_CAPITAL</YieldType>
+			<Yield>4</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_GROWER</SpecialistType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_TRADER</SpecialistType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>4</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</SpecialistYields>
+</GameData>

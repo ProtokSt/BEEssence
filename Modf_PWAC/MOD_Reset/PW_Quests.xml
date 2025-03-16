@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2023 - Blessed by Protok St -->
+<GameData>
+	<!-- Table definitions -->
+	<!-- <Table name="Quests"> -->
+		<!-- <Column name="ID" type="integer" primarykey="true" autoincrement="true"/> -->
+		<!-- <Column name="Type" type="text" notnull="true" unique="true"/> -->
+		<!-- <Column name="Description" type="text" notnull="true" unique="false"/> -->
+		<!-- <Column name="ScriptName" type="text" notnull="true" unique="true"/> -->
+    <!-- <Column name="QuestSetType" type="text" reference="Quest_Sets(Type)"/> -->
+    <!-- <Column name="QuestSetChapter" type="integer" default="0"/> -->
+		<!-- <Column name="Victory" type="boolean" default="false"/> -->
+    <!-- <Column name="Marvel" type="boolean" default="false"/> -->
+    <!-- <Column name="Domestic" type="boolean" default="false"/> -->
+    <!-- <Column name="Affinity" type="boolean" default="false"/> -->
+		<!-- <Column name="VictoryType" type="text" reference="Victories(Type)"/> -->
+		<!-- <Column name="BannerImage" type="text" default="NULL"/> -->
+		<!-- <Column name="IconAtlas" type="text" default="QUEST_PORTRAIT_ATLAS" reference="IconTextureAtlases(Atlas)"/> -->
+		<!-- <Column name="PortraitIndex" type="integer" default="0"/> -->
+		<!-- <Column name="IgnoredByAI" type="boolean" default="false"/> -->
+	<!-- </Table> -->
+	<!-- <Table name="Quest_Flavors"> -->
+		<!-- <Column name="QuestType" type="text" reference="Quests(Type)"/> -->
+		<!-- <Column name="FlavorType" type="text" reference="Flavors(Type)"/> -->
+		<!-- <Column name="Flavor" type="integer"/> -->
+	<!-- </Table> -->
+  <!-- <Table name="Quest_Chains"> -->
+    <!-- <Column name="ID" type="integer" primarykey="true" autoincrement="true"/> -->
+    <!-- <Column name="Type" type="text" notnull="true" unique="true"/> -->
+  <!-- </Table> -->
+	<!-- Table data -->
+	<Quests>
+	</Quests>
+	<Quest_Flavors>
+		<!--
+		<Row>
+			<QuestType>QUEST_FULLY_UPGRADE_UNIT</QuestType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<QuestType>QUEST_LAUNCH_ORBITAL_UNITS_RACE</QuestType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		-->
+	</Quest_Flavors>
+  <Quest_Chains>
+  </Quest_Chains>
+</GameData>

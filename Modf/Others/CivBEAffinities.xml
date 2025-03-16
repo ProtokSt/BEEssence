@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- MGH: Modified v0.7.4.2025-02-04-->
+<GameData>
+	<!-- Table definition -->
+	<Table name="Affinity_Types">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="IconString" type="text"/>
+		<Column name="IconImage" type="text"/>
+		<Column name="ColorType" type="text" reference="Colors(Type)"/>
+		<Column name="Short" type="text" notnull="true"/>
+		<Column name="IconIndex" type="integer" notnull="true"/>
+		<Column name="IconAtlas" type="text" reference="IconTextureAtlases(Atlas)"/>
+		<Column name="CivilopediaConcept" type="text"/>
+	</Table>
+	<Table name="Affinity_Levels">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="AffinityValueNeededAsDominant" type="integer"/>
+		<Column name="AffinityValueNeededAsNonDominant" type="integer"/>
+		<Column name="NonDominantAffinityTechCostMod" type="integer" default="0"/>
+		<Column name="HarmonyFlavorText" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="PurityFlavorText" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="SupremacyFlavorText" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="HarmonyFlavorAudio" type="string" default="NULL"/>
+		<Column name="PurityFlavorAudio" type="string" default="NULL"/>
+		<Column name="SupremacyFlavorAudio" type="string" default="NULL"/>
+	</Table>
+	<Table name="Affinity_Perks">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="PlayerPerk" type="text" notnull="true" reference="PlayerPerks(Type)" default="NULL"/>
+		<Column name="HarmonyLevelNeeded" type="integer" default="0"/>
+		<Column name="PurityLevelNeeded" type="integer" default="0"/>
+		<Column name="SupremacyLevelNeeded" type="integer" default="0"/>
+	</Table>
+	<!-- Table data -->
+	<!-- MODDING NOTE: Affinity_Types should not be changed, added to, or removed. Game engine relies on these particular affinity types for unit, city, and leader visualization. -->
+	<Affinity_Types>
+		<Row>
+			<ID>0</ID>
+			<Type>AFFINITY_TYPE_HARMONY</Type>
+			<Description>TXT_KEY_AFFINITY_TYPE_HARMONY</Description>
+			<IconString>[ICON_HARMONY]</IconString>
+			<IconImage>AffinityIcon_Harmony.dds</IconImage>
+			<ColorType>COLOR_HARMONY_AFFINITY</ColorType>
+			<Short>H</Short>
+			<IconIndex>2</IconIndex>
+			<IconAtlas>AFFINITY_ATLAS</IconAtlas>
+			<CivilopediaConcept>CONCEPT_AFFINITY_HARMONY</CivilopediaConcept>
+		</Row>
+		<Row>
+			<Type>AFFINITY_TYPE_PURITY</Type>
+			<Description>TXT_KEY_AFFINITY_TYPE_PURITY</Description>
+			<IconString>[ICON_PURITY]</IconString>
+			<IconImage>AffinityIcon_Purity.dds</IconImage>
+			<ColorType>COLOR_PURITY_AFFINITY</ColorType>
+			<Short>P</Short>
+			<IconIndex>0</IconIndex>
+			<IconAtlas>AFFINITY_ATLAS</IconAtlas>
+			<CivilopediaConcept>CONCEPT_AFFINITY_PURITY</CivilopediaConcept>
+		</Row>
+		<Row>
+			<Type>AFFINITY_TYPE_SUPREMACY</Type>
+			<Description>TXT_KEY_AFFINITY_TYPE_SUPREMACY</Description>
+			<IconString>[ICON_SUPREMACY]</IconString>
+			<IconImage>AffinityIcon_Supremacy.dds</IconImage>
+			<ColorType>COLOR_SUPREMACY_AFFINITY</ColorType>
+			<Short>S</Short>
+			<IconIndex>1</IconIndex>
+			<IconAtlas>AFFINITY_ATLAS</IconAtlas>
+			<CivilopediaConcept>CONCEPT_AFFINITY_SUPREMACY</CivilopediaConcept>
+		</Row>
+	</Affinity_Types>
+	<Affinity_Levels>
+		<Row>
+			<ID>0</ID>
+			<AffinityValueNeededAsDominant>0</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>0</AffinityValueNeededAsNonDominant>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>10</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>10</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_1</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_01</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_1</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_01</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_1</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_01</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>11</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>11</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_2</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_02</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_2</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_02</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_2</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_02</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>12</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>12</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_3</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_03</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_3</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_03</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_3</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_03</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>13</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>13</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_4</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_04</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_4</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_04</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_4</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_04</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>14</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>14</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_5</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_05</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_5</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_05</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_5</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_05</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>15</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>15</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_6</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_06</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_6</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_06</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_6</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_06</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>16</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>16</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_7</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_07</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_7</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_07</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_7</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_07</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>17</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>17</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_8</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_08</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_8</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_08</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_8</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_08</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>18</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>18</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_9</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_09</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_9</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_09</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_9</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_09</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>19</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>19</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_10</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_10</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_10</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_10</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_10</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_10</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>20</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>20</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_11</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_11</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_11</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_11</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_11</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_11</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>21</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>21</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_12</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_12</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_12</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_12</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_12</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_12</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>22</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>22</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_13</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_13</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_13</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_13</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_13</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_13</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>23</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>23</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_14</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_14</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_14</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_14</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_14</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_14</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>24</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>24</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_15</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_15</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_15</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_15</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_15</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_15</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>25</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>25</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_16</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_16</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_16</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_16</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_16</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_16</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>26</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>26</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_17</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_17</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_17</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_17</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_17</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_17</SupremacyFlavorAudio>
+		</Row>
+		<Row>
+			<AffinityValueNeededAsDominant>27</AffinityValueNeededAsDominant>
+			<AffinityValueNeededAsNonDominant>27</AffinityValueNeededAsNonDominant>
+			<HarmonyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_HARMONY_18</HarmonyFlavorText>
+			<HarmonyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_HARMONY_18</HarmonyFlavorAudio>
+			<PurityFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_PURITY_18</PurityFlavorText>
+			<PurityFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_PURITY_18</PurityFlavorAudio>
+			<SupremacyFlavorText>TXT_KEY_AFFINITY_LEVEL_UP_FLAVOR_SUPREMACY_18</SupremacyFlavorText>
+			<SupremacyFlavorAudio>AS2D_NARRATOR_SPEECH_AFFINITY_SUPREMACY_18</SupremacyFlavorAudio>
+		</Row>
+	</Affinity_Levels>
+	<Affinity_Perks>
+		<!--MGH:New affinity tree -->
+		<Row>
+			<ID>0</ID>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_EXPLORER_MIASMA_IMMUNITY</PlayerPerk>
+			<HarmonyLevelNeeded>2</HarmonyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_ALIEN_COMBAT_MOD</PlayerPerk>
+			<PurityLevelNeeded>2</PurityLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_EXPLORER_CHARGES</PlayerPerk>
+			<SupremacyLevelNeeded>2</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_XENOMASS_GATHERING</PlayerPerk>
+			<HarmonyLevelNeeded>5</HarmonyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_FLOAT_STONE_GATHERING</PlayerPerk>
+			<PurityLevelNeeded>5</PurityLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_FIRAXITE_GATHERING</PlayerPerk>
+			<SupremacyLevelNeeded>5</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_TRADER_MIASMA_IMMUNITY</PlayerPerk>
+			<HarmonyLevelNeeded>8</HarmonyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_CITY_GROWTH</PlayerPerk>
+			<PurityLevelNeeded>8</PurityLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_LESS_UNIT_MAINTENANCE</PlayerPerk>
+			<SupremacyLevelNeeded>8</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_BETTER_BIOWELLS</PlayerPerk>
+			<HarmonyLevelNeeded>12</HarmonyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_BETTER_DOMES</PlayerPerk>
+			<PurityLevelNeeded>12</PurityLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_BETTER_NODES</PlayerPerk>
+			<SupremacyLevelNeeded>12</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_CULTURE_PER_AFFINITY_LEVEL</PlayerPerk>
+			<HarmonyLevelNeeded>2</HarmonyLevelNeeded>
+			<PurityLevelNeeded>2</PurityLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_ENERGY_PER_AFFINITY_LEVEL</PlayerPerk>
+			<PurityLevelNeeded>2</PurityLevelNeeded>
+			<SupremacyLevelNeeded>2</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_SCIENCE_PER_AFFINITY_LEVEL</PlayerPerk>
+			<HarmonyLevelNeeded>2</HarmonyLevelNeeded>
+			<SupremacyLevelNeeded>2</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_LESS_UNHEALTH_PER_POP</PlayerPerk>
+			<HarmonyLevelNeeded>5</HarmonyLevelNeeded>
+			<PurityLevelNeeded>5</PurityLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_HEALTH_PER_MILITARY_UNIT</PlayerPerk>
+			<PurityLevelNeeded>5</PurityLevelNeeded>
+			<SupremacyLevelNeeded>5</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_AFFINITY_LESS_UNHEALTH_PER_CITY</PlayerPerk>
+			<HarmonyLevelNeeded>5</HarmonyLevelNeeded>
+			<SupremacyLevelNeeded>5</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_CITY_CULTURE_UNDER_ORBITAL_UNITS</PlayerPerk>
+			<HarmonyLevelNeeded>8</HarmonyLevelNeeded>
+			<PurityLevelNeeded>8</PurityLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_CITY_ENERGY_UNDER_ORBITAL_UNITS</PlayerPerk>
+			<PurityLevelNeeded>8</PurityLevelNeeded>
+			<SupremacyLevelNeeded>8</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_CITY_PRODUCTION_UNDER_ORBITAL_UNITS</PlayerPerk>
+			<HarmonyLevelNeeded>8</HarmonyLevelNeeded>
+			<SupremacyLevelNeeded>8</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_H_P</PlayerPerk>
+			<HarmonyLevelNeeded>10</HarmonyLevelNeeded>
+			<PurityLevelNeeded>10</PurityLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_P_S</PlayerPerk>
+			<PurityLevelNeeded>10</PurityLevelNeeded>
+			<SupremacyLevelNeeded>10</SupremacyLevelNeeded>
+		</Row>
+		<Row>
+			<PlayerPerk>PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_S_H</PlayerPerk>
+			<HarmonyLevelNeeded>10</HarmonyLevelNeeded>
+			<SupremacyLevelNeeded>10</SupremacyLevelNeeded>
+		</Row>
+	</Affinity_Perks>
+</GameData>

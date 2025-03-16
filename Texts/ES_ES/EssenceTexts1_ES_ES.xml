@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MIGUGH: Last modified v0.9.3.2025-03-09-->
+<GameData>
+	<!--Textos Español-->
+	<Language_ES_ES>
+		<Row Tag="TXT_KEY_MOD_DLC_VERSION"><!--!change version here when new modification!-->
+			<Text>v0.9.3.2025-03-09 (Español)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MOD_DLC_ESSENCE_BALANCE_IF_YOU_SEE_THIS_MESSAGE_THE_LANGUAGE_FILE_HAS_NOT_LOADED_PROPERLY">
+			<Text>CivBE sigue vivo gracias a los mods. Apóyanos usando los hastags #CivBE_Essence y #CivBEAlive. Gracias por usar nuestro Mod para las expansiones 'Rising tide' y 'Exoplanets'.</Text>
+		</Row>
+		<!--Bugs text changes-->
+		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_HITPOINTS">
+			<Text>{1_Num} PG</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_HITPOINTS_TT">
+			<Text>Puntos de golpe de la ciudad: {1_Num} PG</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_PASSIVEABILITY_ULTRASONIC_EMITTER_DAMAGE_HELP">
+			<Text>Daña unidades alienígenas a 2 casillas de distancia.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_CULTURE_FROM_HEALTH">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] por tu excedente de Salud [ICON_HEALTH].[NEWLINE][ICON_BULLET]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST">
+			<Text>Cada ciudad (o ciudad títere [ICON_PUPPET]) que tengas, aparte de la capital [ICON_CAPITAL], aumentará los costes de adquisición de Virtudes en un {1_Num:number "#.#"} %.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_TECH_CITY_COST">
+			<Text>Cada ciudad (o ciudad títere [ICON_PUPPET]) que tengas, aparte de la capital [ICON_CAPITAL], aumentará los costes de adquisición de Ciencias en un {1_Num:number "#.#"} %.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MILITARY_PRODUCTION_MOD">
+			<Text>+{1_Num}% a la Producción [ICON_PRODUCTION] para Unidades militares.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_UNHEALTH_SPECIALISTS">
+			<Text></Text>
+		</Replace>
+		<!--UI Maps easy classification-->
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_HARDLYWITHOUTWATER">
+			<Text>Planeta con muy poca agua al azar[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_HARDLYWITHOUTWATER_HELP">
+			<Text>El juego elegirá un planeta con poca agua para que juegues en él</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_TERRANLIKE">
+			<Text>Planeta parecido al terrestre al azar[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_TERRANLIKE_HELP">
+			<Text>El juego elegirá un planeta equilibrado entre los continentes y el agua para que juegues en él</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_ALMOSTALLWATER">
+			<Text>Planeta bastante acuático al azar[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_ALMOSTALLWATER_HELP">
+			<Text>El juego elegirá un planeta con mucha agua para que juegues en él</Text>
+		</Row>
+		<!--Maps options-->
+		<!--Maps options Team Setting-->
+		<Replace Tag="TXT_KEY_MAP_OPTION_TEAM_SETTING">
+			<Text>Número de equipos</Text>
+		</Replace>
+		<!--Exoplanets maps names-->
+		<!--<Replace Tag="TXT_KEY_MAP_ARBOREAN_NAME">
+			<Text>Exoplaneta-Arborean-(Kepler 186f)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_ARIDEAN_NAME">
+			<Text>Exoplaneta-Aridean-(Rigil Khantoris Bb)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_OCEANIA_NAME">
+			<Text>Exoplaneta-Oceania-(Tau Ceti d)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_TILTED_AXIS_NAME">
+			<Text>Exoplaneta-TiltedAxis-(Mu Arae f)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_VULCAN_NAME">
+			<Text>Exoplaneta-Vulcan-(82 Eridani e)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_WILDERNESS_NAME">
+			<Text>Exoplaneta-Wilderness-(Eta Vulpeculae b)</Text>
+		</Replace>-->
+		<!--Other special maps names-->
+		<Replace Tag="TXT_KEY_MAP_ICE_AGE"><!--TXT_KEY_MAP_ICE_AGE_NAME-->
+			<Text>Unlocked-Ice_Age</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_INLAND_SEA"><!--TXT_KEY_MAP_INLAND_SEA_NAME-->
+			<Text>Unlocked-Inland_Sea #</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_TINY_ISLANDS"><!--TXT_KEY_MAP_TINY_ISLANDS_NAME-->
+			<Text>Unlocked-Tiny_Islands</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_SKIRMISH"><!--TXT_KEY_MAP_SKIRMISH_NAME-->
+			<Text>Usermod-Migugh-Skirmish # (Restored file)</Text>
+		</Replace>
+		<!--Usermod maps names-->
+		<Row Tag="TXT_KEY_MAP_BIGLAND_NAME">
+			<Text>Usermod-Migugh-BigLand</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAP_WATERWORLD_NAME">
+			<Text>Usermod-Migugh-WaterWorld</Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_MAP_TIDALCRACKED_NAME">
+			<Text>Usermod-?-TidalCracked</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SEVENLAKES_NAME">
+			<Text>Usermod-?-7Lakes</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_CHIRON_NAME">
+			<Text>Usermod-?-Quirón (Alpha Centauri)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SINEVA_NAME">
+			<Text>Usermod-?-Sineva (Anchor Ceti)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SKEEPER_TAIL_NAME">
+			<Text>Usermod-Protok-AC_Skeeper_Tail #</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_ACDLC_SKIRMISH_NAME">
+			<Text>Usermod-Protok-AC_Skirbreach #</Text>
+		</Row>-->
+		<!-- Usermod maps names helps-->
+		<Row Tag="TXT_KEY_MAP_BIGLAND_HELP">
+			<Text>Un mapa principlamente predominado por un gran continente conectado con escasos océanos en el medio del mapa.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAP_WATERWORLD_HELP">
+			<Text>Un mapa para navegar en un océano interminable con apenas escasas tierras que emerge de ellas algún acantilado.</Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_MAP_SKEEPER_TAIL_HELP">
+			<Text>Un mapa pensado para multijugador real que está dividido por montañas en el medio.[NEWLINE](opciones: WrapX map)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_ACDLC_SKIRMISH_HELP">
+			<Text>Un mapa pensado para multijugador real que está dividido por un pequeño oceano en el medio.[NEWLINE](opciones: sin oceano)(Plain map)</Text>
+		</Row>-->
+		<!--Colonists, starship, cargo text changes-->
+		<Replace Tag="TXT_KEY_COLONIST_PIONEERS">
+			<Text>+1 a Comida [ICON_FOOD] en cada ciudad. Creas unidades de colonizadores el doble de rápido.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_COLONIST_MERCENARIES">
+			<Text>+1 a Producción [ICON_PRODUCTION] en cada ciudad. Todas las unidades +10% a Fuerza [ICON_STRENGTH] y a Fuerza a distancia [ICON_RANGE_STRENGTH] en territorio amistoso.</Text>
+		</Replace>
+		<!--Tips on initial loading screen text changes (TODO:Change it on Lua)-->
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_1">
+			<Text>TODO:Consejos #1:[NEWLINE]Las unidades cuerpo a cuerpo reciben una bonificación de 10% de fuerza de combate por cada unidad amiga adyacente a la unidad enemiga que están atacando. Las unidades montadas (tanques y caballería) al ser más rapidas son buenas para tender emboscadas así que consiguen además un 20% extra por flanqueo cuando atacas con ellas.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_2">
+			<Text>TODO:Consejos #2:[NEWLINE][ICON_BULLET]MGH Tips 2.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_3">
+			<Text>TODO:Consejos #3:[NEWLINE][ICON_BULLET]MGH Tips 3.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_4">
+			<Text>TODO:Consejos #4:[NEWLINE][ICON_BULLET]MGH Tips 4.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_5">
+			<Text>TODO:Consejos #5:[NEWLINE][ICON_BULLET]MGH Tips 5.</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_ARC_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_AFRICAN_UNION_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_BRASILIA_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_PAN_ASIA_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_FRANCO_IBERIA_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_KAVITHAN_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_POLYSTRALIA_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_RUSSIA_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_AL_FALAH_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_NORTH_SEA_ALLIANCE_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_INTEGR_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_CHUNGSU_1">
+			<Text>Consejos:[NEWLINE][ICON_BULLET]Las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] Cúpula, Nodo y Biopozo no se pueden construir una adyacente a la otra, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en las colinas; los Nodos reducen los PG de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder ser construido.[NEWLINE][ICON_BULLET]Los generadores dan +1 de energía en colinas; las minas usan 1 de energía por turno, solo se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); por lo que en el mar necesitas buscar Arrecifes para obtener producción.[NEWLINE][ICON_BULLET]El comercio solo está disponible desde 1 ciudad, y por cada 10 de población puedes agregar una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena deshabitado.[NEWLINE][ICON_BULLET]En los pantanos y la tundra hay mucha biodiversidad desconocida que nos permite aprender cosas nuevas, por lo que esos lugares tienen un bono de ciencia (si decides trabajar esos espacios para explotarlo y recolectar muestras).[NEWLINE][ICON_BULLET]Haz Expediciones con tus exploradores para poder recuperar artefactos abandonados. También encontrarás algunas ruinas alienígenas que nos proporcionarán cultura e investigación al investigar el funcionamiento de las instalaciones abandonadas hace años.[NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas dan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas pero son un 20% más fáciles de destruir.[NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local estará descontenta. Este descontento se manifiesta en la fase de "Ley Marcial". La duración de esta fase depende de cuánta población tenga la ciudad.[NEWLINE][ICON_BULLET]Si quieres la fase de revueltas en las ciudades conquistadas, necesitas convertir la ciudad en una "Marioneta" pero será autogestionada (puedes tomar el control más tarde) o "Arrasar" la ciudad pero la ciudad será destruida por completo.[NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 HP en territorio enemigo o neutral, +20 HP en territorio aliado, +30 HP dentro de una ciudad. El miasma reduce -10 HP a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 HP por turno.[NEWLINE][ICON_BULLET]Las unidades en un pantano tienen un coste de movimiento adicional y un ataque bajo (-10 %), las colinas proporcionan un 25 % de bonificaciones defensivas, los bosques dificultan el movimiento y los ríos pueden crear puntos de estrangulamiento (penalización de -40 % al ataque) y una bonificación de ataque por flanqueo del 10 %. La capacidad de ataque de las unidades se reduce en el mismo porcentaje de la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Replace>
+		<!--Tips, general and map text changes-->
+		<Replace Tag="TXT_KEY_RESOURCE_TOOLTIP_IMPROVED">
+			<Text>Cuando se mejora con {1: gender masculine?un ; feminine?una ;}[COLOR_HIGHLIGHT_IMPROVEMENT]{@1_ImprovementName}[ENDCOLOR]:[NEWLINE](Las minas añaden +2 [ICON_PRODUCTION] adicionales)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RESOURCE_EGGS">
+			<Text>Huevas</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RESOURCE_SHELL">
+			<Text>Moluscos</Text>
+		</Replace>
+		<!--Improvement text changes-->
+		<Replace Tag="TXT_KEY_BUILD_BLOCKED_CANNOT_BE_ADJACENT">
+			<Text>[COLOR_NEGATIVE_TEXT]Esta Mejora no puede estar adyacente a otras de su mismo tipo[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_WORK_BARGE_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Mejora de casilla[ENDCOLOR] que pueden construir las unidades de [COLOR_HIGHLIGHT_UNIT]Trabajadores[ENDCOLOR] sobre recursos de [COLOR_HIGHLIGHT_RESOURCE]Coral [ICON_CORAL][ENDCOLOR] y [COLOR_HIGHLIGHT_RESOURCE]Algas [ICON_ALGAE][ENDCOLOR]. Da:[NEWLINE][ICON_BULLET] 2 a Producción [ICON_PRODUCTION] y 1 a Energía [ICON_ENERGY] por Coral [ICON_CORAL][NEWLINE][ICON_BULLET] 2 a Alimentos [ICON_FOOD] y 1 a Energía [ICON_ENERGY] por Algas [ICON_ALGAE]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ENERGY_IMPROVEMENTS_HEADING3_BODY">
+			<Text>Las [COLOR_HIGHLIGHT_IMPROVEMENT]Mejoras de casilla[ENDCOLOR] pueden tener bonificadores especiales según la casilla que han sido construidas.[NEWLINE]La Cúpula gana +1 de Cultura [ICON_CULTURE] al estar construida en la ladera de un rio, +1 de Cultura [ICON_CULTURE] si el terreno tiene una Colina y +1 de Cultura [ICON_CULTURE] por cada Terreno de Montaña adyacente.[NEWLINE]El Nodo gana un bonus de +1 de Energía [ICON_ENERGY] al estar adyacente a una Ciudad.[NEWLINE]El Generador puede construirse en una Colina para generar +1 Energía [ICON_ENERGY].[NEWLINE][NEWLINE]También existen excepciones.[NEWLINE]El Biopozo sólo puede ser construido en casillas que tengan un río o lago con agua fresca.[NEWLINE]Además tanto la Cúpula, el Nodo como el Biopozo no se pueden construirse adyacentes a otros de su mismo tipo.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_MANUFACTORY_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Mejora de casilla[ENDCOLOR] que pueden construir las unidades de [COLOR_HIGHLIGHT_UNIT]Trabajadores[ENDCOLOR] en una zona llana en tierra o factorias de extracción de hidratos de metano en las profundidades del oceano.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_BIOWELL_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Mejora de casilla[ENDCOLOR] que pueden construir las unidades de [COLOR_HIGHLIGHT_UNIT]Trabajadores[ENDCOLOR] en tierra, cerca de rios pero no pueden estar adyacentes. Da:[NEWLINE][ICON_BULLET] +1 a Salud [ICON_HEALTH_1]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_DOME_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Mejora de casilla[ENDCOLOR] que pueden construir las unidades de [COLOR_HIGHLIGHT_UNIT]Trabajadores[ENDCOLOR] en cualquier terreno pero no pueden estar adyacentes. Da:[NEWLINE][ICON_BULLET] +10 a los puntos de golpe de la ciudad[NEWLINE][ICON_BULLET] +1 de Cultura [ICON_CULTURE] si está junto a un rio[NEWLINE][ICON_BULLET] +1 de Cultura [ICON_CULTURE] si está en una colina[NEWLINE][ICON_BULLET] +1 de Cultura [ICON_CULTURE] por cada Montaña adyacente</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_NODE_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Mejora de casilla[ENDCOLOR] que pueden construir las unidades de [COLOR_HIGHLIGHT_UNIT]Trabajadores[ENDCOLOR] en cualquier terreno pero no pueden estar adyacentes. Da:[NEWLINE][ICON_BULLET] 10 de daño a las unidades enemigas cercanas</Text>
+		</Replace>
+		<!--Units text changes-->
+		<Replace Tag="TXT_KEY_UNIT_AEGIS_HELP">
+			<Text>Una armadura de combate ligera pilotada con una gran variedad de armas montadas. Es una unidad de combate cuerpo a cuerpo que [COLOR_HIGHLIGHT_TEXT]ataca 2 veces[ENDCOLOR]. Además [COLOR_HIGHLIGHT_TEXT]al atacar desplaza a la unidad defensora del golpe[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ANGEL_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Atraviesa cañones y aguas poco profundas.[ENDCOLOR] El máximo exponente de Supremacía [ICON_SUPREMACY]. Un caminador robótico muy avanzado que cuenta con armamento pesado a distancia excepcional. Es una unidad extremadamente versátil, apta para cualquier cometido en el campo de batalla.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_AQUILON_HELP">
+			<Text>Híbrido flotante de máquina y organismo capaz de lanzar potentes ataques a muy larga distancia.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_AUTOSLED_HELP">
+			<Text>Una escuadra de soldados de asalto montados en una plataforma de combate móvil semiautónoma. Es una unidad de incursiones rápidas, agresivas y de reconocimiento.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_BATTLESUIT_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% de defensa contra ataques a distancia.[ENDCOLOR] Un soldado blindado con armadura aumentada. Es una unidad muy dura de choque cuerpo a cuerpo.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_CARVR_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Atraviesa cañones y aguas poco profundas.[ENDCOLOR] Un soldado robótico de ataque cuerpo a cuerpo muy versátil. Además obtiene una bonificación [COLOR_HIGHLIGHT_TEXT]al atacar a enemigos sin fortificar.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_GELIOPOD_HELP">
+			<Text>Unidad cuerpo a cuerpo frágil pero letal que utiliza la [COLOR_HIGHLIGHT_TEXT]invisibilidad[ENDCOLOR] para flanquear a los enemigos y emboscarlos. Es una unidad cuerpo a cuerpo especializada en cazar y matar.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_GOLEM_HELP">
+			<Text>Unidad colosal muy fortificada pero muy lenta, capaz de cubrir a las tropas que tenga cerca. Constituye una unidad de defensa formidable. Además obtiene una bonificación [COLOR_HIGHLIGHT_TEXT]al atacar a enemigos fortificados.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_IMMORTAL_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Se cura siempre cada turno, sin necesidad de descansar.[ENDCOLOR] Soldado cuyas capacidades físicas han sido mejoradas genéticamente.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LEV_DESTROYER_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% de defensa contra ataques a distancia.[ENDCOLOR] El máximo exponente de Pureza [ICON_PURITY]. Una plataforma gigante fuertemente armada que [COLOR_HIGHLIGHT_TEXT]flota sobre el terreno, lo cual le permite cruzar cañones y agua[ENDCOLOR]. Es una unidad de combate a distancia muy poderosa.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LEV_TANK_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% de defensa contra ataques a distancia.[ENDCOLOR] Un vehículo blindado de ataque que [COLOR_HIGHLIGHT_TEXT]flota sobre el terreno, lo cual le permite salvar cañones y agua[ENDCOLOR]. Es una unidad de combate cuerpo a cuerpo poderosa y agil.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ROCKTOPUS_HELP">
+			<Text>Una unidad orbital viva de bioingeniería que puede trasladarse entre despliegues y da una cobertura orbital limitada alrededor de donde esté.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SABR_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Atraviesa cañones y aguas poco profundas.[ENDCOLOR] Una plataforma robótica de artillería de un alcance muy grande pero necesita ser desplegada. Es una unidad de combate a distancia muy potente.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SIEGE_HELP">
+			<Text>Unidad de combate a distancia que [COLOR_HIGHLIGHT_TEXT]sus misiles pasan por encima de los obstaculos del terreno[ENDCOLOR]. Se especializa en reducir las defensas de las ciudades pero necesita ser desplegada.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SUBMARINE_HELP">
+			<Text>Unidad naval a distancia. Especializada en el sigilo, se le da muy bien asaltar y emboscar, pero tiene una velocidad y un alcance de ataque limitados y confía en su [COLOR_HIGHLIGHT_TEXT]invisibilidad[ENDCOLOR] para burlar a los enemigos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_XENO_CAVALRY_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Se cura siempre cada turno, sin necesidad de descansar.[ENDCOLOR] Soldados humanos montados en formas de vida alienígenas domesticadas y mejoradas genéticamente. Es una unidad rápida de ataque cuerpo a cuerpo.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_XENO_TITAN_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Se cura siempre cada turno, sin necesidad de descansar.[ENDCOLOR] El máximo exponente de Armonía [ICON_HARMONY]. Una criatura monstruosa de bioingeniería basada en las formas de vida alienígenas. Es una unidad de combate cuerpo a cuerpo enorme y muy poderosa.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LASERCOM_SATELLITE_HELP">
+			<Text>Unidad orbital. Cuando está en órbita, establece contacto con la Vieja Tierra, como parte de la victoria por emancipación y por tierra prometida. Toda ciudad dentro del alcance recibe +20% a Cultura [ICON_CULTURE] en general.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_WEATHER_CONTROLLER_HELP">
+			<Text>Unidad orbital. +1 a Alimentos [ICON_FOOD] en tus casillas.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ORBITAL_FABRICATOR_HELP">
+			<Text>Unidad orbital. Genera 2 recursos estratégicos nuevos en casillas sin mejoras durante su ciclo de vida.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_HOLOMATRIX_HELP">
+			<Text>Unidad orbital. +1 a Cultura [ICON_CULTURE] en tus casillas.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_DEEP_SPACE_TELESCOPE_HELP">
+			<Text>Unidad orbital. +1 a Ciencia [ICON_RESEARCH] en tus casillas. Toda ciudad dentro del alcance recibe +20% a Ciencia [ICON_RESEARCH] en general.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ALL_SEEING_EYE_HELP">
+			<Text>Unidad orbital. Elimina el 50% de la Intriga de cualquier ciudad dentro del alcance y recibe un 50% menos de Intriga por la actividad de un Agente secreto enemigo.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_STATION_SENTINEL_HELP">
+			<Text>Unidad orbital. +2 a la Producción [ICON_PRODUCTION] en esa casilla. Toda ciudad dentro del alcance recibe +5% a Producción [ICON_PRODUCTION] en general.</Text>
+		</Replace>
+		<!--Units perks text changes-->
+		<Row Tag="TXT_KEY_UNITPERK_STRONG_AGAINST_RANGED_UNITS_1_HELP">
+			<Text>+20% contra unidades a distancia.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNITPERK_STRONG_AGAINST_MOUNTED_UNITS_1_HELP">
+			<Text>+20% contra unidades montadas (tanques y caballería).</Text>
+		</Row>
+		<!--Units promotions changes-->
+		<Replace Tag="TXT_KEY_PROMOTION_TIDAL_NAVIGATION_HELP">
+			<Text>+33% a la Defensa de las unidades navales contra los ataques a distancia.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_MOUNTED">
+			<Text>Unidad montada</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_MOUNTED_HELP">
+			<Text>Unidad montada, consigues un +20% extra por flanqueo al atacar si rodeas al enemigo con otras unidades.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AUTOHEALING">
+			<Text>Unidad con autocuración</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AUTOHEALING_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Autocuración[ENDCOLOR]: se cura siempre cada turno sin necesidad de descansar.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_EXTRADEFENSE">
+			<Text>Unidad con escudo de defensa</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_EXTRADEFENSE_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]Escudo de defensa[ENDCOLOR]: +30% de defensa contra ataques a distancia.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_SUPERAEGIS">
+			<Text>Doble ataque</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_SUPERAEGIS_HELP">
+			<Text>Puede atacar dos veces.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AMPHIBIOUS">
+			<Text>Anfibia</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AMPHIBIOUS_HELP">
+			<Text>Puede atacar y capturar una ciudad marítima.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_ROBOTWALKER">
+			<Text>Unidad con caminador mecanizado</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_ROBOTWALKER_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Caminador mecanizado[ENDCOLOR]: atraviesa cañones y aguas poco profundas.</Text>
+		</Row>
+		<!--Buildings text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_DESC">
+			<Text>Presa|Presas</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_PEDIA">
+			<Text>Para evitar la inundaciones de los ríos adyacentes a las ciudades se necesitaba una presa. Además proporcionaba agua fresca en momentos de necesidad y también servía para conseguir energía de forma sencilla. Esto era muy fácil de hacer si la ciudad estaba cercana a un río lo que facilitaba su construcción y mantenimiento. Las primeras presas eran idénticas a las de la Vieja Tierra, una estructura de hormigón con turbinas para producir electricidad, sencilla de mantener, gestionada por algunos ingenieros.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_HELP">
+			<Text>[COLOR_RED]Solamente se puede construir en ciudades por las que pase un río[ENDCOLOR]</Text>
+		</Replace>
+		<!--Buildings quests info-->
+		<Replace Tag="TXT_KEY_BUILDING_SPY_AGENCY_HELP">
+			<Text>Proporciona 2 espías.[NEWLINE][NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]Ganas inmediatamente 60 a Ciencia [ICON_RESEARCH][NEWLINE][ICON_BULLET]+2 a Ciencia [ICON_RESEARCH] por Agencias de espías</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DEPOT_HELP">
+			<Text>Permite la creación de Rutas comerciales con origen en esta ciudad y aporta un espacio de Ruta comercial gratuito.[NEWLINE][NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]+2 a la Producción [ICON_PRODUCTION] por Depósitos comerciales[NEWLINE][ICON_BULLET]Ganas inmediatamente una nueva ruta comercial</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_CLINIC_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]Ganas inmediatamente 30 a Ciencia [ICON_RESEARCH][NEWLINE][ICON_BULLET]Ganas inmediatamente 30 a Cultura [ICON_CULTURE]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_ULTRASONIC_FENCE_HELP">
+			<Text>Disuade mucho a los alienígenas de acercarse a esta ciudad o de permanecer a 2 casillas o menos de ella. La potencia de la repulsión disminuye si hay alienígenas hostiles o muy hostiles.[NEWLINE][NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]+1 al alcance de rechazo por Verjas ultrasónicas[NEWLINE][ICON_BULLET]Las unidades alienígenas no atacarán los convoyes comerciales</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_ALIEN_PRESERVE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]Ganas inmediatamente 60 a Cultura [ICON_CULTURE][NEWLINE][ICON_BULLET]+2 a Capital diplomático [ICON_DIPLO_CAPITAL] por Reservas alienígenas</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_COMMAND_CENTER_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]Los Agentes secretos necesitan menos operaciones exitosas para subir de rango[NEWLINE][ICON_BULLET]+1 Agente secreto [ICON_SPY]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SURVEILLANCE_WEB_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]+10% a la velocidad de las Operaciones secretas[NEWLINE][ICON_BULLET]+1 Agente secreto [ICON_SPY]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_XENO_SANCTUARY_HELP">
+			<Text>Añade un punto por turno al progreso de la victoria por trascendencia.[NEWLINE][NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]+10% a Velocidad del Trabajador[NEWLINE][ICON_BULLET]+1 a Ciencia [ICON_RESEARCH] por nivel de Afinidad de Armonía [ICON_HARMONY]</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_HYPERCORE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]+10% a Velocidad del Trabajador[NEWLINE][ICON_BULLET]+1 a Ciencia [ICON_RESEARCH] por nivel de Afinidad de Supremacía [ICON_SUPREMACY]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SKYCRANE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Opciones de misión:[NEWLINE][ICON_BULLET]+10% a Velocidad del Trabajador[NEWLINE][ICON_BULLET]+1 a Ciencia [ICON_RESEARCH] por nivel de Afinidad de Pureza [ICON_PURITY]</Text>
+		</Row>
+		<!--Specialists text changes-->
+		<Replace Tag="TXT_KEY_SPECIALIST_LABORER">
+			<Text>Diplomático|Diplomáticos</Text>
+		</Replace>
+		<!--Technology text changes-->
+		<Row Tag="TXT_KEY_TECH_NOTEXT_HELP">
+			<Text></Text>
+		</Row>
+		<Replace Tag="TXT_KEY_TECH_TRANSCENDENTAL_MATH_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Permite el descubrimiento de la [COLOR_HIGHLIGHT_TEXT]Ecuación transcendental[ENDCOLOR] y el inicio de la victoria por [COLOR_HIGHLIGHT_TEXT]contacto[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_HYPERCOMPUTING_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Se requiere para completar la victoria por [COLOR_SUPREMACY_AFFINITY]emancipación[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_NANOTECHNOLOGY_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Se requiere para completar la victoria por [COLOR_PURITY_AFFINITY]tierra prometida[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_SWARM_INTELLIGENCE_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Se requiere para completar la victoria por [COLOR_HARMONY_AFFINITY]trascendencia[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_TRANSGENICS_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Se requiere para completar la victoria por [COLOR_HARMONY_AFFINITY]trascendencia[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_NANOROBOTICS_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Se requiere para completar la victoria por [COLOR_HARMONY_AFFINITY]trascendencia[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_ARTIFICIAL_EVOLUTION_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Se requiere para completar la victoria por [COLOR_HARMONY_AFFINITY]trascendencia[ENDCOLOR].</Text>
+		</Replace>
+		<!--Perks text changes-->
+		<!--Perks-Artifact text changes-->
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_SLUMBER_SLAUGHTER_EXTRACT_EFFECTS_SUMMARY">
+			<Text>+20% a la velocidad de construcción de los trabajadores.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_STATECRAFT_EFFECTS_SUMMARY">
+			<Text>+5 de Salud [ICON_HEALTH_1].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_PROJECTED_CHASIS_CONSTRUCTION_EFFECTS_SUMMARY">
+			<Text>+10% a la velocidad de construcción de los trabajadores y +10% a la Fuerza [ICON_STRENGTH] y a la Fuerza a distancia [ICON_RANGE_STRENGTH] al atacar a alienígenas o defenderse de ellos.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION">
+			<Text>Hemos comprendido mejor el suelo y el bioma alienígena. Esto hace posible que en nuestras prospecciones hayamos encontrado nuevos materiales aprovechables.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION">
+			<Text>Recursos estrategicos descubiertos</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_1_EFFECTS_SUMMARY">
+			<Text>+1 Titanio [ICON_TITANIUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_2_EFFECTS_SUMMARY">
+			<Text>+1 Titanio [ICON_TITANIUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_3_EFFECTS_SUMMARY">
+			<Text>+1 Petróleo [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_4_EFFECTS_SUMMARY">
+			<Text>+1 Petróleo [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_5_EFFECTS_SUMMARY">
+			<Text>+1 Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_6_EFFECTS_SUMMARY">
+			<Text>+1 Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION">
+			<Text>Recursos estrategicos descubiertos</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_1_EFFECTS_SUMMARY">
+			<Text>+1 Xenomasa [ICON_XENOMASS].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_2_EFFECTS_SUMMARY">
+			<Text>+1 Xenomasa [ICON_XENOMASS].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_3_EFFECTS_SUMMARY">
+			<Text>+1 Piedra flotante [ICON_FLOAT_STONE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_4_EFFECTS_SUMMARY">
+			<Text>+1 Piedra flotante [ICON_FLOAT_STONE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_5_EFFECTS_SUMMARY">
+			<Text>+1 Firaxita [ICON_FIRAXITE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_6_EFFECTS_SUMMARY">
+			<Text>+1 Firaxita [ICON_FIRAXITE].</Text>
+		</Row>
+		<!--Wonders-Artifact text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_TEMPORAL_CALCULUS_HELP">
+			<Text>Las unidades militares pueden conseguir dos niveles adicionales de veteranía.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DIMENSION_FOLDING_COMPLEX_HELP">
+			<Text>Esta ciudad ahora trabaja una cantidad de casillas adicionales igual al número de ciudadanos [ICON_POPULATION] más 2.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_RELATIVISTIC_DATA_BANK_HELP">
+			<Text>Se requiere 1 menos de nivel de intriga para hacer algunas Operaciones secretas y además un espia gratis</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_QUANTUM_POLITICS_HELP">
+			<Text>+10% a la velocidad de adquisición de Virtudes y +10% a la Fuerza [ICON_STRENGTH] y a la Fuerza a distancia [ICON_RANGE_STRENGTH] al atacar a alienígenas o defenderse de ellos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_MACHINE_ASSISTED_FREE_WILL_HELP">
+			<Text>Las tecnologías de hoja cuestan un 10% menos de Ciencia [ICON_RESEARCH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_TESSELATION_FOUNDRY_HELP">
+			<Text>+1 Producción [ICON_PRODUCTION] por las mejoras Generador.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_TESSELATION_FOUNDRY_EFFECTS_SUMMARY">
+			<Text>+1 Producción [ICON_PRODUCTION] por las mejoras Generador y las unidades militares cuestan un 15% menos de Producción [ICON_PRODUCTION] en esta ciudad.</Text>
+		</Replace>
+		<!--Wonders text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_PROMETHEAN_HELP">
+			<Text>Esta ciudad ya no genera Insalubridad [ICON_HEALTH_4] de ningún tipo (tampoco de las casillas en las que está trabajando).</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_NEW_TERRAN_MYTH_HELP">
+			<Text>+1 de Cultura [ICON_CULTURE] por los recursos de Petróleo [ICON_PETROLEUM], Titanio [ICON_TITANIUM] y Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_BYTEGEIST_HELP">
+			<Text>Consigue una Virtud gratuita.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CYNOSURE_HELP">
+			<Text>Gana 1 a Ciencia [ICON_RESEARCH] por cada Población [ICON_CITIZEN] que haya en esta ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DEEP_MEMORY_HELP">
+			<Text>Gana 1 a Cultura [ICON_CULTURE] por cada Población [ICON_CITIZEN] que haya en esta ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DRONE_SPHERE_HELP">
+			<Text>Los trabajadores son un 50% más rápidos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CRAWLER_HELP">
+			<Text>+20% a la Producción [ICON_PRODUCTION] de edificios en esta ciudad y +2 Producción [ICON_PRODUCTION] por las mejoras Fabrica.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ANSIBLE_HELP">
+			<Text>+30% afinidad por investigación de tecnologías.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PRECOG_PROJECT_HELP">
+			<Text>+2 Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_STELLAR_CODEX_HELP">
+			<Text>+1 Ciencia [ICON_RESEARCH] por las mejoras Matriz.[NEWLINE][NEWLINE]+2 Petróleo [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PANOPTICON_HELP">
+			<Text>Todas las unidades militares reciben 1 a la Visual.[NEWLINE][NEWLINE]+2 Titanio [ICON_TITANIUM].</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_AKKOROKAMUI_HELP">
+			<Text>Todos los ciudadanos especialistas [ICON_CITIZEN] en todas las ciudades producen 1 más.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_NANOTHERMITE_HELP">
+			<Text>Bonificación de +20% a la Fuerza [ICON_STRENGTH] y a la Fuerza a distancia [ICON_RANGE_STRENGTH] para todas las unidades.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_XENOMALLEUM_HELP">
+			<Text>+3 a los recursos de Xenomasa [ICON_XENOMASS], Piedra flotante [ICON_FLOAT_STONE] y Firaxita [ICON_FIRAXITE].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_MASS_DRIVER_HELP">
+			<Text>+1 al Alcance al ataque de la ciudad.</Text>
+		</Replace>
+		<!--Quests text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_HARMONY">
+			<Text>+1 a Comida [ICON_FOOD] por Perímetro de defensa</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_PURITY">
+			<Text>+1 a Cultura [ICON_CULTURE] por Perímetro de defensa</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_SUPREMACY">
+			<Text>+1 a Ciencia [ICON_RESEARCH] por Perímetro de defensa</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SEA_WELL_PRODUCTION_FLAT_HELP">
+			<Text>+1 a Producción [ICON_PRODUCTION] por Pozos marinos</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_PLANTATION_FOOD_FLAT_HELP">
+			<Text>+1 a Comida [ICON_FOOD] por Plantaciones</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_RECOVERING_OLIVIA_ROSS_FARMS_FOOD">
+			<Text>+1 a Salud [ICON_HEALTH] por Granjas</Text>
+		</Replace>
+		<!--Quests-Buildings text changes-->
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_CLINICS_A_HELP">
+			<Text>Ganas inmediatamente 30 a Ciencia [ICON_RESEARCH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_CLINICS_B_HELP">
+			<Text>Ganas inmediatamente 30 a Cultura [ICON_CULTURE]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_DEPOTS_PRODUCTION_FLAT_HELP">
+			<Text>+2 a la Producción [ICON_PRODUCTION] por Depósitos comerciales</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_DEPOTS_B_HELP">
+			<Text>Ganas inmediatamente una nueva ruta comercial</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SPY_AGENCY_A_HELP">
+			<Text>Ganas inmediatamente 60 a Ciencia [ICON_RESEARCH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SPY_AGENCY_B_HELP">
+			<Text>+2 a Ciencia [ICON_RESEARCH] por Agencias de espías</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_ALIEN_PRESERVES_A_HELP">
+			<Text>Ganas inmediatamente 60 a Cultura [ICON_CULTURE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_ALIEN_PRESERVES_B_HELP">
+			<Text>+2 a Capital diplomático [ICON_DIPLO_CAPITAL] por Reservas alienígenas</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SURVEILLANCE_WEB_A_HELP">
+			<Text>+10% a la velocidad de las Operaciones secretas</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SURVEILLANCE_WEB_B_HELP">
+			<Text>+1 Agente secreto [ICON_SPY]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_COMMAND_CENTERS_SPIES_HELP">
+			<Text>+1 Agente secreto [ICON_SPY]</Text>
+		</Replace>
+		<!--Affinity text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_AFFINITY_HEALTH_PER_MILITARY_UNIT">
+			<Text>+0,25 a Salud [ICON_HEALTH] por cada unidad militar que esté a tus órdenes.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_EXPLORER_MIASMA_IMMUNITY_HELP">
+			<Text>Inmunidad del Explorador al Miasma</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_EXPLORER_BETTER_HELP">
+			<Text>El Explorador ahora tiene +1 de Movimiento [ICON_MOVES] y +10 de Fuerza [ICON_STRENGTH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_XENOMASS_GATHERING_HELP">
+			<Text>Cada casilla con Xenomasa [ICON_XENOMASS] da 1 recurso de Comida [ICON_FOOD] más de lo normal</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FLOAT_STONE_GATHERING_HELP">
+			<Text>Cada casilla con Piedra flotante [ICON_FLOAT_STONE] da 1 recurso de Cultura [ICON_CULTURE] más de lo normal</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FIRAXITE_GATHERING_HELP">
+			<Text>Cada casilla con Firaxita [ICON_FIRAXITE] da 1 recurso de Ciencia [ICON_RESEARCH] más de lo normal</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_BIOWELLS_HELP">
+			<Text>+1 a Salud [ICON_HEALTH] por mejoras de Biopozo</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_DOMES_HELP">
+			<Text>+1 a Cultura [ICON_CULTURE] por mejoras de Cúpula</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_NODES_HELP">
+			<Text>+1 a Ciencia [ICON_RESEARCH] por mejoras de Nodo</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_BIOWELLS_HELP">
+			<Text>+1 a Comida [ICON_FOOD] por mejoras de Biopozo</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_DOMES_HELP">
+			<Text>+1 a Comida [ICON_FOOD] por mejoras de Cúpula</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_NODES_HELP">
+			<Text>+1 a Comida [ICON_FOOD] por mejoras de Nodo</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_AFFINITY_TRADER_MIASMA_IMMUNITY">
+			<Text>Las unidades y las rutas comerciales no sufren daño por Miasma</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_CULTURE_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% de Cultura [ICON_CULTURE] a la ciudad dentro del alcance de efecto de una unidad orbital amiga</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_ENERGY_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% de Energía [ICON_ENERGY] a la ciudad dentro del alcance de efecto de una unidad orbital amiga</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_PRODUCTION_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% de Producción [ICON_PRODUCTION] a la ciudad dentro del alcance de efecto de una unidad orbital amiga</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_H_P_HELP">
+			<Text>5% a la velocidad de adquisición de Virtudes</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_P_S_HELP">
+			<Text>5% a la velocidad de adquisición de Virtudes</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_S_H_HELP">
+			<Text>5% a la velocidad de adquisición de Virtudes</Text>
+		</Row>
+		<!--Virtues text changes-->
+		<Replace Tag="TXT_KEY_POLICY_EFFECT_WONDER_PRODUCTION_MODIFIER">
+			<Text>+{1_Num} % a la Producción [ICON_PRODUCTION] de Maravillas y Proyectos nacionales.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_2">
+			<Text>Mercantilización[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]-15% al gasto en Mantenimiento de edificios.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_6">
+			<Text>Inversión[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]-50% al manteniento de las carreteras.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_14">
+			<Text>Deber cívico[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]+1 cultura [ICON_CULTURE] por cada ciudad.[ENDCOLOR]</Text>
+		</Replace>
+		<!--Foreign policies text bugs-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A1_HELP">
+			<Text>La producción de Ciencia [ICON_RESEARCH] en cada ciudad aumenta un 8%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A2_HELP">
+			<Text>La producción de Ciencia [ICON_RESEARCH] en cada ciudad aumenta un 12%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A3_HELP">
+			<Text>La producción de Ciencia [ICON_RESEARCH] en cada ciudad aumenta un 15%.</Text>
+		</Replace>
+		<!--Foreign policies text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A1_HELP">
+			<Text>La Cobertura orbital de la ciudad aumenta en 1 y las unidades orbitales producen 1 de Energía [ICON_ENERGY].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A2_HELP">
+			<Text>La Cobertura orbital de la ciudad aumenta en 2 y las unidades orbitales producen 2 de Energía [ICON_ENERGY].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A3_HELP">
+			<Text>La Cobertura orbital de la ciudad aumenta en 3 y las unidades orbitales producen 3 de Energía [ICON_ENERGY].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_ORBITAL3_HELP">
+			<Text>Aumenta en 2 el alcance del ataque antiorbital de la ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_ORBITAL4_HELP">
+			<Text>Aumenta en 2 el alcance del ataque antiorbital de la ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_ORBITAL_HELP">
+			<Text>Da Cobertura orbital por recursos de afinidad ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL2_HELP">
+			<Text>+2 Cobertura orbital en casillas con recursos de afinidad ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL3_HELP">
+			<Text>+2 Cobertura orbital en casillas con recursos de afinidad ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL4_HELP">
+			<Text>+2 Cobertura orbital en casillas con recursos de afinidad ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_MILITARY_HELP">
+			<Text>Más Fuerza [ICON_STRENGTH] y a la Fuerza a distancia [ICON_RANGE_STRENGTH] al atacar a alienígenas o defenderse de ellos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY2_HELP">
+			<Text>+10% a la Fuerza [ICON_STRENGTH] y a la Fuerza a distancia [ICON_RANGE_STRENGTH] al atacar a alienígenas o defenderse de ellos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY3_HELP">
+			<Text>+15% a la Fuerza [ICON_STRENGTH] y a la Fuerza a distancia [ICON_RANGE_STRENGTH] al atacar a alienígenas o defenderse de ellos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY4_HELP">
+			<Text>+20% a la Fuerza [ICON_STRENGTH] y a la Fuerza a distancia [ICON_RANGE_STRENGTH] al atacar a alienígenas o defenderse de ellos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_MILITARY_HELP">
+			<Text>Más fuerza a los ataques a distancia de ciudades y los puestos pueden atacar a distancia.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY2_HELP">
+			<Text>+10% de fuerza a los ataques a distancia de ciudades y los puestos pueden atacar a distancia.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY3_HELP">
+			<Text>+15% de fuerza a los ataques a distancia de ciudades y los puestos pueden atacar a distancia.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY4_HELP">
+			<Text>+20% de fuerza a los ataques a distancia de ciudades y los puestos pueden atacar a distancia.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_INDUSTRY_HELP">
+			<Text>Añade 1 de Producción [ICON_PRODUCTION] por los recursos de Titanio[ICON_TITANIUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY2_HELP">
+			<Text>+1 a Producción [ICON_PRODUCTION] por los recursos de Titanio[ICON_TITANIUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY3_HELP">
+			<Text>+1 a Producción [ICON_PRODUCTION] por los recursos de Titanio[ICON_TITANIUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY4_HELP">
+			<Text>+1 a Producción [ICON_PRODUCTION] por los recursos de Titanio[ICON_TITANIUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_SCIENCE_HELP">
+			<Text>Añade 1 de Ciencia [ICON_RESEARCH] por los recursos de Petróleo [ICON_PETROLEUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE2_HELP">
+			<Text>+1 a Ciencia [ICON_RESEARCH] por los recursos de Petróleo [ICON_PETROLEUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE3_HELP">
+			<Text>+1 a Ciencia [ICON_RESEARCH] por los recursos de Petróleo [ICON_PETROLEUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE4_HELP">
+			<Text>+1 a Ciencia [ICON_RESEARCH] por los recursos de Petróleo [ICON_PETROLEUM].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_WEALTH_HELP">
+			<Text>Añade 2 de Energía [ICON_ENERGY] por los recursos de Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH2_HELP">
+			<Text>+2 a Energía [ICON_ENERGY] por los recursos de Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH3_HELP">
+			<Text>+2 a Energía [ICON_ENERGY] por los recursos de Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH4_HELP">
+			<Text>+2 a Energía [ICON_ENERGY] por los recursos de Energía geotérmica [ICON_GEOTHERMAL].</Text>>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_CULTURE_HELP">
+			<Text>Añade 1 de Cultura [ICON_CULTURE] en las mejoras [COLOR_HIGHLIGHT_IMPROVEMENT]Dehesa[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Lecho[ENDCOLOR] y [COLOR_HIGHLIGHT_IMPROVEMENT]Piscifactoría[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE2_HELP">
+			<Text>+1 a Cultura [ICON_CULTURE] en las mejoras [COLOR_HIGHLIGHT_IMPROVEMENT]Dehesa[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Lecho[ENDCOLOR] y [COLOR_HIGHLIGHT_IMPROVEMENT]Piscifactoría[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE3_HELP">
+			<Text>+1 a Cultura [ICON_CULTURE] en las mejoras [COLOR_HIGHLIGHT_IMPROVEMENT]Dehesa[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Lecho[ENDCOLOR] y [COLOR_HIGHLIGHT_IMPROVEMENT]Piscifactoría[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE4_HELP">
+			<Text>+1 a Cultura [ICON_CULTURE] en las mejoras [COLOR_HIGHLIGHT_IMPROVEMENT]Dehesa[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Lecho[ENDCOLOR] y [COLOR_HIGHLIGHT_IMPROVEMENT]Piscifactoría[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_HEALTH_HELP">
+			<Text>Añade 1 de Salud [ICON_HEALTH] en las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] de recursos de afinidad ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH2_HELP">
+			<Text>+1 a Salud [ICON_HEALTH] en las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] de recursos de afinidad ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH3_HELP">
+			<Text>+1 a Salud [ICON_HEALTH] en las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] de recursos de afinidad ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH4_HELP">
+			<Text>+1 a Salud [ICON_HEALTH] en las [COLOR_HIGHLIGHT_IMPROVEMENT]mejoras[ENDCOLOR] de recursos de afinidad ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_SOCIAL_HEALTH_HELP">
+			<Text>Más Energía [ICON_ENERGY] y +1 Salud [ICON_HEALTH] en los [COLOR_HIGHLIGHT_IMPROVEMENT]Terrascapes[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH2_HELP">
+			<Text>+2 Energía [ICON_ENERGY] y +1 Salud [ICON_HEALTH] en los [COLOR_HIGHLIGHT_IMPROVEMENT]Terrascapes[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH3_HELP">
+			<Text>+3 Energía [ICON_ENERGY] y +1 Salud [ICON_HEALTH] en los [COLOR_HIGHLIGHT_IMPROVEMENT]Terrascapes[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH4_HELP">
+			<Text>+4 Energía [ICON_ENERGY] y +1 Salud [ICON_HEALTH] en los [COLOR_HIGHLIGHT_IMPROVEMENT]Terrascapes[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_INDUSTRY_HELP">
+			<Text>Más Producción [ICON_PRODUCTION] en las ciudades con una unidad militar defensora en su casilla.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY2_HELP">
+			<Text>+2 a Producción [ICON_PRODUCTION] en las ciudades con una unidad militar defensora en su casilla.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY3_HELP">
+			<Text>+3 a Producción [ICON_PRODUCTION] en las ciudades con una unidad militar defensora en su casilla.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY4_HELP">
+			<Text>+4 a Producción [ICON_PRODUCTION] en las ciudades con una unidad militar defensora en su casilla.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_WEALTH_HELP">
+			<Text>Más Energía [ICON_ENERGY] en tus ciudades.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH2_HELP">
+			<Text>+3 de Energía [ICON_ENERGY] en cada ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH3_HELP">
+			<Text>+4 de Energía [ICON_ENERGY] en cada ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH4_HELP">
+			<Text>+5 de Energía [ICON_ENERGY] en cada ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE2_HELP">
+			<Text>El coste en Cultura [ICON_CULTURE] de las nuevas Virtudes se reduce un 6%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE3_HELP">
+			<Text>El coste en Cultura [ICON_CULTURE] de las nuevas Virtudes se reduce un 8%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE4_HELP">
+			<Text>El coste en Cultura [ICON_CULTURE] de las nuevas Virtudes se reduce un 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH2_HELP">
+			<Text>+10% al Crecimiento demográfico [ICON_CITIZEN] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH3_HELP">
+			<Text>+15% al Crecimiento demográfico [ICON_CITIZEN] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH4_HELP">
+			<Text>+20% al Crecimiento demográfico [ICON_CITIZEN] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE2_HELP">
+			<Text>Aumenta en un 6% la obtención de Ciencia [ICON_RESEARCH] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE3_HELP">
+			<Text>Aumenta en un 8% la obtención de Ciencia [ICON_RESEARCH] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE4_HELP">
+			<Text>Aumenta en un 10% la obtención de Ciencia [ICON_RESEARCH] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_CAPITAL_TRADE_HELP">
+			<Text>Las ciudades y los puestos recuperan 5 de daño más por turno, menos Insalubridad [ICON_UNHEALTH] por número de ciudades.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE2_HELP">
+			<Text>Las ciudades y los puestos recuperan 5 de daño más por turno, -10% de Insalubridad [ICON_UNHEALTH] por número de ciudades.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE3_HELP">
+			<Text>Las ciudades y los puestos recuperan 5 de daño más por turno, -15% de Insalubridad [ICON_UNHEALTH] por número de ciudades.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE4_HELP">
+			<Text>Las ciudades y los puestos recuperan 5 de daño más por turno, -20% de Insalubridad [ICON_UNHEALTH] por número de ciudades.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH2_HELP">
+			<Text>Aumenta en un 10% la obtención de Energía [ICON_ENERGY] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH3_HELP">
+			<Text>Aumenta en un 15% la obtención de Energía [ICON_ENERGY] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH4_HELP">
+			<Text>Aumenta en un 20% la obtención de Energía [ICON_ENERGY] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<!--Personality traits text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A1_HELP">
+			<Text>+10% al ritmo de conversión de los Desarrollos de la ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A2_HELP">
+			<Text>+15% al ritmo de conversión de los Desarrollos de la ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A3_HELP">
+			<Text>+20% al ritmo de conversión de los Desarrollos de la ciudad.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A1_HELP">
+			<Text>La Insalubridad [ICON_UNHEALTH] por Población [ICON_CITIZEN] global se reduce un 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A2_HELP">
+			<Text>La Insalubridad [ICON_UNHEALTH] por Población [ICON_CITIZEN] global se reduce un 20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A3_HELP">
+			<Text>La Insalubridad [ICON_UNHEALTH] por Población [ICON_CITIZEN] global se reduce un 30%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A1_HELP">
+			<Text>El coste en Ciencia [ICON_RESEARCH] de las ramas tecnológicas se reduce un 12%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A2_HELP">
+			<Text>El coste en Ciencia [ICON_RESEARCH] de las ramas tecnológicas se reduce un 16%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A3_HELP">
+			<Text>El coste en Ciencia [ICON_RESEARCH] de las ramas tecnológicas se reduce un 20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A1_HELP">
+			<Text>La puntuación de guerra aumenta un 20% sus puntos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A2_HELP">
+			<Text>La puntuación de guerra aumenta un 25% sus puntos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A3_HELP">
+			<Text>La puntuación de guerra aumenta un 30% sus puntos.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A1_HELP">
+			<Text>+50% de Salud [ICON_HEALTH] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A2_HELP">
+			<Text>+75% de Salud [ICON_HEALTH] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A3_HELP">
+			<Text>+100% de Salud [ICON_HEALTH] en la capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_GROWTH_A3_HELP">
+			<Text>+2 a la Fuerza de defensa [ICON_STRENGTH] de la ciudad por unidad de Población [ICON_CITIZEN].</Text>
+		</Replace>
+		<!--Factions traits text changes-->
+		<!--Al Falah-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_WEALTH_A_HELP">
+			<Text>0,2/0,3/0,4 de Energía [ICON_ENERGY] por cada casilla que tengas en tu territorio.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A1_HELP">
+			<Text>+0,2 de Energía [ICON_ENERGY] por cada casilla que tengas en tu territorio.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A2_HELP">
+			<Text>+0,3 de Energía [ICON_ENERGY] por cada casilla que tengas en tu territorio.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A3_HELP">
+			<Text>+0,4 de Energía [ICON_ENERGY] por cada casilla que tengas en tu territorio.</Text>
+		</Replace>
+		<!--Polystralia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_TRADE_A_HELP">
+			<Text>10%/15%/20% a la Producción [ICON_PRODUCTION] de unidades navales, y las ciudades recuperan 5/5/10 puntos de golpe extra por turno.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A1_HELP">
+			<Text>+10% a la Producción [ICON_PRODUCTION] de unidades navales, y las ciudades recuperan 5 puntos extra de golpe por turno.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A2_HELP">
+			<Text>+15% a la Producción [ICON_PRODUCTION] de unidades navales, y las ciudades recuperan 5 puntos extra de golpe por turno.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A3_HELP">
+			<Text>+20% a la Producción [ICON_PRODUCTION] de unidades navales, y las ciudades recuperan 10 puntos extra de golpe por turno.</Text>
+		</Replace>
+		<!--KP-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_EXPAND_A_HELP">
+			<Text>Los costes de Cultura [ICON_CULTURE] y Energía [ICON_ENERGY] para adquirir nuevas casillas de ciudad se reducen un 30%/40%/50%, y 3/6/9 de Salud [ICON_HEALTH] global.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A1_HELP">
+			<Text>Los costes de Cultura [ICON_CULTURE] y Energía [ICON_ENERGY] para adquirir nuevas casillas de ciudad se reducen en un 30%, y +3 de Salud [ICON_HEALTH] global.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A2_HELP">
+			<Text>Los costes de Cultura [ICON_CULTURE] y Energía [ICON_ENERGY] para adquirir nuevas casillas de ciudad se reducen en un 40%, y +6 de Salud [ICON_HEALTH] global.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A3_HELP">
+			<Text>Los costes de Cultura [ICON_CULTURE] y Energía [ICON_ENERGY] para adquirir nuevas casillas de ciudad se reducen en un 50%, y +9 de Salud [ICON_HEALTH] global.</Text>
+		</Replace>
+		<!--PAC-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A_HELP">
+			<Text>Los costes de construcción de maravillas se reducen en 4%/6%/8%. +1/+2/+3 de Capital diplomático [ICON_DIPLO_CAPITAL] de las maravillas.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A1_HELP">
+			<Text>Los costes de construcción de maravillas se reducen en un 4%. +1 de Capital diplomático [ICON_DIPLO_CAPITAL] de las maravillas.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A2_HELP">
+			<Text>Los costes de construcción de maravillas se reducen en un 6%. +2 de Capital diplomático [ICON_DIPLO_CAPITAL] de las maravillas.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A3_HELP">
+			<Text>Los costes de construcción de maravillas se reducen en un 8%. +3 de Capital diplomático [ICON_DIPLO_CAPITAL] de las maravillas.</Text>
+		</Replace>
+		<!--PAU-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_GROWTH_A_HELP">
+			<Text>10%/20%/30% Crecimiento [ICON_FOOD] en las ciudades cuando están saludables [ICON_HEALTH]. Los costes de Producción [ICON_PRODUCTION] de los edificios que produzcan Cultura [ICON_CULTURE] se reducen un 10%/15%/20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A1_HELP">
+			<Text>+10% de Crecimiento [ICON_FOOD] en las ciudades cuando están saludables [ICON_HEALTH]. Los costes de Producción [ICON_PRODUCTION] de los edificios de la ciudad que produzcan Cultura [ICON_CULTURE] se reducen un 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A2_HELP">
+			<Text>+20% de Crecimiento [ICON_FOOD] en las ciudades cuando están saludables [ICON_HEALTH]. Los costes de Producción [ICON_PRODUCTION] de los edificios de la ciudad que produzcan Cultura [ICON_CULTURE] se reducen un 15%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A3_HELP">
+			<Text>+30% de Crecimiento [ICON_FOOD] en las ciudades cuando están saludables [ICON_HEALTH]. Los costes de Producción [ICON_PRODUCTION] de los edificios de la ciudad que produzcan Cultura [ICON_CULTURE] se reducen un 20%.</Text>
+		</Replace>
+		<!--Slavic federation-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A_HELP">
+			<Text>Los requisitos de recursos estratégicos de todas las unidades orbitales se reducen en 1. Dispones de 2/4/6 de Petróleo [ICON_PETROLEUM], 2/4/6 de Titanio [ICON_TITANIUM] y 2/4/6 de Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A1_HELP">
+			<Text>Los requisitos de recursos estratégicos de todas las unidades orbitales se reducen en 1. Comienzas con 2 recursos de Petróleo [ICON_PETROLEUM], Titanio [ICON_TITANIUM] y Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A3_HELP">
+			<Text>Obtienes 2 recursos adicionales de Petróleo [ICON_PETROLEUM], Titanio [ICON_TITANIUM] y Energía geotérmica [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<!--Chungsu-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A_HELP">
+			<Text>+1/0/0 agente secreto [ICON_SPY] extra. +10/+20/+30 de Ciencia [ICON_RESEARCH] por cada operación secreta en una ciudad extranjera por rango del agente.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A2_HELP">
+			<Text>Cada operación secreta que consigas en una ciudad extranjera te dará 20 de Ciencia [ICON_RESEARCH] por rango del agente.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A3_HELP">
+			<Text>Cada operación secreta que consigas en una ciudad extranjera te dará 30 de Ciencia [ICON_RESEARCH] por rango del agente.</Text>
+		</Replace>
+		<!--INTEGR-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A_HELP">
+			<Text>Los Acuerdos cuestan un 50%/60%/70% menos de Capital diplomático [ICON_DIPLO_CAPITAL]. La compra de unidades y edificios cuesta un 50%/60%/70% menos de Capital diplomático [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A1_HELP">
+			<Text>Los Acuerdos cuestan un 50% menos de Capital diplomático [ICON_DIPLO_CAPITAL]. La compra de unidades y edificios cuesta un 50% menos de Capital diplomático [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A2_HELP">
+			<Text>Los Acuerdos cuestan un 60% menos de Capital diplomático [ICON_DIPLO_CAPITAL]. La compra de unidades y edificios cuesta un 60% menos de Capital diplomático [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A3_HELP">
+			<Text>Los Acuerdos cuestan un 75% menos de Capital diplomático [ICON_DIPLO_CAPITAL]. La compra de unidades y edificios cuesta un 75% menos de Capital diplomático [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<!--Factions traits text improvements-->
+		<!--North Sea Alliance-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_AQUATIC_A_HELP">
+			<Text>Las ciudades acuáticas tienen un 50%/60%/75% más a la Fuerza de combate [ICON_STRENGTH] y les cuesta un 50%/60%/75% menos moverse.</Text>
+		</Replace>
+		<!--Brasilia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_COMBAT_A_HELP">
+			<Text>La puntuación de guerra aumenta un 30%/40%/50%. Gana +1/+2/+3 de Capital diplomático [ICON_DIPLO_CAPITAL] por cada unidad destruida en combate.</Text>
+		</Replace>
+		<!--ARC-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_COVERT_A_HELP">
+			<Text>Las operaciones encubiertas son un 30%/40%/50% más rápidas y requieren 1 nivel de intriga menos para comenzar.</Text>
+		</Replace>
+		<!--Franco-Iberia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_CULTURE_A_HELP">
+			<Text>Gana una Virtud gratuita por cada 10/9/8 Virtudes que ganes con Cultura [ICON_CULTURE].</Text>
+		</Replace>
+	</Language_ES_ES>
+</GameData>

@@ -1,0 +1,2537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- MGH: Modified v0.6.6.2024-03-04-->
+<GameData>
+	<!-- Table definition -->
+	<Table name="PolicyBranchTypes">
+		<!-- Basic info -->
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" unique="true" notnull="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Civilopedia" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Strategy" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Help" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Title" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="EraPrereq" type="text" reference="Eras(Type)" default="NULL"/>
+		<Column name="FreePolicy" type="text" reference="Policies(Type)" default="NULL"/>
+		<Column name="FreeFinishingPolicy" type="text" reference="Policies(Type)" default="NULL"/>
+		<Column name="FirstAdopterFreePolicies" type="int" default="0"/>
+		<Column name="SecondAdopterFreePolicies" type="int" default="0"/>
+		<Column name="PurchaseByLevel" type="boolean" default="false"/>
+		<Column name="LockedWithoutReligion" type="boolean" default="false"/>
+		<Column name="AIMutuallyExclusive" type="boolean" default="false"/>
+		<Column name="AIDelayNoReligion" type="boolean" default="false"/>
+		<Column name="AIDelayNoCulture" type="boolean" default="false"/>
+		<Column name="AIDelayNoCityStates" type="boolean" default="false"/>
+		<Column name="AIDelayNoScience" type="boolean" default="false"/>
+		<Column name="BackgroundImage" type="string" default="NULL"/>
+		<Column name="ProgressBarImage" type="string" default="NULL"/>
+	</Table>
+	<Table name="PolicyBranch_Disables">
+		<Column name="PolicyBranchType" type="text" reference="PolicyBranchTypes(Type)"/>
+		<Column name="PolicyBranchDisable" type="text" reference="PolicyBranchTypes(Type)"/>
+	</Table>
+	<Table name="PolicyBranch_KickerPolicies">
+		<Column name="PolicyBranchType" type="text" reference="PolicyBranchTypes(Type)"/>
+		<Column name="NumNeededInBranch" type="integer"/>
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+	</Table>
+	<Table name="PolicyDepthTypes">
+		<!-- Basic info -->
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" unique="true" notnull="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Civilopedia" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Strategy" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Help" type="text" reference="Language_en_US(Tag)"/>
+	</Table>
+	<Table name="PolicyDepth_KickerPolicies">
+		<Column name="PolicyDepthType" type="text" reference="PolicyDepthTypes(Type)"/>
+		<Column name="NumNeededInDepth" type="integer"/>
+		<Column name="PolicyType" type="text" primarykey="true" reference="Policies(Type)"/>
+	</Table>
+	<Table name="Policies">
+		<!-- Basic info -->
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" unique="true" notnull="true"/>
+		<Column name="Description" type="text" default="write a bug on this" reference="Language_en_US(Tag)"/>
+		<Column name="Civilopedia" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Strategy" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Help" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="PolicyBranchType" type="text" reference="PolicyBranchTypes(Type)" default="NULL"/>
+		<Column name="PolicyDepthType" type="text" reference="PolicyDepthTypes(Type)" default="NULL"/>
+		<Column name="NumExtraBranches" type="integer" default="0"/>
+		<Column name="CultureCost" type="integer" default="0"/>
+		<Column name="GridX" type="integer" default="0"/>
+		<Column name="GridY" type="integer" default="0"/>
+		<Column name="Level" type="integer" default="0"/>
+		<Column name="PolicyCostModifier" type="integer" default="0"/>
+		<Column name="CulturePerCity" type="integer" default="0"/>
+		<Column name="CulturePerWonder" type="integer" default="0"/>
+		<Column name="CultureWonderMultiplier" type="integer" default="0"/>
+		<Column name="CulturePerTechResearched" type="integer" default="0"/>
+		<Column name="CultureImprovementChange" type="integer" default="0"/>
+		<Column name="CultureFromKills" type="integer" default="0"/>
+		<Column name="CultureFromBarbarianKills" type="integer" default="0"/>
+		<Column name="GoldFromKills" type="integer" default="0"/>
+		<Column name="EmbarkedExtraMoves" type="integer" default="0"/>
+		<Column name="AttackBonusTurns" type="integer" default="0"/>
+		<Column name="EraOfProsperityTurns" type="integer" default="0"/>
+		<Column name="EraOfProsperityMeterMod" type="integer" default="0"/>
+		<Column name="EraOfProsperityDurationMod" type="integer" default="0"/>
+		<Column name="NumFreeTechs" type="integer" default="0"/>
+		<Column name="NumFreePolicies" type="integer" default="0"/>
+		<Column name="NumFreeAffinityLevels" type="integer" default="0"/>
+		<Column name="ResearchModPerExtraConnectedTech" type="integer" default="0"/>
+		<Column name="MedianTechPercentChange" type="integer" default="0"/>
+		<Column name="StrategicResourceMod" type="integer" default="0"/>
+		<Column name="WonderProductionModifier" type="integer" default="0"/>
+		<Column name="BuildingProductionModifier" type="integer" default="0"/>
+		<Column name="ExtraHealth" type="integer" default="0"/>
+		<Column name="ExtraHealthPerCity" type="integer" default="0"/>
+		<Column name="UnhealthMod" type="integer" default="0"/>
+		<Column name="CityCountUnhealthMod" type="integer" default="0"/>
+		<Column name="OccupiedPopulationUnhealthMod" type="integer" default="0"/>
+		<Column name="CapitalUnhealthMod" type="integer" default="0"/>
+		<Column name="FreeExperience" type="integer" default="0"/>
+		<Column name="WorkerSpeedModifier" type="integer" default="0"/>
+		<Column name="AllFeatureProduction" type="integer" default="0"/>
+		<Column name="ImprovementCostModifier" type="integer" default="0"/>
+		<Column name="ImprovementUpgradeRateModifier" type="integer" default="0"/>
+		<Column name="SpecialistProductionModifier" type="integer" default="0"/>
+		<Column name="SpecialistUpgradeModifier" type="integer" default="0"/>
+		<Column name="MilitaryProductionModifier" type="integer" default="0"/>
+		<Column name="BaseFreeUnits" type="integer" default="0"/>
+		<Column name="BaseFreeMilitaryUnits" type="integer" default="0"/>
+		<Column name="FreeUnitsPopulationPercent" type="integer" default="0"/>
+		<Column name="FreeMilitaryUnitsPopulationPercent" type="integer" default="0"/>
+		<Column name="HealthPerGarrisonedUnit" type="integer" default="0"/>
+		<Column name="CulturePerGarrisonedUnit" type="integer" default="0"/>
+		<Column name="HealthPerTradeRouteTimes100" type="integer" default="0"/>
+		<Column name="HealthPerBuildingTimes100" type="integer" default="0"/>
+		<Column name="HealthPerXPopulation" type="integer" default="0"/>
+		<Column name="HealthPerBasicResourceTypeTimes100" type="integer" default="0"/>
+		<Column name="UnhealthFromUnitsMod" type="integer" default="0"/>
+		<Column name="NumExtraBuilders" type="integer" default="0"/>
+		<Column name="PlotGoldCostMod" type="integer" default="0"/>
+		<Column name="PlotCultureCostModifier" type="integer" default="0"/>
+		<Column name="PlotCultureExponentModifier" type="integer" default="0"/>
+		<Column name="NumCitiesPolicyCostDiscount" type="integer" default="0"/>
+		<Column name="NumCitiesResearchCostDiscount" type="integer" default="0"/>
+		<Column name="GarrisonedCityRangeStrikeModifier" type="integer" default="0"/>
+		<Column name="UnitPurchaseCostModifier" type="integer" default="0"/>
+		<Column name="BuildingPurchaseCostModifier" type="integer" default="0"/>
+		<Column name="CityConnectionTradeRouteGoldModifier" type="integer" default="0"/>
+		<Column name="TradeMissionGoldModifier" type="integer" default="0"/>
+		<Column name="FaithCostModifier" type="integer" default="0"/>
+		<Column name="CulturalPlunderMultiplier" type="integer" default="0"/>
+		<Column name="StealTechSlowerModifier" type="integer" default="0"/>
+		<Column name="StealTechFasterModifier" type="integer" default="0"/>
+		<Column name="CatchSpiesModifier" type="integer" default="0"/>
+		<Column name="GoldPerUnit" type="integer" default="0"/>
+		<Column name="GoldPerMilitaryUnit" type="integer" default="0"/>
+		<Column name="RouteGoldMaintenanceMod" type="integer" default="0"/>
+		<Column name="BuildingGoldMaintenanceMod" type="integer" default="0"/>
+		<Column name="UnitGoldMaintenanceMod" type="integer" default="0"/>
+		<Column name="UnitSupplyMod" type="integer" default="0"/>
+		<Column name="UnitUpgradeCostMod" type="integer" default="0"/>
+		<Column name="CityStrengthMod" type="integer" default="0"/>
+		<Column name="CityGrowthMod" type="integer" default="0"/>
+		<Column name="CapitalGrowthMod" type="integer" default="0"/>
+		<Column name="SettlerProductionModifier" type="integer" default="0"/>
+		<Column name="CapitalSettlerProductionModifier" type="integer" default="0"/>
+		<Column name="NewCityExtraPopulation" type="integer" default="0"/>
+		<Column name="FreeFoodBox" type="integer" default="0"/>
+		<Column name="HealthPerMilitaryUnitTimes100" type="integer" default="0"/>
+		<Column name="MilitaryFoodProduction" type="boolean" default="false"/>
+		<Column name="HealthToCulture" type="integer" default="0"/>
+		<Column name="HealthToScience" type="integer" default="0"/>
+		<Column name="NumCitiesFreeCultureBuilding" type="integer" default="0"/>
+		<Column name="NumCitiesFreeFoodBuilding" type="integer" default="0"/>
+		<Column name="HalfSpecialistUnhealth" type="boolean" default="false"/>
+		<Column name="HalfSpecialistFood" type="boolean" default="false"/>
+		<Column name="MaxConscript" type="integer" default="0"/>
+		<Column name="UnitSightRangeChange" type="integer" default="0"/>
+		<Column name="CombatModifier" type="integer" default="0"/>
+		<Column name="WoundedUnitDamageMod" type="integer" default="0"/>
+		<Column name="BarbarianCombatBonus" type="integer" default="0"/>
+		<Column name="ResearchFromBarbarianKills" type="integer" default="0"/>
+		<Column name="ResearchFromBarbarianCamps" type="integer" default="0"/>
+		<Column name="AlwaysSeeBarbCamps" type="boolean" default="false"/>
+		<Column name="RevealAllCapitals" type="boolean" default="false"/>
+		<Column name="FreeSpecialist" type="integer" default="0"/>
+		<Column name="ExpModifier" type="integer" default="0"/>
+		<Column name="ExpInBorderModifier" type="integer" default="0"/>
+		<Column name="MinorQuestFriendshipMod" type="integer" default="0"/>
+		<Column name="MinorGoldFriendshipMod" type="integer" default="0"/>
+		<Column name="MinorFriendshipMinimum" type="integer" default="0"/>
+		<Column name="MinorFriendshipDecayMod" type="integer" default="0"/>
+		<Column name="OtherPlayersMinorFriendshipDecayMod" type="integer" default="0"/>
+		<Column name="CityStateUnitFrequencyModifier" type="integer" default="0"/>
+		<Column name="CommonFoeTourismModifier" type="integer" default="0"/>
+		<Column name="LessHealthyTourismModifier" type="integer" default="0"/>
+		<Column name="SharedIdeologyTourismModifier" type="integer" default="0"/>
+		<Column name="LandTradeRouteGoldChange" type="integer" default="0"/>
+		<Column name="SeaTradeRouteGoldChange" type="integer" default="0"/>
+		<Column name="SharedIdeologyTradeGoldChange" type="integer" default="0"/>
+		<Column name="RiggingElectionModifier" type="integer" default="0"/>
+		<Column name="MilitaryUnitGiftExtraInfluence" type="integer" default="0"/>
+		<Column name="ProtectedMinorPerTurnInfluence" type="integer" default="0"/>
+		<Column name="AfraidMinorPerTurnInfluence" type="integer" default="0"/>
+		<Column name="CityStateTradeChange" type="integer" default="0"/>
+		<Column name="ThemingBonusMultiplier" type="integer" default="0"/>
+		<Column name="InternalTradeRouteYieldModifier" type="integer" default="0"/>
+		<Column name="OutpostGrowthModifier" type="integer" default="0"/>
+		<Column name="FoodKeptAfterGrowthPercent" type="integer" default="0"/>
+		<Column name="BuildingAlreadyInCapitalModifier" type="integer" default="0"/>
+		<Column name="EnergyInterestPercentPerTurn" type="integer" default="0"/>
+		<Column name="OrbitalProductionModifier" type="integer" default="0"/>
+		<Column name="OrbitalDurationModifier" type="integer" default="0"/>
+		<Column name="UnitProductionModifierPerUpgrade" type="integer" default="0"/>
+		<Column name="TechAffinityXPModifier" type="integer" default="0"/>
+		<Column name="LeafTechResearchModifier" type="integer" default="0"/>
+		<Column name="PercentCultureRateToEnergy" type="integer" default="0"/>
+		<Column name="PercentCultureRateToResearch" type="integer" default="0"/>
+		<Column name="CovertOpsIntrigueModifier" type="integer" default="0"/>
+    <Column name="CovertOpsCounterIntelModifier" type="integer" default="0"/>
+		<Column name="OrbitalCoverageRadiusFromStationTrade" type="integer" default="0"/>
+		<Column name="NumFreeCovertAgents" type="integer" default="0"/>
+		<Column name="OrbitalCoverageModifier" type="integer" default="0"/>
+		<Column name="ResearchFromExpeditions" type="integer" default="0"/>
+		<Column name="ExplorerExpeditionCharges" type="integer" default="0"/>
+		<Column name="MinorGreatPeopleAllies" type="boolean" default="false"/>
+		<Column name="MinorScienceAllies" type="boolean" default="false"/>
+		<Column name="MinorResourceBonus" type="boolean" default="false"/>
+		<Column name="GarrisonFreeMaintenance" type="boolean" default="false"/>
+		<Column name="EraOfProsperityCultureBonusDisabled" type="boolean" default="false"/>
+		<Column name="SecondReligionPantheon" type="boolean" default="false"/>
+		<Column name="AddReformationBelief" type="boolean" default="false"/>
+		<Column name="EnablesSSPartHurry" type="boolean" default="false"/>
+		<Column name="EnablesSSPartPurchase" type="boolean" default="false"/>
+		<Column name="AbleToAnnexCityStates" type="boolean" default="false"/>
+		<Column name="CaptureOutpostsForSelf" type="boolean" default="false"/>
+		<Column name="WeLoveTheKing" type="text" default="NULL"/>
+		<Column name="FreeBuildingOnConquest" type="text" reference="Buildings(Type)" default="NULL"/>
+		<Column name="TechPrereq" type="text" reference="Technologies(Type)" default="NULL"/>
+		<Column name="PortraitIndex" type="integer" default="0"/>
+		<Column name="IconAtlas" type="text" default="NULL" reference="IconTextureAtlases(Atlas)"/>
+		<Column name="IconAtlasAchieved" type="text" default="NULL" reference="IconTextureAtlases(Atlas)"/>
+	</Table>
+	<Table name="Policy_CityYieldChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_CityYieldPerPopChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_CoastalCityYieldChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_CapitalYieldChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_CapitalYieldPerPopChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_CapitalYieldModifiers">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_Disables">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="PolicyDisable" type="text" reference="Policies(Type)"/>
+	</Table>
+	<Table name="Policy_Flavors">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="FlavorType" type="text" reference="Flavors(Type)"/>
+		<Column name="Flavor" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_GreatWorkYieldChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_HurryModifiers">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="HurryType" type="text" reference="HurryInfos(Type)"/>
+		<Column name="HurryCostModifier" type="integer"/>
+	</Table>
+	<Table name="Policy_PrereqPolicies">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="PrereqPolicy" type="text" reference="Policies(Type)"/>
+	</Table>
+	<Table name="Policy_PrereqORPolicies">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="PrereqPolicy" type="text" reference="Policies(Type)"/>
+	</Table>
+	<Table name="Policy_SpecialistExtraYields">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_ResourceClassYieldChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="ResourceClassType" type="text" reference="ResourceClasses(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="YieldChange" type="integer"/>
+	</Table>
+	<Table name="Policy_BuildingClassYieldModifiers">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="YieldMod" type="integer"/>
+	</Table>
+	<Table name="Policy_BuildingClassYieldChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="YieldChange" type="integer"/>
+	</Table>
+	<Table name="Policy_BuildingClassCultureChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="CultureChange" type="integer"/>
+	</Table>
+	<Table name="Policy_BuildingClassProductionModifiers">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="ProductionModifier" type="integer"/>
+	</Table>
+	<Table name="Policy_BuildingClassTourismModifiers">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="TourismModifier" type="integer"/>
+	</Table>
+	<Table name="Policy_BuildingClassHealth">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="BuildingClassType" type="text" reference="BuildingClasses(Type)"/>
+		<Column name="Health" type="integer"/>
+	</Table>
+	<Table name="Policy_ImprovementYieldChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<Table name="Policy_ImprovementCultureChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="ImprovementType" type="text" reference="Improvements(Type)"/>
+		<Column name="CultureChange" type="integer"/>
+	</Table>
+	<Table name="Policy_ValidSpecialists">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="SpecialistType" type="text" reference="Specialists(Type)"/>
+	</Table>
+	<Table name="Policy_YieldModifiers">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_FreePromotions">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
+	</Table>
+	<Table name="Policy_UnitCombatFreeExperiences">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="UnitCombatType" type="text" reference="UnitCombatInfos(Type)"/>
+		<Column name="FreeExperience" type="integer"/>
+	</Table>
+	<Table name="Policy_FreePromotionUnitCombats">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="UnitCombatType" type="text" reference="UnitCombatInfos(Type)"/>
+		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
+	</Table>
+	<Table name="Policy_UnitCombatProductionModifiers">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="UnitCombatType" type="text" reference="UnitCombatInfos(Type)"/>
+		<Column name="ProductionModifier" type="integer"/>
+	</Table>
+	<Table name="Policy_FreeUnitClasses">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="UnitClassType" type="text" reference="UnitClasses(Type)"/>
+		<Column name="Count" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_TourismOnUnitCreation">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="UnitClassType" type="text" reference="UnitClasses(Type)"/>
+		<Column name="Tourism" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Policy_FreeItems">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="SetType" type="text" notnull="true"/>
+		<Column name="MinItems" type="integer" default="1"/>
+		<Column name="MaxItems" type="integer" default="1"/>
+	</Table>
+	<Table name="Policy_TradeRouteWithStationPerTierYieldChanges">
+		<Column name="PolicyType" type="text" reference="Policies(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<!-- Table data -->
+	<PolicyBranchTypes>
+		<Row>
+			<ID>0</ID>
+			<Type>POLICY_BRANCH_MIGHT</Type>
+			<Description>TXT_KEY_POLICY_BRANCH_MIGHT</Description>
+			<Help>TXT_KEY_POLICY_BRANCH_MIGHT_HELP</Help>
+			<Title>TXT_KEY_MIGHT_TITLE</Title>
+			<FreePolicy>POLICY_MIGHT_3</FreePolicy>
+			<BackgroundImage>Virtue_Column_Might.dds</BackgroundImage>
+			<ProgressBarImage>Virtue_VirtueBar_Might.dds</ProgressBarImage>
+		</Row>
+		<Row>
+			<Type>POLICY_BRANCH_PROSPERITY</Type>
+			<Description>TXT_KEY_POLICY_BRANCH_PROSPERITY</Description>
+			<Help>TXT_KEY_POLICY_BRANCH_PROSPERITY_HELP</Help>
+			<Title>TXT_KEY_PROSPERITY_TITLE</Title>
+			<FreePolicy>POLICY_PROSPERITY_1</FreePolicy>
+			<BackgroundImage>Virtue_Column_Prosperity.dds</BackgroundImage>
+			<ProgressBarImage>Virtue_VirtueBar_Prosperity.dds</ProgressBarImage>
+		</Row>
+		<Row>
+			<Type>POLICY_BRANCH_KNOWLEDGE</Type>
+			<Description>TXT_KEY_POLICY_BRANCH_KNOWLEDGE</Description>
+			<Help>TXT_KEY_POLICY_BRANCH_KNOWLEDGE_HELP</Help>
+			<Title>TXT_KEY_KNOWLEDGE_TITLE</Title>
+			<FreePolicy>POLICY_KNOWLEDGE_1</FreePolicy>
+			<BackgroundImage>Virtue_Column_Knowledge.dds</BackgroundImage>
+			<ProgressBarImage>Virtue_VirtueBar_Knowledge.dds</ProgressBarImage>
+		</Row>
+		<Row>
+			<Type>POLICY_BRANCH_INDUSTRY</Type>
+			<Description>TXT_KEY_POLICY_BRANCH_INDUSTRY</Description>
+			<Help>TXT_KEY_POLICY_BRANCH_INDUSTRY_HELP</Help>
+			<Title>TXT_KEY_INDUSTRY_TITLE</Title>
+			<FreePolicy>POLICY_INDUSTRY_1</FreePolicy>
+			<BackgroundImage>Virtue_Column_Industry.dds</BackgroundImage>
+			<ProgressBarImage>Virtue_VirtueBar_Industry.dds</ProgressBarImage>
+		</Row>
+	</PolicyBranchTypes>
+	<PolicyBranch_KickerPolicies>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<NumNeededInBranch>5</NumNeededInBranch>
+			<PolicyType>POLICY_MIGHT_KICKER_1</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<NumNeededInBranch>10</NumNeededInBranch>
+			<PolicyType>POLICY_MIGHT_KICKER_2</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<NumNeededInBranch>15</NumNeededInBranch>
+			<PolicyType>POLICY_MIGHT_KICKER_3</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<NumNeededInBranch>5</NumNeededInBranch>
+			<PolicyType>POLICY_PROSPERITY_KICKER_1</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<NumNeededInBranch>10</NumNeededInBranch>
+			<PolicyType>POLICY_PROSPERITY_KICKER_2</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<NumNeededInBranch>15</NumNeededInBranch>
+			<PolicyType>POLICY_PROSPERITY_KICKER_3</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<NumNeededInBranch>5</NumNeededInBranch>
+			<PolicyType>POLICY_KNOWLEDGE_KICKER_1</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<NumNeededInBranch>10</NumNeededInBranch>
+			<PolicyType>POLICY_KNOWLEDGE_KICKER_2</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<NumNeededInBranch>15</NumNeededInBranch>
+			<PolicyType>POLICY_KNOWLEDGE_KICKER_3</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<NumNeededInBranch>5</NumNeededInBranch>
+			<PolicyType>POLICY_INDUSTRY_KICKER_1</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<NumNeededInBranch>10</NumNeededInBranch>
+			<PolicyType>POLICY_INDUSTRY_KICKER_2</PolicyType>
+		</Row>
+		<Row>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<NumNeededInBranch>15</NumNeededInBranch>
+			<PolicyType>POLICY_INDUSTRY_KICKER_3</PolicyType>
+		</Row>
+	</PolicyBranch_KickerPolicies>
+	<PolicyDepthTypes>
+		<Row>
+			<ID>0</ID>
+			<Type>POLICY_DEPTH_MODERATE</Type>
+			<Description>TXT_KEY_POLICY_DEPTH_MODERATE</Description>
+			<Help>TXT_KEY_POLICY_DEPTH_MODERATE_HELP</Help>
+		</Row>
+		<Row>
+			<Type>POLICY_DEPTH_DEVOTED</Type>
+			<Description>TXT_KEY_POLICY_DEPTH_DEVOTED</Description>
+			<Help>TXT_KEY_POLICY_DEPTH_DEVOTED_HELP</Help>
+		</Row>
+		<Row>
+			<Type>POLICY_DEPTH_EXTREME</Type>
+			<Description>TXT_KEY_POLICY_DEPTH_EXTREME</Description>
+			<Help>TXT_KEY_POLICY_DEPTH_EXTREME_HELP</Help>
+		</Row>
+	</PolicyDepthTypes>
+	<PolicyDepth_KickerPolicies>
+		<Row>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<NumNeededInDepth>6</NumNeededInDepth>
+			<PolicyType>POLICY_MODERATE_KICKER_1</PolicyType>
+		</Row>
+		<Row>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<NumNeededInDepth>10</NumNeededInDepth>
+			<PolicyType>POLICY_MODERATE_KICKER_2</PolicyType>
+		</Row>
+		<Row>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<NumNeededInDepth>15</NumNeededInDepth>
+			<PolicyType>POLICY_MODERATE_KICKER_3</PolicyType>
+		</Row>
+		<Row>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<NumNeededInDepth>8</NumNeededInDepth>
+			<PolicyType>POLICY_DEVOTED_KICKER_1</PolicyType>
+		</Row>
+		<Row>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<NumNeededInDepth>12</NumNeededInDepth>
+			<PolicyType>POLICY_DEVOTED_KICKER_2</PolicyType>
+		</Row>
+		<Row>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<NumNeededInDepth>10</NumNeededInDepth>
+			<PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+		</Row>
+	</PolicyDepth_KickerPolicies>
+	<Policies>
+		<!-- Purchased Virtues-->
+		<Row>
+			<ID>0</ID>
+			<Type>POLICY_MIGHT_1</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_1</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_1_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<GridX>1</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<BarbarianCombatBonus>15</BarbarianCombatBonus><!--changed-->
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_2</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_2</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_2_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>1</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<ResearchFromBarbarianKills>100</ResearchFromBarbarianKills>
+			<ResearchFromBarbarianCamps>60</ResearchFromBarbarianCamps>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_3</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_3</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_3_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<ExpModifier>50</ExpModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_4</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_4</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_4_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<MilitaryProductionModifier>15</MilitaryProductionModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_5</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_5</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_5_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CaptureOutpostsForSelf>true</CaptureOutpostsForSelf>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_6</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_6</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_6_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>5</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<HealthPerMilitaryUnitTimes100>25</HealthPerMilitaryUnitTimes100>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_7</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_7</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_7_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<StrategicResourceMod>25</StrategicResourceMod>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_8</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_8</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_8_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>7</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<TechAffinityXPModifier>20</TechAffinityXPModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_9</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_9</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_9_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>8</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_10</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_10</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_10_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>9</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumFreeAffinityLevels>1</NumFreeAffinityLevels>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_11</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_11</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_11_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>10</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<UnitProductionModifierPerUpgrade>10</UnitProductionModifierPerUpgrade>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_12</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_12</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_12_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>11</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_13</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_13</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_13_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>12</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CovertOpsIntrigueModifier>60</CovertOpsIntrigueModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_14</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_14</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_14_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>13</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<UnitGoldMaintenanceMod>-25</UnitGoldMaintenanceMod><!--changed-->
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_15</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_15</Description>
+			<Civilopedia>TXT_KEY_POLICY_MIGHT_15_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>14</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CombatModifier>10</CombatModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_1</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_1</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_1_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<GridX>3</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>15</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<FoodKeptAfterGrowthPercent>10</FoodKeptAfterGrowthPercent>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_2</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_2</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_2_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>16</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_3</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_3</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_3_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>17</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<OutpostGrowthModifier>30</OutpostGrowthModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_4</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_4</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_4_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>18</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<WorkerSpeedModifier>20</WorkerSpeedModifier><!--15-->
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_5</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_5</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_5_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>19</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<ExplorerExpeditionCharges>1</ExplorerExpeditionCharges>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_6</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_6</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_6_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>20</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NewCityExtraPopulation>1</NewCityExtraPopulation>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_7</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_7</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_7_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>21</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_8</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_8</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_8_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>22</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<PlotCultureCostModifier>-25</PlotCultureCostModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_9</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_9</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_9_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>23</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_10</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_10</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_10_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>24</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<ExtraHealth>7</ExtraHealth>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_11</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_11</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_11_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>25</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_12</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_12</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_12_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>26</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<!--<HealthPerBasicResourceTypeTimes100>100</HealthPerBasicResourceTypeTimes100>-->
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_13</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_13</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_13_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_14</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_14</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_14_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>28</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_15</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_15</Description>
+			<Civilopedia>TXT_KEY_POLICY_PROSPERITY_15_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>29</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<UnhealthMod>-20</UnhealthMod><!--changed-->
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_1</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_1</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_1_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<GridX>3</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>30</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<HealthToScience>10</HealthToScience>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_2</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_2</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_2_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>31</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<ResearchFromExpeditions>30</ResearchFromExpeditions>
+			<ExplorerExpeditionCharges>1</ExplorerExpeditionCharges>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_3</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_3</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_3_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>32</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_4</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_4</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_4_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>33</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_5</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_5</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_5_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>34</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<HealthToCulture>40</HealthToCulture><!--changed-->
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_6</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_6</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_6_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>35</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<PolicyCostModifier>-10</PolicyCostModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_7</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_7</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_7_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>36</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+      <CovertOpsCounterIntelModifier>2</CovertOpsCounterIntelModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_8</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_8</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_8_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>37</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<HealthPerXPopulation>8</HealthPerXPopulation><!--changed-->
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_9</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_9</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_9_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>38</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumCitiesResearchCostDiscount>-40</NumCitiesResearchCostDiscount>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_10</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_10</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_10_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>39</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumCitiesPolicyCostDiscount>-40</NumCitiesPolicyCostDiscount>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_11</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_11</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_11_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>40</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_12</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_12</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_12_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>41</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<LeafTechResearchModifier>10</LeafTechResearchModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_13</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_13</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_13_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>42</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumFreeCovertAgents>1</NumFreeCovertAgents>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_14</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_14</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_14_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>43</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<PercentCultureRateToResearch>15</PercentCultureRateToResearch>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_15</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_15</Description>
+			<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_15_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>44</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CulturePerWonder>3</CulturePerWonder><!--changed-->
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_1</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_1</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_1_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<GridX>3</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>45</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<BuildingProductionModifier>10</BuildingProductionModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_2</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_2</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_2_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<BuildingGoldMaintenanceMod>-15</BuildingGoldMaintenanceMod>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_3</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_3</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_3_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>47</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<WonderProductionModifier>15</WonderProductionModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_4</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_4</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_4_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>48</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_5</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_5</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_5_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>49</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<BuildingAlreadyInCapitalModifier>25</BuildingAlreadyInCapitalModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_6</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_6</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_6_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>50</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<RouteGoldMaintenanceMod>-50</RouteGoldMaintenanceMod>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_7</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_7</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_7_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>51</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_8</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_8</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_8_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>52</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<HealthPerBuildingTimes100>10</HealthPerBuildingTimes100>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_9</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_9</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_9_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>53</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<OrbitalProductionModifier>25</OrbitalProductionModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_10</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_10</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_10_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>54</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_11</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_11</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_11_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>55</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_12</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_12</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_12_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>56</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<OrbitalDurationModifier>50</OrbitalDurationModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_13</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_13</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_13_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>5</GridX>
+			<GridY>0</GridY>
+			<PortraitIndex>57</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<UnitPurchaseCostModifier>-20</UnitPurchaseCostModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_14</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_14</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_14_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>3</GridX>
+			<GridY>1</GridY>
+			<PortraitIndex>58</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CulturePerCity>1</CulturePerCity>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_15</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_15</Description>
+			<Civilopedia>TXT_KEY_POLICY_INDUSTRY_15_PEDIA</Civilopedia>
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<CultureCost>10</CultureCost>
+			<GridX>1</GridX>
+			<GridY>2</GridY>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<HealthPerBasicResourceTypeTimes100>50</HealthPerBasicResourceTypeTimes100>
+		</Row>
+		<!-- Branch Kickers-->
+		<Row>
+			<Type>POLICY_MIGHT_KICKER_1</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_KICKER_1</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_MIGHT_KICKER_1_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CombatModifier>5</CombatModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_KICKER_2</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_KICKER_2</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_MIGHT_KICKER_2_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CombatModifier>5</CombatModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_MIGHT_KICKER_3</Type>
+			<Description>TXT_KEY_POLICY_MIGHT_KICKER_3</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_MIGHT_KICKER_3_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_MIGHT</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumFreeAffinityLevels>1</NumFreeAffinityLevels>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_KICKER_1</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_KICKER_1</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_PROSPERITY_KICKER_1_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CityGrowthMod>10</CityGrowthMod>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_KICKER_2</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_KICKER_2</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_PROSPERITY_KICKER_2_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<ExtraHealthPerCity>1</ExtraHealthPerCity>
+		</Row>
+		<Row>
+			<Type>POLICY_PROSPERITY_KICKER_3</Type>
+			<Description>TXT_KEY_POLICY_PROSPERITY_KICKER_3</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_PROSPERITY_KICKER_3_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_PROSPERITY</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<OrbitalCoverageModifier>50</OrbitalCoverageModifier>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_KICKER_1</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_KICKER_1</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_KICKER_1_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_KICKER_2</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_KICKER_2</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_KICKER_2_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_KNOWLEDGE_KICKER_3</Type>
+			<Description>TXT_KEY_POLICY_KNOWLEDGE_KICKER_3</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_KNOWLEDGE_KICKER_3_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_KNOWLEDGE</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumFreeTechs>1</NumFreeTechs>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_KICKER_1</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_KICKER_1</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_INDUSTRY_KICKER_1_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_KICKER_2</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_KICKER_2</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_INDUSTRY_KICKER_2_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_INDUSTRY_KICKER_3</Type>
+			<Description>TXT_KEY_POLICY_INDUSTRY_KICKER_3</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_INDUSTRY_KICKER_3_PEDIA</Civilopedia>-->
+			<PolicyBranchType>POLICY_BRANCH_INDUSTRY</PolicyBranchType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<EnergyInterestPercentPerTurn>1</EnergyInterestPercentPerTurn>
+		</Row>
+		<!-- Depth Kickers-->
+		<Row>
+			<Type>POLICY_MODERATE_KICKER_1</Type>
+			<Description>TXT_KEY_POLICY_MODERATE_KICKER_1</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_MODERATE_KICKER_1_PEDIA</Civilopedia>-->
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumFreePolicies>1</NumFreePolicies>
+		</Row>
+		<Row>
+			<Type>POLICY_MODERATE_KICKER_2</Type>
+			<Description>TXT_KEY_POLICY_MODERATE_KICKER_2</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_MODERATE_KICKER_2_PEDIA</Civilopedia>-->
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_MODERATE_KICKER_3</Type>
+			<Description>TXT_KEY_POLICY_MODERATE_KICKER_3</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_MODERATE_KICKER_3_PEDIA</Civilopedia>-->
+			<PolicyDepthType>POLICY_DEPTH_MODERATE</PolicyDepthType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumFreeTechs>1</NumFreeTechs>
+		</Row>
+		<Row>
+			<Type>POLICY_DEVOTED_KICKER_1</Type>
+			<Description>TXT_KEY_POLICY_DEVOTED_KICKER_1</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_DEVOTED_KICKER_1_PEDIA</Civilopedia>-->
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumFreePolicies>1</NumFreePolicies>
+			<NumFreeCovertAgents>1</NumFreeCovertAgents>
+		</Row>
+		<Row>
+			<Type>POLICY_DEVOTED_KICKER_2</Type>
+			<Description>TXT_KEY_POLICY_DEVOTED_KICKER_2</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_DEVOTED_KICKER_2_PEDIA</Civilopedia>-->
+			<PolicyDepthType>POLICY_DEPTH_DEVOTED</PolicyDepthType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<NumFreeAffinityLevels>1</NumFreeAffinityLevels>
+		</Row>
+		<Row>
+			<Type>POLICY_EXTREME_KICKER_1</Type>
+			<Description>TXT_KEY_POLICY_EXTREME_KICKER_1</Description>
+			<!--<Civilopedia>TXT_KEY_POLICY_EXTREME_KICKER_1_PEDIA</Civilopedia>-->
+			<PolicyDepthType>POLICY_DEPTH_EXTREME</PolicyDepthType>
+			<PortraitIndex>46</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
+			<CityGrowthMod>10</CityGrowthMod>
+		</Row>
+	</Policies>
+	<Policy_YieldModifiers>
+		<Row>
+			<PolicyType>POLICY_KNOWLEDGE_KICKER_1</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_KNOWLEDGE_KICKER_2</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INDUSTRY_KICKER_1</PolicyType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INDUSTRY_KICKER_2</PolicyType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>10</Yield>
+		</Row>
+	</Policy_YieldModifiers>
+	<Policy_CapitalYieldModifiers>
+		<Row>
+			<PolicyType>POLICY_MODERATE_KICKER_2</PolicyType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>10</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MODERATE_KICKER_2</PolicyType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>10</Yield>
+		</Row>
+	</Policy_CapitalYieldModifiers>
+	<Policy_CityYieldChanges/>
+	<Policy_CityYieldPerPopChanges>
+		<Row>
+			<PolicyType>POLICY_KNOWLEDGE_3</PolicyType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>25</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_KNOWLEDGE_4</PolicyType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>25</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INDUSTRY_7</PolicyType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>25</Yield>
+		</Row>
+		<Row><!--new-->
+			<PolicyType>POLICY_PROSPERITY_13</PolicyType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>25</Yield>
+		</Row>
+		<Row><!--new-->
+			<PolicyType>POLICY_PROSPERITY_9</PolicyType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>50</Yield>
+		</Row>
+	</Policy_CityYieldPerPopChanges>
+	<Policy_CapitalYieldChanges>
+		<Row>
+			<PolicyType>POLICY_INDUSTRY_4</PolicyType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Policy_CapitalYieldChanges>
+	<Policy_SpecialistExtraYields>
+		<Row>
+			<PolicyType>POLICY_PROSPERITY_12</PolicyType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Policy_SpecialistExtraYields>
+	<Policy_TradeRouteWithStationPerTierYieldChanges>
+	</Policy_TradeRouteWithStationPerTierYieldChanges>
+	<Policy_ResourceClassYieldChanges>
+		<Row>
+			<PolicyType>POLICY_INDUSTRY_11</PolicyType>
+			<ResourceClassType>RESOURCECLASS_BASIC</ResourceClassType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MIGHT_9</PolicyType>
+			<ResourceClassType>RESOURCECLASS_STRATEGIC</ResourceClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MIGHT_12</PolicyType>
+			<ResourceClassType>RESOURCECLASS_STRATEGIC</ResourceClassType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<!--<Row>
+			<PolicyType>POLICY_PROSPERITY_11</PolicyType>
+			<ResourceClassType>RESOURCECLASS_BASIC</ResourceClassType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>-->
+	</Policy_ResourceClassYieldChanges>
+	<Policy_ImprovementYieldChanges>
+		<Row>
+			<PolicyType>POLICY_KNOWLEDGE_11</PolicyType>
+			<ImprovementType>IMPROVEMENT_ACADEMY</ImprovementType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_INDUSTRY_10</PolicyType>
+			<ImprovementType>IMPROVEMENT_GENERATOR</ImprovementType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PROSPERITY_14</PolicyType>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PROSPERITY_14</PolicyType>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PROSPERITY_14</PolicyType>
+			<ImprovementType>IMPROVEMENT_TERRASCAPE</ImprovementType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PROSPERITY_11</PolicyType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PROSPERITY_11</PolicyType>
+			<ImprovementType>IMPROVEMENT_FISHERY</ImprovementType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Policy_ImprovementYieldChanges>
+	<Policy_FreeUnitClasses>
+		<Row>
+			<PolicyType>POLICY_PROSPERITY_2</PolicyType>
+			<UnitClassType>UNITCLASS_WORKER</UnitClassType>
+			<Count>1</Count>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_PROSPERITY_5</PolicyType>
+			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+			<Count>1</Count>
+		</Row>
+		<Row><!--new-->
+			<PolicyType>POLICY_PROSPERITY_7</PolicyType>
+			<UnitClassType>UNITCLASS_EXPLORER</UnitClassType>
+			<Count>1</Count>
+		</Row>
+	</Policy_FreeUnitClasses>
+	<Policy_Flavors>
+    <Row>
+      <PolicyType>POLICY_MIGHT_1</PolicyType>
+      <FlavorType>FLAVOR_OFFENSE</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_1</PolicyType>
+      <FlavorType>FLAVOR_DEFENSE</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_2</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_3</PolicyType>
+      <FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+      <Flavor>15</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_4</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>35</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_5</PolicyType>
+      <FlavorType>FLAVOR_OFFENSE</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_5</PolicyType>
+      <FlavorType>FLAVOR_EXPANSION</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_6</PolicyType>
+      <FlavorType>FLAVOR_HEALTH</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_7</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>6</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_7</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>15</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_8</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>16</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_8</PolicyType>
+      <FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+      <Flavor>6</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_9</PolicyType>
+      <FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+      <Flavor>8</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_10</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>24</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_10</PolicyType>
+      <FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+      <Flavor>9</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_11</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>15</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_12</PolicyType>
+      <FlavorType>FLAVOR_OFFENSE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_12</PolicyType>
+      <FlavorType>FLAVOR_DEFENSE</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_12</PolicyType>
+      <FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_13</PolicyType>
+      <FlavorType>FLAVOR_ORBITAL</FlavorType>
+      <Flavor>15</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_14</PolicyType>
+      <FlavorType>FLAVOR_DEFENSE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_15</PolicyType>
+      <FlavorType>FLAVOR_OFFENSE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_15</PolicyType>
+      <FlavorType>FLAVOR_DEFENSE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_1</PolicyType>
+      <FlavorType>FLAVOR_GROWTH</FlavorType>
+      <Flavor>40</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_2</PolicyType>
+      <FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_3</PolicyType>
+      <FlavorType>FLAVOR_GROWTH</FlavorType>
+      <Flavor>24</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_3</PolicyType>
+      <FlavorType>FLAVOR_EXPANSION</FlavorType>
+      <Flavor>30</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_4</PolicyType>
+      <FlavorType>FLAVOR_TILE_IMPROVEMENT</FlavorType>
+      <Flavor>14</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_5</PolicyType>
+      <FlavorType>FLAVOR_EXPANSION</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_6</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_7</PolicyType>
+      <FlavorType>FLAVOR_RECON</FlavorType>
+      <Flavor>5</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_8</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>12</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_8</PolicyType>
+      <FlavorType>FLAVOR_I_TRADE_ORIGIN</FlavorType>
+      <Flavor>12</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_9</PolicyType>
+      <FlavorType>FLAVOR_GROWTH</FlavorType>
+      <Flavor>16</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_9</PolicyType>
+      <FlavorType>FLAVOR_EXPANSION</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_10</PolicyType>
+      <FlavorType>FLAVOR_HEALTH</FlavorType>
+      <Flavor>35</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_11</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>15</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_12</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType><!--Changed-->
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_13</PolicyType>
+      <FlavorType>FLAVOR_GROWTH</FlavorType><!--Changed-->
+      <Flavor>30</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_14</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>12</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_14</PolicyType>
+      <FlavorType>FLAVOR_GROWTH</FlavorType>
+      <Flavor>12</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_14</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>15</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_15</PolicyType>
+      <FlavorType>FLAVOR_HEALTH</FlavorType>
+      <Flavor>30</Flavor><!--Changed-->
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_1</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>16</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_2</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_3</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>48</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_4</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>96</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_5</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>24</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_7</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>12</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_8</PolicyType>
+      <FlavorType>FLAVOR_HEALTH</FlavorType>
+      <Flavor>30</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_9</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>16</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_10</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>32</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_11</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>48</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_12</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>16</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_13</PolicyType>
+      <FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_14</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>24</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_15</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>28</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_15</PolicyType>
+      <FlavorType>FLAVOR_WONDER</FlavorType>
+      <Flavor>42</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_1</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_2</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>6</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_3</PolicyType>
+      <FlavorType>FLAVOR_WONDER</FlavorType>
+      <Flavor>9</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_4</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_5</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_6</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_7</PolicyType>
+      <FlavorType>FLAVOR_I_TRADE_ORIGIN</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_8</PolicyType>
+      <FlavorType>FLAVOR_HEALTH</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_8</PolicyType>
+      <FlavorType>FLAVOR_I_TRADE_ORIGIN</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_9</PolicyType>
+      <FlavorType>FLAVOR_ORBITAL</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_10</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>2</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_11</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>30</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_12</PolicyType>
+      <FlavorType>FLAVOR_ORBITAL</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_13</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>8</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_14</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>125</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_15</PolicyType>
+      <FlavorType>FLAVOR_HEALTH</FlavorType>
+      <Flavor>30</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_OFFENSE</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_DEFENSE</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_OFFENSE</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_DEFENSE</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_KICKER_3</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>24</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MIGHT_KICKER_3</PolicyType>
+      <FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+      <Flavor>9</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_GROWTH</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_HEALTH</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PROSPERITY_KICKER_3</PolicyType>
+      <FlavorType>FLAVOR_ORBITAL</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>40</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_KNOWLEDGE_KICKER_3</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>40</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_INDUSTRY_KICKER_3</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MODERATE_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>40</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MODERATE_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>4</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MODERATE_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_MODERATE_KICKER_3</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>40</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_DEVOTED_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>40</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_DEVOTED_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_DEVOTED_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>24</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_DEVOTED_KICKER_2</PolicyType>
+      <FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+      <Flavor>9</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_SCIENCE</FlavorType>
+      <Flavor>40</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_ENERGY</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_GROWTH</FlavorType>
+      <Flavor>20</Flavor>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_EXTREME_KICKER_1</PolicyType>
+      <FlavorType>FLAVOR_PRODUCTION</FlavorType>
+      <Flavor>25</Flavor>
+    </Row>
+  </Policy_Flavors>
+	<Policy_PrereqORPolicies>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_3</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_1</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_3</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_4</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_1</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_2</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_4</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_6</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_4</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_5</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_6</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_8</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_5</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_9</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_2</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_8</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_7</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_12</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_8</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_7</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_8</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_10</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_9</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_10</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_9</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_13</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_10</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_11</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_11</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_14</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_13</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_14</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_MIGHT_14</PrereqPolicy>
+			<PolicyType>POLICY_MIGHT_15</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_1</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_2</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_1</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_3</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_2</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_4</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_2</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_7</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_3</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_4</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_3</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_5</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_4</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_6</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_6</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_8</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_6</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_9</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_7</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_8</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_8</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_10</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_8</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_11</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_9</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_10</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_10</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_11</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_10</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_13</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_11</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_12</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_11</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_13</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_13</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_14</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_PROSPERITY_13</PrereqPolicy>
+			<PolicyType>POLICY_PROSPERITY_15</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_1</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_2</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_1</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_3</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_2</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_4</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_3</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_4</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_3</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_5</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_4</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_6</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_5</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_7</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_6</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_8</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_6</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_9</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_7</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_10</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_8</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_12</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_9</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_10</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_9</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_12</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_10</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_11</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_11</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_14</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_11</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_15</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_12</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_13</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_KNOWLEDGE_12</PrereqPolicy>
+			<PolicyType>POLICY_KNOWLEDGE_14</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_1</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_2</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_1</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_3</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_1</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_4</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_2</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_5</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_2</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_6</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_3</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_9</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_4</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_5</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_5</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_8</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_6</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_10</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_7</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_11</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_7</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_13</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_8</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_7</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_8</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_10</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_9</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_8</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_10</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_11</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_11</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_14</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_13</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_12</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_13</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_14</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_14</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_12</PolicyType>
+		</Row>
+		<Row>
+			<PrereqPolicy>POLICY_INDUSTRY_14</PrereqPolicy>
+			<PolicyType>POLICY_INDUSTRY_15</PolicyType>
+		</Row>
+	</Policy_PrereqORPolicies>
+</GameData>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- created by Orion Burcham (Firaxis Games) -->
+<!-- MGH: Modified v0.4.5.2021-01-05-->
+<GameData>
+	<!-- Table definitions -->
+  <Table name="Marvels">
+    <Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+    <Column name="Type" type="text" notnull="true" unique="true"/>
+    <Column name="Planet" type="text" reference="Planets(Type)"/>
+    <Column name="MajorMarvelLandmark" type="text" reference="HeroLandmarks(Type)"/>
+    <Column name="MajorMarvelSummary" type="text" notnull="true"/>
+    <Column name="MajorMarvelGameInfo" type="text" notnull="true"/>
+    <Column name="MinorMarvelImprovement" type="text" reference="Improvements(Type)"/>
+    <Column name="LandmarkAction" type="text" reference="LandmarkActions(Type)"/>
+    <Column name="LandmarkActionEffect" type="text" default="NULL"/>
+    <Column name="NumLandmarkActions" type="integer" notnull="true"/>
+    <Column name="MinorMarvelCount" type="integer" default="0"/>
+    <Column name="PlaceMinorMarvelsAtGameStart" type="boolean" default="true"/>
+    <Column name="AllowMinorMarvelsOnLand" type="boolean" default="true"/>
+    <Column name="QuestName" type="text" notnull="true"/>
+    <Column name="QuestPrologueIntroYou" type="text" notnull="true"/>
+    <Column name="QuestPrologueIntroOther" type="text" notnull="true"/>
+    <Column name="QuestPrologueRemainder" type="text" notnull="true"/>
+    <Column name="QuestObjectiveSummary" type="text" notnull="true"/>
+    <Column name="QuestFirstActionEpilogue" type="text" notnull="true"/>
+    <Column name="QuestLastActionEpilogue" type="text" notnull="true"/>
+    <Column name="RewardPlayerPerk" type="text" reference="PlayerPerks(Type)"/>
+    <Column name="RewardEffectInitialTurns" type="integer" default="0"/>
+    <Column name="RewardEffectAdditionalTurns" type="integer" default="0"/>
+    <Column name="RewardEffectBonusPercent" type="integer" default="0"/>
+    <Column name="RewardYieldEffect" type="integer" default="0"/>
+    <Column name="MinorMarvelPrimaryColor" type="text" default="NULL" reference="Colors(Atlas)"/>
+    <Column name="MinorMarvelSecondaryColor" type="text" default="NULL" reference="Colors(Atlas)"/>
+    <Column name="MinDistanceFromMajorMarvels" type="integer" default="6"/>
+    <Column name="MinDistanceFromMinorMarvels" type="integer" default="4"/>
+    <Column name="MinDistanceFromPlayerStarts" type="integer" default="5"/>
+    <Column name="MaxDistanceFromPlayerStarts" type="integer" default="15"/>
+  </Table>
+	<!-- Table data -->
+  <Marvels>
+    <Row>
+      <ID>0</ID>
+      <Type>MARVEL_FRIGID</Type>
+      <Planet>PLANET_FRIGID</Planet>
+      <MajorMarvelLandmark>HERO_LANDMARK_FRIGID</MajorMarvelLandmark>
+      <MajorMarvelSummary>TXT_KEY_QUEST_MARVEL_FRIGID_PEDIA</MajorMarvelSummary>
+      <MajorMarvelGameInfo>TXT_KEY_QUEST_MARVEL_FRIGID_GAME_INFO</MajorMarvelGameInfo>
+      <MinorMarvelImprovement>IMPROVEMENT_MARVEL_FRIGID</MinorMarvelImprovement>
+      <LandmarkAction>LANDMARK_ACTION_MARVEL_FRIGID</LandmarkAction>
+      <LandmarkActionEffect>FrigidNodeActivate</LandmarkActionEffect>
+      <NumLandmarkActions>3</NumLandmarkActions>
+      <MinorMarvelCount>15</MinorMarvelCount>
+      <QuestName>TXT_KEY_QUEST_MARVEL_FRIGID_DESCRIPTION</QuestName>
+      <QuestPrologueIntroYou>TXT_KEY_QUEST_MARVEL_FRIGID_PROLOGUE_INTRO_YOU</QuestPrologueIntroYou>
+      <QuestPrologueIntroOther>TXT_KEY_QUEST_MARVEL_FRIGID_PROLOGUE_INTRO_OTHER</QuestPrologueIntroOther>
+      <QuestPrologueRemainder>TXT_KEY_QUEST_MARVEL_FRIGID_PROLOGUE_REMAINDER</QuestPrologueRemainder>
+      <QuestObjectiveSummary>TXT_KEY_QUEST_MARVEL_FRIGID_OBJECTIVE_SUMMARY</QuestObjectiveSummary>
+      <QuestFirstActionEpilogue>TXT_KEY_QUEST_MARVEL_FRIGID_FIRST_ACTION_EPILOGUE</QuestFirstActionEpilogue>
+      <QuestLastActionEpilogue>TXT_KEY_QUEST_MARVEL_FRIGID_LAST_ACTION_EPILOGUE</QuestLastActionEpilogue>
+      <RewardPlayerPerk>PLAYERPERK_MARVEL_FRIGID</RewardPlayerPerk>
+      <MinorMarvelPrimaryColor>COLOR_MARVEL_FRIGID_PRIMARY</MinorMarvelPrimaryColor>
+      <MinorMarvelSecondaryColor>COLOR_MARVEL_FRIGID_SECONDARY</MinorMarvelSecondaryColor>
+    </Row>
+    <Row>
+      <Type>MARVEL_PRIMORDIAL</Type>
+      <Planet>PLANET_VOLCANIC</Planet>
+      <MajorMarvelLandmark>HERO_LANDMARK_PRIMORDIAL</MajorMarvelLandmark>
+      <MajorMarvelSummary>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_PEDIA</MajorMarvelSummary>
+      <MajorMarvelGameInfo>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_GAME_INFO</MajorMarvelGameInfo>
+      <MinorMarvelImprovement>IMPROVEMENT_MARVEL_PRIMORDIAL</MinorMarvelImprovement>
+      <LandmarkAction>LANDMARK_ACTION_MARVEL_PRIMORDIAL</LandmarkAction>
+      <LandmarkActionEffect></LandmarkActionEffect>
+      <NumLandmarkActions>3</NumLandmarkActions>
+      <MinorMarvelCount>15</MinorMarvelCount>
+      <PlaceMinorMarvelsAtGameStart>false</PlaceMinorMarvelsAtGameStart>
+      <QuestName>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_DESCRIPTION</QuestName>
+      <QuestPrologueIntroYou>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_PROLOGUE_INTRO_YOU</QuestPrologueIntroYou>
+      <QuestPrologueIntroOther>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_PROLOGUE_INTRO_OTHER</QuestPrologueIntroOther>
+      <QuestPrologueRemainder>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_PROLOGUE_REMAINDER</QuestPrologueRemainder>
+      <QuestObjectiveSummary>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_OBJECTIVE_SUMMARY</QuestObjectiveSummary>
+      <QuestFirstActionEpilogue>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_FIRST_ACTION_EPILOGUE</QuestFirstActionEpilogue>
+      <QuestLastActionEpilogue>TXT_KEY_QUEST_MARVEL_PRIMORDIAL_LAST_ACTION_EPILOGUE</QuestLastActionEpilogue>
+      <RewardPlayerPerk>PLAYERPERK_MARVEL_PRIMORDIAL</RewardPlayerPerk>
+      <RewardEffectInitialTurns>50</RewardEffectInitialTurns>
+      <RewardEffectAdditionalTurns>15</RewardEffectAdditionalTurns>
+      <RewardEffectBonusPercent>25</RewardEffectBonusPercent>
+      <MinorMarvelPrimaryColor>COLOR_MARVEL_PRIMORDIAL_PRIMARY</MinorMarvelPrimaryColor>
+      <MinorMarvelSecondaryColor>COLOR_MARVEL_PRIMORDIAL_SECONDARY</MinorMarvelSecondaryColor>
+    </Row>
+    <Row>
+      <Type>MARVEL_ARID</Type>
+      <Planet>PLANET_DESERT</Planet>
+      <MajorMarvelLandmark>HERO_LANDMARK_ARID</MajorMarvelLandmark>
+      <MajorMarvelSummary>TXT_KEY_QUEST_MARVEL_ARID_PEDIA</MajorMarvelSummary>
+      <MajorMarvelGameInfo>TXT_KEY_QUEST_MARVEL_ARID_GAME_INFO</MajorMarvelGameInfo>
+      <MinorMarvelImprovement>IMPROVEMENT_MARVEL_ARID</MinorMarvelImprovement>
+      <LandmarkAction>LANDMARK_ACTION_MARVEL_ARID</LandmarkAction>
+      <LandmarkActionEffect></LandmarkActionEffect>
+      <NumLandmarkActions>3</NumLandmarkActions>
+      <MinorMarvelCount>15</MinorMarvelCount>
+      <QuestName>TXT_KEY_QUEST_MARVEL_ARID_DESCRIPTION</QuestName>
+      <QuestPrologueIntroYou>TXT_KEY_QUEST_MARVEL_ARID_PROLOGUE_INTRO_YOU</QuestPrologueIntroYou>
+      <QuestPrologueIntroOther>TXT_KEY_QUEST_MARVEL_ARID_PROLOGUE_INTRO_OTHER</QuestPrologueIntroOther>
+      <QuestPrologueRemainder>TXT_KEY_QUEST_MARVEL_ARID_PROLOGUE_REMAINDER</QuestPrologueRemainder>
+      <QuestObjectiveSummary>TXT_KEY_QUEST_MARVEL_ARID_OBJECTIVE_SUMMARY</QuestObjectiveSummary>
+      <QuestFirstActionEpilogue>TXT_KEY_QUEST_MARVEL_ARID_FIRST_ACTION_EPILOGUE</QuestFirstActionEpilogue>
+      <QuestLastActionEpilogue>TXT_KEY_QUEST_MARVEL_ARID_LAST_ACTION_EPILOGUE</QuestLastActionEpilogue>
+      <RewardPlayerPerk>PLAYERPERK_MARVEL_ARID</RewardPlayerPerk>
+      <MinorMarvelPrimaryColor>COLOR_MARVEL_ARID_PRIMARY</MinorMarvelPrimaryColor>
+      <MinorMarvelSecondaryColor>COLOR_MARVEL_ARID_SECONDARY</MinorMarvelSecondaryColor>
+    </Row>
+    <Row>
+      <Type>MARVEL_LUSH</Type>
+      <Planet>PLANET_DEFAULT</Planet>
+      <MajorMarvelLandmark>HERO_LANDMARK_LUSH</MajorMarvelLandmark>
+      <MajorMarvelSummary>TXT_KEY_QUEST_MARVEL_LUSH_PEDIA</MajorMarvelSummary>
+      <MajorMarvelGameInfo>TXT_KEY_QUEST_MARVEL_LUSH_GAME_INFO</MajorMarvelGameInfo>
+      <MinorMarvelImprovement>IMPROVEMENT_MARVEL_LUSH</MinorMarvelImprovement>
+      <LandmarkAction>LANDMARK_ACTION_MARVEL_LUSH</LandmarkAction>
+      <LandmarkActionEffect></LandmarkActionEffect>
+      <NumLandmarkActions>5</NumLandmarkActions>
+      <MinorMarvelCount>15</MinorMarvelCount>
+      <QuestName>TXT_KEY_QUEST_MARVEL_LUSH_DESCRIPTION</QuestName>
+      <QuestPrologueIntroYou>TXT_KEY_QUEST_MARVEL_LUSH_PROLOGUE_INTRO_YOU</QuestPrologueIntroYou>
+      <QuestPrologueIntroOther>TXT_KEY_QUEST_MARVEL_LUSH_PROLOGUE_INTRO_OTHER</QuestPrologueIntroOther>
+      <QuestPrologueRemainder>TXT_KEY_QUEST_MARVEL_LUSH_PROLOGUE_REMAINDER</QuestPrologueRemainder>
+      <QuestObjectiveSummary>TXT_KEY_QUEST_MARVEL_LUSH_OBJECTIVE_SUMMARY</QuestObjectiveSummary>
+      <QuestFirstActionEpilogue>TXT_KEY_QUEST_MARVEL_LUSH_FIRST_ACTION_EPILOGUE</QuestFirstActionEpilogue>
+      <QuestLastActionEpilogue>TXT_KEY_QUEST_MARVEL_LUSH_LAST_ACTION_EPILOGUE</QuestLastActionEpilogue>
+      <RewardPlayerPerk>PLAYERPERK_MARVEL_LUSH</RewardPlayerPerk>
+      <MinorMarvelPrimaryColor>COLOR_MARVEL_LUSH_PRIMARY</MinorMarvelPrimaryColor>
+      <MinorMarvelSecondaryColor>COLOR_MARVEL_LUSH_SECONDARY</MinorMarvelSecondaryColor>
+    </Row>
+    <Row>
+      <Type>MARVEL_FUNGAL</Type>
+      <Planet>PLANET_FUNGUS</Planet>
+      <MajorMarvelLandmark>HERO_LANDMARK_FUNGAL</MajorMarvelLandmark>
+      <MajorMarvelSummary>TXT_KEY_QUEST_MARVEL_FUNGAL_PEDIA</MajorMarvelSummary>
+      <MajorMarvelGameInfo>TXT_KEY_QUEST_MARVEL_FUNGAL_GAME_INFO</MajorMarvelGameInfo>
+      <MinorMarvelImprovement>IMPROVEMENT_MARVEL_FUNGAL</MinorMarvelImprovement>
+      <LandmarkAction>LANDMARK_ACTION_MARVEL_FUNGAL</LandmarkAction>
+      <LandmarkActionEffect>FungalNodeActivate</LandmarkActionEffect>
+      <NumLandmarkActions>3</NumLandmarkActions>
+      <MinorMarvelCount>15</MinorMarvelCount>
+      <QuestName>TXT_KEY_QUEST_MARVEL_FUNGAL_DESCRIPTION</QuestName>
+      <QuestPrologueIntroYou>TXT_KEY_QUEST_MARVEL_FUNGAL_PROLOGUE_INTRO_YOU</QuestPrologueIntroYou>
+      <QuestPrologueIntroOther>TXT_KEY_QUEST_MARVEL_FUNGAL_PROLOGUE_INTRO_OTHER</QuestPrologueIntroOther>
+      <QuestPrologueRemainder>TXT_KEY_QUEST_MARVEL_FUNGAL_PROLOGUE_REMAINDER</QuestPrologueRemainder>
+      <QuestObjectiveSummary>TXT_KEY_QUEST_MARVEL_FUNGAL_OBJECTIVE_SUMMARY</QuestObjectiveSummary>
+      <QuestFirstActionEpilogue>TXT_KEY_QUEST_MARVEL_FUNGAL_FIRST_ACTION_EPILOGUE</QuestFirstActionEpilogue>
+      <QuestLastActionEpilogue>TXT_KEY_QUEST_MARVEL_FUNGAL_LAST_ACTION_EPILOGUE</QuestLastActionEpilogue>
+      <RewardPlayerPerk>PLAYERPERK_MARVEL_FUNGAL</RewardPlayerPerk>
+      <RewardYieldEffect>1</RewardYieldEffect><!--3-->
+      <MinorMarvelPrimaryColor>COLOR_MARVEL_FUNGAL_PRIMARY</MinorMarvelPrimaryColor>
+      <MinorMarvelSecondaryColor>COLOR_MARVEL_FUNGAL_SECONDARY</MinorMarvelSecondaryColor>
+    </Row>
+    <Row>
+      <Type>MARVEL_WATER</Type>
+      <MajorMarvelLandmark>HERO_LANDMARK_WATER</MajorMarvelLandmark>
+      <MajorMarvelSummary>TXT_KEY_QUEST_MARVEL_WATER_PEDIA</MajorMarvelSummary>
+      <MajorMarvelGameInfo>TXT_KEY_QUEST_MARVEL_WATER_GAME_INFO</MajorMarvelGameInfo>
+      <MinorMarvelImprovement>IMPROVEMENT_MARVEL_WATER</MinorMarvelImprovement>
+      <LandmarkAction>LANDMARK_ACTION_MARVEL_WATER</LandmarkAction>
+      <LandmarkActionEffect></LandmarkActionEffect>
+      <NumLandmarkActions>3</NumLandmarkActions>
+      <MinorMarvelCount>15</MinorMarvelCount>
+      <AllowMinorMarvelsOnLand>false</AllowMinorMarvelsOnLand>
+      <QuestName>TXT_KEY_QUEST_MARVEL_WATER_DESCRIPTION</QuestName>
+      <QuestPrologueIntroYou>TXT_KEY_QUEST_MARVEL_WATER_PROLOGUE_INTRO_YOU</QuestPrologueIntroYou>
+      <QuestPrologueIntroOther>TXT_KEY_QUEST_MARVEL_WATER_PROLOGUE_INTRO_OTHER</QuestPrologueIntroOther>
+      <QuestPrologueRemainder>TXT_KEY_QUEST_MARVEL_WATER_PROLOGUE_REMAINDER</QuestPrologueRemainder>
+      <QuestObjectiveSummary>TXT_KEY_QUEST_MARVEL_WATER_OBJECTIVE_SUMMARY</QuestObjectiveSummary>
+      <QuestFirstActionEpilogue>TXT_KEY_QUEST_MARVEL_WATER_FIRST_ACTION_EPILOGUE</QuestFirstActionEpilogue>
+      <QuestLastActionEpilogue>TXT_KEY_QUEST_MARVEL_WATER_LAST_ACTION_EPILOGUE</QuestLastActionEpilogue>
+      <RewardPlayerPerk>PLAYERPERK_MARVEL_WATER</RewardPlayerPerk>
+      <MinorMarvelPrimaryColor>COLOR_MARVEL_WATER_PRIMARY</MinorMarvelPrimaryColor>
+      <MinorMarvelSecondaryColor>COLOR_MARVEL_WATER_SECONDARY</MinorMarvelSecondaryColor>
+    </Row>
+  </Marvels>
+</GameData>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- MGH: Modified v0.4.9.2021-01-31-->
+<GameData>
+	<!-- Table definition -->
+	<Table name="Cargo">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="ShortDescription" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="GrantUnit" type="text" reference="Units(Type)" default="NULL"/>
+		<Column name="GrantUnitWater" type="text" reference="Units(Type)" default="NULL"/>
+		<Column name="GrantBuildingClass" type="text" reference="BuildingClasses(Type)" default="NULL"/>
+		<Column name="GrantTech" type="text" reference="Technologies(Type)" default="NULL"/>
+		<Column name="GrantPantheon" type="boolean" default="false"/>
+		<Column name="GrantFreeTechChoice" type="boolean" default="false"/>
+		<Column name="GrantFreePolicyChoice" type="boolean" default="false"/>
+		<Column name="GrantFreeAffinityLevelChoice" type="boolean" default="false"/>
+		<Column name="GrantFreePop" type="boolean" default="false"/>
+		<Column name="PortraitIndex" type="integer" default="0"/>
+		<Column name="IconAtlas" type="text" default="LOADOUT_CARGO_ATLAS" reference="IconTextureAtlases(Atlas)"/>
+		<Column name="FiraxisLiveUnlockKey" type="text" default="NULL"/>
+	</Table>
+	<!-- Table data -->
+	<Cargo>
+		<Row ID="0" Type="CARGO_HYDROPONICS" 
+         Description="TXT_KEY_CARGO_HYDROPONICS" 
+         ShortDescription="TXT_KEY_CARGO_HYDROPONICS_SHORT" 
+         GrantFreePop="true" 
+         IconAtlas="LOADOUT_ATLAS" 
+         PortraitIndex="16"/>
+		<Row Type="CARGO_LABORATORY" 
+         Description="TXT_KEY_CARGO_LABORATORY" 
+         ShortDescription="TXT_KEY_CARGO_LABORATORY_SHORT" 
+         IconAtlas="LOADOUT_ATLAS" 
+         GrantFreeTechChoice="true" 
+         PortraitIndex="17"/>
+		<Row Type="CARGO_WEAPONRY" 
+         Description="TXT_KEY_CARGO_WEAPONRY" 
+         ShortDescription="TXT_KEY_CARGO_WEAPONRY_SHORT" 
+         GrantUnit="UNIT_MARINE"
+         GrantUnitWater="UNIT_NAVAL_MELEE"
+         IconAtlas="LOADOUT_ATLAS" 
+         PortraitIndex="19"/>
+		<Row Type="CARGO_MACHINERY" 
+         Description="TXT_KEY_CARGO_MACHINERY" 
+         ShortDescription="TXT_KEY_CARGO_MACHINERY_SHORT" 
+         GrantUnit="UNIT_WORKER"
+         IconAtlas="LOADOUT_ATLAS" 
+         PortraitIndex="20"
+         FiraxisLiveUnlockKey="AlwaysLocked"/>
+		<Row Type="CARGO_CRYOTOME" 
+         Description="TXT_KEY_CARGO_CRYOTOME" 
+         ShortDescription="TXT_KEY_CARGO_CRYOTOME_SHORT" 
+         GrantFreePolicyChoice="true" 
+         IconAtlas="LOADOUT_ATLAS" 
+         PortraitIndex="21"/>
+		<Row Type="CARGO_ULTRASONIC_EMITTER" 
+         Description="TXT_KEY_CARGO_ULTRASONIC_EMITTER" 
+         ShortDescription="TXT_KEY_CARGO_ULTRASONIC_EMITTER_SHORT" 
+         IconAtlas="LOADOUT_ATLAS" 
+         PortraitIndex="22"
+         FiraxisLiveUnlockKey="AlwaysLocked"/>
+         <!--GrantUnit="UNIT_ULTRASONIC_EMITTER" -->
+	</Cargo>
+</GameData>

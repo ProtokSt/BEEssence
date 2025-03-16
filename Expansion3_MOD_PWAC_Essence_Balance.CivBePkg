@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Project version v0_9_3-->
+<!-- MIGUGH: Last modified v0.9.3.2025-03-09-->
+<CivBEPackage>
+	<GUID>{54D2B257-C591-4045-8F17-A69F033166C7}</GUID>
+	<SteamApp>353830</SteamApp>
+	<Version>1</Version>
+	<Priority>120</Priority>
+	<Key>8c2f15ef79062faaf4a7fb287603ee47</Key>
+	<PTags>
+		<Tag>Version</Tag>
+	</PTags>
+	<Name>
+		<Value language="en_US">PWAC Essence Balance</Value>
+	</Name>
+	<Description>
+		<Value language="en_US">PWAC Essence Balance by Migugh - for Rising Tide And Exoplanets (+ PW patch)</Value>
+	</Description>
+	<Gameplay>
+		<!-- Text to be put into the localization database -->
+		<TextData>EssenceTexts1_en_US.xml</TextData>
+		<GameData>EssenceTexts1_en_US.xml</GameData>
+		<TextData>EssenceTexts1_ES_ES.xml</TextData>
+		<GameData>EssenceTexts1_ES_ES.xml</GameData>
+		<TextData>EssenceTexts1_RU_RU.xml</TextData>
+		<GameData>EssenceTexts1_RU_RU.xml</GameData>
+		
+		<!-- Text waiting to be official translation -->
+		<TextData>toAdd-PW_TextInfos_TyposReplacements_ES_ES.xml</TextData>
+		<GameData>toAdd-PW_TextInfos_TyposReplacements_ES_ES.xml</GameData>
+		<TextData>toAdd-PW_TextInfos_UI_ES_ES.xml</TextData>
+		<GameData>toAdd-PW_TextInfos_UI_ES_ES.xml</GameData>
+	
+		<!-- Additional directories to scan -->
+		<Directory>Texts</Directory>
+		<MapDirectory>Maps</MapDirectory>
+	</Gameplay>
+	
+	<UISkin name="BaseGame" set="BaseGame" platform="Common">
+		<Skin>
+			<Directory>UI</Directory>
+			<Directory>Modf</Directory>
+		</Skin>
+	</UISkin>
+</CivBEPackage>

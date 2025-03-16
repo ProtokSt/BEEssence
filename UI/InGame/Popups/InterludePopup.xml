@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context Style="FontNormal14" FontStyle="Base" Color="Beige" Color1="Black">
+	<Box ID="BGBlock" Style="BGBlock" />
+	<AlphaAnim ID="AlphaAnim" Size="Full,Full" Cycle="Once" Pause="0" Speed="2" AlphaStart="0" Function="OutQuint" AlphaEnd="1">
+		<Grid ID="Window" Size="465, 310" Style="Grid9DetailFive140" Anchor="C,C" Offset="0,0" ConsumeMouse="1">
+			<Grid ID="WindowHeader" Style="ProductionListHeaderGrid" Anchor="C,T" Offset="0,3" Size="parent,45">
+				<Label ID="TitleLabel" Style="GrayGlow24" Anchor="C,C" Offset="0,-3" String="Window::WindowHeader::TitleLabel::MGH_TEST1" />
+				<Grid ID="HeaderSeparator" Style="TabSpacer" Anchor="L,B" Offset="0,3" Size="parent,5" />
+			</Grid>
+			<Stack ID="ContentStack" Anchor="C,T" Offset="0,64" Size="0,0" StackGrowth="Bottom" Padding="15">
+				<Label ID="DescriptionLabel" Style="WhiteShadow" Anchor="L,T" WrapWidth="350" LeadingOffset="4" String="Window::ContentStack::DescriptionLabel::MGH_TEST2" />
+				<GridButton ID="CloseButton" Style="BaseButton" Anchor="C,B" Offset="0,0" Size="200,36" Hidden="0" String="TXT_KEY_CLOSE" />
+			</Stack>
+		</Grid>
+	</AlphaAnim>
+</Context>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.0.2025-02-16-->
+<!-- 2023 - Blessed by Protok -->
+<GameData>
+	<!-- MGH:MOD reset -->
+	<Table name="Colonist_EffectAsBuilding">
+		<Column name="ColonistType" type="text" reference="Colonists(Type)"/>
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+	</Table>
+	<Table name="Colonist_EffectAsSingleBuilding">
+		<Column name="ColonistType" type="text" reference="Colonists(Type)"/>
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+	</Table>
+	
+	<Colonists>
+	</Colonists>
+
+	<Colonist_EffectAsBuilding>
+	</Colonist_EffectAsBuilding>
+
+	<Colonist_EffectAsSingleBuilding>
+	</Colonist_EffectAsSingleBuilding>
+
+	<Colonist_UnitClassProductionModifier>
+	</Colonist_UnitClassProductionModifier>
+
+	<Colonist_YieldFlatModifier>
+	</Colonist_YieldFlatModifier>
+</GameData>
