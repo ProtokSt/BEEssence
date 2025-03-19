@@ -1,2 +1,4 @@
 # BEEssence
-Migugh's Essence mod for Beyond Earth with support by AC
+Migugh's Essence mod for Sid Meier's Civilization Beyond Earth with support by AC
+Essence Balance
+Essence Alpha
