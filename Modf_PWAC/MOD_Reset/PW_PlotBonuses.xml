@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.0.2025-02-16-->
+<!-- 2023 - Blessed by Protok -->
+<GameData>
+	<!-- MGH:MOD reset (except Alien Skeleton) -->
+	<!-- bonus type, bonus text, bonus script. If RuinsChanceWeight is specified, then the bonus will drop from capsules, not from excavations-->
+	<PlotBonuses>
+		<!-- Resource Pod bonuses -->
+
+		<!-- Alien Skeleton -->
+		<Row><Type>PLOT_BONUS_FOOD_SKELET</Type>
+			<Description>TXT_KEY_PLOT_BONUS_FOOD_SKELET</Description>
+			<Help>TXT_KEY_PLOT_BONUS_FOOD_SKELET_DETAILS</Help>
+			<ScriptName>FoodSkeletPlotBonus</ScriptName>
+		</Row>
+		<Row><Type>PLOT_BONUS_CULTURE_SKELET</Type>
+			<Description>TXT_KEY_PLOT_BONUS_CULTURE_SKELET</Description>
+			<Help>TXT_KEY_PLOT_BONUS_CULTURE_SKELET_DETAILS</Help>
+			<ScriptName>CultureSkeletPlotBonus</ScriptName>
+		</Row>
+	</PlotBonuses>
+
+	<!-- the weight of the bonus in the drop table from a particular resource, that is, excavations -->
+	<PlotBonus_ResourceChanceWeights>
+		<!-- Alien Skeleton -->
+		<Row><PlotBonusType>PLOT_BONUS_FOOD_SKELET</PlotBonusType>
+			<ResourceType>RESOURCE_ALIEN_SKELETON</ResourceType>
+			<ChanceWeight>2</ChanceWeight>
+		</Row>
+		<Row><PlotBonusType>PLOT_BONUS_FOOD_SKELET</PlotBonusType>
+			<ResourceType>RESOURCE_ALIEN_SKELETON_OCEAN</ResourceType>
+			<ChanceWeight>2</ChanceWeight>
+		</Row>
+		<Row><PlotBonusType>PLOT_BONUS_CULTURE_SKELET</PlotBonusType>
+			<ResourceType>RESOURCE_ALIEN_SKELETON</ResourceType>
+			<ChanceWeight>1</ChanceWeight>
+		</Row>
+		<Row><PlotBonusType>PLOT_BONUS_CULTURE_SKELET</PlotBonusType>
+			<ResourceType>RESOURCE_ALIEN_SKELETON_OCEAN</ResourceType>
+			<ChanceWeight>1</ChanceWeight>
+		</Row>
+	</PlotBonus_ResourceChanceWeights>
+</GameData>

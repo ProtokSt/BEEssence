@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 26/04/2020 blessed by Protok St -->
+<GameData>
+	<!-- Table data -->
+	<Stations>
+		<!-- Yield-Themed Stations -->
+		<!-- <Row> -->
+			<!-- <Type>STATION_HEKIMA</Type> -->
+			<!-- <PlayerColor>PLAYERCOLOR_LIGHT_GREEN</PlayerColor> -->
+			<!-- <ScriptName>Station_Hekima</ScriptName> -->
+			<!-- <Description>TXT_KEY_STATION_HEKIMA</Description> -->
+			<!-- <QuestPromptKey>TXT_KEY_STATION_HEKIMA_PROMPT</QuestPromptKey> -->
+			<!-- <ArtDefineTag>ART_DEF_IMPROVEMENT_STATION_ECONOMY</ArtDefineTag> -->
+		<!-- </Row> -->
+
+			<!-- <ArtDefineTag>ART_DEF_IMPROVEMENT_STATION_RESEARCH</ArtDefineTag> -->
+
+			<!-- <ArtDefineTag>ART_DEF_IMPROVEMENT_STATION_MILITARY</ArtDefineTag> -->
+
+			<!-- <ArtDefineTag>ART_DEF_IMPROVEMENT_STATION_CULTURAL</ArtDefineTag> -->
+
+		<Row>
+			<Type>STATION_ARKAIM4</Type>
+			<PlayerColor>PLAYERCOLOR_BLUE</PlayerColor>
+			<ScriptName>Station_Arkaim4</ScriptName>
+			<Description>TXT_KEY_STATION_ARKAIM4</Description>
+			<QuestPromptKey>TXT_KEY_STATION_ARKAIM4_PROMPT</QuestPromptKey>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STATION_RESEARCH</ArtDefineTag>
+		</Row>
+		<Row>
+			<Type>STATION_BRAC</Type>
+			<PlayerColor>PLAYERCOLOR_PINKPURPLE</PlayerColor>
+			<ScriptName>Station_BRAC</ScriptName>
+			<Description>TXT_KEY_STATION_BRAC</Description>
+			<QuestPromptKey>TXT_KEY_STATION_BRAC_PROMPT</QuestPromptKey>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STATION_CULTURAL</ArtDefineTag>
+		</Row>
+		<Row>
+			<Type>STATION_STARWOLVES</Type>
+			<PlayerColor>PLAYERCOLOR_GRAY</PlayerColor>
+			<ScriptName>Station_StarWolves</ScriptName>
+			<Description>TXT_KEY_STATION_STARWOLVES</Description>
+			<QuestPromptKey>TXT_KEY_STATION_STARWOLVES_PROMPT</QuestPromptKey>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_STATION_MILITARY</ArtDefineTag>
+		</Row>
+
+	</Stations>
+</GameData>

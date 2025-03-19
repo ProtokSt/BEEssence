@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MIGUGH: Last modified v0.9.4.2025-03-19-->
+<GameData>
+	<!--English texts-->
+	<Language_en_US>
+		<Row Tag="TXT_KEY_MOD_DLC_VERSION"><!--!change version here when new modification!-->
+			<Text>v0.9.4.2025-03-19 (English)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MOD_DLC_ESSENCE_BALANCE_IF_YOU_SEE_THIS_MESSAGE_THE_LANGUAGE_FILE_HAS_NOT_LOADED_PROPERLY">
+			<Text>CivBE is still alive thanks to mods. Support us using the hashtags #CivBE_Essence and #CivBEAlive. Thank you for using our Mod for the 'Rising tide' and 'Exoplanets' expansions.</Text>
+		</Row>
+		<!--Bugs text changes-->
+		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_HITPOINTS">
+			<Text>{1_Num} HP</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PRODUCTION_BUILDING_HITPOINTS_TT">
+			<Text>City hit points: {1_Num} HP</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_PASSIVEABILITY_ULTRASONIC_EMITTER_DAMAGE_HELP">
+			<Text>Damages Alien Units within 2 squares.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_CULTURE_FROM_HEALTH">
+			<Text>[ICON_BULLET][COLOR_POSITIVE_TEXT]+{1_Num}[ENDCOLOR] by your surplus Health [ICON_HEALTH].[NEWLINE][ICON_BULLET]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_CULTURE_CITY_COST">
+			<Text>Each city (or puppet city [ICON_PUPPET]) you have, other than the capital [ICON_CAPITAL], will increase the acquisition costs of Virtues by {1_Num:number "#.#"} %.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_TECH_CITY_COST">
+			<Text>Each city (or puppet city) [ICON_PUPPET]) you have, other than the capital [ICON_CAPITAL], will increase the acquisition costs of Sciences by {1_Num:number "#.#"} %.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MILITARY_PRODUCTION_MOD">
+			<Text>+{1_Num}% to Production [ICON_PRODUCTION] for Military Units.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TP_UNHEALTH_SPECIALISTS">
+			<Text></Text>
+		</Replace>
+		<!--UI Maps easy classification-->
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_HARDLYWITHOUTWATER">
+			<Text>Random planet with very little water[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_HARDLYWITHOUTWATER_HELP">
+			<Text>The game will choose a planet with little water for you to play on</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_TERRANLIKE">
+			<Text>Random Earth-like planet[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_TERRANLIKE_HELP">
+			<Text>The game will choose a planet balanced between continents and water for you to play on</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_ALMOSTALLWATER">
+			<Text>Random pretty aquatic planet[NEWLINE](DO NOT USE, In development)</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RANDOM_MAP_SCRIPT_ALMOSTALLWATER_HELP">
+			<Text>The game will choose a planet with a lot of water for you to play on</Text>
+		</Row>
+		<!--Maps options-->
+		<!--Maps options Team Setting-->
+		<Replace Tag="TXT_KEY_MAP_OPTION_TEAM_SETTING">
+			<Text>Number of teams</Text>
+		</Replace>
+		<!--Exoplanets maps names-->
+		<!--<Replace Tag="TXT_KEY_MAP_ARBOREAN_NAME">
+			<Text>Exoplanet-Arborean-(Kepler 186f)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_ARIDEAN_NAME">
+			<Text>Exoplanet-Aridean-(Rigil Khantoris Bb)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_OCEANIA_NAME">
+			<Text>Exoplanet-Oceania-(Tau Ceti d)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_TILTED_AXIS_NAME">
+			<Text>Exoplanet-TiltedAxis-(Mu Arae f)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_VULCAN_NAME">
+			<Text>Exoplanet-Vulcan-(82 Eridani e)</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_WILDERNESS_NAME">
+			<Text>Exoplanet-Wilderness-(Eta Vulpeculae b)</Text>
+		</Replace>-->
+		<!--Other special maps names-->
+		<Replace Tag="TXT_KEY_MAP_ICE_AGE"><!--TXT_KEY_MAP_ICE_AGE_NAME-->
+			<Text>Unlocked-Ice_Age</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_INLAND_SEA"><!--TXT_KEY_MAP_INLAND_SEA_NAME-->
+			<Text>Unlocked-Inland_Sea #</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_TINY_ISLANDS"><!--TXT_KEY_MAP_TINY_ISLANDS_NAME-->
+			<Text>Unlocked-Tiny_Islands</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_MAP_SKIRMISH"><!--TXT_KEY_MAP_SKIRMISH_NAME-->
+			<Text>Usermod-Migugh-Skirmish # (Restored file)</Text>
+		</Replace>
+		<!--Usermod maps names-->
+		<Row Tag="TXT_KEY_MAP_BIGLAND_NAME">
+			<Text>Usermod-Migugh-BigLand</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAP_WATERWORLD_NAME">
+			<Text>Usermod-Migugh-WaterWorld</Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_MAP_TIDALCRACKED_NAME">
+			<Text>Usermod-?-TidalCracked</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SEVENLAKES_NAME">
+			<Text>Usermod-?-7Lakes</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_CHIRON_NAME">
+			<Text>Usermod-?-Chiron (Alpha Centauri)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SINEVA_NAME">
+			<Text>Usermod-?-Sineva (Anchor Ceti)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_SKEEPER_TAIL_NAME">
+			<Text>Usermod-Protok-AC_Skeeper_Tail #</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_ACDLC_SKIRMISH_NAME">
+			<Text>Usermod-Protok-AC_Skirbreach #</Text>
+		</Row>-->
+		<!-- Usermod map names help-->
+		<Row Tag="TXT_KEY_MAP_BIGLAND_HELP">
+			<Text>A vast map dominated by a large continent connected with sparse oceans in the middle of the map.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MAP_WATERWORLD_HELP">
+			<Text>A map to navigate an endless ocean with only sparse lands emerging on them some occasional cliffs.</Text>
+		</Row>
+		<!--<Row Tag="TXT_KEY_MAP_SKEEPER_TAIL_HELP">
+			<Text>A real multiplayer map which is divided by mountains in the middle.[NEWLINE](options: WrapX map)</Text>
+		</Row>-->
+		<!--<Row Tag="TXT_KEY_MAP_ACDLC_SKIRMISH_HELP">
+			<Text>A real multiplayer map which is divided by an small ocean in the middle.[NEWLINE](options: without ocean)(Plain map)</Text>
+		</Row>-->
+		<!--Colonists, starship, cargo text changes-->
+		<Replace Tag="TXT_KEY_COLONIST_PIONEERS">
+			<Text>+1 Food [ICON_FOOD] in each city. Create colonist units twice as fast.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_COLONIST_MERCENARIES">
+			<Text>+1 Production [ICON_PRODUCTION] in each city. All Units +10% Strength [ICON_STRENGTH] and Ranged Strength [ICON_RANGE_STRENGTH] in friendly territory.</Text>
+		</Replace>
+		<!--Tips on initial loading screen text changes (TODO:Change it on Lua)-->
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_1">
+			<Text>TODO:Tips #1:[NEWLINE]Melee units receive a 10% bonus to combat strength for each friendly unit adjacent to the enemy unit they are attacking. Mounted units (tanks and cavalry) are faster and good at ambushing so they also get an extra 20% for flanking when you attack with them.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_2">
+			<Text>TODO:Tips #2:[NEWLINE][ICON_BULLET]Tips 2.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_3">
+			<Text>TODO:Tips #2:[NEWLINE][ICON_BULLET]Tips 3.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_4">
+			<Text>TODO:Tips #2:[NEWLINE][ICON_BULLET]Tips 4.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_INTRO_MESSAGE_MGHTIPS_5">
+			<Text>TODO:Tips #2:[NEWLINE][ICON_BULLET]Tips 5.</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_ARC_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_AFRICAN_UNION_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_BRASILIA_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_PAN_ASIA_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_FRANCO_IBERIA_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_KAVITHAN_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_POLYSTRALIA_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_RUSSIA_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_AL_FALAH_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_NORTH_SEA_ALLIANCE_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_INTEGR_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_INTRO_MESSAGE_CHUNGSU_1">
+			<Text>Tips:[NEWLINE][ICON_BULLET]The Dome, Node, and Biowell [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Dome gives extra yield near montains, rivers or on a hill; Node reduce the health of enemy units; Biowell needs river or fresh water to be deployed.[NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs to get production.[NEWLINE][ICON_BULLET]Trading is only available from 1 city, and for each 10 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an uninhabited alien planet.[NEWLINE][ICON_BULLET]In the swamps and tundra there is a lot of unknown biodiversity that allows us to learn new things, so those places have a science bonus (if you decide to work those spaces to exploit it and collect samples).[NEWLINE][ICON_BULLET]Do Expeditions with your explorers to be able to recover abandoned artifacts. You will also find some alien ruins that will provide us with culture and research when investigating the operation of the facility abandoned years ago.[NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.[NEWLINE][ICON_BULLET]When a a city is conquered, the local population will be discontented. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city.[NEWLINE][ICON_BULLET]If you want the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.[NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn.[NEWLINE][ICON_BULLET]Units in a Swamp have an additional movement cost and lows attack (-10%), Hills provide 25% defensive bonuses, Forests hinder movement, and Rivers can create choke points (-40% penalty to attack) and flanking attack bonus of 10%.Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Replace>
+		<!--Tips, general and map text changes-->
+		<Replace Tag="TXT_KEY_RESOURCE_TOOLTIP_IMPROVED">
+			<Text>TODO:When improved with a[COLOR_HIGHLIGHT_IMPROVEMENT]{@1_ImprovementName}[ENDCOLOR]:[NEWLINE](Mines add an additional +2 [ICON_PRODUCTION])</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RESOURCE_EGGS">
+			<Text>Roe</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RESOURCE_SHELL">
+			<Text>Molluscs</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_RESOURCE_ALIEN_RUIN_HELP">
+			<Text>This mysterious ruins cannot let you do any improvements on it but give +2 Culture [ICON_CULTURE] +2 Science [ICON_RESEARCH]</Text>
+		</Replace>
+		<!--Improvement text changes-->
+		<Replace Tag="TXT_KEY_BUILD_BLOCKED_CANNOT_BE_ADJACENT">
+			<Text>[COLOR_NEGATIVE_TEXT]This Improvement cannot be adjacent to other Improvements of the same type[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_WORK_BARGE_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]A tile improvement[ENDCOLOR] that can be built by [COLOR_HIGHLIGHT_UNIT]Workers[ENDCOLOR] units on [COLOR_HIGHLIGHT_RESOURCE]Coral [ICON_CORAL][ENDCOLOR] and [COLOR_HIGHLIGHT_RESOURCE]Algae [ICON_ALGAE][ENDCOLOR] resources. Gives:[NEWLINE][ICON_BULLET] 2 to Production [ICON_PRODUCTION] and 1 to Energy [ICON_ENERGY] from Coral [ICON_CORAL][NEWLINE][ICON_BULLET] 2 to Food [ICON_FOOD] and 1 to Energy [ICON_ENERGY] from Algae [ICON_ALGAE]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ENERGY_IMPROVEMENTS_HEADING3_BODY">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Tile Improvements[ENDCOLOR] may have special bonuses based on the square they are built on.[NEWLINE]The Dome gains +1 Culture [ICON_CULTURE] when built on a riverside, +1 Culture [ICON_CULTURE] if the terrain has a Hill, and +1 Culture [ICON_CULTURE] for each adjacent Mountain Terrain.[NEWLINE]The Node gains a +1 [ICON_ENERGY] Energy bonus when adjacent to a City.[NEWLINE]The Generator can be built on a Hill to generate +1 [ICON_ENERGY] Energy.[NEWLINE][NEWLINE]There are also exceptions.[NEWLINE]The Biowell can only be built on tiles that have a river or lake with fresh water.[NEWLINE]In addition, the Dome, the Node and the Biowell cannot be built adjacent to other Biowells of the same type.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_MANUFACTORY_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Tile improvements[ENDCOLOR] that can be built by [COLOR_HIGHLIGHT_UNIT]Workers[ENDCOLOR] units in a flat area in land or deep-sea methane hydrate extraction factories.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_BIOWELL_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Tile improvements[ENDCOLOR] that can be built by [COLOR_HIGHLIGHT_UNIT]Worker[ENDCOLOR] units on land, near rivers but they cannot be adjacent. Gives:[NEWLINE][ICON_BULLET] +1 to Health [ICON_HEALTH_1]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_DOME_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Tile improvements[ENDCOLOR] that can be built by [COLOR_HIGHLIGHT_UNIT]Worker[ENDCOLOR] units on any terrain but cannot be adjacent. Gives:[NEWLINE][ICON_BULLET] +10 to city hit points[NEWLINE][ICON_BULLET] +1 Culture [ICON_CULTURE] if next to a river[NEWLINE][ICON_BULLET] +1 Culture [ICON_CULTURE] if on a hill[NEWLINE][ICON_BULLET] +1 Culture [ICON_CULTURE] for each adjacent Mountain</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_IMPROVEMENT_NODE_HELP">
+			<Text>[COLOR_HIGHLIGHT_IMPROVEMENT]Tile improvements[ENDCOLOR] that [COLOR_HIGHLIGHT_UNIT]Worker[ENDCOLOR] units can build on any terrain but cannot be adjacent. Gives:[NEWLINE][ICON_BULLET] 10 damage to nearby enemy units</Text>
+		</Replace>
+		<!--Units text changes-->
+		<Replace Tag="TXT_KEY_UNIT_AEGIS_HELP">
+			<Text>A piloted light combat armor with a variety of mounted weapons. It is a melee unit that [COLOR_HIGHLIGHT_TEXT]attacks 2 times[ENDCOLOR]. It also [COLOR_HIGHLIGHT_TEXT]displaces the defending unit from the hit when attacking[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ANGEL_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Travels through canyons and shallow water.[ENDCOLOR] The ultimate exponent of Supremacy [ICON_SUPREMACY]. A highly advanced robotic walker that packs exceptional ranged heavy weaponry. It is an extremely versatile unit, suited to any role on the battlefield.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_AQUILON_HELP">
+			<Text>A floating hybrid of machine and organism capable of delivering powerful attacks at extremely long range.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_AUTOSLED_HELP">
+			<Text>A squad of stormtroopers mounted on a semi-autonomous mobile combat platform. It is a fast, aggressive raiding and reconnaissance unit.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_BATTLESUIT_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% defense against ranged units attacks.[ENDCOLOR] An armored soldier with augmented armor. It is a very tough melee shock unit.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_CARVR_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Travels through canyons and shallow water.[ENDCOLOR] A versatile melee attack robotic soldier. It also gains a [COLOR_HIGHLIGHT_TEXT]bonus when attacking unfortified enemies.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_GELIOPOD_HELP">
+			<Text>A fragile but deadly melee unit that uses [COLOR_HIGHLIGHT_TEXT]invisibility[ENDCOLOR] to flank and ambush enemies. It is a melee unit specialized in hunting and killing.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_GOLEM_HELP">
+			<Text>A very fortified but very slow colossal unit, capable of covering nearby troops. It is a formidable defensive unit. Additionally gains a [COLOR_HIGHLIGHT_TEXT]bonus when attacking fortified enemies.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_IMMORTAL_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Always heals every turn, without needing to rest.[ENDCOLOR] A soldier whose physical capabilities have been genetically enhanced.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LEV_DESTROYER_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% defense against ranged units attacks.[ENDCOLOR] The ultimate embodiment of [ICON_PURITY] Purity. A giant, heavily armed platform that [COLOR_HIGHLIGHT_TEXT]floats above the ground, allowing it to traverse canyons and water[ENDCOLOR]. It is a very powerful ranged combat unit.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LEV_TANK_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]+30% defense against ranged units attacks.[ENDCOLOR] An armored attack vehicle that [COLOR_HIGHLIGHT_TEXT]floats above the ground, allowing it to avoid cannons and water[ENDCOLOR]. It is a powerful and agile melee combat unit.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ROCKTOPUS_HELP">
+			<Text>A living, bio-engineered orbital unit that can move between deployments and provides limited orbital coverage around where it is.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SABR_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Traverses canyons and shallow waters.[ENDCOLOR]A robotic artillery platform with a very long range but needs to be deployed. It is a very powerful ranged combat unit.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SIEGE_HELP">
+			<Text>A ranged combat unit that [COLOR_HIGHLIGHT_TEXT]its missiles can fly over terrain obstacles[ENDCOLOR]. Specializes in reducing city defenses but needs to be deployed.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_SUBMARINE_HELP">
+			<Text>A ranged naval unit. Specialized in stealth, it is very good at assaulting and ambushing, but has limited attack speed and range and relies on its [COLOR_HIGHLIGHT_TEXT]invisibility[ENDCOLOR] to outwit enemies.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_XENO_CAVALRY_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Always heals itself every turn, never needing to rest.[ENDCOLOR]Human soldiers mounted on genetically enhanced, domesticated alien lifeforms. It is a fast melee attack unit.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_XENO_TITAN_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]It always heals itself every turn, without needing to rest.[ENDCOLOR] The ultimate exponent of Harmony [ICON_HARMONY]. A monstrous bio-engineered creature based on alien life forms. It is a huge and very powerful melee combat unit.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_LASERCOM_SATELLITE_HELP">
+			<Text>Orbital Unit. When in orbit, it establishes contact with Old Earth, as part of the victory for emancipation and the promised land. Every city within range receives +20% to overall [ICON_CULTURE] Culture.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_WEATHER_CONTROLLER_HELP">
+			<Text>Orbital Unit. +1 to [ICON_FOOD] Food in your tiles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ORBITAL_FABRICATOR_HELP">
+			<Text>Orbital Unit. Spawns 2 new Strategic Resources in unimproved tiles during its lifecycle.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_HOLOMATRIX_HELP">
+			<Text>Orbital Unit. +1 Culture [ICON_CULTURE] on your tiles.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_DEEP_SPACE_TELESCOPE_HELP">
+			<Text>Orbital Unit. +1 Science [ICON_RESEARCH] on your tiles. Every city within range receives +20% Science [ICON_RESEARCH] overall.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_ALL_SEEING_EYE_HELP">
+			<Text>Orbital Unit. Removes 50% of the Intrigue from any city within range and receives 50% less Intrigue from enemy Secret Agent activity.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_UNIT_STATION_SENTINEL_HELP">
+			<Text>Orbital Unit. +2 to Production [ICON_PRODUCTION] on that tile. Every city within range receives +5% to Production [ICON_PRODUCTION] overall.</Text>
+		</Replace>
+		<!--Units perks text changes-->
+		<Row Tag="TXT_KEY_UNITPERK_STRONG_AGAINST_RANGED_UNITS_1_HELP">
+			<Text>+20% against Ranged Units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNITPERK_STRONG_AGAINST_MOUNTED_UNITS_1_HELP">
+			<Text>+20% against Mounted Units (tanks and cavalry).</Text>
+		</Row>
+		<!--Units promotions changes-->
+		<Replace Tag="TXT_KEY_PROMOTION_TIDAL_NAVIGATION_HELP">
+			<Text>+33% Defense to Naval units against ranged attacks</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_MOUNTED">
+			<Text>Mounted unit</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_MOUNTED_HELP">
+			<Text>Mounted unit: you get an extra +20% for flanking when attacking if you surround the enemy with other units.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AUTOHEALING">
+			<Text>Self-healing unit</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AUTOHEALING_HELP">
+			<Text>[COLOR_HARMONY_AFFINITY]Self-Healing[ENDCOLOR]: Always heals every turn without needing to rest.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_EXTRADEFENSE">
+			<Text>Unit with defense shield</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_EXTRADEFENSE_HELP">
+			<Text>[COLOR_PURITY_AFFINITY]Defense shield[ENDCOLOR]: +30% defense against ranged units attacks.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_SUPERAEGIS">
+			<Text>Double attack</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_SUPERAEGIS_HELP">
+			<Text>Can attack twice.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AMPHIBIOUS">
+			<Text>Amphibious</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_AMPHIBIOUS_HELP">
+			<Text>May attack and capture a sea city.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_ROBOTWALKER">
+			<Text>Unit with mechanized walker</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PROMOTION_MGH_ROBOTWALKER_HELP">
+			<Text>[COLOR_SUPREMACY_AFFINITY]Mechanized Walker[ENDCOLOR]: Traverses canyons and shallow waters deep.</Text>
+		</Row>
+		<!--Buildings text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_DESC">
+			<Text>Dam|Dams</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_PEDIA">
+			<Text>To prevent the flooding of rivers adjacent to cities, a dam was needed. It also provided fresh water in times of need and also served to obtain energy in a simple way. This was very easy to do if the city was close to a river, which made its construction and maintenance easier. The first dams were identical to those on Old Earth, a concrete structure with turbines to produce electricity, easy to maintain, managed by a few engineers.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_REPAIR_FACILITY_HELP">
+			<Text>[COLOR_RED]Can only be built in cities with a river[ENDCOLOR]</Text>
+		</Replace>
+		<!--Buildings quests info-->
+		<Replace Tag="TXT_KEY_BUILDING_SPY_AGENCY_HELP">
+			<Text>Provides 2 spies.[NEWLINE][NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]Immediately gain 60 Science [ICON_RESEARCH][NEWLINE][ICON_BULLET]+2 Science [ICON_RESEARCH] from Spy Agencies</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DEPOT_HELP">
+			<Text>Allows the creation of Trade Routes originating in this city and provides a free Trade Route slot.[NEWLINE][NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]+2 Production [ICON_PRODUCTION] from Depots [NEWLINE][ICON_BULLET]You immediately gain a new trade route</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_CLINIC_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]You immediately gain 30 Science [ICON_RESEARCH][NEWLINE][ICON_BULLET]You immediately gain 30 Culture [ICON_CULTURE]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_ULTRASONIC_FENCE_HELP">
+			<Text>Strongly deters aliens from approaching or staying within 2 tiles of this city. The knockback power is decreased by hostile or very hostile aliens.[NEWLINE][NEWLINE][ICON_QUEST] Mission Options:[NEWLINE][ICON_BULLET]+1 to Ultrasonic Fences knockback range[NEWLINE][ICON_BULLET]Alien units will not attack trade convoys</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_ALIEN_PRESERVE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]You immediately gain 60 Culture [ICON_CULTURE][NEWLINE][ICON_BULLET]+2 Diplomatic Capital [ICON_DIPLO_CAPITAL] from Alien Preserves</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_COMMAND_CENTER_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]Secret Agents need fewer successful operations to rank up[NEWLINE][ICON_BULLET]+1 Secret Agent [ICON_SPY]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SURVEILLANCE_WEB_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]+10% to Secret Operations speed[NEWLINE][ICON_BULLET]+1 Secret Agent [ICON_SPY]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_XENO_SANCTUARY_HELP">
+			<Text>Adds one point per turn to Transcendence Victory Progress.[NEWLINE][NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]+10% to Worker Speed[NEWLINE][ICON_BULLET]+1 to Science [ICON_RESEARCH] per Harmony Affinity Level [ICON_HARMONY]</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_HYPERCORE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]+10% to Worker Speed[NEWLINE][ICON_BULLET]+1 to Science [ICON_RESEARCH] per Harmony Affinity Level [ICON_HARMONY] Supremacy [ICON_SUPREMACY]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_SKYCRANE_HELP_MGHFORQUESTINFO">
+			<Text>[NEWLINE][ICON_QUEST] Quest Options:[NEWLINE][ICON_BULLET]+10% Worker Speed[NEWLINE][ICON_BULLET]+1 Science [ICON_RESEARCH] per Purity Affinity Level [ICON_PURITY]</Text>
+		</Row>
+		<!--Specialists text changes-->
+		<Replace Tag="TXT_KEY_SPECIALIST_LABORER">
+			<Text>Diplomat|Diplomats</Text>
+		</Replace>
+		<!--Technology text changes-->
+		<Row Tag="TXT_KEY_TECH_NOTEXT_HELP">
+			<Text></Text>
+		</Row>
+		<Replace Tag="TXT_KEY_TECH_TRANSCENDENTAL_MATH_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Allows the discovery of the [COLOR_HIGHLIGHT_TEXT]Transcendental Equation[ENDCOLOR] and the start of the victory by [COLOR_HIGHLIGHT_TEXT]contact[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_HYPERCOMPUTING_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Required to complete the victory by [COLOR_SUPREMACY_AFFINITY]emancipation[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_NANOTECHNOLOGY_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Required to complete the victory for [COLOR_PURITY_AFFINITY]Promised Land[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_SWARM_INTELLIGENCE_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Required to complete the victory for [COLOR_HARMONY_AFFINITY]Transcendence[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_TRANSGENICS_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Required to complete the victory for [COLOR_HARMONY_AFFINITY]Transcendence[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_NANOROBOTICS_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Required to complete the victory for [COLOR_HARMONY_AFFINITY]transcendence[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_TECH_ARTIFICIAL_EVOLUTION_HELP">
+			<Text>[NEWLINE][ICON_BULLET]Required to complete the victory for [COLOR_HARMONY_AFFINITY]transcendence[ENDCOLOR].</Text>
+		</Replace>
+		<!--Perks text changes-->
+		<!--Perks-Artifact text changes-->
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_SLUMBER_SLAUGHTER_EXTRACT_EFFECTS_SUMMARY">
+			<Text>+20% to worker construction speed.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_STATECRAFT_EFFECTS_SUMMARY">
+			<Text>+5 Health [ICON_HEALTH_1].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_PROJECTED_CHASIS_CONSTRUCTION_EFFECTS_SUMMARY">
+			<Text>+10% to worker construction speed and +10% to Strength [ICON_STRENGTH] and Ranged Strength [ICON_RANGE_STRENGTH] when attacking or defending against aliens.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION">
+			<Text>We have gained a better understanding of the alien biome and soil. This makes it possible that in our prospecting we have found new usable materials.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION">
+			<Text>Strategic resources discovered</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_1_EFFECTS_SUMMARY">
+			<Text>+1 Titanium [ICON_TITANIUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_2_EFFECTS_SUMMARY">
+			<Text>+1 Titanium [ICON_TITANIUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_3_EFFECTS_SUMMARY">
+			<Text>+1 Petroleum [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_4_EFFECTS_SUMMARY">
+			<Text>+1 Petroleum [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_5_EFFECTS_SUMMARY">
+			<Text>+1 Geothermal energy [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_6_EFFECTS_SUMMARY">
+			<Text>+1 Geothermal energy [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION">
+			<Text>Strategic resources discovered</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_1_EFFECTS_SUMMARY">
+			<Text>+1 Xenomass [ICON_XENOMASS].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_2_EFFECTS_SUMMARY">
+			<Text>+1 Xenomass [ICON_XENOMASS].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_3_EFFECTS_SUMMARY">
+			<Text>+1 Floating Stone [ICON_FLOAT_STONE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_4_EFFECTS_SUMMARY">
+			<Text>+1 Floating Stone [ICON_FLOAT_STONE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_5_EFFECTS_SUMMARY">
+			<Text>+1 Firaxite [ICON_FIRAXITE].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_6_EFFECTS_SUMMARY">
+			<Text>+1 Firaxite [ICON_FIRAXITE].</Text>
+		</Row>
+		<!--Wonders-Artifact text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_TEMPORAL_CALCULUS_HELP">
+			<Text>Military Units can gain two additional levels of veterancy.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DIMENSION_FOLDING_COMPLEX_HELP">
+			<Text>This city now works an additional number of tiles equal to the number of citizens [ICON_CITIZEN] more 2.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_RELATIVISTIC_DATA_BANK_HELP">
+			<Text>1 less level of intrigue is required to do some Secret Operations and get a free spy</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_QUANTUM_POLITICS_HELP">
+			<Text>+10% to Virtue acquisition speed and +10% to Strength [ICON_STRENGTH] and Ranged Strength [ICON_RANGE_STRENGTH] when attacking aliens or defend against them.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_MACHINE_ASSISTED_FREE_WILL_HELP">
+			<Text>Leaf technologies cost 10% less Science [ICON_RESEARCH].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_TESSELATION_FOUNDRY_HELP">
+			<Text>+1 Production [ICON_PRODUCTION] from Generator improvements.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_ARTIFACT_REWARD_TESSELATION_FOUNDRY_EFFECTS_SUMMARY">
+			<Text>+1 Production [ICON_PRODUCTION] from Generator improvements and in this city Military Units cost 15% less Production [ICON_PRODUCTION].</Text>
+		</Replace>
+		<!--Wonders text changes-->
+		<Replace Tag="TXT_KEY_BUILDING_PROMETHEAN_HELP">
+			<Text>This city no longer generates Unhealthiness [ICON_HEALTH_4] of any kind (including from the tiles it is working on).</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_NEW_TERRAN_MYTH_HELP">
+			<Text>+1 Culture [ICON_CULTURE] for the resources of Petroleum [ICON_PETROLEUM], Titanium [ICON_TITANIUM] and Geothermal Energy [ICON_GEOTHERMAL].</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_BYTEGEIST_HELP">
+			<Text>Get a Free virtue.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CYNOSURE_HELP">
+			<Text>Gain 1 to Science [ICON_RESEARCH] for each Population [ICON_CITIZEN] in this city.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DEEP_MEMORY_HELP">
+			<Text>Gain 1 Culture [ICON_CULTURE] for each Population [ICON_CITIZEN] in this city.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_DRONE_SPHERE_HELP">
+			<Text>Workers are 50% faster.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_CRAWLER_HELP">
+			<Text>+20% to Production [ICON_PRODUCTION] of buildings in this city and +2 Production [ICON_PRODUCTION] from Factory improvements.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_ANSIBLE_HELP">
+			<Text>+30% affinity for technology research.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_PRECOG_PROJECT_HELP">
+			<Text>+2 Geothermal energy [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_BUILDING_STELLAR_CODEX_HELP">
+			<Text>+1 Science [ICON_RESEARCH] for Matrix improvements.[NEWLINE][NEWLINE]+2 Petroleum [ICON_PETROLEUM].</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_PANOPTICON_HELP">
+			<Text>All Military Units receive 1 to Visual.[NEWLINE][NEWLINE]+2 Titanium [ICON_TITANIUM].</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_BUILDING_AKKOROKAMUI_HELP">
+			<Text>All Specialist citizens [ICON_CITIZEN] in all cities produce 1 more.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_NANOTHERMITE_HELP">
+			<Text>+20% bonus to Strength [ICON_STRENGTH] and Ranged Strength [ICON_RANGE_STRENGTH] for all Units.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_XENOMALLEUM_HELP">
+			<Text>+3 to Xenomass [ICON_XENOMASS], Floating Stone [ICON_FLOAT_STONE] and Firaxite [ICON_FIRAXITE] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_BUILDING_MASS_DRIVER_HELP">
+			<Text>+1 to City Attack Range.</Text>
+		</Replace>
+		<!--Quests text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_HARMONY">
+			<Text>+1 to Food [ICON_FOOD] per Defense Perimeter</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_PURITY">
+			<Text>+1 to Culture [ICON_CULTURE] per Defense Perimeter</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_THE_SUBSET_CURSE_SUPREMACY">
+			<Text>+1 to Science [ICON_RESEARCH] per Defense Perimeter</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SEA_WELL_PRODUCTION_FLAT_HELP">
+			<Text>+1 to Production [ICON_PRODUCTION] per Sea Wells</Text> 
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_PLANTATION_FOOD_FLAT_HELP">
+			<Text>+1 to Food [ICON_FOOD] per Plantations</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_RECOVERING_OLIVIA_ROSS_FARMS_FOOD">
+			<Text>+1 a Health [ICON_HEALTH] per Farms</Text>
+		</Replace>
+		<!--Quests-Buildings text changes-->
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_CLINICS_A_HELP">
+			<Text>You immediately gain 30 Science [ICON_RESEARCH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_CLINICS_B_HELP">
+			<Text>You immediately gain 30 Culture [ICON_CULTURE]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_DEPOTS_PRODUCTION_FLAT_HELP">
+			<Text>+2 to Production [ICON_PRODUCTION] by Trade Depots</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_DEPOTS_B_HELP">
+			<Text>You immediately gain a new trade route</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SPY_AGENCY_A_HELP">
+			<Text>You immediately gain 60 to Science [ICON_RESEARCH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SPY_AGENCY_B_HELP">
+			<Text>+2 to Science [ICON_RESEARCH] by Spy Agencies</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_ALIEN_PRESERVES_A_HELP">
+			<Text>You immediately gain 60 to Culture [ICON_CULTURE]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_ALIEN_PRESERVES_B_HELP">
+			<Text>+2 to Diplomatic Capital [ICON_CAPITAL] for Alien Preserves</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SURVEILLANCE_WEB_A_HELP">
+			<Text>+10% to the speed of Secret Operations</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_SURVEILLANCE_WEB_B_HELP">
+			<Text>+1 Secret Agent [ICON_SPY]</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_COMMAND_CENTERS_SPIES_HELP">
+			<Text>+1 Secret Agent [ICON_SPY]</Text>
+		</Replace>
+		<!--Affinity text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_AFFINITY_HEALTH_PER_MILITARY_UNIT">
+			<Text>+0.25 Health [ICON_HEALTH] for each Military Unit under your command.</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_EXPLORER_MIASMA_IMMUNITY_HELP">
+			<Text>Explorer's immunity to Miasma</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_EXPLORER_BETTER_HELP">
+			<Text>Explorer now has +1 Movement [ICON_MOVES] and +10 Strength [ICON_STRENGTH]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_XENOMASS_GATHERING_HELP">
+			<Text>Each tile with Xenomass [ICON_XENOMASS] gives 1 more Food [ICON_FOOD] resource than normal</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FLOAT_STONE_GATHERING_HELP">
+			<Text>Each tile with Floating Stone [ICON_FLOAT_STONE] gives 1 more Culture [ICON_CULTURE] resource than normal</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FIRAXITE_GATHERING_HELP">
+			<Text>Each tile with Firaxite [ICON_FIRAXITE] gives 1 more Science [ICON_RESEARCH] resource than normal normal</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_BIOWELLS_HELP">
+			<Text>+1 to Health [ICON_HEALTH] for Biowell improvements</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_DOMES_HELP">
+			<Text>+1 to Culture [ICON_CULTURE] for Dome improvements</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_BETTER_NODES_HELP">
+			<Text>+1 Science [ICON_RESEARCH] for Node improvements</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_BIOWELLS_HELP">
+			<Text>+1 to Food [ICON_FOOD] from Biowell improvements</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_DOMES_HELP">
+			<Text>+1 to Food [ICON_FOOD] from Dome improvements</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_FOOD_NODES_HELP">
+			<Text>+1 to Food [ICON_FOOD] from Node improvements</Text>
+		</Row>
+		<Replace Tag="TXT_KEY_PLAYERPERK_AFFINITY_TRADER_MIASMA_IMMUNITY">
+			<Text>Units and trade routes do not take damage from Miasma</Text>
+		</Replace>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_CULTURE_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% Culture [ICON_CULTURE] to the city within the range of effect of a friendly Orbital Unit</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_ENERGY_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% Energy [ICON_ENERGY] to the city within the range of effect of a friendly Orbital Unit</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_CITY_PRODUCTION_UNDER_ORBITAL_UNITS_HELP">
+			<Text>+10% Production [ICON_PRODUCTION] to the city within the range of effect of a friendly Orbital Unit</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_H_P_HELP">
+			<Text>5% to the speed of acquiring Virtues</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_P_S_HELP">
+			<Text>5% to the speed of acquiring Virtues</Text>
+		</Row>
+		<Row Tag="TXT_KEY_PLAYERPERK_MGH_AFFINITY_VIRTUES_PROGRESS_QUICKER_S_H_HELP">
+			<Text>5% to the speed of acquiring Virtues</Text>
+		</Row>
+		<!--Virtues text changes-->
+		<Replace Tag="TXT_KEY_POLICY_EFFECT_WONDER_PRODUCTION_MODIFIER">
+			<Text>+{1_Num} % to the Production [ICON_PRODUCTION] of Wonders and National Projects.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_2">
+			<Text>Commodification[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]-15% to the expenditure on Building Maintenance.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_6">
+			<Text>Investment[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]-50% to the maintenance of the roads.[ENDCOLOR]</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_POLICY_INDUSTRY_14">
+			<Text>Civic Duty[NEWLINE][NEWLINE][ICON_BULLET][COLOR_WHITE]+1 [ICON_CULTURE] culture for each city.[ENDCOLOR]</Text>
+		</Replace>
+		<!--Foreign policies text bugs-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A1_HELP">
+			<Text>Science [ICON_RESEARCH] production in each city is increased by 8%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A2_HELP">
+			<Text>Science [ICON_RESEARCH] production in each city is increased by 12%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_SCIENCE_A3_HELP">
+			<Text>Science [ICON_RESEARCH] production in each city is increased by 15%.</Text>
+		</Replace>
+		<!--Foreign policies text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A1_HELP">
+			<Text>City's Orbital Coverage is increased by 1 and Orbital Units produce 1 Energy [ICON_ENERGY].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A2_HELP">
+			<Text>City's Orbital Coverage is increased by 2 and Orbital Units produce 2 Energy [ICON_ENERGY].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_ORBITAL_A3_HELP">
+			<Text>The city's Orbital Coverage is increased by 3 and Orbital Units produce 3 [ICON_ENERGY] Energy.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_ORBITAL3_HELP">
+			<Text>Increases the city's Anti-Orbital Attack Range by 2.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_ORBITAL4_HELP">
+			<Text>Increases the city's Anti-Orbital Attack Range by 2.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_ORBITAL_HELP">
+			<Text>Gives orbital coverage by affinity resources ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL2_HELP">
+			<Text>+2 Orbital coverage in spaces with affinity resources ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL3_HELP">
+			<Text>+2 Orbital coverage on spaces with affinity resources ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_ORBITAL4_HELP">
+			<Text>+2 Orbital Cover on tiles with affinity resources ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_MILITARY_HELP">
+			<Text>Increased Strength [ICON_STRENGTH] and Ranged Strength [ICON_RANGE_STRENGTH] when attacking or defending against aliens.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY2_HELP">
+			<Text>+10% Strength [ICON_STRENGTH] and Ranged Strength [ICON_RANGE_STRENGTH] when attacking or defending against aliens.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY3_HELP">
+			<Text>+15% Strength [ICON_STRENGTH] and Ranged Strength [ICON_RANGE_STRENGTH] when attacking or defending against aliens.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_MILITARY4_HELP">
+			<Text>+20% Strength [ICON_STRENGTH] and Ranged Strength [ICON_RANGE_STRENGTH] when attacking or defending against aliens.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_MILITARY_HELP">
+			<Text>More strength to ranged attacks on cities and outposts can attack from a distance.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY2_HELP">
+			<Text>+10% strength to ranged attacks from cities and outposts can attack from a distance.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY3_HELP">
+			<Text>+15% strength to ranged attacks from cities and outposts can attack from a distance.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_MILITARY4_HELP">
+			<Text>+20% strength to ranged attacks from cities and outposts can attack from a distance.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_INDUSTRY_HELP">
+			<Text>Adds 1 to Production [ICON_PRODUCTION] for Titanium[ICON_TITANIUM] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY2_HELP">
+			<Text>+1 to Production [ICON_PRODUCTION] for Titanium[ICON_TITANIUM] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY3_HELP">
+			<Text>+1 to Production [ICON_PRODUCTION] for Titanium[ICON_TITANIUM] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_INDUSTRY4_HELP">
+			<Text>+1 to Production [ICON_PRODUCTION] from Titanium [ICON_TITANIUM] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_SCIENCE_HELP">
+			<Text>Adds 1 Science [ICON_RESEARCH] from Petroleum [ICON_PETROLEUM] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE2_HELP">
+			<Text>+1 to Science [ICON_RESEARCH] from Petroleum [ICON_PETROLEUM] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE3_HELP">
+			<Text>+1 to Science [ICON_RESEARCH] for Petroleum [ICON_PETROLEUM] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_SCIENCE4_HELP">
+			<Text>+1 to Science [ICON_RESEARCH] for Petroleum [ICON_PETROLEUM] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_WEALTH_HELP">
+			<Text>Adds 2 Energy [ICON_ENERGY] for Geothermal Energy [ICON_GEOTHERMAL] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH2_HELP">
+			<Text>+2 to Energy [ICON_ENERGY] for Geothermal Energy [ICON_GEOTHERMAL] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH3_HELP">
+			<Text>+2 to Energy [ICON_ENERGY] for Geothermal Energy [ICON_GEOTHERMAL] resources.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_WEALTH4_HELP">
+			<Text>+2 to Energy [ICON_ENERGY] for Geothermal Energy [ICON_GEOTHERMAL] resources.</Text>>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_CULTURE_HELP">
+			<Text>Adds 1 Culture [ICON_CULTURE] to the [COLOR_HIGHLIGHT_IMPROVEMENT]Paddock[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Bed[ENDCOLOR] and [COLOR_HIGHLIGHT_IMPROVEMENT]Fishery[ENDCOLOR] improvements.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE2_HELP">
+			<Text>+1 to Culture [ICON_CULTURE] to the [COLOR_HIGHLIGHT_IMPROVEMENT]Paddock[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Bed[ENDCOLOR] and [COLOR_HIGHLIGHT_IMPROVEMENT]Fishery[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE3_HELP">
+			<Text>+1 to Culture [ICON_CULTURE] to the [COLOR_HIGHLIGHT_IMPROVEMENT]Paddock[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Bed[ENDCOLOR] and [COLOR_HIGHLIGHT_IMPROVEMENT]Fishery[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_CULTURE4_HELP">
+			<Text>+1 to Culture [ICON_CULTURE] to the [COLOR_HIGHLIGHT_IMPROVEMENT]Paddock[ENDCOLOR], [COLOR_HIGHLIGHT_IMPROVEMENT]Bed[ENDCOLOR] and [COLOR_HIGHLIGHT_IMPROVEMENT]Fishery[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_HEALTH_HELP">
+			<Text>Adds 1 Health [ICON_HEALTH] to Affinity resource [COLOR_HIGHLIGHT_IMPROVEMENT]Improvements[ENDCOLOR] ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH2_HELP">
+			<Text>+1 to Health [ICON_HEALTH] on Affinity resource [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH3_HELP">
+			<Text>+1 to Health [ICON_HEALTH] on Affinity resource [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_HEALTH4_HELP">
+			<Text>+1 Health [ICON_HEALTH] on Affinity resource [COLOR_HIGHLIGHT_IMPROVEMENT]improvements[ENDCOLOR] ([ICON_XENOMASS][ICON_FLOAT_STONE][ICON_FIRAXITE]).</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_SOCIAL_HEALTH_HELP">
+			<Text>More Energy [ICON_ENERGY] and +1 Health [ICON_HEALTH] in [COLOR_HIGHLIGHT_IMPROVEMENT]Terrascapes[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH2_HELP">
+			<Text>+2 Energy [ICON_ENERGY] and +1 Health [ICON_HEALTH] in [COLOR_HIGHLIGHT_IMPROVEMENT]Terrascapes[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH3_HELP">
+			<Text>+3 Energy [ICON_ENERGY] and +1 Health [ICON_HEALTH] in [COLOR_HIGHLIGHT_IMPROVEMENT]Terrascapes[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_HEALTH4_HELP">
+			<Text>+4 Energy [ICON_ENERGY] and +1 Health [ICON_HEALTH] in [COLOR_HIGHLIGHT_IMPROVEMENT]Terrascapes[ENDCOLOR].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_LUXURY_INDUSTRY_HELP">
+			<Text>More Production [ICON_PRODUCTION] in cities with a defending Military Unit in its tile.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY2_HELP">
+			<Text>+2 to Production [ICON_PRODUCTION] in cities with a defending Military Unit in its tile.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY3_HELP">
+			<Text>+3 to Production [ICON_PRODUCTION] in cities with a defending Military Unit in its space.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_LUXURY_INDUSTRY4_HELP">
+			<Text>+4 to Production [ICON_PRODUCTION] in cities with a defending Military Unit in its space.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_TERRITORY_WEALTH_HELP">
+			<Text>More Energy [ICON_ENERGY] in your cities.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH2_HELP">
+			<Text>+3 Energy [ICON_ENERGY] in each city.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH3_HELP">
+			<Text>+4 Energy [ICON_ENERGY] in each city.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_WEALTH4_HELP">
+			<Text>+5 Energy [ICON_ENERGY] in each city.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE2_HELP">
+			<Text>The Culture [ICON_CULTURE] cost of new Virtues is reduced by 6%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE3_HELP">
+			<Text>The Culture [ICON_CULTURE] cost of new Virtues is reduced by 8%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_SOCIAL_CULTURE4_HELP">
+			<Text>The Culture [ICON_CULTURE] cost of new Virtues is reduced by 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH2_HELP">
+			<Text>+10% to Population Growth [ICON_CITIZEN] in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH3_HELP">
+			<Text>+15% to Population Growth [ICON_CITIZEN] in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_GROWTH4_HELP">
+			<Text>+20% to Population Growth [ICON_CITIZEN] in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE2_HELP">
+			<Text>Increases Science [ICON_RESEARCH] gain by 6% in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE3_HELP">
+			<Text>Increases Science [ICON_RESEARCH] gain by 8% in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_SCIENCE4_HELP">
+			<Text>Increases Science [ICON_RESEARCH] gain by 10% in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_FOREIGN_POLICY_CAPITAL_TRADE_HELP">
+			<Text>Cities and Stalls heal 5 more damage per turn, minus Unhealthiness [ICON_UNHEALTH] per number of cities.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE2_HELP">
+			<Text>Cities and outposts recover 5 more damage per turn, -10% Unhealthiness [ICON_UNHEALTH] per number of cities.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE3_HELP">
+			<Text>Cities and outposts recover 5 more damage per turn, -15% Unhealthiness [ICON_UNHEALTH] per number of cities.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_TRADE4_HELP">
+			<Text>Cities and outposts recover 5 more damage per turn, -20% Unhealthiness [ICON_UNHEALTH] per number of cities.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH2_HELP">
+			<Text>Increases Energy [ICON_ENERGY] gains by 10% in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH3_HELP">
+			<Text>Increases Energy [ICON_ENERGY] gains by 15% in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_WEALTH4_HELP">
+			<Text>Increases Energy [ICON_ENERGY] gains by 20% in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<!--Personality traits text changes-->
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A1_HELP">
+			<Text>+10% to the City Developments conversion rate.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A2_HELP">
+			<Text>+15% to the City Developments conversion rate.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A3_HELP">
+			<Text>+20% to the City Developments conversion rate.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A1_HELP">
+			<Text>Unhealthiness [ICON_UNHEALTH] per global Population [ICON_CITIZEN] is reduced by 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A2_HELP">
+			<Text>Unhealthiness [ICON_UNHEALTH] per global Population [ICON_CITIZEN] is reduced by 20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_POLITICAL_TRADE_A3_HELP">
+			<Text>Unhealthiness [ICON_UNHEALTH] per global Population [ICON_CITIZEN] is reduced by 30%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A1_HELP">
+			<Text>The Science cost [ICON_RESEARCH] of the technology branches is reduced by 12%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A2_HELP">
+			<Text>The Science cost [ICON_RESEARCH] of the technology branches is reduced by 16%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_TRADE_A3_HELP">
+			<Text>The Science cost [ICON_RESEARCH] of the technology branches is reduced by 20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A1_HELP">
+			<Text>War Score is increased by 20% points.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A2_HELP">
+			<Text>War Score is increased by 25% points.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_TRADE_A3_HELP">
+			<Text>War Score is increased by 30% points.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A1_HELP">
+			<Text>+50% Health [ICON_HEALTH] in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A2_HELP">
+			<Text>+75% Health [ICON_HEALTH] in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_DOMESTIC_EXPAND_A3_HELP">
+			<Text>+100% Health [ICON_HEALTH] in the Capital [ICON_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_MILITARY_GROWTH_A3_HELP">
+			<Text>+2 to the City's Defense Strength [ICON_STRENGTH] per unit of Population [ICON_CITIZEN].</Text>
+		</Replace>
+		<!--Factions traits text changes-->
+		<!--Al Falah-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_WEALTH_A_HELP">
+			<Text>0.2/0.3/0.4 Energy [ICON_ENERGY] for each tile you have in your territory.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A1_HELP">
+			<Text>+0.2 Energy [ICON_ENERGY] for each tile you have in your territory.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A2_HELP">
+			<Text>+0.3 Energy [ICON_ENERGY] for each tile you have in your territory.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_WEALTH_A3_HELP">
+			<Text>+0.4 Energy [ICON_ENERGY] for each tile you have in your territory.</Text>
+		</Replace>
+		<!--Polystralia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_TRADE_A_HELP">
+			<Text>10%/15%/20% to Naval Units Production [ICON_PRODUCTION], and cities regain 5/5/10 extra hit points per turn.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A1_HELP">
+			<Text>+10% to Naval Units Production [ICON_PRODUCTION], and cities regain 5 extra hit points per turn.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A2_HELP">
+			<Text>+15% to Naval Units Production [ICON_PRODUCTION], and cities regain 5 extra hit points per turn.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_TRADE_A3_HELP">
+			<Text>+20% to Naval Units Production [ICON_PRODUCTION], and cities regain 10 extra hit points per turn.</Text>
+		</Replace>
+		<!--KP-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_EXPAND_A_HELP">
+			<Text>The Culture [ICON_CULTURE] and Energy [ICON_ENERGY] costs to acquire new city tiles are reduced by 30%/40%/50%, and 3/6/9 Health [ICON_HEALTH] overall.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A1_HELP">
+			<Text>The Culture [ICON_CULTURE] and Energy [ICON_ENERGY] costs to acquire new city tiles are reduced by 30%, and +3 Health [ICON_HEALTH] globally.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A2_HELP">
+			<Text>The Culture [ICON_CULTURE] and Energy [ICON_ENERGY] costs to acquire new city tiles are reduced by 40%, and +6 Health [ICON_HEALTH] globally.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_EXPAND_A3_HELP">
+			<Text>The Culture [ICON_CULTURE] and Energy [ICON_ENERGY] costs to acquire new city tiles are reduced by 50%, and +9 Health [ICON_HEALTH] overall.</Text>
+		</Replace>
+		<!--PAC-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A_HELP">
+			<Text>Wonder construction costs are reduced by 4%/6%/8%. +1/+2/+3 Diplomatic Capital [ICON_CAPITAL] of Wonders.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A1_HELP">
+			<Text>Wonder construction costs are reduced by 4%. +1 Diplomatic Capital [ICON_CAPITAL] from Wonders.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A2_HELP">
+			<Text>Wonder construction costs are reduced by 6%. +2 Diplomatic Capital [ICON_CAPITAL] from Wonders.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_INDUSTRY_A3_HELP">
+			<Text>Wonder construction costs are reduced by 8%. +3 Diplomatic Capital [ICON_CAPITAL] from Wonders.</Text>
+		</Replace>
+		<!--PAU-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_GROWTH_A_HELP">
+			<Text>10%/20%/30% [ICON_FOOD] GRowth in cities when healthy [ICON_HEALTH]. Production costs [ICON_PRODUCTION] of buildings that produce Culture [ICON_CULTURE] are reduced by 10%/15%/20%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A1_HELP">
+			<Text>+10% [ICON_FOOD] Growth in cities when healthy [ICON_HEALTH]. The Production costs [ICON_PRODUCTION] of city buildings that produce Culture [ICON_CULTURE] are reduced by 10%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A2_HELP">
+			<Text>+20% [ICON_FOOD] Growth in cities when healthy [ICON_HEALTH]. The Production costs [ICON_PRODUCTION] of city buildings that produce Culture [ICON_CULTURE] are reduced by 15%.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_GROWTH_A3_HELP">
+			<Text>+30% [ICON_FOOD] Growth in cities when healthy [ICON_HEALTH]. The Production costs [ICON_PRODUCTION] of city buildings that produce Culture [ICON_CULTURE] are reduced by 20%.</Text>
+		</Replace>
+		<!--Slavic federation-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A_HELP">
+			<Text>The strategic resource requirements of all Orbital Units are reduced by 1. You get 2/4/6 Petroleum [ICON_PETROLEUM], 2/4/6 Titanium [ICON_TITANIUM] and 2/4/6 Geothermal Energy [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A1_HELP">
+			<Text>The strategic resource requirements of all Orbital Units are reduced by 1. You start with 2 resources of Petroleum [ICON_PETROLEUM], Titanium [ICON_TITANIUM], and Geothermal Energy [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_ORBITAL_A3_HELP">
+			<Text>You get 2 additional resources of Petroleum [ICON_PETROLEUM], Titanium [ICON_TITANIUM] and Geothermal Energy [ICON_GEOTHERMAL].</Text>
+		</Replace>
+		<!--Chungsu-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A_HELP">
+			<Text>+1/0/0 extra Covert Agent [ICON_SPY]. Each successful Covert Operation in a foreign City rewards you with 10/20/30 Science [ICON_RESEARCH] per Agent rank.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A2_HELP">
+			<Text>Each successful Covert Operation in a foreign City rewards 20 Science [ICON_RESEARCH] per Agent rank.</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_SCIENCE_A3_HELP">
+			<Text>Each successful Covert Operation in a foreign City rewards 30 Science [ICON_RESEARCH] per Agent rank.</Text>
+		</Replace>
+		<!--INTEGR-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A_HELP">
+			<Text>Agreements cost 50%/60%/75% less Diplomatic Capital [ICON_DIPLO_CAPITAL]. Purchasing units and buildings cost 50%/60%/75% less Diplomatic Capital [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A1_HELP">
+			<Text>Agreements cost 50% less Diplomatic Capital [ICON_DIPLO_CAPITAL]. Purchasing units and buildings cost 50% less Diplomatic Capital [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A2_HELP">
+			<Text>Agreements cost 60% less Diplomatic Capital [ICON_DIPLO_CAPITAL]. Purchasing units and buildings cost 60% less Diplomatic Capital [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PLAYERPERK_PERSONALITY_TRAIT_CHARACTER_DIPLOMACY_A3_HELP">
+			<Text>Agreements cost 75% less Diplomatic Capital [ICON_DIPLO_CAPITAL]. Purchasing units and buildings cost 75% less Diplomatic Capital [ICON_DIPLO_CAPITAL].</Text>
+		</Replace>
+		<!--Factions traits text improvements-->
+		<!--North Sea Alliance-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_AQUATIC_A_HELP">
+			<Text>Aquatic Cities have 50%/60%/75% more Combat Strength [ICON_STRENGTH] and cost 50%/60%/75% less to move.</Text>
+		</Replace>
+		<!--Brasilia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_COMBAT_A_HELP">
+			<Text>War Score points increased by 30%/40%/50%. Gain +1/+2/+3 Diplomatic Capital [ICON_DIPLO_CAPITAL] for each Unit killed in combat.</Text>
+		</Replace>
+		<!--ARC-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_COVERT_A_HELP">
+			<Text>Covert Operations complete 30%/40%/50% faster and require 1 less Intrigue level to attempt.</Text>
+		</Replace>
+		<!--Franco-Iberia-->
+		<Replace Tag="TXT_KEY_PERSONALITY_TRAIT_CHARACTER_CULTURE_A_HELP">
+			<Text>Gain 1 free Virtue for every 10/9/8 Virtues earned with Culture [ICON_CULTURE].</Text>
+		</Replace>
+	</Language_en_US>
+</GameData>

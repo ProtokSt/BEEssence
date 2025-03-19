@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- MGH: Modified v0.9.3.2025-03-09-->
+<GameData>
+	<!-- Table definition -->
+	<Table name="Projects">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text"/>
+		<Column name="Civilopedia" type="text"/>
+		<Column name="Strategy" type="text"/>
+		<Column name="Help" type="text"/>
+		<Column name="Requirements" type="text"/>
+		<Column name="MaxGlobalInstances" type="integer" default="0"/>
+		<Column name="MaxTeamInstances" type="integer" default="0"/>
+		<Column name="Cost" type="integer" default="0"/>
+    <Column name="UseSpecialCost" type="boolean" default="false" notes="Set to true if game core will provide an algorithmic cost for this project. If no special function exists, the default 'Cost' field will be used instead."/>
+		<Column name="PlotProject" type="boolean" default="false"/>
+    <Column name="PlotPlacementToolTip" type="text" default=""/>
+    <Column name="PlotPlacementConfirmSound" type="text" default=""/>
+		<Column name="PartialImprovement" type="text"/>
+		<Column name="CompleteImprovement" type="text"/>
+		<Column name="CultureBranchesRequired" type="integer" default="0"/>
+		<Column name="TechShare" type="integer" default="0"/>
+		<Column name="VictoryDelayPercent" type="integer" default="0"/>
+		<Column name="MovieDefineTag" type="text" default="NULL"/>
+		<Column name="BuildingPrereq" type="text" default="NULL"/>
+		<Column name="VictoryPrereq" type="text" default="NULL"/>
+		<Column name="TechPrereq" type="text" default="NULL"/>
+		<Column name="ProjectPrereq" type="text" default="NULL"/>
+		<Column name="OnlyAllowedByQuest" type="boolean" default="false"/>
+		<Column name="EveryoneSpecialUnit" type="text" default="NULL"/>
+		<Column name="CreateSound" type="text" default="NULL"/>
+		<Column name="AnyonePrereqProject" type="text" default="NULL"/>
+		<Column name="ObsoleteProject" type="text" reference="Projects(Type)" default="NULL"/>
+		<Column name="PortraitIndex" type="integer" default="-1"/>
+		<Column name="IconAtlas" type="text" default="NULL" reference="IconTextureAtlases(Atlas)"/>
+	</Table>
+	<Table name="Project_Flavors">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="FlavorType" type="text" reference="Flavors(Type)"/>
+		<Column name="Flavor" type="integer" notnull="true"/>
+	</Table>
+	<Table name="Project_Prereqs">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="PrereqProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="AmountNeeded" type="integer" default="1"/>
+	</Table>
+	<Table name="Project_AffinityPrereqs">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="AffinityType" type="text" reference="Affinity_Types(Type)"/>
+		<Column name="Level" type="integer"/>
+	</Table>
+	<Table name="Project_VictoryThresholds">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="VictoryType" type="text" reference="Victories(Type)"/>
+		<Column name="Threshold" type="integer" notnull="true"/>
+		<Column name="MinThreshold" type="integer" default="0"/>
+	</Table>
+	<Table name="Project_ResourceQuantityRequirements">
+		<Column name="ProjectType" type="text" reference="Projects(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+		<Column name="Quantity" type="integer" notnull="true"/>
+	</Table>
+	<!-- Table data -->
+	<Projects>
+		<!-- Planetary Wonders -->
+		<Row>
+			<ID>0</ID>
+			<Type>PROJECT_BEACON</Type>
+			<Cost>2000</Cost><!--1650-->
+			<VictoryPrereq>VICTORY_CONTACT</VictoryPrereq>
+			<ProjectPrereq>PROJECT_DECODE_SIGNAL</ProjectPrereq>
+			<PlotProject>true</PlotProject>
+      <PlotPlacementToolTip>TXT_KEY_PLACE_WONDER_HERE</PlotPlacementToolTip>
+			<Description>TXT_KEY_OBJECT_BEACON</Description>
+			<Help>TXT_KEY_OBJECT_BEACON_HELP</Help>
+			<Civilopedia>TXT_KEY_OBJECT_BEACON_PEDIA</Civilopedia>
+			<MaxGlobalInstances>-1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<PartialImprovement>IMPROVEMENT_BEACON_PARTIAL</PartialImprovement>
+			<CompleteImprovement>IMPROVEMENT_BEACON</CompleteImprovement>
+			<IconAtlas>PROJECT_ATLAS</IconAtlas>
+			<PortraitIndex>3</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>PROJECT_PURITY_GATE</Type>
+			<Cost>2500</Cost><!--1750-->
+			<VictoryPrereq>VICTORY_PROMISED_LAND</VictoryPrereq>
+			<OnlyAllowedByQuest>true</OnlyAllowedByQuest>
+			<TechPrereq>TECH_NANOTECHNOLOGY</TechPrereq>
+			<PlotProject>true</PlotProject>
+      <PlotPlacementToolTip>TXT_KEY_PLACE_WONDER_HERE</PlotPlacementToolTip>
+			<Description>TXT_KEY_OBJECT_PURITY_GATE</Description>
+			<Help>TXT_KEY_OBJECT_PURITY_GATE_HELP</Help>
+			<Civilopedia>TXT_KEY_OBJECT_PURITY_GATE_PEDIA</Civilopedia>
+			<MaxGlobalInstances>-1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<PartialImprovement>IMPROVEMENT_PURITY_GATE_PARTIAL</PartialImprovement>
+			<CompleteImprovement>IMPROVEMENT_PURITY_GATE</CompleteImprovement>
+			<IconAtlas>PROJECT_ATLAS</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>PROJECT_SUPREMACY_GATE</Type>
+			<Cost>2500</Cost><!--1750-->
+			<VictoryPrereq>VICTORY_EMANCIPATION</VictoryPrereq>
+			<OnlyAllowedByQuest>true</OnlyAllowedByQuest>
+			<TechPrereq>TECH_HYPERCOMPUTING</TechPrereq>
+			<PlotProject>true</PlotProject>
+      <PlotPlacementToolTip>TXT_KEY_PLACE_WONDER_HERE</PlotPlacementToolTip>
+			<Description>TXT_KEY_OBJECT_SUPREMACY_GATE</Description>
+			<Help>TXT_KEY_OBJECT_SUPREMACY_GATE_HELP</Help>
+			<Civilopedia>TXT_KEY_OBJECT_SUPREMACY_GATE_PEDIA</Civilopedia>
+			<MaxGlobalInstances>-1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<PartialImprovement>IMPROVEMENT_SUPREMACY_GATE_PARTIAL</PartialImprovement>
+			<CompleteImprovement>IMPROVEMENT_SUPREMACY_GATE</CompleteImprovement>
+			<IconAtlas>PROJECT_ATLAS</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>PROJECT_MIND_FLOWER</Type>
+			<Cost>2500</Cost><!--1900-->
+			<VictoryPrereq>VICTORY_TRANSCENDENCE</VictoryPrereq>
+			<OnlyAllowedByQuest>true</OnlyAllowedByQuest>
+			<PlotProject>true</PlotProject>
+      <PlotPlacementToolTip>TXT_KEY_PLACE_WONDER_HERE</PlotPlacementToolTip>
+			<Description>TXT_KEY_OBJECT_MIND_FLOWER</Description>
+			<Help>TXT_KEY_OBJECT_MIND_FLOWER_HELP</Help>
+			<Civilopedia>TXT_KEY_OBJECT_MIND_FLOWER_PEDIA</Civilopedia>
+			<MaxGlobalInstances>-1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<PartialImprovement>IMPROVEMENT_MIND_FLOWER_PARTIAL</PartialImprovement>
+			<CompleteImprovement>IMPROVEMENT_MIND_FLOWER</CompleteImprovement>
+			<IconAtlas>PROJECT_ATLAS</IconAtlas>
+			<PortraitIndex>5</PortraitIndex>
+		</Row>
+		<!-- Victory Condition Projects -->
+		<Row>
+			<Type>PROJECT_DISCOVER_SIGNAL</Type>
+			<Cost>500</Cost><!--450-->
+			<VictoryPrereq>VICTORY_CONTACT</VictoryPrereq>
+			<TechPrereq>TECH_TRANSCENDENTAL_MATH</TechPrereq>
+			<Description>TXT_KEY_PROJECT_DISCOVER_SIGNAL</Description>
+			<Help>TXT_KEY_PROJECT_DISCOVER_SIGNAL_HELP</Help>
+			<Civilopedia>TXT_KEY_PROJECT_DISCOVER_SIGNAL_PEDIA</Civilopedia>
+			<MaxGlobalInstances>-1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<ObsoleteProject>PROJECT_DECODE_SIGNAL</ObsoleteProject>
+			<IconAtlas>PROJECT_ATLAS</IconAtlas>
+			<PortraitIndex>0</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>PROJECT_DECODE_SIGNAL</Type>
+			<Cost>1000</Cost><!--850-->
+			<VictoryPrereq>VICTORY_CONTACT</VictoryPrereq>
+			<OnlyAllowedByQuest>true</OnlyAllowedByQuest>
+			<Description>TXT_KEY_OBJECT_DECODE_SIGNAL</Description>
+			<Help>TXT_KEY_OBJECT_DECODE_SIGNAL_HELP</Help>
+			<Civilopedia>TXT_KEY_OBJECT_DECODE_SIGNAL_PEDIA</Civilopedia>
+			<MaxGlobalInstances>-1</MaxGlobalInstances>
+			<MaxTeamInstances>1</MaxTeamInstances>
+			<IconAtlas>PROJECT_ATLAS</IconAtlas>
+			<PortraitIndex>1</PortraitIndex>
+		</Row>
+    <!-- Water Gameplay -->
+    <Row>
+      <Type>PROJECT_MOVE_CITY</Type>
+      <Cost>75</Cost><!--60-->
+      <Description>TXT_KEY_PROJECT_MOVE_CITY</Description>
+      <Help>TXT_KEY_PROJECT_MOVE_CITY_HELP</Help>
+      <PlotProject>true</PlotProject>
+      <UseSpecialCost>true</UseSpecialCost>
+      <PlotPlacementToolTip>TXT_KEY_TOOLTIP_MOVE_CITY_HERE</PlotPlacementToolTip>
+      <PlotPlacementConfirmSound>AS2D_INTERFACE_MOVE_CITY_CONFIRM</PlotPlacementConfirmSound>
+      <MaxGlobalInstances>-1</MaxGlobalInstances><!-- 0=disable -1=infinite uses-->
+      <MaxTeamInstances>-1</MaxTeamInstances><!-- 0=disable -1=infinite uses-->
+      <IconAtlas>PROJECT_ATLAS</IconAtlas>
+      <PortraitIndex>6</PortraitIndex>
+    </Row>
+	</Projects>
+	<Project_Prereqs>
+	</Project_Prereqs>
+	<Project_AffinityPrereqs>
+		<Row>
+			<ProjectType>PROJECT_MIND_FLOWER</ProjectType>
+			<AffinityType>AFFINITY_TYPE_HARMONY</AffinityType>
+			<Level>15</Level>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_PURITY_GATE</ProjectType>
+			<AffinityType>AFFINITY_TYPE_PURITY</AffinityType>
+			<Level>15</Level>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_SUPREMACY_GATE</ProjectType>
+			<AffinityType>AFFINITY_TYPE_SUPREMACY</AffinityType>
+			<Level>15</Level>
+		</Row>
+	</Project_AffinityPrereqs>
+	<Project_VictoryThresholds>
+	</Project_VictoryThresholds>
+	<Project_Flavors>
+		<Row>
+			<ProjectType>PROJECT_DISCOVER_SIGNAL</ProjectType>
+			<FlavorType>FLAVOR_CONTACT</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_DECODE_SIGNAL</ProjectType>
+			<FlavorType>FLAVOR_CONTACT</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_BEACON</ProjectType>
+			<FlavorType>FLAVOR_CONTACT</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_MIND_FLOWER</ProjectType>
+			<FlavorType>FLAVOR_TRANSCENDENCE</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_SUPREMACY_GATE</ProjectType>
+			<FlavorType>FLAVOR_EMANCIPATION</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+		<Row>
+			<ProjectType>PROJECT_PURITY_GATE</ProjectType>
+			<FlavorType>FLAVOR_PROMISED_LAND</FlavorType>
+			<Flavor>200</Flavor>
+		</Row>
+    <Row>
+      <ProjectType>PROJECT_MOVE_CITY</ProjectType>
+      <FlavorType>FLAVOR_MOVE_CITY</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+  </Project_Flavors>
+</GameData>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by David McDonough (Firaxis Games) -->
+<!-- MGH: Modified v0.6.2.2021-12-12-->
+<GameData>
+	<!-- Table definition -->
+	<Table name="Features">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Civilopedia" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Help" type="text" default="NULL"/>
+		<Column name="ArtDefineTag" type="text"/>
+		<Column name="StartingLocationWeight" type="integer" default="0"/>
+		<Column name="Movement" type="integer" default="1"/>
+		<Column name="SeeThrough" type="integer" default="0"/>
+		<Column name="Defense" type="integer" default="0"/>
+		<Column name="InfluenceCost" type="integer" default="0"/>
+		<Column name="AppearanceProbability" type="integer" default="0"/>
+		<Column name="DisappearanceProbability" type="integer" default="0"/>
+		<Column name="Growth" type="integer" default="0"/>
+		<Column name="GrowthTerrainType" type="text" reference="Terrains(Type)"/>
+		<Column name="TurnDamage" type="integer" default="0"/>
+		<Column name="AdjacentUnitFreePromotion" type="text" reference="UnitPromotions(Type)"/>
+		<Column name="FirstFinderGold" type="integer" default="0"/>
+		<Column name="InBorderHealth" type="integer" default="0"/>
+		<Column name="OccurrenceFrequency" type="integer" default="0"/>
+		<Column name="AdjacentFrequency" type="integer" default="0"/>
+		<Column name="YieldNotAdditive" type="boolean" default="false"/>
+		<Column name="NoCoast" type="boolean" default="false"/>
+		<Column name="NoRiver" type="boolean" default="false"/>
+		<Column name="NoAdjacent" type="boolean" default="false"/>
+		<Column name="RequiresFlatlands" type="boolean" default="false"/>
+		<Column name="RequiresRiver" type="boolean" default="false"/>
+		<Column name="AddsFreshWater" type="boolean" default="false"/>
+		<Column name="Impassable" type="boolean" default="false"/>
+		<Column name="NoCity" type="boolean" default="false"/>
+		<Column name="NoImprovement" type="boolean" default="false"/>
+		<Column name="VisibleAlways" type="boolean" default="false"/>
+		<Column name="NukeImmune" type="boolean" default="false"/>
+		<Column name="Rough" type="boolean" default="false"/>
+		<Column name="WorldSoundscapeAudioScript" type="text"/>
+		<Column name="EffectType" type="text"/>
+		<Column name="EffectProbability" type="integer" default="0"/>
+		<Column name="EffectTypeTag" type="text"/>
+		<Column name="AdvancedStartRemoveCost" type="integer" default="0"/>
+		<Column name="PortraitIndex" type="integer" default="-1"/>
+		<Column name="IconAtlas" type="text" default="NULL" reference="IconTextureAtlases(Atlas)"/>
+		<Column name="GraphicalOnly" type="boolean" default="false"/>
+	</Table>
+	<Table name="FakeFeatures">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Civilopedia" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="ArtDefineTag" type="text"/>
+		<Column name="StartingLocationWeight" type="integer" default="0"/>
+		<Column name="Movement" type="integer" default="0"/>
+		<Column name="SeeThrough" type="integer" default="0"/>
+		<Column name="Defense" type="integer" default="0"/>
+		<Column name="InfluenceCost" type="integer" default="0"/>
+		<Column name="AppearanceProbability" type="integer" default="0"/>
+		<Column name="DisappearanceProbability" type="integer" default="0"/>
+		<Column name="Growth" type="integer" default="0"/>
+		<Column name="GrowthTerrainType" type="text" reference="Terrains(Type)"/>
+		<Column name="TurnDamage" type="integer" default="0"/>
+		<Column name="YieldNotAdditive" type="boolean" default="false"/>
+		<Column name="NoCoast" type="boolean" default="false"/>
+		<Column name="NoRiver" type="boolean" default="false"/>
+		<Column name="NoAdjacent" type="boolean" default="false"/>
+		<Column name="RequiresFlatlands" type="boolean" default="false"/>
+		<Column name="RequiresRiver" type="boolean" default="false"/>
+		<Column name="AddsFreshWater" type="boolean" default="false"/>
+		<Column name="Impassable" type="boolean" default="false"/>
+		<Column name="NoCity" type="boolean" default="false"/>
+		<Column name="NoImprovement" type="boolean" default="false"/>
+		<Column name="VisibleAlways" type="boolean" default="false"/>
+		<Column name="NukeImmune" type="boolean" default="false"/>
+		<Column name="Rough" type="boolean" default="false"/>
+		<Column name="WorldSoundscapeAudioScript" type="text"/>
+		<Column name="EffectType" type="text"/>
+		<Column name="EffectProbability" type="integer" default="0"/>
+		<Column name="EffectTypeTag" type="text"/>
+		<Column name="AdvancedStartRemoveCost" type="integer" default="0"/>
+		<Column name="PortraitIndex" type="integer" default="-1"/>
+		<Column name="IconAtlas" type="text" default="NULL" reference="IconTextureAtlases(Atlas)"/>
+		<Column name="DecorationOnly" type="boolean" default="false"/>
+	</Table>
+	<Table name="Feature_YieldChanges">
+		<!-- Removed reference to Features(Type) since this table will sometimes reference FakeFeatures(Type) as well -->
+		<Column name="FeatureType" type="text"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<Table name="Feature_RiverYieldChanges">
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<Table name="Feature_HillsYieldChanges">
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<Table name="Feature_TerrainBooleans">
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+		<Column name="TerrainType" type="text" reference="Terrains(Type)"/>
+	</Table>
+	<!-- Table data -->
+	<Features>
+		<Row>
+			<ID>0</ID>
+			<Type>FEATURE_ICE</Type>
+			<Description>TXT_KEY_FEATURE_ICE</Description>
+			<Civilopedia>TXT_KEY_FEATURE_ICE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_ICE</ArtDefineTag>
+			<Impassable>true</Impassable>
+			<InfluenceCost>3</InfluenceCost>
+			<EffectTypeTag>SNOW</EffectTypeTag>
+			<PortraitIndex>13</PortraitIndex>
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>FEATURE_MARSH</Type>
+			<Description>TXT_KEY_FEATURE_MARSH</Description>
+			<Civilopedia>TXT_KEY_CIVBE_FEATURES_MARSH_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_MARSH</ArtDefineTag>
+			<StartingLocationWeight>-10</StartingLocationWeight>
+			<Movement>3</Movement>
+			<Defense>-15</Defense>
+			<InfluenceCost>1</InfluenceCost>
+			<RequiresFlatlands>true</RequiresFlatlands>
+			<WorldSoundscapeAudioScript>ASSS_AMBIENCE_SWAMP</WorldSoundscapeAudioScript>
+			<EffectTypeTag>MUD</EffectTypeTag>
+			<PortraitIndex>15</PortraitIndex>
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>FEATURE_FLOOD_PLAINS</Type>
+			<Description>TXT_KEY_FEATURE_FLOOD_PLAINS</Description>
+			<Civilopedia>TXT_KEY_CIVBE_FEATURES_FLOODPLAINS_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_FLOOD_PLAINS</ArtDefineTag>
+			<AppearanceProbability>10000</AppearanceProbability>
+			<Defense>-10</Defense>
+			<InfluenceCost>-1</InfluenceCost>
+			<RequiresFlatlands>true</RequiresFlatlands>
+			<RequiresRiver>true</RequiresRiver>
+			<PortraitIndex>11</PortraitIndex>
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>FEATURE_FOREST</Type>
+			<Description>TXT_KEY_FEATURE_FOREST</Description>
+			<Civilopedia>TXT_KEY_CIVBE_FEATURES_FOREST_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_FOREST</ArtDefineTag>
+			<Movement>2</Movement>
+			<SeeThrough>0</SeeThrough><!--changed-->
+			<Defense>25</Defense>
+			<Growth>8</Growth>
+			<InfluenceCost>1</InfluenceCost>
+			<Rough>true</Rough>
+			<YieldNotAdditive>true</YieldNotAdditive>
+			<WorldSoundscapeAudioScript>ASSS_AMBIENCE_FOREST</WorldSoundscapeAudioScript>
+			<EffectType>EFFECT_BIRDSCATTER</EffectType>
+			<EffectProbability>15</EffectProbability>
+			<EffectTypeTag>LEAVES</EffectTypeTag>
+			<PortraitIndex>12</PortraitIndex>
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>FEATURE_MIASMA</Type>
+			<Description>TXT_KEY_FEATURE_MIASMA</Description>
+			<Civilopedia>TXT_KEY_FEATURE_MIASMA_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_MIASMA</ArtDefineTag>
+      <Movement>0</Movement>
+			<PortraitIndex>16</PortraitIndex>
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>FEATURE_CRATER</Type>
+			<Description>TXT_KEY_FEATURE_CRATER</Description>
+			<Civilopedia>TXT_KEY_CIVBE_FEATURES_CRATER_TEXT</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_CRATER</ArtDefineTag>
+			<Movement>2</Movement>
+			<SeeThrough>2</SeeThrough>
+			<Impassable>true</Impassable>
+			<InfluenceCost>2</InfluenceCost>
+			<NoImprovement>true</NoImprovement>
+			<OccurrenceFrequency>10</OccurrenceFrequency>
+			<Rough>true</Rough>
+			<YieldNotAdditive>true</YieldNotAdditive>
+			<PortraitIndex>10</PortraitIndex>
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>FEATURE_REEF</Type>
+			<Description>TXT_KEY_FEATURE_REEF</Description>
+			<Civilopedia>TXT_KEY_FEATURE_REEF_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_FEATURE_ICE</ArtDefineTag>
+			<PortraitIndex>13</PortraitIndex>
+			<InfluenceCost>-1</InfluenceCost>
+			<OccurrenceFrequency>70</OccurrenceFrequency> <!-- Percent of transition tiles -->
+			<AdjacentFrequency>50</AdjacentFrequency> <!-- Percent of reefs adjacent. Make larger to make more reefs adjacent. -->
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+			<GraphicalOnly>true</GraphicalOnly>
+		</Row>
+		<Row>
+			<Type>FEATURE_LAKE_MODRT</Type> <!--Change for CivBE RT-->
+			<Description>TXT_KEY_CIVBE_FEATURES_LAKE_TITLE</Description>
+			<Civilopedia>TXT_KEY_CIVBE_FEATURES_LAKE_TEXT</Civilopedia>
+			<Movement>1</Movement>
+			<!--<YieldNotAdditive>true</YieldNotAdditive>-->
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+			<PortraitIndex>14</PortraitIndex>
+			<GraphicalOnly>true</GraphicalOnly>
+		</Row>
+	</Features>
+	<FakeFeatures>
+		<Row>
+			<ID>0</ID>
+			<Type>FEATURE_LAKE</Type> <!--Not working well, then check FEATURE_LAKE_MODRT too-->
+			<Description>TXT_KEY_CIVBE_FEATURES_LAKE_TITLE</Description>
+			<Civilopedia>TXT_KEY_CIVBE_FEATURES_LAKE_TEXT</Civilopedia>
+			<Movement>1</Movement>
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+			<PortraitIndex>14</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>FEATURE_RIVER</Type>
+			<Description>TXT_KEY_CIVBE_FEATURES_RIVER_TITLE</Description>
+			<Civilopedia>TXT_KEY_CIVBE_FEATURES_RIVER_TEXT</Civilopedia>
+			<Movement>TXT_KEY_CIVBE_FEATURES_RIVER_MVT_TEXT</Movement>
+			<IconAtlas>TERRAIN_ATLAS</IconAtlas>
+			<PortraitIndex>17</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>FEATURE_BUBBLES</Type>
+			<ArtDefineTag>ART_DEF_FEATURE_BUBBLES</ArtDefineTag>
+			<DecorationOnly>true</DecorationOnly>
+			<NoAdjacent>true</NoAdjacent>
+			<AppearanceProbability>5</AppearanceProbability>
+		</Row>
+		<Row>
+			<Type>FEATURE_TRENCH_BUBBLES</Type>
+			<ArtDefineTag>ART_DEF_FEATURE_TRENCH_BUBBLES</ArtDefineTag>
+			<DecorationOnly>true</DecorationOnly>
+			<NoAdjacent>true</NoAdjacent>
+			<AppearanceProbability>25</AppearanceProbability>
+		</Row>
+	</FakeFeatures>
+	<Feature_YieldChanges>
+		<Row>
+			<FeatureType>FEATURE_RIVER</FeatureType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_LAKE</FeatureType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_LAKE</FeatureType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield><!--changed-->
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield><!--changed-->
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_REEF</FeatureType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Feature_YieldChanges>
+	<Feature_RiverYieldChanges>
+		<Row>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Feature_RiverYieldChanges>
+	<Feature_TerrainBooleans>
+		<Row>
+			<FeatureType>FEATURE_ICE</FeatureType>
+			<TerrainType>TERRAIN_COAST</TerrainType>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_ICE</FeatureType>
+			<TerrainType>TERRAIN_OCEAN</TerrainType>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<TerrainType>TERRAIN_GRASS</TerrainType>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<TerrainType>TERRAIN_PLAINS</TerrainType>
+		</Row>
+		<!--<Row>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<TerrainType>TERRAIN_TUNDRA</TerrainType>
+		</Row>-->
+		<Row>
+			<FeatureType>FEATURE_BUBBLES</FeatureType>
+			<TerrainType>TERRAIN_OCEAN</TerrainType>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_TRENCH_BUBBLES</FeatureType>
+			<TerrainType>TERRAIN_TRENCH</TerrainType>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_LAKE</FeatureType>
+			<TerrainType>TERRAIN_COAST</TerrainType>
+		</Row>
+		<Row>
+			<FeatureType>FEATURE_LAKE</FeatureType>
+			<TerrainType>TERRAIN_OCEAN</TerrainType>
+		</Row>
+	</Feature_TerrainBooleans>
+</GameData>

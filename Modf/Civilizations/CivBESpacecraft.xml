@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (http://www.altova.com) by David McDonough (Firaxis Games) -->
+<!-- MGH: Modified v0.4.3.2019-11-12-->
+<GameData>
+	<!-- Table definition -->
+	<Table name="Spacecraft">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="ShortDescription" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="RevealBarbarians" type="boolean" default="false"/>
+		<Column name="RevealPlayersTurn" type="integer" default="-1"/>
+		<Column name="PlanetfallRangeChange" type="integer" default="0"/>
+		<Column name="PlanetfallSightChange" type="integer" default="0"/>
+		<Column name="ResourcePodsNearStart" type="integer" default="0"/>
+		<Column name="GrantBuildingClass" type="text" reference="BuildingClasses(Type)" default="NULL"/>
+		<Column name="RevealContinentOutline" type="boolean" default="false"/>
+		<Column name="RevealArtifactLocations" type="boolean" default="false"/>
+		<Column name="PortraitIndex" type="integer" default="0"/>
+		<Column name="IconAtlas" type="text" default="LOADOUT_ATLAS" reference="IconTextureAtlases(Atlas)"/>
+		<Column name="FiraxisLiveUnlockKey" type="text" default="NULL"/>
+	</Table>
+	<Table name="Spacecraft_GrantedYield">
+		<Column name="SpacecraftType" type="text" reference="Spacecraft(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+	<Table name="Spacecraft_VisibleResources">
+		<Column name="SpacecraftType" type="text" reference="Spacecraft(Type)"/>
+		<Column name="ResourceType" type="text" reference="Resources(Type)"/>
+	</Table>
+	<!-- Table data -->
+	<Spacecraft>
+		<Row ID="0" Type="SPACECRAFT_SURVEYOR" 
+         Description="TXT_KEY_SPACECRAFT_SURVEYOR" 
+         ShortDescription="TXT_KEY_SPACECRAFT_SURVEYOR_SHORT" 
+         RevealContinentOutline="true" 
+         PortraitIndex="0"
+         FiraxisLiveUnlockKey="AlwaysLocked"/>
+		<Row Type="SPACECRAFT_RETRO_THRUSTERS" 
+         Description="TXT_KEY_SPACECRAFT_RETRO_THRUSTERS" 
+         ShortDescription="TXT_KEY_SPACECRAFT_RETRO_THRUSTERS_SHORT" 
+         PlanetfallRangeChange="1"
+         PlanetfallSightChange="3"
+         PortraitIndex="3"/>
+		<Row Type="SPACECRAFT_TECTONIC_SCANNER" 
+         Description="TXT_KEY_SPACECRAFT_TECTONIC_SCANNER" 
+         ShortDescription="TXT_KEY_SPACECRAFT_TECTONIC_SCANNER_SHORT" 
+         PortraitIndex="6"/>
+		<Row Type="SPACECRAFT_FUSION_REACTOR" 
+         Description="TXT_KEY_SPACECRAFT_FUSION_REACTOR" 
+		 ShortDescription="TXT_KEY_SPACECRAFT_FUSION_REACTOR_SHORT" 
+         PortraitIndex="4"
+         FiraxisLiveUnlockKey="AlwaysLocked"/>
+		<Row Type="SPACECRAFT_LIFEFORM_SENSOR" 
+         Description="TXT_KEY_SPACECRAFT_LIFEFORM_SENSOR" 
+         ShortDescription="TXT_KEY_SPACECRAFT_LIFEFORM_SENSOR_SHORT" 
+         RevealBarbarians="true" 
+         PortraitIndex="1"
+         FiraxisLiveUnlockKey="AlwaysLocked"/>
+		<Row Type="SPACECRAFT_SUPPLY_MODULE" 
+         Description="TXT_KEY_SPACECRAFT_SUPPLY_MODULE" 
+         ShortDescription="TXT_KEY_SPACECRAFT_SUPPLY_MODULE_SHORT" 
+         ResourcePodsNearStart="2" 
+         PortraitIndex="5" />
+		<Row Type="SPACECRAFT_ELECTROMAGNETIC_SENSOR" 
+         Description="TXT_KEY_SPACECRAFT_ELECTROMAGNETIC_SENSOR" 
+         ShortDescription="TXT_KEY_SPACECRAFT_ELECTROMAGNETIC_SENSOR_SHORT" 
+         RevealArtifactLocations="true" 
+         PortraitIndex="2" />
+	</Spacecraft>
+	<Spacecraft_GrantedYield>
+		<Row SpacecraftType="SPACECRAFT_FUSION_REACTOR" YieldType="YIELD_ENERGY" Yield="100"/>
+	</Spacecraft_GrantedYield>
+	<Spacecraft_VisibleResources>
+		<Row SpacecraftType="SPACECRAFT_TECTONIC_SCANNER" ResourceType="RESOURCE_PETROLEUM"/>
+		<Row SpacecraftType="SPACECRAFT_TECTONIC_SCANNER" ResourceType="RESOURCE_GEOTHERMAL_ENERGY"/>
+		<Row SpacecraftType="SPACECRAFT_TECTONIC_SCANNER" ResourceType="RESOURCE_TITANIUM"/>
+	</Spacecraft_VisibleResources>
+</GameData>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.0.2025-02-16-->
+<!-- 2022 - Blessed by Protok -->
+<GameData>
+	<!-- MGH:MOD reset (except new aliens stages) -->
+	<UnitPerks>
+		<!-- Aliens Unit Upgrades Perks -->
+		<Row><Type>UNITPERK_ALIENS_STAGE_2_1</Type>
+			<PortraitIndex>7</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<DefendWhileInMiasmaMod>25</DefendWhileInMiasmaMod>
+		</Row>
+		<Row><Type>UNITPERK_ALIENS_STAGE_2_2</Type>
+			<PortraitIndex>7</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<AttackWhileInMiasmaMod>25</AttackWhileInMiasmaMod>
+		</Row>
+		<Row><Type>UNITPERK_ALIENS_STAGE_3_1</Type>
+			<PortraitIndex>7</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<DefendWhileInMiasmaMod>50</DefendWhileInMiasmaMod>
+		</Row>
+		<Row><Type>UNITPERK_ALIENS_STAGE_3_2</Type>
+			<PortraitIndex>7</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<AttackWhileInMiasmaMod>50</AttackWhileInMiasmaMod>
+		</Row>
+	</UnitPerks>
+	<UnitPerks_DomainCombatMods>
+	</UnitPerks_DomainCombatMods>
+	<UnitPerks_TerrainCombatMods>
+	</UnitPerks_TerrainCombatMods>
+	<UnitPerks_CombatClassMods>
+	</UnitPerks_CombatClassMods>
+</GameData>

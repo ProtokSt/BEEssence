@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.1.2025-02-18-->
+<!-- 20/07/2020 blessed by Protok St -->
+<GameData>
+	<Notifications>
+		<!--MGH:Bug:Is duplicated in other file-->
+		<!--<Row>
+			<NotificationType>NOTIFICATION_ECONOMIC_PLAN</NotificationType>
+			<IconAtlas>NOTIFICATION_PW_ATLAS</IconAtlas>
+			<IconIndex>0</IconIndex>
+		</Row>-->
+	</Notifications>
+</GameData>

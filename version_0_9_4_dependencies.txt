@@ -1,0 +1,26 @@
+0.9.4
+Dependencies:
+¯¯¯¯¯¯¯¯¯¯¯¯¯
+Exoplanets
+BERT
+PW AnchorCeti 1.15.414
+
+::::::::::::::
+:NEW FEATURES:
+::::::::::::::
+-Tidal navigation bonus reduced to 33% to avoid a huge impact in game playing at sea.
+-Without stations.
+-New Unit system + 2 Military units per tile.
+-Changed the Resources/improvements yields.
+-Changed the Political Traits a bit.
+-Changed Techs, Wonders and buildings a bit.
+-Aliens are now more controled to spawn much less on late game.
+
+:::::::::::
+:KNOW BUGS:
+:::::::::::
+-Progenitor device 3D is under floor
+-Progenitor Ruins need not to be similar to an expedition site
+-Quantities of strategic resources must be 2-3 (sometimes are 7 or 8)
+-When a quest create again an Afinities/Common strategic resource do not give any quantity!
+-Augmentary, Gene garden. Gene smelter, Clone plant, Aegis (Unit), Rocktopus (Unit), Inmortal (Unit) do not have right affinity icon on tech screen for Essence.

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.0.2025-02-16-->
+<!-- 2023 blessed by Protok -->
+<GameData>
+	<!-- MGH:MOD reset -->
+	<Improvements>
+		<Update><Where Type="IMPROVEMENT_FARM"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_GENERATOR"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_MINE"/><Set OutsideBorders = "true" /></Update>
+		
+		<Update><Where Type="IMPROVEMENT_PADDOCK"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_PLANTATION"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_QUARRY"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_FIRAXITE_MINE"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_FLOAT_STONE_QUARRY"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_GEOTHERMAL_WELL"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_PETROL_WELL"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_XENOMASS_WELL"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_WORK_BARGE"/><Set OutsideBorders = "true" /></Update>
+		
+		<Update><Where Type="IMPROVEMENT_ACADEMY"/><Set OutsideBorders = "true" 
+			NoTwoAdjacent = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_ARRAY"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_BIOWELL"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_DOME"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_MANUFACTORY"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_NODE"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_TERRASCAPE"/><Set OutsideBorders = "true" /></Update>
+		
+		<Update><Where Type="IMPROVEMENT_BED"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_FISHERY"/><Set OutsideBorders = "true" /></Update>
+		<Update><Where Type="IMPROVEMENT_SEA_WELL"/><Set OutsideBorders = "true" /></Update>
+		
+		<Update><Where Type="IMPROVEMENT_MINEFIELD"/><Set OutsideBorders = "true" /></Update>
+		
+		<!--<Update><Where Type="IMPROVEMENT_ALIEN_NEST"/><Set Civilopedia = "TXT_KEY_IMPROVEMENT_ALIEN_NEST_AC_PEDIA" /></Update>-->
+		<!--<Update><Where Type="IMPROVEMENT_ALIEN_NEST_OCEAN"/><Set Civilopedia = "TXT_KEY_IMPROVEMENT_ALIEN_NEST_AC_PEDIA" /></Update>-->
+	</Improvements>
+	
+	<Improvement_Yields>
+	</Improvement_Yields>
+</GameData>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- MGH: Modified v0.4.9.2021-01-31-->
+<GameData>
+	<Table name="OrbitalUnits">
+		<!-- Basic info -->
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="InOrbitUnitArtInfo" type="text" default="NULL"/>
+		<!-- Orbital properties-->
+		<Column name="EffectRange" type="integer" default="0"/>
+		<Column name="SightRange" type="integer" default="2"/>
+		<Column name="TurnDuration" type="integer" default="0"/>
+		<Column name="FloatsIntoOrbit" type="boolean" default="false"/>
+		<Column name="LivesAfterDeorbit" type="boolean" default="false"/>
+		<Column name="Offensive" type="boolean" default="false" notes="Should the AI get mad if we build this over a plot they control?"/>
+		<!-- Orbital effects-->
+		<Column name="CombatMod" type="integer" default="0"/>
+		<Column name="HealingMod" type="integer" default="0"/>
+		<Column name="CityIntrigueMod" type="integer" default="0"/>
+		<Column name="CityIntrigueCapChange" type="integer" default="0"/>
+		<Column name="CoverageExtendRange" type="integer" default="0"/>
+		<Column name="HealthFromWorkedTile" type="integer" default="0"/>
+		<Column name="StationTradeYieldMod" type="integer" default="0"/>
+		<Column name="StationCombatStrengthMod" type="integer" default="0"/>
+		<Column name="MiasmaRepulsion" type="boolean" default="false"/>
+		<Column name="MiasmaGeneration" type="boolean" default="false"/>
+		<Column name="Paradrop" type="boolean" default="false"/>
+		<Column name="CovertOpsPrevented" type="boolean" default="false"/>
+		<Column name="AlienAttraction" type="boolean" default="false"/>
+		<Column name="ArtDefVisEffect" type="text" default="NULL"/>
+	</Table>
+	<Table name="OrbitalUnits_CityYieldModifiers">
+		<Column name="OrbitalUnitType" type="text" reference="OrbitalUnits(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<Table name="OrbitalUnits_PlotYieldChanges">
+		<Column name="OrbitalUnitType" type="text" reference="OrbitalUnits(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer"/>
+	</Table>
+	<Table name="OrbitalUnits_ResourceClassSpawnChances">
+		<Column name="OrbitalUnitType" type="text" reference="OrbitalUnits(Type)" unique="true"/>
+		<Column name="ResourceClassType" type="text" reference="ResourceClasses(Type)"/>
+		<Column name="MinimumSpawns" type="integer"/>
+		<Column name="MaximumSpawns" type="integer"/>
+	</Table>
+	<OrbitalUnits>
+		<Row>
+			<ID>0</ID>
+			<Type>ORBITALUNIT_TACNET_HUB</Type>
+			<Description>TXT_KEY_UNIT_TACNET_HUB</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_MIL_TACNET_HUB</InOrbitUnitArtInfo>
+			<EffectRange>2</EffectRange>
+			<SightRange>2</SightRange>
+			<TurnDuration>40</TurnDuration>
+			<CombatMod>20</CombatMod>
+			<HealingMod>5</HealingMod>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_ORBITAL_LASER</Type>
+			<Description>TXT_KEY_UNIT_ORBITAL_LASER</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_MIL_ORBITAL_LASER</InOrbitUnitArtInfo>
+			<EffectRange>3</EffectRange>
+			<SightRange>3</SightRange>
+			<TurnDuration>40</TurnDuration>
+			<ArtDefVisEffect>Orbital_LaserAttack</ArtDefVisEffect>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_PHASAL_TRANSPORTER</Type>
+			<Description>TXT_KEY_UNIT_PHASAL_TRANSPORTER</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_MIL_PHASAL_TRANSPORTER</InOrbitUnitArtInfo>
+			<EffectRange>1</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>40</TurnDuration>
+			<Paradrop>true</Paradrop>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_PLANET_CARVER</Type>
+			<Description>TXT_KEY_UNIT_PLANET_CARVER</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_MIL_PLANET_CARVER</InOrbitUnitArtInfo>
+			<EffectRange>2</EffectRange>
+			<SightRange>2</SightRange>
+			<TurnDuration>40</TurnDuration>
+			<ArtDefVisEffect>Orbital_PlanetCarverAttack</ArtDefVisEffect>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_MIASMIC_REPULSOR</Type>
+			<Description>TXT_KEY_UNIT_MIASMIC_REPULSOR</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_RES_MIASMIC_REPULSOR</InOrbitUnitArtInfo>
+			<EffectRange>2</EffectRange>
+			<SightRange>2</SightRange>
+			<TurnDuration>10</TurnDuration>
+			<MiasmaRepulsion>true</MiasmaRepulsion>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_DEEP_SPACE_TELESCOPE</Type>
+			<Description>TXT_KEY_UNIT_DEEP_SPACE_TELESCOPE</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_RES_DEEP_SPACE_TELESCOPE</InOrbitUnitArtInfo>
+			<EffectRange>1</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>60</TurnDuration>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_LASERCOM_SATELLITE</Type>
+			<Description>TXT_KEY_UNIT_LASERCOM_SATELLITE</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_RES_LASERCOM_SATELLITE</InOrbitUnitArtInfo>
+			<EffectRange>1</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>60</TurnDuration>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_MIASMIC_CONDENSER</Type>
+			<Description>TXT_KEY_UNIT_MIASMIC_CONDENSER</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_RES_MIASMIC_CONDENSER</InOrbitUnitArtInfo>
+			<EffectRange>2</EffectRange>
+			<SightRange>2</SightRange>
+			<TurnDuration>10</TurnDuration>
+			<MiasmaGeneration>true</MiasmaGeneration>
+			<Paradrop>true</Paradrop>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_ALL_SEEING_EYE</Type>
+			<Description>TXT_KEY_UNIT_ALL_SEEING_EYE</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_RES_ALL_SEEING_EYE</InOrbitUnitArtInfo>
+			<EffectRange>0</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>40</TurnDuration>
+			<CityIntrigueCapChange>-50</CityIntrigueCapChange>
+			<CityIntrigueMod>-100</CityIntrigueMod>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_SOLAR_COLLECTOR</Type>
+			<Description>TXT_KEY_UNIT_SOLAR_COLLECTOR</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_ECON_SOLAR_COLLECTOR</InOrbitUnitArtInfo>
+			<EffectRange>1</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>60</TurnDuration>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_WEATHER_CONTROLLER</Type>
+			<Description>TXT_KEY_UNIT_WEATHER_CONTROLLER</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_ECON_WEATHER_CONTROLLER</InOrbitUnitArtInfo>
+			<EffectRange>1</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>60</TurnDuration>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_ORBITAL_FABRICATOR</Type>
+			<Description>TXT_KEY_UNIT_ORBITAL_FABRICATOR</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_ECON_ORBITAL_FABRICATOR</InOrbitUnitArtInfo>
+			<EffectRange>1</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>40</TurnDuration>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_HOLOMATRIX</Type>
+			<Description>TXT_KEY_UNIT_HOLOMATRIX</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_ECON_HOLOMATRIX</InOrbitUnitArtInfo>
+			<EffectRange>1</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>60</TurnDuration>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_ROCKTOPUS</Type>
+			<Description>TXT_KEY_UNIT_ROCKTOPUS</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_ROCKTOPUS_ORBITAL</InOrbitUnitArtInfo>
+			<EffectRange>2</EffectRange>
+			<SightRange>2</SightRange>
+			<TurnDuration>10</TurnDuration>
+			<FloatsIntoOrbit>true</FloatsIntoOrbit>
+			<LivesAfterDeorbit>true</LivesAfterDeorbit>
+			<Paradrop>true</Paradrop>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_XENO_SIREN</Type>
+			<Description>TXT_KEY_UNIT_XENO_SIREN</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_SCI_XENO_SIREN</InOrbitUnitArtInfo>
+			<EffectRange>2</EffectRange>
+			<SightRange>2</SightRange>
+			<TurnDuration>40</TurnDuration>
+			<AlienAttraction>true</AlienAttraction>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_STATION_SENTINEL</Type>
+			<Description>TXT_KEY_UNIT_STATION_SENTINEL</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_ECON_STATION_SENTINEL</InOrbitUnitArtInfo>
+			<EffectRange>0</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>40</TurnDuration>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_COMM_RELAY</Type>
+			<Description>TXT_KEY_UNIT_COMM_RELAY</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_SCI_COMM_RELAY</InOrbitUnitArtInfo>
+			<EffectRange>0</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>60</TurnDuration>
+			<CoverageExtendRange>5</CoverageExtendRange>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_SPY_SATELLITE</Type>
+			<Description>TXT_KEY_UNIT_SPY_SATELLITE</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_SCI_SPY_SATELLITE</InOrbitUnitArtInfo>
+			<EffectRange>0</EffectRange>
+			<SightRange>6</SightRange>
+			<TurnDuration>40</TurnDuration>
+			<Offensive>true</Offensive>
+		</Row>
+		<Row>
+			<Type>ORBITALUNIT_PAEAN</Type>
+			<Description>TXT_KEY_UNIT_PAEAN</Description>
+			<InOrbitUnitArtInfo>ART_DEF_UNIT_SAT_ECON_PAEAN</InOrbitUnitArtInfo>
+			<EffectRange>1</EffectRange>
+			<SightRange>1</SightRange>
+			<TurnDuration>60</TurnDuration>
+			<HealthFromWorkedTile>1</HealthFromWorkedTile>
+		</Row>
+	</OrbitalUnits>
+	<OrbitalUnits_CityYieldModifiers>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_SOLAR_COLLECTOR</OrbitalUnitType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>20</Yield>
+		</Row>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_DEEP_SPACE_TELESCOPE</OrbitalUnitType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>20</Yield>
+		</Row>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_LASERCOM_SATELLITE</OrbitalUnitType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>20</Yield>
+		</Row>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_STATION_SENTINEL</OrbitalUnitType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</OrbitalUnits_CityYieldModifiers>
+	<OrbitalUnits_PlotYieldChanges>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_SOLAR_COLLECTOR</OrbitalUnitType>
+			<YieldType>YIELD_ENERGY</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_WEATHER_CONTROLLER</OrbitalUnitType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_DEEP_SPACE_TELESCOPE</OrbitalUnitType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_HOLOMATRIX</OrbitalUnitType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_STATION_SENTINEL</OrbitalUnitType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</OrbitalUnits_PlotYieldChanges>
+	<OrbitalUnits_ResourceClassSpawnChances>
+		<Row>
+			<OrbitalUnitType>ORBITALUNIT_ORBITAL_FABRICATOR</OrbitalUnitType>
+			<ResourceClassType>RESOURCECLASS_STRATEGIC</ResourceClassType>
+			<MinimumSpawns>2</MinimumSpawns>
+			<MaximumSpawns>2</MaximumSpawns>
+		</Row>
+	</OrbitalUnits_ResourceClassSpawnChances>
+</GameData>

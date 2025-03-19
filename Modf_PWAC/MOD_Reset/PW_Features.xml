@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.0.2025-02-16-->
+<!-- 2023 - Blessed by Protok -->
+<GameData>
+	<!-- MGH:MOD reset -->
+	<Table name="Feature_TechYieldChanges">
+		<Column name="FeatureType" type="text" reference="Features(Type)"/>
+		<Column name="TechType" type="text" reference="Technologies(Type)"/>
+		<Column name="BuildingType" type="text" reference="Buildings(Type)"/>
+		<Column name="PlayerPerkType" type="text" reference="PlayerPerks(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+	
+	<!-- These should work same as for improvements. Changes to the feature's yield after a given Tech is researched. -->
+	<Feature_TechYieldChanges>
+	</Feature_TechYieldChanges>
+	
+	<Feature_YieldChanges>
+	</Feature_YieldChanges>
+	
+	<Terrains>
+		<Update>
+			<Where Type="TERRAIN_MOUNTAIN"/>
+			<Set><GraphicalOnly>false</GraphicalOnly></Set>
+		</Update>
+		<Update>
+			<Where Type="TERRAIN_HILL"/>
+			<Set><GraphicalOnly>false</GraphicalOnly></Set>
+		</Update>
+		<Update>
+			<Where Type="TERRAIN_CANYON"/>
+			<Set><GraphicalOnly>false</GraphicalOnly></Set>
+		</Update>
+	</Terrains>
+</GameData>
