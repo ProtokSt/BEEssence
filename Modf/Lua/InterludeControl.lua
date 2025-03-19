@@ -4,7 +4,7 @@
 -- A Controller for Interlude Popups
 ----------------------------------------------------
 -- dbg print out
-local _dpo = true; 
+local _dpo = true;
 --_dpo = false;
 if _dpo then print("---- InterludeControl.lua INIT ----"); end
 
