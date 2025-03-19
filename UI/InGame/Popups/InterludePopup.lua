@@ -2,26 +2,113 @@
 -------------------------------------------------
 -- Essence Player Interlude Greeting Popup
 -------------------------------------------------
-print("MGH:Essence Player Interlude Greeting Popup");
+local _dpo = true;
+-- _dpo = false;
+if _dpo then print("MGH:Essence Player Interlude Greeting Popup"); end
+
 local m_PopupInfo = nil;
+local g_Shown = false;
 -------------------------------------------------
 -------------------------------------------------
 function OnPopup(popupInfo)
-	print("MGH:OnPopup Interlude Greeting");
-	if popupInfo.Type ~= ButtonPopupTypes.BUTTONPOPUP_STATION_GREETING then return; end
-	--
+	if _dpo then print("MGH:OnPopup Interlude Greeting: "..tostring(popupInfo.Type)..", "..tostring(popupInfo.Interlude));end
 	m_PopupInfo = popupInfo;
-	local playerType = m_PopupInfo.Data1;
-	local questIndex = m_PopupInfo.Data2;
-	--
-	if(playerType ~= Game.GetActivePlayer()) then return; end -- Do not show the interlude in other player turn
-	--
-	if popupInfo.Type == ButtonPopupTypes.BUTTONPOPUP_STATION_GREETING then
-		ShowThisMessage();
+	--if popupInfo.Type ~= ButtonPopupTypes.BUTTONPOPUP_INTERLUDE then
+	if popupInfo.Type ~= ButtonPopupTypes.BUTTONPOPUP_MODDER_1 then
+		if not ContextPtr:IsHidden() and popupInfo.Type ~= ButtonPopupTypes.BUTTONPOPUP_TUTORIAL then
+			OnCloseButtonClicked();
+		end
+		return;
+	elseif popupInfo.Type == ButtonPopupTypes.BUTTONPOPUP_MODDER_1	then
+		if _dpo then print("ButtonPopupTypes.BUTTONPOPUP_MODDER_1");end
+		if (popupInfo.Data1 == 1) then
+			if (not ContextPtr:IsHidden()) then
+				OnCloseButtonClicked()
+			else
+				g_Shown = true
+				UIManager:QueuePopup(ContextPtr, PopupPriority.InGameUtmost);
+			end
+		else
+			UIManager:QueuePopup(ContextPtr, PopupPriority.EcologyOverview);
+		end
+
 	end
 end
--- MGH:Add to Events
 Events.SerialEventGameMessagePopup.Add(OnPopup);
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+function OnCloseButtonClicked()
+	if _dpo then print("OnCloseButtonClicked"); end
+	UIManager:DequeuePopup(ContextPtr);
+	--ContextPtr:SetHide(true);
+	--UIManager:PopModal(ContextPtr);
+end
+Controls.CloseButton:RegisterCallback(Mouse.eLClick, OnCloseButtonClicked);
+-------------------------------------------------
+-------------------------------------------------
+function ShowWindow()
+	if _dpo then print("ShowWindow"); end
+	UIManager:QueuePopup( ContextPtr, PopupPriority.InGameUtmost );
+end
+-------------------------------------------------------------------------------
+------- Gather UIManager:Queue, UIManager:DequeuePopup, ContextPtr:SetHide
+-------------------------------------------------------------------------------
+function ShowHideHandler(isHide, isInit)
+	if _dpo then print("ShowHideHandler started ---- isHide "..tostring(isHide)) end
+
+	if (not isHide) then
+		if( not g_Shown ) then
+			g_Shown = true;
+			UpdateWindow();
+		end
+
+	elseif isHide then
+		g_Shown = false;
+		--UIManager:DequeuePopup( ContextPtr );
+		ContextPtr:SetHide(true);
+	end
+
+end
+ContextPtr:SetShowHideHandler( ShowHideHandler );
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+function InputHandler(uiMsg, wParam, lParam)
+	if uiMsg == KeyEvents.KeyDown then
+		if wParam == Keys.VK_ESCAPE or wParam == Keys.VK_RETURN then
+			OnCloseButtonClicked();
+		end
+		-- info Print
+		if(wParam == Keys.VK_F2) then
+			OnPlayerTurnShowInterludeMessage(Game.GetActivePlayer())
+		end
+		return true;
+	end
+end
+ContextPtr:SetInputHandler( InputHandler );
+-------------------------------------------------
+--- Controlling Size and Info Inside Window
+-------------------------------------------------
+function UpdateWindow()
+	if _dpo then print("UpdateWindow"); end
+	local playerID = Game.GetActivePlayer();
+	local pPlayer = Players[playerID];
+
+	local g_screenWidth, g_screenHeight = UIManager:GetScreenSizeVal();
+	if _dpo then print("SizeToScreen: "..tostring(g_screenWidth)..", "..tostring(g_screenHeight)); end
+	Controls.Window:SetSizeVal(g_screenWidth-500,g_screenHeight-500);
+
+	--OnPlayerTurnShowInterludeMessage(playerID);
+end
+-------------------------------------------------
+-------------------------------------------------
+
+
+
+
+
+
+
+
 -------------------------------------------------
 -------------------------------------------------
 function SizeWindowToContent()
@@ -67,37 +154,6 @@ function ShowThisMessage()
 	-- Sound
 	Events.AudioPlay2DSound("AS2D_INTERFACE_TECH_WINDOW");
 end
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-function OnCloseButtonClicked()
-	UIManager:DequeuePopup(ContextPtr);
-end
-Controls.CloseButton:RegisterCallback(Mouse.eLClick, OnCloseButtonClicked);
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-function InputHandler(uiMsg, wParam, lParam)
-    if uiMsg == KeyEvents.KeyDown then
-        if wParam == Keys.VK_ESCAPE or wParam == Keys.VK_RETURN then
-            OnCloseButtonClicked();
-            return true;
-        end
-    end
-end
-ContextPtr:SetInputHandler( InputHandler );
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-function ShowHideHandler(bIsHide, bInitState)
-    if( not bInitState ) then
-        if( not bIsHide ) then
-        	UI.incTurnTimerSemaphore();
-        	Events.SerialEventGameMessagePopupShown(m_PopupInfo);
-        else
-            UI.decTurnTimerSemaphore();
-            Events.SerialEventGameMessagePopupProcessed.CallImmediate(m_PopupInfo.Type, 0);
-        end
-    end
-end
-ContextPtr:SetShowHideHandler( ShowHideHandler );
 ----------------------------------------------------------------
 -- 'Active' (local human) player has changed
 ----------------------------------------------------------------
@@ -110,23 +166,24 @@ g_PlayersReadInterlude = {};--empty array
 for i = 0, GameDefines.MAX_PLAYERS - 1 do
 	g_PlayersReadInterlude[i] = false;
 end
+
 function OnPlayerTurnShowInterludeMessage(playerID)
+	if _dpo then print("OnPlayerTurnShowInterludeMessage start"); end
     local pPlayer = Players[playerID];
 	local iLocalPlayer = Game.GetActivePlayer();
-	print("MGH:This function is called every turn");
     if(pPlayer ~= nil and playerID == iLocalPlayer and pPlayer:IsHuman() and g_PlayersReadInterlude[playerID] == false)then
 		print("MGH: Interlude should be opened for playerID={1}", playerID);
-		print(".GetTurnString="Game.GetTurnString());
-		print(".GetTurnYear="Game.GetTurnYear());
-		print(".CountNumHumanGameTurnActive="Game.CountNumHumanGameTurnActive());
-		print(".GetElapsedGameTurns="Game.GetElapsedGameTurns());
-		print(".GetGameTurn="Game.GetGameTurn());
-		print(".GetGameTurnYear="Game.GetGameTurnYear());
-		print(".GetNumGameTurnActive="Game.GetNumGameTurnActive());
-		ShowThisMessage();
+		print(".GetTurnString=", Game.GetTurnString());
+		print(".GetTurnYear=", Game.GetTurnYear());
+		print(".CountNumHumanGameTurnActive=", Game.CountNumHumanGameTurnActive());
+		print(".GetElapsedGameTurns=", Game.GetElapsedGameTurns());
+		print(".GetGameTurn=", Game.GetGameTurn());
+		print(".GetGameTurnYear=", Game.GetGameTurnYear());
+		print(".GetNumGameTurnActive=", Game.GetNumGameTurnActive());
+		--ShowThisMessage();
 		g_PlayersReadInterlude[playerID] = false;
 	end
 end
 ----------------------------------------------------
 -- MGH:Add to GameEvents
-GameEvents.PlayerDoTurn.Add(OnPlayerShowInterludeMessage);
+--GameEvents.PlayerDoTurn.Add(OnPlayerTurnShowInterludeMessage);
