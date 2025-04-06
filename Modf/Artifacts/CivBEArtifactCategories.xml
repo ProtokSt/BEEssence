@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- by Orion Burcham (Firaxis Games) -->
+<!-- MGH: Modified v0.7.0.2025-01-31-->
+<GameData>
+	<!-- Table definitions -->
+	<Table name="ArtifactCategories">
+		<Column name="ID"						type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type"					type="text" notnull="true" unique="true"/>
+		<Column name="Description"	type="text" reference="Language_en_US(Tag)"/>
+    <Column name="Explanation"	type="text" reference="Language_en_US(Tag)"/>
+    <Column name="RewardHint"		type="text" reference="Language_en_US(Tag)"/>
+    <Column name="RewardCost"		type="integer" default="0" />
+    <Column name="UIPriority"		type="integer" default="0"/>
+    <Column name="BaseAcquisitionRate"		type="integer" default="0"/>
+    <Column name="AcquisitionRateChange"		type="integer" default="0"/>
+	</Table>
+	<!-- Table data -->
+  <ArtifactCategories>
+    <Row>
+      <ID>0</ID>
+      <Type>ARTIFACT_CATEGORY_OLD_EARTH</Type>
+      <Description>TXT_KEY_ARTIFACT_CATEGORY_OLD_EARTH_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_CATEGORY_OLD_EARTH_FLAVOR_TEXT</Explanation>
+      <RewardHint>TXT_KEY_ARTIFACT_CATEGORY_OLD_EARTH_REWARD_HINT</RewardHint>
+      <RewardCost>3</RewardCost>
+      <UIPriority>0</UIPriority>
+      <BaseAcquisitionRate>20</BaseAcquisitionRate>
+      <AcquisitionRateChange>20</AcquisitionRateChange><!--10-->
+    </Row>
+    <Row>
+      <Type>ARTIFACT_CATEGORY_ALIEN</Type>
+      <Description>TXT_KEY_ARTIFACT_CATEGORY_ALIEN_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_CATEGORY_ALIEN_FLAVOR_TEXT</Explanation>
+      <RewardHint>TXT_KEY_ARTIFACT_CATEGORY_ALIEN_REWARD_HINT</RewardHint>
+      <RewardCost>2</RewardCost>
+      <UIPriority>1</UIPriority>
+      <BaseAcquisitionRate>40</BaseAcquisitionRate><!--38-->
+      <AcquisitionRateChange>10</AcquisitionRateChange><!--7-->
+  </Row>
+    <Row>
+      <Type>ARTIFACT_CATEGORY_PROGENITOR</Type>
+      <Description>TXT_KEY_ARTIFACT_CATEGORY_PROGENITOR_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_CATEGORY_PROGENITOR_FLAVOR_TEXT</Explanation>
+      <RewardHint>TXT_KEY_ARTIFACT_CATEGORY_PROGENITOR_REWARD_HINT</RewardHint>
+      <RewardCost>4</RewardCost>
+      <UIPriority>2</UIPriority>
+      <BaseAcquisitionRate>60</BaseAcquisitionRate><!--55-->
+      <AcquisitionRateChange>5</AcquisitionRateChange><!--3-->
+    </Row>
+  </ArtifactCategories>
+</GameData>

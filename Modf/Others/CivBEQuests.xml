@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by David McDonough (Firaxis Games)-->
+<!-- MGH: Modified v0.6.2.2021-12-12-->
+<GameData>
+	<!-- Table definitions-->
+	<Table name="Quests">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" notnull="true" unique="false"/>
+		<Column name="ScriptName" type="text" notnull="true" unique="true"/>
+		<Column name="QuestSetType" type="text" reference="Quest_Sets(Type)"/>
+		<Column name="QuestSetChapter" type="integer" default="0"/>
+		<Column name="Victory" type="boolean" default="false"/>
+		<Column name="Marvel" type="boolean" default="false"/>
+		<Column name="Domestic" type="boolean" default="false"/>
+		<Column name="Affinity" type="boolean" default="false"/>
+		<Column name="VictoryType" type="text" reference="Victories(Type)"/>
+		<Column name="BannerImage" type="text" default="NULL"/>
+		<Column name="IconAtlas" type="text" default="QUEST_PORTRAIT_ATLAS" reference="IconTextureAtlases(Atlas)"/>
+		<Column name="PortraitIndex" type="integer" default="0"/>
+		<Column name="IgnoredByAI" type="boolean" default="false"/>
+	</Table>
+	<Table name="Quest_Flavors">
+		<Column name="QuestType" type="text" reference="Quests(Type)"/>
+		<Column name="FlavorType" type="text" reference="Flavors(Type)"/>
+		<Column name="Flavor" type="integer"/>
+	</Table>
+	<Table name="Quest_Chains">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+	</Table>
+	<!-- Table data-->
+	<Quests>
+	<!--Exploration Quests-->
+		<!--OK:Gifts From Home-->
+		<Row>
+			<ID>0</ID>
+			<Type>QUEST_FIND_RESOURCE_PODS</Type>
+			<ScriptName>FindResourcePodsQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_FIND_RESOURCE_PODS_DESCRIPTION</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<!--OK:Worm Killing-->
+		<Row>
+			<Type>QUEST_KILL_SIEGE_WORM</Type>
+			<ScriptName>KillSiegeWormQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_KILL_SIEGE_WORM_DESCRIPTION</Description>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<!--OK:Found An Outpost-->
+		<Row>
+			<Type>QUEST_FOUND_OUTPOST</Type>
+			<ScriptName>FoundOutpostQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_FOUND_OUTPOST_DESCRIPTION</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+	<!--Affinity Choice Quests-->
+		<!--Clear:(Use a station)-->
+		<!--<Row>
+			<Type>QUEST_SOLID_STATE_CITIZEN</Type>
+			<ScriptName>SolidStateCitizenQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_SOLID_STATE_CITIZEN_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>-->
+		<!--Changes:BUILDING_XENO_SANCTUARY->BUILDING_CYTONURSERY[City] (Affinity->Harmony)-->
+		<Row>
+			<Type>QUEST_FAMILIAR_EXOTICS</Type>
+			<ScriptName>FamiliarExoticsQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_FAMILIAR_EXOTICS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_PHARMALAB->BUILDING_WATER_PLANT[Water_City] (Affinity->Purity)-->
+		<!--Changes:BUILDING_XENO_SANCTUARY->BUILDING_VIVARIUM[Earth_City] (Affinity->Purity)-->
+		<!--Changes:BUILDING_ALIEN_PRESERVE->BUILDING_TIDAL_TURBINE[Water_City] (Affinity->Supremacy)-->
+		<!--Changes:BUILDING_CYTONURSERY->BUILDING_THORIUM_REACTOR[Earth_City] (Affinity->Supremacy)-->
+		<Row>
+			<Type>QUEST_FAMILIAR_EXOTICS_CHAPTER_2</Type>
+			<ScriptName>FamiliarExotics_Chapter2Quest</ScriptName>
+			<Description>TXT_KEY_QUEST_FAMILIAR_EXOTICS_CHAPTER_2_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_ALIEN_PRESERVE[num:2->1] (Affinity->Harmony)-->
+		<!--Changes:Destroy 2->1 alien nests (Affinity->Purity)-->
+		<!--Changes:BUILDING_ALIEN_PRESERVE[num:2->1] (Affinity->Supremacy)-->
+		<Row>
+			<Type>QUEST_OCCUPATIONAL_HAZARDS</Type>
+			<ScriptName>OccupationalHazardsQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_OCCUPATIONAL_HAZARDS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Reward:Get Xenomass from crash site (Affinity->Harmony)-->
+		<!--Reward:PLAYERPERK_CULTURAL_BURDEN_WORKER_SPEED(+10% a Velocidad del Trabajador) (Affinity->Purity)(Affinity->Supremacy)-->
+		<Row>
+			<Type>QUEST_CULTURAL_BURDEN</Type>
+			<ScriptName>CulturalBurdenQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_CULTURAL_BURDEN_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Reward:Get XP for Unit that explore the cave (Send Unit) from the cave (Affinity->Harmony)-->
+		<!--Reward:Get Float stone near the cave from the cave (Affinity->Purity)-->
+		<!--Reward:Reveal all Firaxite deposits from the cave(Affinity->Supremacy)-->
+		<Row>
+			<Type>QUEST_AN_ELEMENTAL_FATE</Type>
+			<ScriptName>AnElementalFateQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_AN_ELEMENTAL_FATE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Clear:(Use a station)-->
+		<!--<Row>
+			<Type>QUEST_DOGMATIC_ENGINEERING</Type>
+			<ScriptName>DogmaticEngineeringQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_DOGMATIC_ENGINEERING_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>-->
+		<!--Changes:BUILDING_LABORATORY->BUILDING_PHARMALAB[num:1]-->
+		<!--Changes:BUILDING_PHARMALAB->BUILDING_DEFENSE_PERIMETER[num:1]/Find 2 resource pods->Build PETROL_WELL(satellite)-->
+		<!--Changes:BUILDING_GENE_GARDEN->BUILDING_ULTRASONIC_FENCE[num:1] (Affinity->Harmony)-->
+		<!--Changes:BUILDING_BIOFACTORY->BUILDING_COMMAND_CENTER[num:1] (Affinity->Purity)-->
+		<!--Changes:SPY_AGENCY_TYPE[num:1] (Affinity->Supremacy)-->
+		<!--Reward:PLAYERPERK_THE_SUBSET_CURSE_HARMONY->BUILDING_DEFENSE_PERIMETER[+1 Food] (Affinity->Harmony)-->
+		<!--Reward:PLAYERPERK_THE_SUBSET_CURSE_PURITY->BUILDING_DEFENSE_PERIMETER[+1 Culture] (Affinity->Purity)-->
+		<!--Reward:PLAYERPERK_THE_SUBSET_CURSE_SUPREMACY->BUILDING_DEFENSE_PERIMETER[+1 Science] (Affinity->Supremacy)-->
+		<Row>
+			<Type>QUEST_THE_SUBSET_CURSE</Type>
+			<ScriptName>TheSubsetCurseQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_SUBSET_CURSE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_RECYCLER[num:1] (Affinity->Purity)(Affinity->Supremacy)-->
+		<!--Changes:Build improvements Biowell[num:1] (Affinity->Harmony)-->
+		<!--Changes:Build improvements Dome[num:1] (Affinity->Purity)-->
+		<!--Changes:Build improvements Node[num:1] (Affinity->Supremacy)-->
+		<!--Changes:UNIT_NAVAL_MELEE[Water_City] (Affinity->Harmony)(Affinity->Supremacy)-->
+		<!--Changes:UNIT_MARINES[Earth_City] (Affinity->Harmony)(Affinity->Supremacy)-->
+		<!--Changes:BUILDING_DRYDOCK[Water_City] (Affinity->Harmony)-->
+		<!--Changes:BUILDING_ROCKET_BATTERY[num:1] (Affinity->Harmony)-->
+		<Row>
+			<Type>QUEST_THE_BEATING_HEART_SOCIETY</Type>
+			<ScriptName>TheBeatingHeartSocietyQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_BEATING_HEART_SOCIETY_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Clear:(Use a station)-->
+		<!--<Row>
+			<Type>QUEST_STEPAN_VS_THE_NEW_WORLD</Type>
+			<ScriptName>StepanVsTheNewWorldQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_STEPAN_VS_THE_NEW_WORLD_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>-->
+		<!--Changes:BUILDING_CLINIC->BUILDING_CYTONURSERY[City]-->
+		<!--Changes:BUILDING_VIVARIUM->BUILDING_GAIAN_WELL[num:1] (Affinity->Harmony)-->
+		<!--Changes:BUILDING_ULTRASONIC_FENCE->BUILDING_VIVARIUM[num:1] (Affinity->Purity)(Affinity->Supremacy)-->
+		<Row>
+			<Type>QUEST_VANISHERS</Type>
+			<ScriptName>VanishersQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_VANISHERS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_CHOICE_QUESTS</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+	<!--Affinity Investment Quests (Vainilla)-->
+		<!--Changes:BUILDING_XENO_SANCTUARY->BUILDING_XENONURSERY[num:1]-->
+		<!--Changes:BUILDING_ORGAN_PRINTER[num:1->4]-->
+		<!--Reward:PLAYERPERK_ALIEN_PRESERVES_UNIT_HEAL_MOD->PLAYERPERK_THE_BEATING_HEART_SOCIETY_HARMONY (Harmony)-->
+		<Row>
+			<Type>QUEST_LEAD_FOOT_SOLDIER</Type>
+			<ScriptName>LeadFootSoldierQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_LEADFOOT_SOLDIER_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_HARMONY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--OK:Kill 3 aliens-->
+		<!--Reward:Show the location of all alien nests (Harmony)-->
+		<Row>
+			<Type>QUEST_GENETIC_ENTANGLEMENT</Type>
+			<ScriptName>GeneticEntanglementQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_GENETIC_ENTANGLEMENT_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_HARMONY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_MICROBIAL_MINE->BUILDING_GAIAN_WELL[City_near_Canyon]-->
+		<!--Changes:BUILDING_XENONURSERY->BUILDING_GENE_SMELTER[num:2->4]-->
+		<!--Reward:PLAYERPERK_ACCLIMATION_TRADE_ROUTE_YIELDS (OR) (Harmony)-->
+		<!--Reward:PLAYERPERK_ACCLIMATION_GROWTH_CARRYOVER (OR) (Harmony)-->
+		<Row>
+			<Type>QUEST_ACCLIMATION</Type>
+			<ScriptName>AcclimationQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_ACCLIMATION_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_HARMONY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Build improvements Terrascape[num:~3->3-6(1 per city with minimum 3 maximum 6)]-->
+		<!--Reward change:PLAYERPERK_QUARRY_CULTURE_FLAT (+1 culture on each Quarry) (Purity)-->
+		<Row>
+			<Type>QUEST_FROM_SCRATCH</Type>
+			<ScriptName>FromScratchQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_FROM_SCRATCH_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_PURITY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Build improvements Mine[num:1]-->
+		<!--Changes:BUILDING_MASS_DIGESTER[num:2->1]-->
+		<!--Reward:PLAYERPERK_MASS_DIGESTER_CITY_HP (Harmony)-->
+		<Row>
+			<Type>QUEST_SECURE_COMPOUNDS</Type>
+			<ScriptName>SecureCompoundsQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_SECURE_COMPOUNDS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_HARMONY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Bug on flavors solved-->
+		<!--OK:Launch any Orbital Unit[num:1] (or go to chapter2)-->
+		<!--Reward:PLAYERPERK_WORK_BARGE_FOOD_FLAT(+1 Food from Work Barges) (OR) (Supremacy)-->
+		<Row>
+			<Type>QUEST_SKY_MINE</Type>
+			<ScriptName>SkyMineQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_SKY_MINE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_SUPREMACY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Explore zone of impact-->
+		<!--Reward:Production in all cities and get Firaxite from impact site (OR) (Supremacy)-->
+		<Row>
+			<Type>QUEST_SKY_MINE_CHAPTER2</Type>
+			<ScriptName>SkyMine_Chapter2Quest</ScriptName>
+			<Description>TXT_KEY_QUEST_SKY_MINE_CHAPTER2_DESCRIPTION</Description>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--OK(clear):Found city near Miasma-->
+		<!--<Row>
+			<Type>QUEST_SOLITUDE</Type>
+			<ScriptName>SolitudeQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_SOLITUDE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_HARMONY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>-->
+		<!--Changes:BUILDING_RELIC->BUILDING_NETWORK[Having it in all cities] (Purity)-->
+		<Row>
+			<Type>QUEST_KNOW_THYSELF</Type>
+			<ScriptName>KnowThySelfQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_KNOW_THYSELF_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_PURITY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_CEL_CRADLE->BUILDING_FEEDSITE_HUB[num:3] (Supremacy)-->
+		<Row>
+			<Type>QUEST_STEEL_SYNAPSE</Type>
+			<ScriptName>SteelSynapseQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_STEEL_SYNAPSE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_SUPREMACY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--OK:Clear all forests in your territory (Supremacy)-->
+		<Row>
+			<Type>QUEST_ANCILLARY_ADAMS</Type>
+			<ScriptName>AncillaryAdamsQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_ANCILLARY_ADAMS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_SUPREMACY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Build improvements Quarry->Mine[num:1->2]-->
+		<!--Changes:BUILDING_THERMOHALINE_RUDDER[num:1]-->
+		<!--Reward change:PLAYERPERK_MGH_SEA_WELL_PRODUCTION_FLAT->+1 production on each Sea well (Purity)-->
+		<Row>
+			<Type>QUEST_NO_ONE_THING</Type>
+			<ScriptName>NoOneThingQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_NO_ONE_THING_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_PURITY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Found city near Float stone->BUILDING_SOMA_DISTILLERY[City] (Purity)-->
+		<Row>
+			<Type>QUEST_CIVIL_SKIES</Type>
+			<ScriptName>CivilSkiesQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_CIVIL_SKIES_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_PURITY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--OK:Send Explorer to do an expedition to expecific ruins-->
+		<!--OK:Send Unit to explore the tomb-->
+		<!--OK:BUILDING_LABORATORY[num:1] (DominantAffinity)-->
+		<Row>
+			<Type>QUEST_WRITTEN_IN_STONE</Type>
+			<ScriptName>WrittenInStoneQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_WRITTEN_IN_STONE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_PROGENITOR</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Bug on prerequisites solved-->
+		<!--OK:BUILDING_NEUROLAB[City]-->
+		<!--OK:Launch any Orbital Unit[City] (OR) (Supremacy)-->
+		<!--OK:Found city (OR) (Supremacy)-->
+		<Row>
+			<Type>QUEST_POINT_OF_NO_RETURN_NULL</Type>
+			<ScriptName>PointOfNoReturnNullQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_POINT_OF_NO_RETURN_NULL_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_SUPREMACY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Clear:(Require trading)-->
+		<!--<Row>
+			<Type>QUEST_AS_WITH_MAN</Type>
+			<ScriptName>AsWithManQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_AS_WITH_MEN_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_SUPREMACY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>-->
+		<!--Changes:UNIT_DEEP_SPACE_TELESCOPE[num:1]-->
+		<!--Changes:BUILDING_LAUNCH_COMPLEX->BUILDING_NEOPLANETARIUM[num:1]-->
+		<!--Reward:Reveal coast lines (DominantAffinity)-->
+		<Row>
+			<Type>QUEST_STARTOGRAPHER</Type>
+			<ScriptName>StartographerQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_STARTOGRAPHER_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_PROGENITOR</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--OK:Launch any Orbital Unit[num:2]-->
+		<Row>
+			<Type>QUEST_BEAUTY_IN_THE_EYE_OF_THE_ORBITER_CHAPTER_1</Type>
+			<ScriptName>BeautyInTheEyeOfTheOrbiter_Chapter1Quest</ScriptName>
+			<Description>TXT_KEY_QUEST_BEAUTY_IN_THE_EYE_OF_THE_ORBITER_CHAPTER_1_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_PROGENITOR</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--OK:Send Explorer to do an expedition to expecific ruins (DominantAffinity)-->
+		<Row>
+			<Type>QUEST_BEAUTY_IN_THE_EYE_OF_THE_ORBITER_CHAPTER_2</Type>
+			<ScriptName>BeautyInTheEyeOfTheOrbiter_Chapter2Quest</ScriptName>
+			<Description>TXT_KEY_QUEST_BEAUTY_IN_THE_EYE_OF_THE_ORBITER_CHAPTER_2_DESCRIPTION</Description>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Bug on prerequisites solved-->
+		<!--OK:BUILDING_BIONICS_LAB[num:1] (Purity)-->
+		<Row>
+			<Type>QUEST_PURE_ADVANTAGE</Type>
+			<ScriptName>PureAdvantageQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_PURE_ADVANTAGE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_INVESTMENT_QUESTS_SINGLE_PURITY</QuestSetType>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+	<!--Building Choice Quests-->
+		<Row>
+			<Type>QUEST_BUILDING_CHOICE_TEMPLATE</Type>
+			<ScriptName>BuildingChoiceTemplateQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_BUILDING_CHOICE_TEMPLATE</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<Domestic>true</Domestic>
+		</Row>
+	<!--Station Quests-->
+		<!--<Row>
+			<Type>QUEST_STATION_SPAWN_CHOICE</Type>
+			<ScriptName>SpawnStationChoiceTemplateQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_STATION_SPAWN_CHOICE</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_STATION_HOSTILE_TAKEOVER</Type>
+			<ScriptName>HostileTakeoverStationQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_STATION_HOSTILE_TAKEOVER_DESC</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_STATION_GROWTH_POTENTIAL</Type>
+			<ScriptName>GrowthPotentialStationQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_STATION_GROWTH_POTENTIAL_DESC</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_STATION_FRESH_SPECIMENS</Type>
+			<ScriptName>FreshSpecimensStationQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_STATION_FRESH_SPECIMENS_DESC</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_STATION_CAPITAL_GAINS</Type>
+			<ScriptName>CapitalGainsStationQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_STATION_CAPITAL_GAINS_DESC</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>-->
+	<!-- Victory Quests-->
+		<Row>
+			<Type>QUEST_VICTORY_DOMINATION</Type>
+			<ScriptName>DominationVictoryQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_VICTORY_DOMINATION_DESCRIPTION</Description>
+			<Victory>true</Victory>
+			<VictoryType>VICTORY_DOMINATION</VictoryType>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>QUEST_VICTORY_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_VICTORY_CONTACT</Type>
+			<ScriptName>ContactVictoryQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_VICTORY_CONTACT_DESCRIPTION</Description>
+			<Victory>true</Victory>
+			<VictoryType>VICTORY_CONTACT</VictoryType>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>QUEST_VICTORY_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_VICTORY_PROMISED_LAND</Type>
+			<ScriptName>PromisedLandVictoryQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_VICTORY_PROMISED_LAND_DESCRIPTION</Description>
+			<Victory>true</Victory>
+			<VictoryType>VICTORY_PROMISED_LAND</VictoryType>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>1</PortraitIndex>
+			<IconAtlas>QUEST_VICTORY_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_VICTORY_EMANCIPATION</Type>
+			<ScriptName>EmancipationVictoryQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_VICTORY_EMANCIPATION_DESCRIPTION</Description>
+			<Victory>true</Victory>
+			<VictoryType>VICTORY_EMANCIPATION</VictoryType>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>QUEST_VICTORY_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_VICTORY_TRANSCENDENCE</Type>
+			<ScriptName>TranscendenceVictoryQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_VICTORY_TRANSCENDENCE_DESCRIPTION</Description>
+			<Victory>true</Victory>
+			<VictoryType>VICTORY_TRANSCENDENCE</VictoryType>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_VICTORY_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+	<!-- Covert Ops Quests-->
+		<Row>
+			<Type>QUEST_COVERT_OPS_1A</Type>
+			<ScriptName>CovertOpsQuest1A</ScriptName>
+			<Description>TXT_KEY_QUEST_COVERT_OPS_1A_DESCRIPTION</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>1</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_COVERT_OPS_2A</Type>
+			<ScriptName>CovertOpsQuest2A</ScriptName>
+			<Description>TXT_KEY_QUEST_COVERT_OPS_2A_DESCRIPTION</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>1</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_COVERT_OPS_2B</Type>
+			<ScriptName>CovertOpsQuest2B</ScriptName>
+			<Description>TXT_KEY_QUEST_COVERT_OPS_2B_DESCRIPTION</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>1</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>QUEST_COVERT_OPS_3A</Type>
+			<ScriptName>CovertOpsQuest3A</ScriptName>
+			<Description>TXT_KEY_QUEST_COVERT_OPS_3A_DESCRIPTION</Description>
+			<BannerImage>PlaceholderQuestBanner.dds</BannerImage>
+			<PortraitIndex>1</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+		</Row>
+	<!--Affinity Investment Quests (RT)-->
+		<!--MGH:Changes:Now removed stations, trading or buildings not available)-->
+		<!--Supremacy-Purity-Harmony long Quest-->
+		<!--Changes:BUILDING_ULTRASONIC_FENCE[city]->BUILDING_ULTRASONIC_FENCE[num:1]-->
+		<!--Changes:BUILDING_LABORATORY[city]->BUILDING_LABORATORY[num:1] (Affinity->Supremacy)-->
+		<Row>
+			<Type>QUEST_THE_GENIUS_OF_OLIVIA_ROSS</Type>
+			<ScriptName>TheGeniusOfOliviaRossQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_GENIUS_OF_OLIVIA_ROSS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_OLIVIA_ROSS</QuestSetType>
+			<QuestSetChapter>0</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<Row>
+			<Type>QUEST_SIGHTINGS_OF_OLIVIA_ROSS</Type>
+			<ScriptName>SightingsOfOliviaRossQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_SIGHTINGS_OF_OLIVIA_ROSS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_OLIVIA_ROSS</QuestSetType>
+			<QuestSetChapter>1</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--MGH:Changes:changed the Perk to other a bit less powerfull-->
+		<Row>
+			<Type>QUEST_RECOVERING_OLIVIA_ROSS</Type>
+			<ScriptName>RecoveringOliviaRossQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_RECOVERING_OLIVIA_ROSS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_OLIVIA_ROSS</QuestSetType>
+			<QuestSetChapter>2</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Supremacy long Quest-->
+		<!--Changes:BUILDING_LAUNCH_COMPLEX->BUILDING_NEOPLANETARIUM[num:1->2]-->
+		<Row>
+			<Type>QUEST_CHARGED</Type>
+			<ScriptName>ChargedQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_CHARGED_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_BLOOD_TYPE_E_NEGATIVE</QuestSetType>
+			<QuestSetChapter>0</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_ALLOY_FOUNDRY[num:2->1] or launch any Orbital Unit[num:2]-->
+		<Row>
+			<Type>QUEST_DRAINED</Type>
+			<ScriptName>DrainedQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_DRAINED_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_BLOOD_TYPE_E_NEGATIVE</QuestSetType>
+			<QuestSetChapter>1</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Build improvements Manufactory[num:1->3]-->
+		<Row>
+			<Type>QUEST_BLOODTYPE_E_NEGATIVE</Type>
+			<ScriptName>BloodtypeENegativeQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_BLOODTYPE_E_NEGATIVE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_BLOOD_TYPE_E_NEGATIVE</QuestSetType>
+			<QuestSetChapter>2</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Purity long Quest-->
+		<!--Changes:removed other objectives-->
+		<!--Changes:BUILDING_PHARMALAB->BUILDING_AUTOPLANT[num:1]-->
+		<!--Reward:+1 population on Capital-->
+		<Row>
+			<Type>QUEST_THE_DEATH_PROBLEM</Type>
+			<ScriptName>TheDeathProblemQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_DEATH_PROBLEM_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_DEATH_PROBLEM</QuestSetType>
+			<QuestSetChapter>0</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Build improvements Academy[num:1->3]-->
+		<Row>
+			<Type>QUEST_SAEVARS_THEOREM</Type>
+			<ScriptName>SaevarsTheoremQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_SAEVARS_THEOREM_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_DEATH_PROBLEM</QuestSetType>
+			<QuestSetChapter>1</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Build improvements Farm[num:2->5]-->
+		<!--Reward:+1 production per each new citizen in all cities (OR)-->
+		<!--Reward:+1 science per each new citizen in all cities (OR)-->
+		<Row>
+			<Type>QUEST_THE_MISSING_GRAVES</Type>
+			<ScriptName>TheMissingGravesQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_MISSING_GRAVES_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_DEATH_PROBLEM</QuestSetType>
+			<QuestSetChapter>2</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Harmony long Quest-->
+		<!--Changes:Build improvements Plantation[City->num:2]-->
+		<!--Changes:BUILDING_CLINIC->BUILDING_MOLECULAR_FORGE[City->num:1]-->
+		<Row>
+			<Type>QUEST_THE_SOUNDS_OF_HARVEST</Type>
+			<ScriptName>TheSoundsOfHarvestQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_SOUNDS_OF_HARVEST_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_SOUNDS_OF_HARVEST</QuestSetType>
+			<QuestSetChapter>0</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_INSTITUTE->BUILDING_HOLOSUITE[City->num:1]-->
+		<Row>
+			<Type>QUEST_THE_SILENT_SYMPHONY</Type>
+			<ScriptName>TheSilentSymphonyQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_SILENT_SYMPHONY_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_SOUNDS_OF_HARVEST</QuestSetType>
+			<QuestSetChapter>1</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_VIVARIUM->BUILDING_CYTONURSERY[City]-->
+		<!--Changes:BUILDING_XENO_SANCTUARY->BUILDING_PROGENITOR_GARDEN[num:4]-->
+		<!--Reward:PLAYERPERK_MGH_PLANTATION_FOOD_FLAT(+1 Food from Plantation)-->
+		<Row>
+			<Type>QUEST_RADIO_SILENCE</Type>
+			<ScriptName>RadioSilenceQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_RADIO_SILENCE_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_SOUNDS_OF_HARVEST</QuestSetType>
+			<QuestSetChapter>2</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Clear:(Station as objetive or unnecessary)-->
+		<!--
+		<Row>
+			<Type>QUEST_RETURN_TO_SENDER</Type>
+			<ScriptName>ReturnToSenderQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_RETURN_TO_SENDER_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_NOSTALGIA_TRIP</QuestSetType>
+			<QuestSetChapter>0</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<Row>
+			<Type>QUEST_HOMESICK</Type>
+			<ScriptName>HomesickQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_HOMESICK_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_NOSTALGIA_TRIP</QuestSetType>
+			<QuestSetChapter>1</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<Row>
+			<Type>QUEST_NOSTALGIA_TRIP_A</Type>
+			<ScriptName>NostalgiaTripAQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_NOSTALGIA_TRIP_A_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_NOSTALGIA_TRIP</QuestSetType>
+			<QuestSetChapter>2</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<Row>
+			<Type>QUEST_NOSTALGIA_TRIP_B</Type>
+			<ScriptName>NostalgiaTripBQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_NOSTALGIA_TRIP_B_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_NOSTALGIA_TRIP</QuestSetType>
+			<QuestSetChapter>2</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>-->
+		<!--Harmony-Purity-Supremacy long Quest-->
+		<!--Changes:Trading->BUILDING_BIOFACTORY[num:1] (Affinity->Harmony)-->
+		<!--Changes:BUILDING_LABORATORY->BUILDING_REPAIR_FACILITY[num:1] (Affinity->Harmony)-->
+		<Row>
+			<Type>QUEST_A_WEALTH_OF_LIMBS</Type>
+			<ScriptName>AWealthOfLimbsQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_A_WEALTH_OF_LIMBS_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_LONELY_REVOLUTION</QuestSetType>
+			<QuestSetChapter>0</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:BUILDING_NEUROLAB->BUILDING_BOREHOLE[num:1] (Affinity->Purity)-->
+		<Row>
+			<Type>QUEST_THE_LONELY_REVOLUTION</Type>
+			<ScriptName>TheLonelyRevolutionQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_LONELY_REVOLUTION_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_LONELY_REVOLUTION</QuestSetType>
+			<QuestSetChapter>1</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Changes:Build improvements Academy->BUILDING_BIOGLASS_FURNACE[num:1] (Affinity->Supremacy)-->
+		<!--Changes:Build improvements Academy->BUILDING_FEEDSITE_HUB[num:2] (Affinity->Supremacy)-->
+		<Row>
+			<Type>QUEST_PAY_DAY</Type>
+			<ScriptName>PayDayQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_PAY_DAY_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_LONELY_REVOLUTION</QuestSetType>
+			<QuestSetChapter>2</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<!--Clear:(Station as objetive and xenoswarm as objetive)-->
+		<!--
+		<Row>
+			<Type>QUEST_THE_DENDRITE_FRONTIER</Type>
+			<ScriptName>TheDendriteFrontierQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_THE_DENDRITE_FRONTIER_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_DENDRITE_FRONTIER</QuestSetType>
+			<QuestSetChapter>0</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<Row>
+			<Type>QUEST_ACTION_POTENTIAL</Type>
+			<ScriptName>ActionPotentialQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_ACTION_POTENTIAL_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_DENDRITE_FRONTIER</QuestSetType>
+			<QuestSetChapter>1</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>
+		<Row>
+			<Type>QUEST_A_PRAXIS_DARKLY</Type>
+			<ScriptName>APraxisDarklyQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_A_PRAXIS_DARKLY_DESCRIPTION</Description>
+			<QuestSetType>QUEST_SET_THE_DENDRITE_FRONTIER</QuestSetType>
+			<QuestSetChapter>2</QuestSetChapter>
+			<Affinity>true</Affinity>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<IgnoredByAI>true</IgnoredByAI>
+		</Row>-->
+		<Row>
+			<Type>QUEST_MARVEL</Type>
+			<ScriptName>MarvelQuest</ScriptName>
+			<Description>TXT_KEY_QUEST_HERO_LANDMARK_EXAMPLE_DESCRIPTION</Description>
+			<BannerImage>StationQuestBanner.dds</BannerImage>
+			<PortraitIndex>5</PortraitIndex>
+			<IconAtlas>QUEST_PORTRAITS_ATLAS</IconAtlas>
+			<Marvel>true</Marvel>
+		</Row>
+	</Quests>
+	<Quest_Flavors>
+		<!--
+		<Row>
+			<QuestType>QUEST_FULLY_UPGRADE_UNIT</QuestType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<QuestType>QUEST_LAUNCH_ORBITAL_UNITS_RACE</QuestType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		-->
+	</Quest_Flavors>
+  <Quest_Chains>
+    <Row>
+      <ID>0</ID>
+      <Type>QUEST_CHAIN_OLIVIA_ROSS</Type>
+    </Row>
+    <Row>
+      <Type>QUEST_CHAIN_BLOOD_TYPE_E_NEGATIVE</Type>
+    </Row>
+    <Row>
+      <Type>QUEST_CHAIN_THE_DEATH_PROBLEM</Type>
+    </Row>
+  </Quest_Chains>
+</GameData>

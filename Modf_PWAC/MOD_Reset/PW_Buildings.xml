@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.0.2025-02-16-->
+<!-- 2023 - Blessed by Protok -->
+<GameData>
+	<!-- MGH:MOD reset -->
+	<Buildings>
+	</Buildings>
+	
+	<Building_YieldChanges>
+	</Building_YieldChanges>
+
+	<!-- TECHNOLOGY EFFECTS AS BUILDINGS -->
+	<Building_FeatureYieldChanges>
+	</Building_FeatureYieldChanges>
+
+	<Building_DomainFreeExperiences>
+	</Building_DomainFreeExperiences>
+</GameData>

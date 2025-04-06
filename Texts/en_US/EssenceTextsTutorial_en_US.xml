@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MIGUGH: Last modified v0.9.5.2025-03-26-->
+<GameData>
+	<!--English texts-->
+	<Language_en_US>
+		<!-- INTERLUDE Tutorial -->
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_TITLE">
+			<Text>--Essence Mod changes, tips and tutorial--</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_A1">
+			<Text>[COLOR_HIGHLIGHT_TEXT]Terrain:[ENDCOLOR][NEWLINE][ICON_BULLET]Repairing a unit per turn is +10 HP on enemy or neutral territory, +20HP on friendly territory, +30 HP inside a city. Miasma reduce -10HP to the unit in the tile except for alien units that health them +10HP per turn. The fortification bonus is 25%. If you take advantage of the terrain by establishing your units in forests or mountains, you add 25% to your defense (does not stack). Avoid swamps (lows attack -10%), Rivers can create choke points (these are heavily penalized with -40% penalty to attack), Forests hinder movement, and flanking give an attack bonus of 10%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_B1">
+			<Text>[ICON_BULLET]In the swamps and tundra there is a lot of unknown animals and plants that allows us to learn new technologies learning from planet biodiversity, so those places have a science bonus. The best place for science is alien ruins that can be used to find out new cultural and new scientific things from the builders of that structures. For the rest of unknow mysterious places use an Explorer to do Expeditions with your explorers to be able to recover abandoned artifacts. You can also find information to reconstruct the Progenitor signal by investigating Progenitor devices, that have data on their communications, and sunken Progenitor ships in the ocean.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_A2">
+			<Text>[COLOR_HIGHLIGHT_TEXT]Cities:[ENDCOLOR][NEWLINE][ICON_BULLET]Land is more interesting than sea, city near rivers can build the especial building "Dam" too, in compensation, aquatic bases give more culture (+50%) and have big bonuses for creating aquatic units but they are 20% easier to destroy.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_B2">
+			<Text>[ICON_BULLET]Trading now is only available from 1 city, and for each 5 population you can add an extra route; trading is very difficult due to the hostile landscape and the fact that it is an alien planet full of dangers.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_A3">
+			<Text>[COLOR_HIGHLIGHT_TEXT]Improvements:[ENDCOLOR][NEWLINE][ICON_BULLET]Generators give +1 energy on hills; Mines use 1 energy per turn, only can be built on hills or in special resources and cannot be built in the sea (except in Minerals); so in the sea you need to search for Reefs that give +1 production.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_B3">
+			<Text>[ICON_BULLET]Domes, Nodes, and Biowells improvements cannot be built adjacent to each other, they must have a large space apart in order to develop properly. Domes gives extra yield near montains, rivers or in the land near the coast; Nodes reduce the health of enemy units; Biowells needs a river with fresh water to be deployed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_A4">
+			<Text>[COLOR_HIGHLIGHT_TEXT]War:[ENDCOLOR][NEWLINE][ICON_BULLET]When a a city is conquered, the local population became unhappy. This discontent manifests itself in the "Martial Law" phase. The length of this phase depends on how much population has the city. If you want to avoid the revolts phase in the conquered cities, you need to became the city a "Puppet" but it will be automanaged (can be taken the control later) or "Raze" the city but the city will be full destroyed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_B4">
+			<Text>[ICON_BULLET]Units attack output is reduced by the same percentage of damaged unit. There are not air units available.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

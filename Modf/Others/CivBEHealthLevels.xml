@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- MGH: Modified v0.4.3.2019-11-12-->
+<GameData>
+	<!-- NOTE TO MODDERS: Bonuses and Penalties of Health levels stack on top of each other. HealthStart is when the bonus/penalty will begin. HealthEnd is when any "PerPoint" bonus/penalty will stop increasing, but its capped value will still be in effect past that point.-->
+	<!-- Table definition -->
+	<Table name="HealthLevels">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="Help" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="HealthStart" type="integer" notnull="true" unique="true"/>
+		<Column name="HealthEnd" type="integer" notnull="true"/>
+		<Column name="CombatModifier" type="integer"/>
+		<Column name="CityGrowthModifier" type="integer"/>
+		<Column name="CityGrowthModifierPerPoint" type="integer"/>
+		<Column name="OutpostGrowthModifier" type="integer"/>
+		<Column name="OutpostGrowthModifierPerPoint" type="integer"/>
+		<Column name="CityIntrigueModifier" type="integer"/>
+		<Column name="CityIntrigueModifierPerPoint" type="integer"/>
+	</Table>
+	<Table name="HealthLevels_CityYieldModifiers">
+		<Column name="HealthLevelType" type="text" reference="HealthLevels(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<Table name="HealthLevels_CityYieldModifiersPerPoint">
+		<Column name="HealthLevelType" type="text" reference="HealthLevels(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" notnull="true"/>
+	</Table>
+	<!-- Table data -->
+	<HealthLevels>
+		<Row>
+			<ID>0</ID>
+			<Type>HEALTH_LEVEL_NEUTRAL</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_NEUTRAL_HELP</Help>
+			<HealthStart>1</HealthStart>
+			<HealthEnd>5</HealthEnd>
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_PENALTY_GROWTH</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_PENALTY_HELP</Help>
+			<HealthStart>0</HealthStart>
+			<HealthEnd>-50</HealthEnd>
+			<CityGrowthModifierPerPoint>-2</CityGrowthModifierPerPoint>
+			<!--<OutpostGrowthModifierPerPoint>-2</OutpostGrowthModifierPerPoint>-->
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_PENALTY_CULTURE</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_PENALTY_HELP</Help>
+			<HealthStart>-5</HealthStart>
+			<HealthEnd>-55</HealthEnd>
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_PENALTY_SCIENCE</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_PENALTY_HELP</Help>
+			<HealthStart>-10</HealthStart>
+			<HealthEnd>-60</HealthEnd>
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_PENALTY_INTRIGUE</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_PENALTY_HELP</Help>
+			<HealthStart>-1</HealthStart><!--(-15)-->
+			<HealthEnd>-50</HealthEnd><!--(-65)-->
+			<CityIntrigueModifierPerPoint>2</CityIntrigueModifierPerPoint>
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_PENALTY_PRODUCTION</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_PENALTY_HELP</Help>
+			<HealthStart>-20</HealthStart>
+			<HealthEnd>-70</HealthEnd>
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_BONUS_CULTURE</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_BONUS_HELP</Help>
+			<HealthStart>5</HealthStart><!--(20)-->
+			<HealthEnd>25</HealthEnd><!--(40)-->
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_BONUS_SCIENCE</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_BONUS_HELP</Help>
+			<HealthStart>10</HealthStart><!--(15)-->
+			<HealthEnd>30</HealthEnd><!--(35)-->
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_BONUS_PRODUCTION</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_BONUS_HELP</Help>
+			<HealthStart>15</HealthStart><!--(5)-->
+			<HealthEnd>35</HealthEnd><!--(25)-->
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_BONUS_INTRIGUE</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_BONUS_HELP</Help>
+			<HealthStart>20</HealthStart><!--(10)-->
+			<HealthEnd>40</HealthEnd><!--(30)-->
+			<CityIntrigueModifierPerPoint>-2</CityIntrigueModifierPerPoint>
+		</Row>
+		<Row>
+			<Type>HEALTH_LEVEL_BONUS_GROWTH</Type>
+			<Help>TXT_KEY_HEALTH_LEVEL_BONUS_HELP</Help>
+			<HealthStart>25</HealthStart>
+			<HealthEnd>45</HealthEnd>
+			<CityGrowthModifierPerPoint>1</CityGrowthModifierPerPoint>
+			<!--<OutpostGrowthModifierPerPoint>2</OutpostGrowthModifierPerPoint>-->
+		</Row>
+	</HealthLevels>
+	<HealthLevels_CityYieldModifiersPerPoint>
+		<Row>
+			<HealthLevelType>HEALTH_LEVEL_PENALTY_PRODUCTION</HealthLevelType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>-1</Yield>
+		</Row>
+		<Row>
+			<HealthLevelType>HEALTH_LEVEL_PENALTY_SCIENCE</HealthLevelType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>-1</Yield>
+		</Row>
+		<Row>
+			<HealthLevelType>HEALTH_LEVEL_PENALTY_CULTURE</HealthLevelType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>-1</Yield>
+		</Row>
+		<Row>
+			<HealthLevelType>HEALTH_LEVEL_BONUS_PRODUCTION</HealthLevelType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<HealthLevelType>HEALTH_LEVEL_BONUS_SCIENCE</HealthLevelType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<HealthLevelType>HEALTH_LEVEL_BONUS_CULTURE</HealthLevelType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</HealthLevels_CityYieldModifiersPerPoint>
+</GameData>

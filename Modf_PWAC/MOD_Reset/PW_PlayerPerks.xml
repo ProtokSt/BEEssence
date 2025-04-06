@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.0.2025-02-16-->
+<!-- 2023 - Blessed by Protok -->
+<GameData>
+	<!-- MGH:MOD reset -->
+	<PlayerPerks>
+		<!-- MGH:TODO:Use better the correct values -->
+		<!-- Updating correct text var name
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_CAPITAL_DIPLOMATIC2" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_DIPLOMATIC2_HELP" />
+		</Update>	
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_CAPITAL_DIPLOMATIC3" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_DIPLOMATIC3_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_CAPITAL_DIPLOMATIC4" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_CAPITAL_DIPLOMATIC4_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_MARTIAL_DIPLOMATIC2" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_DIPLOMATIC2_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_MARTIAL_DIPLOMATIC3" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_DIPLOMATIC3_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_MARTIAL_DIPLOMATIC4" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_DIPLOMATIC4_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_TERRITORY_AQUATIC2" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_AQUATIC2_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_TERRITORY_AQUATIC3" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_AQUATIC3_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_TERRITORY_AQUATIC4" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_TERRITORY_AQUATIC4_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_MARTIAL_AQUATIC2" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_AQUATIC2_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_MARTIAL_AQUATIC3" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_AQUATIC3_HELP" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_FOREIGN_POLICY_MARTIAL_AQUATIC4" />
+			<Set Help="TXT_KEY_PLAYERPERK_FOREIGN_POLICY_MARTIAL_AQUATIC4_HELP" />
+		</Update> -->
+
+		<Update><Where Type="PLAYERPERK_ALIEN_LEASH_MISSION" />
+			<Set IconIndex="5" IconAtlas="UNIT_ACTION_ATLAS_2" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_ALIEN_LEASH_COLOSSAL_MISSION" />
+			<Set IconIndex="5" IconAtlas="UNIT_ACTION_ATLAS_2" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_MARVEL_LUSH" />
+			<Set IconIndex="5" IconAtlas="UNIT_ACTION_ATLAS_2" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_BIOSPHERES_GROWTH_CARRYOVER" />
+			<Set IconIndex="0" IconAtlas="UNIT_ACTION_BUILD_BASE" />
+		</Update>
+		<Update><Where Type="PLAYERPERK_SURROGACY_WORKER_SPEED" />
+			<Set IconIndex="2" IconAtlas="UNIT_ATLAS_1" />
+		</Update>
+
+		<!-- Affinity Level Perks -->
+
+		<!-- TECHNOLOGY EFFECTS AS BUILDINGS -->
+		<!--<Row><Type>PLAYERPERK_TE_MARSH_FOREST_ENERGY</Type>
+			<Help>TXT_KEY_PLAYERPERK_TE_MARSH_FOREST_ENERGY</Help>
+			<IconIndex>2</IconIndex>
+			<IconAtlas>EFFECTS_ATLAS</IconAtlas>
+		</Row>-->
+	</PlayerPerks>
+
+	<PlayerPerks_ImprovementYieldEffects>
+	</PlayerPerks_ImprovementYieldEffects>
+</GameData>
