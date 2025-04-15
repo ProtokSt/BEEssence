@@ -6111,8 +6111,8 @@ function AssignStartingPlots:CompetitionStart()
 						plot = Map.GetPlotByIndex(RingOrderedPlots[i]);
 						if (plot) then
 							if plot:CanHaveResource(resourcesID[r]) then
-								local q = 2 + Map.Rand(2, "Compet Resource Strategic Quantity");
-								q=3
+								local q = 7 + Map.Rand(2, "Compet Resource Strategic Quantity");
+								q=3 -- Essence
 								plot:SetResourceType(resourcesID[r], q);
 								if _dpo then print(tostring(loop)..") Plot "..tostring(plot:GetX())..", "..tostring(plot:GetY())..", ID="..resourcesID[r]..", q="..q); end
 								break	
@@ -6155,8 +6155,8 @@ function AssignStartingPlots:CompetitionStart()
 						plot = Map.GetPlotByIndex(RingOrderedPlots[i]);
 						if (plot) then
 							if plot:CanHaveResource(resourcesID[r]) then
-								local q = 2 + Map.Rand(2, "Compet Resource Strategic Quantity");
-								q=3
+								local q = 7 + Map.Rand(2, "Compet Resource Strategic Quantity");
+								q=3 -- Essence
 								plot:SetResourceType(resourcesID[r], q);
 								if _dpo then print(tostring(loop)..") Plot "..tostring(plot:GetX())..", "..tostring(plot:GetY())..", ID="..resourcesID[r]..", q="..q); end
 								break	

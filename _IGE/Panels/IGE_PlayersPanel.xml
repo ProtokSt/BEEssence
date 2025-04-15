@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Released under GPL v3 -->
+<Context ColorSet="Beige_Black_Alpha" Font="TwCenMT14" FontStyle="Shadow" ConsumeMouse="0" >
+
+	<Instance Name="PlayerInstance">
+		<Button ID="Button" Anchor="R,T" Offset="30,5" Size="320,30" StateOffsetIncrement="0,0" ToolTipType="IGE_ToolTip" >
+			<ShowOnMouseOver>
+				<AlphaAnim Anchor="C,C" Size="330,56" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
+					<Grid  ID="HoverHighLight" Anchor="C,C" Size="100,24" Offset="0,0" Style="Grid9FrameTurnsHL" />
+				</AlphaAnim>
+			</ShowOnMouseOver>
+
+			<Container Anchor="L,T" Size="320,30" >
+				<Image ID="SmallIcon" TextureOffset="0,0" Size="32,32" Offset="2,0" Anchor="L,C" />
+				<Label ID="NameLabel" Anchor="L,C" Font="TwCenMT16" Offset="32,0"/>
+			</Container>
+		</Button>
+	</Instance>
+
+	<Instance Name="ArtifactsInstance" >
+		<Button ID="Button" Size="100,24" Anchor="L,T" Padding="0,0" ToolTipType="IGE_ToolTip" >
+			<Grid ID="SelectionFrame" Anchor="C,C" Offset="0,0" Size="100,24" Style="Grid9FrameTurns"/>
+			<Label ID="NameLabel" Anchor="L,C" Offset="10,0" Size="190,24" Padding="0,0" ColorSet="Beige_Black_Alpha" Font="TwCenMT14" FontStyle="Shadow" />
+
+			<ShowOnMouseOver>
+				<AlphaAnim Anchor="C,C" Size="230,56" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
+					<Grid  ID="HoverHighLight" Anchor="C,C" Size="100,24" Offset="0,0" Style="Grid9FrameTurnsHL" />
+				</AlphaAnim>
+			</ShowOnMouseOver>
+		</Button>
+	</Instance>
+
+	<Instance Name="ListItemInstance" >
+		<Button ID="Button" Size="100,24" Anchor="L,T" Padding="0,0" ToolTipType="IGE_ToolTip" >
+			<Grid ID="SelectionFrame" Anchor="C,C" Offset="0,0" Size="100,24" Style="Grid9FrameTurns"/>
+			<Label ID="NameLabel" Anchor="L,C" Offset="10,0" Size="90,24" Padding="0,0" ColorSet="Beige_Black_Alpha" Font="TwCenMT14" FontStyle="Shadow" />
+
+			<ShowOnMouseOver>
+				<AlphaAnim Anchor="C,C" Size="330,56" Pause="0" Cycle="Bounce" Speed="1" AlphaStart="2" AlphaEnd="1">
+					<Grid  ID="HoverHighLight" Anchor="C,C" Size="100,24" Offset="0,0" Style="Grid9FrameTurnsHL" />
+				</AlphaAnim>
+			</ShowOnMouseOver>
+		</Button>
+	</Instance>
+
+
+	<!--=======================================================================================================================-->
+	<!--		BODY		-->
+	<!--=======================================================================================================================-->
+	<Container ID="Container" Offset="10,0" Size="1266,410">
+		<ScrollPanel ID="ScrollPanel" Anchor="L,T" Offset="0,0" Size="1266,410" Vertical="1" AutoScrollBar="1">
+			<Stack ID ="TopStack" StackGrowth="Bottom">
+				<Stack ID="Stack" StackGrowth="Right" Size="1266,410" Offset="0,0">				
+
+					<!-- Properties -->
+					<Stack ID="PropertiesStack" Anchor="L,T" Size="240,390" Offset="20,10" StackGrowth="Bottom">
+
+						<Stack Anchor="L,T" Offset="0,0" StackGrowth="Right">
+
+							<Stack Anchor="L,T" Offset="0,0" StackGrowth="Bottom">
+
+								<GridButton ID="TakeSeatButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,20" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_TAKE_SEAT_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_TAKE_SEAT_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="RevealMapButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_REVEAL_MAP_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_REVEAL_MAP_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="RemoveMiamsaButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_PWE_REMOVE_MIASMA_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_PWE_REMOVE_MIASMA_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="RemovePodsButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_PWE_REMOVE_PODS_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_PWE_REMOVE_PODS_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="RemoveAliensButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_PWE_REMOVE_ALIENS_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_PWE_REMOVE_ALIENS_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="SetWild0Button" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_PWE_SET_WILD_0_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_PWE_SET_WILD_0_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="ExploreMapButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_EXPLORE_MAP_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_EXPLORE_MAP_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="UnexploreMapButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_UNEXPLORE_MAP_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_UNEXPLORE_MAP_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="KillUnitsButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_KILL_UNITS_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_KILL_UNITS_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+								<GridButton ID="KillButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_KILL_CIV_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_KILL_CIV_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+							</Stack>
+
+							<Stack Anchor="L,T" Offset="20,0" StackGrowth="Bottom">								
+								<GridButton ID="LevelUpStationsButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,20" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_LEVELUP_STATIONS_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_LEVELUP_STATIONS_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+								<GridButton ID="KillAliensButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_KILL_ALL_ALIENS_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_KILL_ALL_ALIENS" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+								<GridButton ID="FreePolicyButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_PLAYERPERK_HOLOSUITES_FREE_VIRTUE_HELP" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+								<GridButton ID="FreeTechButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_FREE_TECH_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_FREE_TECH_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+								<GridButton ID="GrantAllTechsButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_ALL_TECH_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_ALL_TECH_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+								<GridButton ID="RemoveAllTechsButton" Anchor="L,T" Style="SmallButton" Size="180,24" Offset="0,5" StateOffsetIncrement="0,0"
+										ToolTip="TXT_KEY_IGE_REMOVEALL_TECH_BUTTON_HELP">
+									<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_REMOVEALL_TECH_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+								</GridButton>
+
+							</Stack>
+
+						</Stack>
+							
+							
+							
+					</Stack>
+
+					<Stack ID="EditBoxStack" Anchor="L,T" Size="240,390" Offset="50,10" StackGrowth="Bottom">
+
+						<Container Offset="0,10" Anchor="C,T" Size="90,24"  ToolTip="TXT_KEY_BARBARIAN_TREASURE_HEADING4_TITLE">
+							<Grid     Offset="0,0" Anchor="L,C" Size="90,18" Style="ShellTextEditBackground"/>
+							<EditBox ID="EnergyEditBox" Offset="18,0" Anchor="L,C" Size="72,16" EditMode="1" NumberInput="1" MaxLength="7" />
+							<Button  ID="EnergyDown" Offset="0,0" Anchor="L,C" Style="ScrollBarLeft"/>
+							<Button  ID="EnergyUp" Offset="0,0" Anchor="R,C" Style="ScrollBarRight"/>
+							<Label   String="[ICON_ENERGY]" Offset="12,4" Anchor="R,C" AnchorSide="o,i"/>
+						</Container>
+
+						<Container Offset="0,10" Anchor="C,T" Size="90,24"  ToolTip="TXT_KEY_IGE_CURRENT_CULTURE">
+							<Grid     Offset="0,0" Anchor="L,C" Size="90,18" Style="ShellTextEditBackground"/>
+							<EditBox ID="CultureEditBox" Offset="18,0" Anchor="L,C" Size="72,16" EditMode="0" NumberInput="1" MaxLength="7" />
+							<Button  ID="CultureDown" Offset="0,0" Anchor="L,C" Style="ScrollBarLeft"/>
+							<Button  ID="CultureUp" Offset="0,0" Anchor="R,C" Style="ScrollBarRight"/>
+							<Label   String="[ICON_CULTURE]" Offset="12,4" Anchor="R,C" AnchorSide="o,i"/>
+						</Container>
+
+						<Container ID="DiploContainer" Offset="0,10" Anchor="C,T" Size="90,24"  ToolTip="TXT_KEY_DIPLOMATIC_CAPITAL_HEADING2_TITLE">
+							<Grid     Offset="0,0" Anchor="L,C" Size="90,18" Style="ShellTextEditBackground"/>
+							<EditBox ID="DiplomaticCapitalEditBox" Offset="18,0" Anchor="L,C" Size="72,16" EditMode="1" NumberInput="1" MaxLength="7" />
+							<Button  ID="DiplomaticCapitalDown" Offset="0,0" Anchor="L,C" Style="ScrollBarLeft"/>
+							<Button  ID="DiplomaticCapitalUp" Offset="0,0" Anchor="R,C" Style="ScrollBarRight"/>
+							<Label   String="[ICON_DIPLO_CAPITAL]" Offset="12,4" Anchor="R,C" AnchorSide="o,i"/>
+						</Container>
+
+						<GridButton ID="HarmonyUpgrade" Anchor="L,T" Style="SmallButton" Size="125,24" Offset="0,25" StateOffsetIncrement="0,0"
+								ToolTip="TXT_KEY_IGE_AFFINITY_WARNING">
+							<Label Anchor="L,C"  Offset="5,0" String="[ICON_HARMONY]" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+							<Label Anchor="C,C"  Offset="0,0" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" ID="harmonylabel" />
+						</GridButton>
+								
+						<GridButton ID="PurityUpgrade" Anchor="L,T" Style="SmallButton" Size="125,24" Offset="0,5" StateOffsetIncrement="0,0"
+								ToolTip="TXT_KEY_IGE_AFFINITY_WARNING">
+							<Label Anchor="L,C"  Offset="5,0" String="[ICON_PURITY]" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+							<Label Anchor="C,C"  Offset="0,0" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" ID="puritylabel" />						
+						</GridButton>
+
+						<GridButton ID="SupremacyUpgrade" Anchor="L,T" Style="SmallButton" Size="125,24" Offset="0,5" StateOffsetIncrement="0,0"
+								ToolTip="TXT_KEY_IGE_AFFINITY_WARNING">
+							<Label Anchor="L,C"  Offset="5,0" String="[ICON_SUPREMACY]" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+							<Label Anchor="C,C"  Offset="0,0" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" ID="supremacylabel" />
+						</GridButton>
+
+					
+					</Stack>
+
+									
+				</Stack>
+
+				<!-- Actions -->
+				<Stack ID="ActionsStack" StackGrowth="Bottom" Offset="0,20">
+					<GridButton	ID="ActionHeaderBackground"	Anchor="L,C" Size="140,26" Style="ColumnHeader">
+						<Label ID="ActionHeader" Anchor="C,C"  Offset="0,-2" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="TXT_KEY_CHOOSE_ARCH_OPTIONS"/>
+					</GridButton>
+					<Stack StackGrowth="Right" Offset="10,10">
+						<PullDown ID="PullDown" Offset="0,0" Anchor="L,T" Style="GenericPullDown" ScrollThreshold="350" SpaceForScroll="0" Size="300,24" />
+						<GridButton ID="AllButton" Anchor="L,T" Style="SmallButton" Size="60,24" Offset="10,0" StateOffsetIncrement="0,0"
+									ToolTip="TXT_KEY_IGE_ALL_BUTTON_HELP">
+							<Label Anchor="C,C"  Offset="0,0" String="TXT_KEY_IGE_ALL_BUTTON" ColorSet="Beige_Black_Alpha" FontStyle="Shadow"  />
+						</GridButton>
+					</Stack>
+					<Stack ID="PlayersStack" StackGrowth="Bottom" Size="500,350" Offset="10,10">
+						<Container ID="NoPlayerContainer" Size="180,200">
+							<Label ID="NoPlayerLabel" Anchor="L,C" Offset="20,2" String="TXT_KEY_IGE_INVALID_BUTTON" Font="TwCenMT20" FontStyle="Shadow"/>
+						</Container>
+						<Container ID="MajorPlayersList" Size="180,350" />
+					</Stack>
+				</Stack>
+				
+				<Stack ID="ArtifactsStack" StackGrowth="Bottom">
+					<GridButton	ID="ArtifactHeaderBackground"	Anchor="L,C" Size="140,26" Style="ColumnHeader">
+						<Label ID="ArtifactHeader" Anchor="C,C"  Offset="0,-2" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="TXT_KEY_ARTIFACTS_POPUP_TITLE"/>
+					</GridButton>
+					<Stack ID="ArtifactsSubStack" StackGrowth="Bottom">
+						<Stack ID="ArtifactOldEarth" StackGrowth="Bottom" Anchor="L,T" Size="100,272" Offset="0,0">
+							<GridButton	ID="OEHeaderBackground"	Anchor="L,C" Size="140,26" Style="ColumnHeader">
+								<Label ID="OEHeader" Anchor="C,C"  Offset="0,-2" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="TXT_KEY_ARTIFACT_CATEGORY_OLD_EARTH_DESCRIPTION"/>
+							</GridButton>
+							<Container ID="OEList" Anchor="L,T" Size="100,272" Offset="0,0"/>
+						</Stack>
+						
+						<Stack ID="ArtifactAlien" StackGrowth="Bottom" Anchor="L,T" Size="100,272" Offset="0,0">
+							<GridButton	ID="AHeaderBackground"	Anchor="L,C" Size="140,26" Style="ColumnHeader">
+								<Label ID="AHeader" Anchor="C,C"  Offset="0,-2" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="TXT_KEY_ARTIFACT_CATEGORY_ALIEN_DESCRIPTION"/>
+							</GridButton>
+							<Container ID="AList" Anchor="L,T" Size="100,272" Offset="0,0"/>
+						</Stack>
+
+						<Stack ID="ArtifactProgenitor" StackGrowth="Bottom" Anchor="L,T" Size="100,272" Offset="0,0">
+							<GridButton	ID="PHeaderBackground"	Anchor="L,C" Size="140,26" Style="ColumnHeader">
+								<Label ID="PHeader" Anchor="C,C"  Offset="0,-2" Font="TwCenMT18" ColorSet="Beige_Black_Alpha" FontStyle="Shadow" String="TXT_KEY_ARTIFACT_CATEGORY_PROGENITOR_DESCRIPTION"/>
+							</GridButton>
+							<Container ID="PList" Anchor="L,T" Size="100,272" Offset="0,0"/>
+						</Stack>
+					</Stack>
+				</Stack>
+				
+			</Stack>
+				<!--	 Scroll controls -->
+			<ScrollBar ID="ScrollBar" Style="VertSlider" Offset="-10,0" Anchor="R,T"  Length="1000"/>
+		</ScrollPanel>
+	</Container>
+</Context>

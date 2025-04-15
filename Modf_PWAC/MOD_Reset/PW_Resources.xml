@@ -126,5 +126,5 @@
 			<!-- <ResourceType>RESOURCE_ALIEN_SKELETON</ResourceType> -->
 			<!-- <TerrainType>TERRAIN_HILL</TerrainType> -->
 		<!-- </Row> -->
-	</Resource_FeatureTerrainBooleans>
+<!--	</Resource_FeatureTerrainBooleans>-->
 </GameData>

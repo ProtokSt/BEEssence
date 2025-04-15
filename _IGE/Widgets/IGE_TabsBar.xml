@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Released under GPL v3 -->
+<Context ColorSet="Beige_Black_Alpha" Font="TwCenMT14" FontStyle="Shadow" ConsumeMouse="0" >
+
+	<Instance Name="TabInstance" >
+		<Container ID="Root" Size="70,52">
+			<Container ID="SelectionFrame" Anchor="C,C" Size="70,52">
+				<Grid Size="50,34" Color="154,193,234,190" Anchor="C,C" StateOffsetIncrement="0,0" LLSize="0,0" LRSize="0,0" LCSize="13,0" ULSize="0,0" URSize="0,0" UCSize="13,0"/>
+			</Container>
+			
+			<Button ID="Button" Size="70,64" Anchor="C,B" >
+				<Image ID="Icon" Anchor="C,B" Offset="0,0" Size="64,64" />
+			</Button>
+			
+			<Image ID="TopButton" Anchor="C,T" AnchorSide="i,o" Offset="0,10" Size="64,64" ToolTipType="IGE_ToolTip" Texture="64x64FrameButtons.dds" >
+				<Image ID="TopIcon" Anchor="C,C" Size="64,64"/>
+			</Image>
+		</Container>
+	</Instance>
+
+	<Instance Name="SmallTabInstance" >
+		<Container ID="Root" Size="50,34" Style="ColumnHeader">
+			<Container ID="SelectionFrame" Anchor="C,C" Size="50,32" Style="ColumnHeader">
+				<Grid Size="50,34" Style="ColumnHeader" Anchor="C,C"/>
+			</Container>
+			
+			<Button ID="Button" Size="50,45" Anchor="C,B">
+				<Image ID="Icon" Anchor="C,B" Offset="0,0" Size="45,45" />
+			</Button>
+
+			<Image ID="TopButton" Anchor="C,T" AnchorSide="i,o" Offset="0,5" Size="64,64" ToolTipType="IGE_ToolTip" Texture="64x64FrameButtons.dds" >
+				<Image ID="TopIcon" Anchor="C,C" Size="64,64"/>
+			</Image>
+		</Container>
+	</Instance>
+
+	<!--=======================================================================================================================-->
+	<!--		BODY	-->
+	<!--=======================================================================================================================-->
+	<Box ID="Container" Offset="0,0" Size="1286,52" ConsumeMouseOver="1" Padding="0" Color="0,255,0,0">
+		
+		<!-- Tabs -->
+		<Grid ID="TabsGrid" Color="0,0,255,0" Size="969,50" Offset="0,1" LLSize="0,0" LRSize="0,0" LCSize="28,0" ULSize="0,0" URSize="0,0" UCSize="28,0" LSize="0,25" RSize="0,28">
+			<Stack ID="TabsStack" StackGrowth="Right" Size="5,50" Offset="5,0">
+				<Label ID="Label_Edit" String="TXT_KEY_IGE_EDIT" Font="TwCenMT24" FontStyle="Stroke" Anchor="L,C" Offset="8,0"/>
+				<Stack ID="EditTabsStack" StackGrowth="Right" Size="100,64" Offset="2,0" />
+
+				<Label ID="Label_Paint" String="TXT_KEY_IGE_PAINT" Font="TwCenMT24" FontStyle="Stroke" Anchor="L,C" Offset="8,0"/>
+				<Stack ID="PaintTabsStack" StackGrowth="Right" Size="100,64" Offset="2,0" />
+
+				<Label ID="Label_Change" String="TXT_KEY_IGE_CHANGE" Font="TwCenMT24" FontStyle="Stroke" Anchor="L,C" Offset="8,0"/>
+				<Stack ID="ChangeTabsStack" StackGrowth="Right" Size="100,64" Offset="2,0" />
+			</Stack>
+		</Grid>
+
+		<!-- Player selection -->
+		<Button ID="PlayerButton" Anchor="R,T" Offset="11,-5" Size="200,52" ToolTip="TXT_KEY_IGE_ACTIVE_PLAYER_BUTTON_HELP">
+			<Container ID="PlayerContainer" Anchor="R,T" Size="200,52">
+				<Image ID="PlayerImage" Anchor="R,C" TextureOffset="0,0" Size="64,64" Offset="0,-3" />
+				<Label ID="PlayerLabel" Anchor="R,C" Font="TwCenMT20" Offset="65,0" String="TXT_KEY_IGE_PLAYER"/>
+			</Container>
+		</Button>
+
+		<Grid Style="TabSpacerDark" Anchor="L,B" Size="1286,5" ID="LowerFrame"/>
+	</Box>
+</Context>

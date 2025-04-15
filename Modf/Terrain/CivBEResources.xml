@@ -558,6 +558,8 @@
 		<Row>
 			<Type>RESOURCE_SOUNDING_BELL_OCEAN</Type>
 			<!--<Flatlands>true</Flatlands>changed-->
+			<Flatlands>true</Flatlands>
+			<Hills>true</Hills>
 			<Description>TXT_KEY_RESOURCE_SOUNDING_BELL_OCEAN</Description>
 			<Civilopedia>TXT_KEY_RESOURCE_SOUNDING_BELL_OCEAN_TEXT</Civilopedia>
 			<Help>TXT_KEY_ARTIFACT_RESOURCE_DEFAULT_HELP</Help>
@@ -1698,6 +1700,10 @@
 			<ResourceType>RESOURCE_AN_ELEMENTAL_FATE_CAVE</ResourceType>
 			<FeatureType>FEATURE_MARSH</FeatureType>
 		</Row>
+		<Row><ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType><FeatureType>FEATURE_FOREST</FeatureType></Row>
+		<Row><ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType><FeatureType>FEATURE_MARSH</FeatureType></Row>
+		<Row><ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType><FeatureType>FEATURE_FLOOD_PLAINS</FeatureType></Row>
+		<Row><ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType><FeatureType>FEATURE_REEF</FeatureType></Row>
 	</Resource_FeatureBooleans>
 	<!-- Feature-Terrain Booleans are strange: they are gates for terrains, but only on tiles that also have a feature. If the tile has a feature that the resource is allowed with, this table represents a second step to check against terrains that may allow the feature but not allow the resource -->
 	<Resource_FeatureTerrainBooleans>
@@ -1837,6 +1843,10 @@
 			<ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType>
 			<TerrainType>TERRAIN_OCEAN</TerrainType>
 		</Row>
+		<Row><ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType><TerrainType>TERRAIN_GRASS</TerrainType></Row>
+		<Row><ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType><TerrainType>TERRAIN_PLAINS</TerrainType></Row>
+		<Row><ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType><TerrainType>TERRAIN_TUNDRA</TerrainType></Row>
+		<Row><ResourceType>RESOURCE_SOUNDING_BELL_OCEAN</ResourceType><TerrainType>TERRAIN_DESERT</TerrainType></Row>
 		<Row>
 			<ResourceType>RESOURCE_SUNKEN_SPACECRAFT_OCEAN</ResourceType>
 			<TerrainType>TERRAIN_COAST</TerrainType>

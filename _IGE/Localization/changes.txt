@@ -1,0 +1,45 @@
+v1:
+* Ported InGameEditor from Civ5
+
+v2:
+* Fixed issue where camera was stuck and snaping to one city
+* Fixed issue with first virtues not unlocking properly (Adaptive, Frugality, Foresight, Labor Logistics)
+* Fixed miasma, it can now be removed or added and does damage.
+
+v3:
+* Fixed technology unlocking, works for AI players now, panel also shows what techs AI is researching now.
+* Added ability to upgrade affinities *BEWARE: Affinities cannot be reset or removed only upgraded, changes are permanent.
+
+v4:
+-- Fixes
+* Error message popups
+* Works with BE and BE:Rising Tide
+* Updates/Changes to some of the back-end code
+* Can only select other players after they planetfall
+* Unit lists display correct unit name and stats after upgrades
+* Tile yield/resource overlay icon misalignment
+
+-- New features
+___UI___
+* New layout 
+* Automatically scales (can be disabled in IGE options)
+
+___Terrain___
+* Automatic reveal when adding improvements (set on/off in IGE options)(when disabled improvements will be invisible until a unit comes near by)
+* Added canyon terrain type
+
+___Cities/Units___
+* Artifact reward buildings
+* Reset unit moves/attack
+
+___Players___
+* Diplomatic Capital
+* Artifacts
+* Kill all Alien units
+* Grant all techs
+* Remove all techs
+* Level up stations (sets max level for stations currently on the map)
+* Make AI planetfall (only one planetfall animation will happen if all AI is made to planetfall)
+
+___Tech Web___
+* Added filters/search function and updated style
