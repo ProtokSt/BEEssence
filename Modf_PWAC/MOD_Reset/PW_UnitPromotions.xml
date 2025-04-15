@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MGH: Modified v0.9.0.2025-02-16-->
+<!-- 2023 - Blessed by Protok -->
+<GameData>
+	<!-- MGH:MOD reset (except new aliens stages/bugs) -->
+	<UnitPromotions>
+		<!-- <Set CombatPercent="50" RangeChange="3"  /> -->
+		<Update><Where Type="PROMOTION_SKY_CHITIN" /><Set CombatPercent="20" RangeChange="1"  Help="TXT_KEY_PROMOTION_SKY_CHITIN_AC_HELP"  /></Update>
+
+		<!-- <Update><Where Type="PROMOTION_HOMELAND_DEFENSE" /><Set FriendlyLandsModifier="15"  /></Update> -->
+
+		<!-- updating wrong description -->
+		<Update><Where Type="PROMOTION_COMBAT_BOOST_4" /><Set><Help>TXT_KEY_PROMOTION_COMBAT_BOOST_4_20_HELP</Help></Set></Update>
+		<Update><Where Type="PROMOTION_INSTANT_HEAL_4" /><Set><Help>TXT_KEY_PROMOTION_INSTANT_HEAL_4_AC_HELP</Help></Set></Update>
+
+		<!-- Cavalry penalty versus Base -->
+		<!-- <Row><Type>PROMOTION_CAVALRY_VS_BASE</Type>
+			<Description>TXT_KEY_PROMOTION_CAVALRY_VS_BASE</Description>
+			<Help>TXT_KEY_PROMOTION_CAVALRY_VS_BASE_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_CAVALRY_VS_BASE</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<PortraitIndex>31</PortraitIndex>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CityAttack>-55</CityAttack>
+		</Row> -->
+
+		<!-- <Row>
+			<Type>PROMOTION_COMBATHEAL_BOOST_1</Type>
+			<Description>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</Description>
+			<Help>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_1_HELP</Help>
+			<ExactLevelPrereq>5</ExactLevelPrereq>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>5</OrderPriority>
+			<CombatPercent>5</CombatPercent>
+			<SameTileHealChange>2</SameTileHealChange>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_COMBATHEAL_BOOST_2</Type>
+			<Description>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</Description>
+			<Help>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_2_HELP</Help>
+			<PromotionPrereq>PROMOTION_COMBATHEAL_BOOST_1</PromotionPrereq>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>5</OrderPriority>
+			<CombatPercent>5</CombatPercent>
+			<SameTileHealChange>4</SameTileHealChange>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_COMBATHEAL_BOOST_3</Type>
+			<Description>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</Description>
+			<Help>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_3_HELP</Help>
+			<PromotionPrereq>PROMOTION_COMBATHEAL_BOOST_2</PromotionPrereq>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>5</OrderPriority>
+			<CombatPercent>5</CombatPercent>
+			<SameTileHealChange>6</SameTileHealChange>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_COMBATHEAL_BOOST_4</Type>
+			<Description>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</Description>
+			<Help>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_4_HELP</Help>
+			<PromotionPrereq>PROMOTION_COMBATHEAL_BOOST_3</PromotionPrereq>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>5</OrderPriority>
+			<CombatPercent>5</CombatPercent>
+			<SameTileHealChange>8</SameTileHealChange>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_COMBATHEAL_BOOST_5</Type>
+			<Description>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</Description>
+			<Help>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_5_HELP</Help>
+			<PromotionPrereq>PROMOTION_COMBATHEAL_BOOST_4</PromotionPrereq>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>5</OrderPriority>
+			<CombatPercent>5</CombatPercent>
+			<SameTileHealChange>10</SameTileHealChange>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</PediaEntry>
+		</Row>
+		<Row>
+			<Type>PROMOTION_COMBATHEAL_BOOST_6</Type>
+			<Description>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</Description>
+			<Help>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_6_HELP</Help>
+			<PromotionPrereq>PROMOTION_COMBATHEAL_BOOST_5</PromotionPrereq>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<OrderPriority>5</OrderPriority>
+			<CombatPercent>5</CombatPercent>
+			<SameTileHealChange>12</SameTileHealChange>
+			<PortraitIndex>2</PortraitIndex>
+			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_COMBATHEAL_BOOST_X</PediaEntry>
+		</Row>-->
+
+		<!-- test for trader -->
+		<!-- <Row> -->
+		<!-- <Type>PROMOTION_TRADER_SIGHT</Type> -->
+		<!-- <Description>TXT_KEY_PROMOTION_TRADER_SIGHT</Description> -->
+		<!-- <Help>TXT_KEY_PROMOTION_TRADER_SIGHT_HELP</Help> -->
+		<!-- <Sound>AS2D_IF_LEVELUP</Sound> -->
+		<!-- <CannotBeChosen>true</CannotBeChosen> -->
+		<!-- <VisibilityChange>1</VisibilityChange> -->
+		<!-- <PortraitIndex>2</PortraitIndex> -->
+		<!-- <IconAtlas>PROMOTION_ATLAS</IconAtlas> -->
+		<!-- <PediaType>PEDIA_SHARED</PediaType> -->
+		<!-- <PediaEntry>TXT_KEY_PROMOTION_TRADER_SIGHT</PediaEntry> -->
+		<!-- </Row> -->
+
+<!-- PW ALIENS -->
+		
+		<Row><Type>PROMOTION_ALIEN_SOA1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_SOA1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_SOA1_HELP</Help>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_SOA1</PediaEntry>
+			<PortraitIndex>12</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<ExperiencePercent>-70</ExperiencePercent>
+		</Row>
+		
+		<!-- City Attack -->
+		<!-- <Row><Type>PROMOTION_ANIMAL</Type> -->
+			<!-- <Description>TXT_KEY_PROMOTION_ANIMAL</Description> -->
+			<!-- <Help>TXT_KEY_PROMOTION_ANIMAL_HELP</Help> -->
+			<!-- <Sound>AS2D_IF_LEVELUP</Sound> -->
+			<!-- <CannotBeChosen>true</CannotBeChosen> -->
+			<!-- <CityAttack>-50</CityAttack> -->
+			<!-- <PortraitIndex>12</PortraitIndex> -->
+			<!-- <IconAtlas>PERK_ATLAS</IconAtlas> -->
+			<!-- <PediaType>PEDIA_SHARED</PediaType> -->
+			<!-- <PediaEntry>TXT_KEY_PROMOTION_ANIMAL</PediaEntry> -->
+		<!-- </Row> -->
+		<Row><Type>PROMOTION_ANIMAL_2</Type>
+			<Description>TXT_KEY_PROMOTION_ANIMAL</Description>
+			<Help>TXT_KEY_PROMOTION_ANIMAL_2_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ANIMAL</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CityAttack>-30</CityAttack>
+		</Row>
+		<Row><Type>PROMOTION_ANIMAL_3</Type>
+			<Description>TXT_KEY_PROMOTION_ANIMAL</Description>
+			<Help>TXT_KEY_PROMOTION_ANIMAL_3_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ANIMAL</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CityAttack>-10</CityAttack>
+		</Row>
+		<Row><Type>PROMOTION_ANIMAL_4</Type>
+			<Description>TXT_KEY_PROMOTION_ANIMAL</Description>
+			<Help>TXT_KEY_PROMOTION_ANIMAL_4_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ANIMAL</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CityAttack>10</CityAttack>
+		</Row>
+		
+	<!-- Ranged Defense -->
+		<Row><Type>PROMOTION_ALIEN_CHITIN_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_CHITIN_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_CHITIN_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_CHITIN_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<RangedDefenseMod>25</RangedDefenseMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_CHITIN_2</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_CHITIN_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_CHITIN_2_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_CHITIN_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<RangedDefenseMod>50</RangedDefenseMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_CHITIN_3</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_CHITIN_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_CHITIN_3_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_CHITIN_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<RangedDefenseMod>75</RangedDefenseMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_CHITIN_4</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_CHITIN_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_CHITIN_4_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_CHITIN_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<RangedDefenseMod>100</RangedDefenseMod>
+		</Row>
+		
+	<!-- Terrain Adapted -->		
+		<Row><Type>PROMOTION_ALIEN_HILL_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_HILL_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_HILL_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_HILL_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<!-- <HillsDoubleMove>true</HillsDoubleMove> -->
+		</Row>
+		<!-- <Row><Type>PROMOTION_ALIEN_HILL_2</Type> -->
+			<!-- <Description>TXT_KEY_PROMOTION_ALIEN_HILL_2</Description> -->
+			<!-- <Help>TXT_KEY_PROMOTION_ALIEN_HILL_2_HELP</Help> -->
+			<!-- <PediaEntry>TXT_KEY_PROMOTION_ALIEN_HILL_2</PediaEntry> -->
+			<!-- <PediaType>PEDIA_SHARED</PediaType> -->
+			<!-- <PortraitIndex>27</PortraitIndex> -->
+			<!-- <IconAtlas>PERK_ATLAS</IconAtlas> -->
+			<!-- <Sound>AS2D_IF_LEVELUP</Sound> -->
+			<!-- <CannotBeChosen>true</CannotBeChosen> -->
+		<!-- </Row> -->
+		<Row><Type>PROMOTION_ALIEN_SNOW_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_SNOW_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_SNOW_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_SNOW_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_DSRT_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_DSRT_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_DSRT_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_DSRT_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_SWMP_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_SWMP_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_SWMP_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_SWMP_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_COAST_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_COAST_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_COAST_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_COAST_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>28</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_OCEAN_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_OCEAN_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_OCEAN_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_OCEAN_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>28</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_REEF_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_REEF_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_REEF_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_REEF_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>28</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		
+	<!-- Stage 2 All -->	
+		<Row><Type>PROMOTION_ALIEN_STAGE_2_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_2_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_2_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_2_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>21</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<MiasmaFlatHealthMod>5</MiasmaFlatHealthMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_2_2</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_2_2</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_2_2_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_2_2</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<RangedDefenseMod>20</RangedDefenseMod>
+			<DefenseMod>20</DefenseMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_2_3</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_2_3</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_2_3_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_2_3</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<RangedAttackModifier>20</RangedAttackModifier>
+			<AttackMod>20</AttackMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_2_4</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_2_4</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_2_4_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_2_4</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>8</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CombatPercent>10</CombatPercent>
+		</Row>
+		
+	<!-- Stage 3 All -->	
+		<Row><Type>PROMOTION_ALIEN_STAGE_3_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_3_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_3_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_3_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>21</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<MiasmaFlatHealthMod>10</MiasmaFlatHealthMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_3_2</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_3_2</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_3_2_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_3_2</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>6</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<RangedDefenseMod>40</RangedDefenseMod>
+			<DefenseMod>40</DefenseMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_3_3</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_3_3</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_3_3_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_3_3</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>4</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<RangedAttackModifier>40</RangedAttackModifier>
+			<AttackMod>40</AttackMod>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_3_4</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_3_4</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_3_4_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_3_4</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>8</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+			<CombatPercent>20</CombatPercent>
+		</Row>
+		
+	<!-- Stage List 2 -->	
+		<Row><Type>PROMOTION_ALIEN_STAGE_LIST_2_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_LIST_2_2</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_2</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_2_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_2</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_LIST_2_3</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_3</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_3_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_2_3</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		
+	<!-- Stage List 3 -->	
+		<Row><Type>PROMOTION_ALIEN_STAGE_LIST_3_1</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_1</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_1_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_1</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_LIST_3_2</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_2</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_2_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_2</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		<Row><Type>PROMOTION_ALIEN_STAGE_LIST_3_3</Type>
+			<Description>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_3</Description>
+			<Help>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_3_HELP</Help>
+			<PediaEntry>TXT_KEY_PROMOTION_ALIEN_STAGE_LIST_3_3</PediaEntry>
+			<PediaType>PEDIA_SHARED</PediaType>
+			<PortraitIndex>27</PortraitIndex>
+			<IconAtlas>PERK_ATLAS</IconAtlas>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<CannotBeChosen>true</CannotBeChosen>
+		</Row>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- PW ALIENS -->
+
+
+	</UnitPromotions>
+
+	<UnitPromotions_Terrains>
+		<Row><PromotionType>PROMOTION_ALIEN_HILL_1</PromotionType>
+			<TerrainType>TERRAIN_HILL</TerrainType>
+			<Attack>40</Attack>
+			<Defense>40</Defense>
+		</Row>
+		<!-- <Row><PromotionType>PROMOTION_ALIEN_HILL_2</PromotionType> -->
+			<!-- <TerrainType>TERRAIN_HILL</TerrainType> -->
+			<!-- <Attack>20</Attack> -->
+			<!-- <Defense>20</Defense> -->
+			<!-- <DoubleMove>true</DoubleMove> -->
+		<!-- </Row> -->
+		<Row><PromotionType>PROMOTION_ALIEN_SNOW_1</PromotionType>
+			<TerrainType>TERRAIN_SNOW</TerrainType>
+			<Attack>40</Attack>
+			<Defense>40</Defense>
+			<!-- <DoubleMove>true</DoubleMove> -->
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_DSRT_1</PromotionType>
+			<TerrainType>TERRAIN_DESERT</TerrainType>
+			<Attack>40</Attack>
+			<Defense>40</Defense>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_COAST_1</PromotionType>
+			<TerrainType>TERRAIN_COAST</TerrainType>
+			<Attack>40</Attack>
+			<Defense>40</Defense>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_OCEAN_1</PromotionType>
+			<TerrainType>TERRAIN_OCEAN</TerrainType>
+			<Attack>40</Attack>
+			<Defense>40</Defense>
+		</Row>
+	</UnitPromotions_Terrains>
+
+	<UnitPromotions_Features>
+		<Row><PromotionType>PROMOTION_ALIEN_SWMP_1</PromotionType>
+			<FeatureType>FEATURE_MARSH</FeatureType>
+			<Attack>40</Attack>
+			<Defense>40</Defense>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_SWMP_1</PromotionType>
+			<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+			<Attack>40</Attack>
+			<Defense>40</Defense>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_REEF_1</PromotionType>
+			<FeatureType>FEATURE_REEF</FeatureType>
+			<Attack>40</Attack>
+			<Defense>40</Defense>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_STAGE_LIST_2_1</PromotionType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Defense>30</Defense>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_STAGE_LIST_2_2</PromotionType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Attack>30</Attack>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_STAGE_LIST_2_3</PromotionType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Defense>15</Defense>
+			<Attack>15</Attack>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_STAGE_LIST_3_1</PromotionType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Defense>50</Defense>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_STAGE_LIST_3_2</PromotionType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Attack>50</Attack>
+		</Row>
+		<Row><PromotionType>PROMOTION_ALIEN_STAGE_LIST_3_3</PromotionType>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<Defense>25</Defense>
+			<Attack>25</Attack>
+		</Row>
+	</UnitPromotions_Features>
+	
+	<UnitPromotions_UnitCombats>
+	</UnitPromotions_UnitCombats>
+
+</GameData>

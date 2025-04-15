@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Anton Strenger (Firaxis Games) -->
+<!-- MGH: Modified v0.4.3.2019-11-12-->
+<GameData>
+	<!-- Table definition -->
+	<Table name="Colonists">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="ShortDescription" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="HealthPerCity" type="integer" default="0"/>
+		<Column name="ExtraCityHitPoints" type="integer" default="0"/>
+		<Column name="PortraitIndex" type="integer" default="0"/>
+		<Column name="IconAtlas" type="text" default="LOADOUT_ATLAS" reference="IconTextureAtlases(Atlas)"/>
+		<Column name="FiraxisLiveUnlockKey" type="text" default="NULL"/>
+	</Table>
+	<Table name="Colonist_FreePromotions">
+		<Column name="ColonistType" type="text" reference="Colonists(Type)"/>
+		<Column name="PromotionType" type="text" reference="UnitPromotions(Type)"/>
+	</Table>
+	<Table name="Colonist_UnitClassProductionModifier">
+		<Column name="ColonistType" type="text" reference="Colonists(Type)"/>
+		<Column name="UnitClassType" type="text" reference="UnitClasses(Type)"/>
+		<Column name="Modifier" type="integer" default="0"/>
+	</Table>
+	<Table name="Colonist_YieldFlatModifier">
+		<Column name="ColonistType" type="text" reference="Colonists(Type)"/>
+		<Column name="YieldType" type="text" reference="Yields(Type)"/>
+		<Column name="Yield" type="integer" default="0"/>
+	</Table>
+	<!-- Table data -->
+	<Colonists name="Colonists">
+		<Row ID="0" Type="COLONIST_SCIENTISTS" 
+         Description="TXT_KEY_COLONIST_SCIENTISTS" 
+         ShortDescription="TXT_KEY_COLONIST_SCIENTISTS_SHORT" 
+         PortraitIndex="8"/>
+		<Row Type="COLONIST_REFUGEES" 
+         Description="TXT_KEY_COLONIST_REFUGEES" 
+         ShortDescription="TXT_KEY_COLONIST_REFUGEES_SHORT" 
+         PortraitIndex="14"
+         FiraxisLiveUnlockKey="AlwaysLocked"/>
+		<Row Type="COLONIST_ARISTOCRATS"
+         Description="TXT_KEY_COLONIST_ARISTOCRATS"
+         ShortDescription="TXT_KEY_COLONIST_ARISTOCRATS_SHORT"
+         PortraitIndex="10"
+         FiraxisLiveUnlockKey="AlwaysLocked"/>
+		<Row Type="COLONIST_ENGINEERS" 
+         Description="TXT_KEY_COLONIST_ENGINEERS" 
+         ShortDescription="TXT_KEY_COLONIST_ENGINEERS_SHORT" 
+         PortraitIndex="12"
+         FiraxisLiveUnlockKey="AlwaysLocked"/>
+		<Row Type="COLONIST_ARTISTS"
+         Description="TXT_KEY_COLONIST_ARTISTS"
+         ShortDescription="TXT_KEY_COLONIST_ARTISTS_SHORT"
+         PortraitIndex="13"/>
+		<Row Type="COLONIST_PIONEERS" 
+         Description="TXT_KEY_COLONIST_PIONEERS" 
+         ShortDescription="TXT_KEY_COLONIST_PIONEERS_SHORT" 
+         PortraitIndex="11" />
+		<Row Type="COLONIST_MERCENARIES" 
+         Description="TXT_KEY_COLONIST_MERCENARIES" 
+         ShortDescription="TXT_KEY_COLONIST_MERCENARIES_SHORT" 
+         PortraitIndex="9" />
+	</Colonists>
+	<Colonist_FreePromotions>
+		<Row>
+			<ColonistType>COLONIST_MERCENARIES</ColonistType>
+			<PromotionType>PROMOTION_HOMELAND_DEFENSE</PromotionType>
+		</Row>
+	</Colonist_FreePromotions>
+	<Colonist_UnitClassProductionModifier>
+		<Row>
+			<ColonistType>COLONIST_PIONEERS</ColonistType>
+			<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+			<Modifier>-50</Modifier>
+		</Row>
+	</Colonist_UnitClassProductionModifier>
+	<Colonist_YieldFlatModifier name="Colonists">
+		<Row ColonistType="COLONIST_SCIENTISTS" YieldType="YIELD_SCIENCE" Yield="2"/>
+		<Row ColonistType="COLONIST_REFUGEES" YieldType="YIELD_FOOD" Yield="2"/>
+		<Row ColonistType="COLONIST_ARISTOCRATS" YieldType="YIELD_ENERGY" Yield="4"/>
+		<Row ColonistType="COLONIST_ENGINEERS" YieldType="YIELD_PRODUCTION" Yield="2"/>
+		<Row ColonistType="COLONIST_ARTISTS" YieldType="YIELD_CULTURE" Yield="2"/>
+		<Row ColonistType="COLONIST_MERCENARIES" YieldType="YIELD_PRODUCTION" Yield="1"/>
+		<Row ColonistType="COLONIST_PIONEERS" YieldType="YIELD_FOOD" Yield="1"/>
+	</Colonist_YieldFlatModifier>
+</GameData>

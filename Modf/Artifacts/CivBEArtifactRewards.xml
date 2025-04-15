@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- by Orion Burcham (Firaxis Games) -->
+<!-- MGH: Modified v0.4.3.2019-11-12-->
+<GameData>
+	<!-- Table definitions -->
+	<Table name="ArtifactRewards">
+		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
+		<Column name="Type" type="text" notnull="true" unique="true"/>
+		<Column name="Description" type="text" notnull="true" unique="false"/>
+		<Column name="Explanation" type="text" notnull="true" unique="false"/>
+		<Column name="EffectsSummary" type="text" notnull="true" unique="false"/>
+		<Column name="BuildingReward" type="text" notnull="false" unique="false"/>
+		<Column name="PlayerPerkReward" type="text" notnull="false" unique="false"/>
+		<Column name="PromotionReward" type="text" notnull="false" unique="false"/>
+		<Column name="Category" type="text" notnull="false" unique="false" />
+	</Table>
+	<!-- Table data -->
+  <ArtifactRewards>
+    <!-- Old Earth (Strategic resources) Rewards -->
+    <Row>
+      <ID>0</ID>
+      <Type>ARTIFACT_REWARD_STRATEGIC_RESOURCES_1</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_1_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_STRATEGIC_RESOURCES_1</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_OLD_EARTH</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_STRATEGIC_RESOURCES_2</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_2_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_STRATEGIC_RESOURCES_2</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_OLD_EARTH</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_STRATEGIC_RESOURCES_3</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_3_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_STRATEGIC_RESOURCES_3</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_OLD_EARTH</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_STRATEGIC_RESOURCES_4</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_4_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_STRATEGIC_RESOURCES_4</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_OLD_EARTH</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_STRATEGIC_RESOURCES_5</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_5_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_STRATEGIC_RESOURCES_5</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_OLD_EARTH</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_STRATEGIC_RESOURCES_6</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_STRATEGIC_RESOURCES_6_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_STRATEGIC_RESOURCES_6</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_OLD_EARTH</Category>
+    </Row>
+    <!-- Alien World (Affinity resources) Rewards -->
+    <Row>
+      <Type>ARTIFACT_REWARD_AFFINITY_RESOURCES_1</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_1_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_AFFINITY_RESOURCES_1</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_ALIEN_WORLD</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_AFFINITY_RESOURCES_2</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_2_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_AFFINITY_RESOURCES_2</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_ALIEN_WORLD</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_AFFINITY_RESOURCES_3</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_3_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_AFFINITY_RESOURCES_3</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_ALIEN_WORLD</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_AFFINITY_RESOURCES_4</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_4_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_AFFINITY_RESOURCES_4</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_ALIEN_WORLD</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_AFFINITY_RESOURCES_5</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_5_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_AFFINITY_RESOURCES_5</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_ALIEN_WORLD</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_AFFINITY_RESOURCES_6</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RESOURCES_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_AFFINITY_RESOURCES_6_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_MGH_ARTIFACT_REWARD_AFFINITY_RESOURCES_6</PlayerPerkReward>
+      <Category>ARTIFACT_CATEGORY_ALIEN_WORLD</Category>
+    </Row>
+    <!-- Progentitor (Wonder) Rewards -->
+    <Row>
+      <Type>ARTIFACT_REWARD_MACHINE_ASSISTED_FREE_WILL</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_MACHINE_ASSISTED_FREE_WILL_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_MACHINE_ASSISTED_FREE_WILL_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_BUILDING_MACHINE_ASSISTED_FREE_WILL_HELP</EffectsSummary>
+      <BuildingReward>BUILDING_MACHINE_ASSISTED_FREE_WILL</BuildingReward>
+      <Category>ARTIFACT_CATEGORY_PROGENITOR</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_DIMENSION_FOLDING_COMPLEX</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_DIMENSION_FOLDING_COMPLEX_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_DIMENSION_FOLDING_COMPLEX_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_DRONE_COMMAND_EFFECTS_SUMMARY</EffectsSummary>
+      <BuildingReward>BUILDING_DIMENSION_FOLDING_COMPLEX</BuildingReward>
+      <Category>ARTIFACT_CATEGORY_PROGENITOR</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_QUANTUM_POLITICS</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_QUANTUM_POLITICS_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_QUANTUM_POLITICS_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_BUILDING_QUANTUM_POLITICS_HELP</EffectsSummary>
+      <BuildingReward>BUILDING_QUANTUM_POLITICS</BuildingReward>
+      <Category>ARTIFACT_CATEGORY_PROGENITOR</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_TEMPORAL_CALCULUS</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_TEMPORAL_CALCULUS_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_TEMPORAL_CALCULUS_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_BUILDING_PRECOG_PROJECT_HELP</EffectsSummary>
+      <BuildingReward>BUILDING_TEMPORAL_CALCULUS</BuildingReward>
+      <Category>ARTIFACT_CATEGORY_PROGENITOR</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_TESSELATION_FOUNDRY</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_TESSELATION_FOUNDRY_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_TESSELATION_FOUNDRY_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_TESSELATION_FOUNDRY_EFFECTS_SUMMARY</EffectsSummary>
+      <BuildingReward>BUILDING_TESSELATION_FOUNDRY</BuildingReward>
+      <Category>ARTIFACT_CATEGORY_PROGENITOR</Category>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_RELATIVISTIC_DATA_BANK</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_RELATIVISTIC_DATA_BANK_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_RELATIVISTIC_DATA_BANK_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_BUILDING_RELATIVISTIC_DATA_BANK_HELP</EffectsSummary>
+      <BuildingReward>BUILDING_RELATIVISTIC_DATA_BANK</BuildingReward>
+      <Category>ARTIFACT_CATEGORY_PROGENITOR</Category>
+    </Row>
+    <!-- Combination (Player Perk/Promotions) Rewards -->
+    <Row>
+      <Type>ARTIFACT_REWARD_TESSERACT_TARGETING</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_TESSERACT_TARGETING_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_TESSERACT_TARGETING_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_TESSERACT_TARGETING_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_TESSERACT_TARGETING</PlayerPerkReward>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_SOUL_DISCERNER_TRAINING</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_SOUL_DISCERNER_TRAINING_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_SOUL_DISCERNER_TRAINING_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_SOUL_DISCERNER_TRAINING_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_SOUL_DISCERNER_TRAINING</PlayerPerkReward>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_XENOANTHROPOLOGY</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_XENOANTHROPOLOGY_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_XENOANTHROPOLOGY_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_XENOANTHROPOLOGY_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_XENOANTHROPOLOGY</PlayerPerkReward>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_GROUND_PENETRATING_LIDAR</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_GROUND_PENETRATING_LIDAR_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_GROUND_PENETRATING_LIDAR_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_GROUND_PENETRATING_LIDAR_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_GROUND_PENETRATING_LIDAR</PlayerPerkReward>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_ZYGOTIC_ENGINEERING</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_ZYGOTIC_ENGINEERING_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_ZYGOTIC_ENGINEERING_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_ZYGOTIC_ENGINEERING_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_ZYGOTIC_ENGINEERING</PlayerPerkReward>
+    </Row>
+    <Row>
+      <Type>ARTIFACT_REWARD_VAPOR_SHIELD</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_VAPOR_SHIELD_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_VAPOR_SHIELD_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_VAPOR_SHIELD_EFFECTS_SUMMARY</EffectsSummary>
+      <PromotionReward>PROMOTION_VAPOR_SHIELD</PromotionReward>
+    </Row>
+	<!--MGH:Changed to 20% Worker speed-->
+    <Row>
+      <Type>ARTIFACT_REWARD_SLUMBER_SLAUGHTER_EXTRACT</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_SLUMBER_SLAUGHTER_EXTRACT_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_SLUMBER_SLAUGHTER_EXTRACT_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_SLUMBER_SLAUGHTER_EXTRACT_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_SLUMBER_SLAUGHTER_EXTRACT</PlayerPerkReward>
+    </Row>
+	<!--MGH:Changed to 5 health-->
+    <Row>
+      <Type>ARTIFACT_REWARD_STATECRAFT</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_STATECRAFT_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_STATECRAFT_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_STATECRAFT_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_STATECRAFT</PlayerPerkReward>
+    </Row>
+	<!--MGH:Changed to 10% Alien combat mod and 10% Worker speed-->
+    <Row>
+      <Type>ARTIFACT_REWARD_PROJECTED_CHASIS_CONSTRUCTION</Type>
+      <Description>TXT_KEY_ARTIFACT_REWARD_PROJECTED_CHASIS_CONSTRUCTION_DESCRIPTION</Description>
+      <Explanation>TXT_KEY_ARTIFACT_REWARD_PROJECTED_CHASIS_CONSTRUCTION_EXPLANATION</Explanation>
+      <EffectsSummary>TXT_KEY_ARTIFACT_REWARD_PROJECTED_CHASIS_CONSTRUCTION_EFFECTS_SUMMARY</EffectsSummary>
+      <PlayerPerkReward>PLAYERPERK_SURROGACY_WORKER_SPEED</PlayerPerkReward>
+    </Row>
+  </ArtifactRewards>
+</GameData>

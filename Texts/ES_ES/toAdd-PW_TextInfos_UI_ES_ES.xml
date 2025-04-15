@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MIGUGH: Last modified v0.9.1.2025-02-18-->
+<!--Temporal texts meanwhile there are not spanish translation on PWAC-->
+<GameData>
+	<!--Textos Español-->
+	<Language_ES_ES>
+		<!-- MAP OPTIONS -->
+		<!--Map options Resources-->
+		<Row Tag="TXT_KEY_MAP_OPTION_RESOURCES_HELP"><Text>Determina la riqueza de los depósitos de recursos estratégicos. No cambia el número de depósitos.</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_SPARSE_HELP"><Text>Baja riqueza de los yacimientos[NEWLINE]Tipo 1: 75%[NEWLINE]Tipo 2: 25%</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_STANDARD_HELP"><Text>Nivel medio de riqueza de los depósitos[NEWLINE]Tipo 1: 75%[NEWLINE]Tipo 2: 25%</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_ABUNDANT_HELP"><Text>Alto nivel de riqueza depositada[NEWLINE]Tipo 1: 75%[NEWLINE]Tipo 2: 25%</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_LEGENDARY_START_HELP"><Text>Hasta 6 niveles de riqueza de depósito[NEWLINE]Tipo 1: 8%[NEWLINE]Tipo 2: 25%[NEWLINE]Tipo 3: 17%[NEWLINE]Tipo 4: 17%[NEWLINE]Tipo 5: 25%[NEWLINE]Tipo 6: 8%[NEWLINE][NEWLINE]Un conjunto de recursos básicos en el sitio de aterrizaje</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_STRATEGIC_BALANCE_HELP"><Text>Hasta 6 niveles de riqueza de depósito[NEWLINE]Tipo 1: 8%[NEWLINE]Tipo 2: 25%[NEWLINE]Tipo 3: 17%[NEWLINE]Tipo 4: 17%[NEWLINE]Tipo 5: 25%[NEWLINE]Tipo 6: 8%[NEWLINE][NEWLINE]Un conjunto de recursos estratégicos (titanio, geotermia, petróleo), cerca del lugar de aterrizaje</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_RANDOM_HELP"><Text>Selección aleatoria de una de las opciones: Raro, Estándar, Muchos</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_REAL_RANDOM"><Text>Muy aleatorio</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_REAL_RANDOM_HELP"><Text>Selección aleatoria de volumen para cada campo en un amplio rango de valores</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_COMPET"><Text>Competencia</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_RES_COMPET_HELP"><Text>Hasta 6 niveles de riqueza de depósito[NEWLINE]Tipo 1: 8%[NEWLINE]Tipo 2: 25%[NEWLINE]Tipo 3: 17%[NEWLINE]Tipo 4: 17%[NEWLINE]Tipo 5: 25%[NEWLINE]Tipo 6: 8%[NEWLINE][NEWLINE]La ubicación inicial recibe una celda de cada recurso, si el paisaje lo permite</Text></Row>
+		<!--Map options Landscape-->
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDSCAPE_TYPE"><Text>Paisaje</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDSCAPE_TYPE_HELP"><Text>Define los detalles de la creación del paisaje que afectan la apariencia final del mapa</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STATIC"><Text>Estático</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STATIC_HELP"><Text>El mismo paisaje se genera en secciones opuestas del mapa</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_DYNAMIC"><Text>Dinámico</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_DYNAMIC_HELP"><Text>Si bien se mantiene la identidad general del paisaje, las propiedades de algunas casillas se determinan aleatoriamente</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKIRMISH_TYPE_1"><Text>Montañas</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKIRMISH_TYPE_1_HELP"><Text>Las partes derecha e izquierda del mapa están separadas por una cresta con montañas raras</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKIRMISH_TYPE_2"><Text>Brecha</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKIRMISH_TYPE_2_HELP"><Text>Las partes derecha e izquierda del mapa están separadas por una brecha de agua. Creado por Migugh, especialmente para AC.</Text></Row>
+		<!--Map options WrapX/Flat-->
+		<Row Tag="TXT_KEY_MAP_OPTION_WRAPPED"><Text>Meridiano</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_WRAPPED_HELP"><Text>Define la forma del mapa, de longitud constante o cilíndrico como un globo</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_WRAPPED_FALSE"><Text>Mapa diseccionado #</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_WRAPPED_FALSE_HELP"><Text>Mapa plano (Flat), el meridiano cero separa el oeste del este</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_WRAPPED_TRUE"><Text>Mapa unificado</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_WRAPPED_TRUE_HELP"><Text>Mapa cilíndrico (WrapX), el meridiano cero conecta los dos bordes occidental y oriental del mapa</Text></Row>
+		<!--Map options Miasma-->
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_ON_START"><Text>Miasma</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_ON_START_HELP"><Text>Determina la cantidad de miasma que se generará al comienzo del mapa</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_NO_MIASMA_ON_START"><Text>Casi ninguno</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_NO_MIASMA_ON_START_HELP"><Text>Mapa sin miasma, solo unas pocas piezas en losas con nidos de alienígenas</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_THEN_WILDNESS"><Text>Un poco menos</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_THEN_WILDNESS_HELP"><Text>Ubicación del miasma antes de aplicar la capa principal de elementos salvajes al mapa. Hace que la cantidad total de miasma se reduzca en una cantidad de entre el 2 % y el 15 %, según las condiciones del mapa, en comparación con la colocación estándar.</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_AFTER_WILDNESS"><Text>Por defecto</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_AFTER_WILDNESS_HELP"><Text>Colocación estándar de miasma, después de aplicar la capa de naturaleza salvaje</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_ALMOST"><Text>Casi todo el mapa</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_ALMOST_HELP"><Text>Colocación del miasma en el 90 % de los mosaicos posibles, excepto en las zonas de aterrizaje de los jugadores</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_ALL_MAP"><Text>Mapa completo</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_MIASMA_ALL_MAP_HELP"><Text>Colocación del miasma en todas las casillas posibles, excepto en las zonas de aterrizaje de los jugadores</Text></Row>
+		<!--Map options Startings plots-->
+		<Row Tag="TXT_KEY_MAP_OPTION_STARTINGS"><Text>Lugar de aterrizaje</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_STARTINGS_HELP"><Text>Determina de que forma se eligen las coordenadas de inicio de los jugadores</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STARTINGS_STRAIGHT"><Text>Uno frente a otro</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STARTINGS_STRAIGHT_HELP"><Text>Los jugadores se colocan según el siguiente posicionamiento: los impares a la izquierda y los pares a la derecha. Úselo para el inicio del equipo[NEWLINE][NEWLINE]3º - 7º  [ICON_MOUNTAIN] 8º  - 4º[NEWLINE]1º - 9º  [ICON_MOUNTAIN] 10º - 2º[NEWLINE]5º - 11º [ICON_MOUNTAIN] 12º - 6º</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STARTINGS_DIAGONAL"><Text>En diagonal</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STARTINGS_DIAGONAL_HELP"><Text>Los jugadores se colocan de acuerdo con el siguiente posicionamiento: los impares a la izquierda y los pares a la derecha. Úselo para el inicio del equipo[NEWLINE][NEWLINE]3º - 11º [ICON_MOUNTAIN] 10º - 2º[NEWLINE]7º - 5º  [ICON_MOUNTAIN] 6º  - 8º[NEWLINE]1º - 9º  [ICON_MOUNTAIN] 12º - 4º</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STARTINGS_RANDOM"><Text>Aleatorio</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STARTINGS_RANDOM_HELP"><Text>Colocación aleatoria de jugadores en posiciones iniciales fijas</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STARTINGS_USUAL"><Text>Regional</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_SKPRTL_STARTINGS_USUAL_HELP"><Text>Las posiciones iniciales se selecionan usando regiones de similares características de una forma estándar. No se tendrá en cuenta la influencia de las zonas con una mayor Fauna alien y del Miasma en la evaluación de una posición potencial</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_STARTINGS_TEAMS_WE"><Text>En 2 equipos: Oeste / Este</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_STARTINGS_TEAMS_WE_HELP"><Text>Los jugadores se colocan en grupos por equipos en los lados izquierdo y derecho del mapa. Si hay más de dos equipos, la ubicación se restablece a Continental.</Text></Row>
+		<!--Map options Landmarks-->
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS"><Text>Prodigios</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_HELP"><Text>Los Prodigios naturales o Prodigios del terreno son objetos grandes notables en el mapa, generalmente con tareas relacionadas. Esta opción le permite seleccionar un método para crear dichos objetos en el mapa.</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_0"><Text>Sin Prodigios</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_0_HELP"><Text>Los Prodigios grandes y pequeños y sus tareas no aparecerán en el mapa</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_1_BIOME"><Text>Nativo (1)</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_1_BIOME_HELP"><Text>Si es posible, se creará 1 punto de referencia correspondiente al bioma</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_2_BIOME_PLUS_WATER"><Text>Nativo (2)</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_2_BIOME_PLUS_WATER_HELP"><Text>Si es posible, se crearán 2 Prodigios correspondientes al bioma</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_3_BIOME_PLUS_WATER_PLUS"><Text>Nativo (2+1)</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_3_BIOME_PLUS_WATER_PLUS_HELP"><Text>Si es posible, se crearán 2 Prodigios correspondientes al bioma y 1 aleatorio</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_1_RANDOM"><Text>Aleatorio (1)</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_1_RANDOM_HELP"><Text>Si es posible, se creará 1 punto de referencia seleccionado aleatoriamente</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_2_RANDOM"><Text>Aleatorio (2)</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_2_RANDOM_HELP"><Text>Si es posible, se crearán 2 Prodigios seleccionados aleatoriamente</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_3_RANDOM"><Text>Aleatorio (3)</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_3_RANDOM_HELP"><Text>Si es posible, se crearán 3 Prodigios seleccionados aleatoriamente</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_X_MAX"><Text>Suite</Text></Row>
+		<Row Tag="TXT_KEY_MAP_OPTION_LANDMARKS_X_MAX_HELP"><Text>Si es posible, se crearán todos los Prodigios naturales</Text></Row>
+
+		<!-- PLANET EFFECTS -->
+		<Row Tag="TXT_KEY_MIASMA_DAMAGE_MOD"><Text>Daños por miasma:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_MIASMA_HEAL_MOD"><Text>Curación Alien en miasma:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_SPAWN_RATE_MOD"><Text>Tasa de aparición de Aliens:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_MIN_SPAWN_RATE_CHANGE"><Text>Mínima tasa de aparición de Aliens:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_MAX_SPAWN_RATE_CHANGE"><Text>Máxima tasa de aparición de Aliens:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_NEST_SPAWN_RATE_MOD"><Text>Tasa de aparición de nidos Aliens:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_COMBAT_STRENGTH_MOD"><Text>Fuerza de combate Alien:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_MOVE_RATE_CHANGE"><Text>Movimientos Aliens:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_OPINION_SENSITIVITY_MOD"><Text>Sensibilidad de la opinión Alien:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_DANGER_SENSITIVITY_MOD"><Text>Sensibilidad del peligro Alien:</Text></Row>
+		<Row Tag="TXT_KEY_ALIEN_MIASMA_SENSITIVITY_MOD"><Text>Alien miasma sensitivity:</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_CLOCKON"><Text>[COLOR_VIRTUE_INDUSTRY]1.[ENDCOLOR][COLOR:211,211,211,255]√[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Mostrar reloj en el panel superior[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_CLOCKON_HELP"><Text>Aquí puedes activar o desactivar la visualización de los relojes en la parte superior.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PBS_OPEN_SEASON"><Text>[COLOR_VIRTUE_INDUSTRY]2.[ENDCOLOR][COLOR:211,211,211,255]√[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Temporada abierta[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PBS_OPEN_SEASON_HELP"><Text>La caza de fauna salvaje podría conducir al descubrimiento de fósiles.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PBS_LONG_EXPEDITIONS"><Text>[COLOR_VIRTUE_INDUSTRY]3.[ENDCOLOR][COLOR:211,211,211,255]√[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Expediciones largas[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PBS_LONG_EXPEDITIONS_HELP"><Text>Los exploradores encuentran aleatoriamente nuevos sitios de expedición en la naturaleza.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PBS_ORBITAL_SUPPORT"><Text>[COLOR_VIRTUE_INDUSTRY]4.[ENDCOLOR][COLOR:211,211,211,255]√[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Soporte orbital[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PBS_ORBITAL_SUPPORT_HELP"><Text>De vez en cuando, cápsulas con recursos que permanecian en el espacio descenderán a la superficie.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_ALIENS_LIKE_STRATEGICS"><Text>[COLOR_VIRTUE_INDUSTRY]5.[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Los Aliens protegen recursos estratégicos[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_ALIENS_LIKE_STRATEGICS_HELP"><Text>Los nidos Alien podrán aparecer en los recursos estratégicos de titanio, energía geotérmica y petróleo.[NEWLINE]Solamente si están fuera del territorio del jugador.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_ALIENS_LIKE_BASICS"><Text>[COLOR_VIRTUE_INDUSTRY]6.[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Los Aliens protegen recursos básicos[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_ALIENS_LIKE_BASICS_HELP"><Text>Los nidos Alien podrán aparecer en los recursos básicos, como frutas, tubérculos, algas, etc.[NEWLINE]Solamente si están fuera del territorio del jugador.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_ALIENS_LIKE_EXCAVATIONS"><Text>[COLOR_VIRTUE_INDUSTRY]7.[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Los Aliens protegen excavaciones[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_ALIENS_LIKE_EXCAVATIONS_HELP"><Text>Los nidos Alien podrán aparecer en los sitios de excavación.[NEWLINE]Solamente si están fuera del territorio del jugador.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_HYDRACORAL_REPRODUCTION_OFF"><Text>[COLOR_VIRTUE_INDUSTRY]8.[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Los Hidracorales no se reproducen[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_HYDRACORAL_REPRODUCTION_OFF_HELP"><Text>Esta opción traerá de vuelta un error que impedía que los Hidracorales se reprodujeran.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_MIASMA_SPREADING_OFF"><Text>[COLOR_VIRTUE_INDUSTRY]9.[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]El Miasma no se reproduce ni se desplaza[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_MIASMA_SPREADING_OFF_HELP"><Text>El ciclo de vida de las nubes de esporas de Miasma implica el desplazamiento por una zona accesible con la ayuda del movimiento de masas de aire. Con esta opción, el miasma no se propagará ni se desplazará a nuevos territorios con la ayuda del viento.</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_AI_EXPLORERS_GRANT"><Text>[COLOR_VIRTUE_INDUSTRY]10.[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]La IA consigue exploradores (SP)[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAME_OPTION_PW_AI_EXPLORERS_GRANT_HELP"><Text>Cuanto más grande sea el mapa, más exploradores tendrá la IA. Las reliquias son importantes a lo largo del juego, la IA también quiere bonificaciones y excavará.[NEWLINE][NEWLINE]Normalmente, hacia la mitad del juego, la IA ya no construye exploradores. Esta opción los crea de vez en cuando para la IA.[NEWLINE](Opción disponible exclusivamente para modo individual)</Text></Row>
+		<Row Tag="TXT_KEY_GAMEOPTION_PW_COLONY_NAMES_RANDOM_ORDER"><Text>[COLOR_VIRTUE_INDUSTRY]11.[ENDCOLOR][COLOR:211,211,211,255]√[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Orden aleatorio de los nombres de las colonias (SP)[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAMEOPTION_PW_COLONY_NAMES_RANDOM_ORDER_HELP"><Text>Las colonias recibirán sus nombres en orden aleatorio. El nombre de la sede central seguirá siendo el mismo.[NEWLINE](Opción disponible exclusivamente para modo individual)</Text></Row>
+		<Row Tag="TXT_KEY_GAMEOPTION_PW_COLONY_NAMES_RANDOM_ORDER_CAPITAL_TOO"><Text>[COLOR_VIRTUE_INDUSTRY]12.[ENDCOLOR] [COLOR_VIRTUE_PROSPERITY]Nombre aleatorio para la Capital (SP)[ENDCOLOR]</Text></Row>
+		<Row Tag="TXT_KEY_GAMEOPTION_PW_COLONY_NAMES_RANDOM_ORDER_CAPITAL_TOO_HELP"><Text>El nombre de la sede también se elegirá de forma aleatoria. No funciona si la opción (Orden aleatorio de los nombres de las colonias) está desactivada.[NEWLINE](Opción disponible exclusivamente para modo individual)</Text></Row>
+	</Language_ES_ES>
+</GameData>

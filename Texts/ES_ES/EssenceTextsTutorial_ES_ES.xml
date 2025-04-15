@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MIGUGH: Last modified v0.9.5.2025-03-26-->
+<GameData>
+	<!--Textos Español-->
+	<Language_ES_ES>
+		<!-- INTERLUDE Tutorial -->
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_TITLE">
+			<Text>--Essence Mod Cambios, consejos y tutorial--</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_A1">
+			<Text>[COLOR_HIGHLIGHT_TEXT]Terreno:[ENDCOLOR][NEWLINE][ICON_BULLET]Reparar una unidad por turno supone +10 PV en territorio enemigo o neutral, +20 PV en territorio aliado y +30 PV dentro de una ciudad. El miasma reduce -10 PV a la unidad en la casilla, excepto para las unidades alienígenas, que les otorgan +10 PV por turno. La bonificación por fortificación es del 25 %. Si aprovechas el terreno estableciendo tus unidades en bosques o montañas, añades un 25 % a tu defensa (no acumulable). Evita los pantanos (baja el ataque -10 %), los ríos pueden crear cuellos de botella (estos tienen una penalización severa de -40 % al ataque), los bosques dificultan el movimiento y el flanqueo otorga una bonificación de ataque del 10 %.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_B1">
+			<Text>[ICON_BULLET]En los pantanos y la tundra hay una gran cantidad de animales y plantas desconocidos que nos permiten aprender nuevas tecnologías a partir de la biodiversidad del planeta. Por eso, estos lugares tienen una ventaja científica. El mejor lugar para la ciencia son las ruinas alienígenas, que permiten descubrir nuevos conocimientos culturales y científicos gracias a los constructores de dichas estructuras. Para el resto de lugares misteriosos y desconocidos, usa un Explorador para realizar expediciones con tus exploradores y recuperar artefactos abandonados. También puedes encontrar información para reconstruir la señal de los Progenitores investigando Los dispositivos de los Progenitores, que contienen datos sobre sus comunicaciones, y naves hundidas de los Progenitores en el océano.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_A2">
+			<Text>[COLOR_HIGHLIGHT_TEXT]Ciudades:[ENDCOLOR][NEWLINE][ICON_BULLET]La tierra es más interesante que el mar, las ciudades cercanas a los ríos también pueden construir el edificio especial "Presa", en compensación, las bases acuáticas otorgan más cultura (+50%) y tienen grandes bonificaciones por crear unidades acuáticas, pero son un 20% más fáciles de destruir.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_B2">
+			<Text>[ICON_BULLET]Actualmente el comercio sólo está disponible desde 1 ciudad, y por cada 5 poblaciones puedes añadir una ruta extra; el comercio es muy difícil debido al paisaje hostil y al hecho de que es un planeta alienígena lleno de peligros.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_A3">
+			<Text>[COLOR_HIGHLIGHT_TEXT]Mejoras:[ENDCOLOR][NEWLINE][ICON_BULLET]Los generadores otorgan +1 de energía en las colinas; las minas usan 1 de energía por turno, solamente se pueden construir en colinas o en recursos especiales y no se pueden construir en el mar (excepto en Minerales); sin embargo en el mar los Arrecifes otorgan +1 producción.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_B3">
+			<Text>[ICON_BULLET]Las mejoras Cúpula, Nodo y Biopozo no se pueden construir adyacentes, deben tener un gran espacio separado para poder desarrollarse correctamente. Las Cúpulas otorgan rendimiento adicional cerca de montañas, ríos o en terrenos costeros; los Nodos reducen los puntos de salud de las unidades enemigas; los Biopozos necesitan un río con agua dulce para poder construirse.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_A4">
+			<Text>[COLOR_HIGHLIGHT_TEXT]Guerra:[ENDCOLOR][NEWLINE][ICON_BULLET]Cuando una ciudad es conquistada, la población local queda descontenta. Este descontento se manifiesta en forma de "Ley Marcial". La duración de esta depende de la población de la ciudad. Para que evitar que las revueltas en las ciudades conquistadas se activen debes convertir la ciudad en una "Marioneta", lo cual hará que se autogestione (se puede tomar el control posteriormente) o "Arrasarla", lo cual la destruirá por completo.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_MODESSENCE_TUTORIAL_BASICS_B4">
+			<Text>[ICON_BULLET]El ataque de las unidades se reduce en el mismo porcentaje que la unidad dañada. No hay unidades aéreas disponibles.</Text>
+		</Row>
+	</Language_ES_ES>
+</GameData>
